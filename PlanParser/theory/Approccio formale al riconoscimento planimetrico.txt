@@ -1,0 +1,77 @@
+# 📐 PlanParser – Approccio formale al riconoscimento planimetrico
+
+## ✅ Scelta metodologica
+
+Questo progetto adotta una scelta metodologica chiara e strutturata per interpretare planimetrie in modo computazionale.
+
+**Non si parte da entità semantiche predefinite** (come "muro", "stanza", "porta"),  
+ma si costruiscono queste entità **a partire da elementi geometrici primitivi**,  
+attraverso un processo di relazione, riconoscimento e astrazione.
+
+---
+
+## 🧱 Entità primitive
+
+Le **entità primitive** sono elementi grafici puri, direttamente estraibili da un file vettoriale o raster (es. PDF).  
+Non portano significato in sé, ma descrivono ciò che è visivamente presente nella planimetria.
+
+### Esempi di entità primitive:
+- **Punti** (coordinate cartesiane 2D)
+- **Segmenti** (linee tra due punti)
+- **Polilinee** (sequenze di segmenti connessi)
+- **Archi** (porzioni di cerchio)
+- **Poligoni** (forme chiuse)
+- **Testi** (etichette con posizione)
+- **Bounding box** (regioni rettangolari)
+
+Ogni entità è neutra, misurabile, e descritta in uno spazio metrico comune.
+
+---
+
+## 🔗 Relazioni tra entità primitive
+
+Le entità primitive, da sole, non bastano. È attraverso le **relazioni** che emerge il significato.
+
+### Alcuni esempi di relazioni:
+- **Adiacenza**: due segmenti condividono un punto → possibile connessione
+- **Chiusura**: una serie di segmenti forma un ciclo → possibile stanza
+- **Parallellismo e distanza**: due segmenti paralleli ravvicinati → possibile muro
+- **Contenimento**: un testo è dentro un poligono → possibile etichetta di stanza
+- **Interruzione**: una discontinuità in una polilinea → possibile apertura (porta)
+
+Queste relazioni sono il **ponte** tra la forma e il significato.
+
+---
+
+## 🧠 Emergenza delle entità fondamentali
+
+Solo a valle della rilevazione delle relazioni tra entità primitive,  
+si può parlare di **entità fondamentali della planimetria**: i concetti che usiamo ogni giorno nel linguaggio architettonico.
+
+### Le entità fondamentali che emergono:
+- `Wall` → da segmenti paralleli e spessi
+- `Room` → da poligoni chiusi con etichetta
+- `Door` → da aperture geometriche nei muri
+- `Label` → da testo posizionato semanticamente
+- `Dimension` → da linee con testo metrico associato
+- `Scale` → da testo o metadati che dichiarano l’unità di misura
+
+Queste entità sono il risultato finale di un processo di interpretazione strutturata,  
+e non un’assunzione iniziale.
+
+---
+
+## 🎯 Perché scegliere questo approccio
+
+- **Generalizzabilità**: funziona anche su documenti disomogenei, non standardizzati.
+- **Controllabilità**: ogni passaggio è tracciabile e migliorabile.
+- **Modularità**: ogni stadio (estrazione, relazione, interpretazione) è separabile.
+- **Compatibilità futura**: una volta introdotti metadati standard (es. PlanimetryDigitalConventions), il parser potrà integrare o validare automaticamente i dati semanticamente.
+
+---
+
+## 📌 Conclusione
+
+Questo approccio non si limita a “leggere” un PDF.  
+Costruisce una **grammatica computazionale della planimetria**,  
+partendo da forme visive elementari e arrivando progressivamente a una compren

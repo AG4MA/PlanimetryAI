@@ -1,0 +1,62 @@
+# 🧠 Struttura topologica e Machine Learning
+
+L’approccio adottato in PlanParser — basato su entità primitive, relazioni, e strutture topologiche — non è solo utile per interpretare correttamente una planimetria,  
+ma è anche **fondamentale per aprire la strada all’applicazione del Machine Learning** nel ragionamento architettonico automatizzato.
+
+Questa scelta ha valore teorico, ma soprattutto **implicazioni pratiche** a lungo termine.
+
+---
+
+## ✅ 1. I modelli ML ragionano meglio su strutture relazionali
+
+Modelli avanzati come le **GNN** (Graph Neural Networks) sono progettati per lavorare su **grafi etichettati**: insiemi di nodi e archi con relazioni esplicite.
+
+Una planimetria descritta come grafo topologico è **perfettamente compatibile** con questa rappresentazione.
+
+> Relazioni come **connessione**, **contenimento**, **adiacenza** diventano input nativo per l’ML.
+
+Questa struttura permette di addestrare modelli su:
+- Il **tipo** di una stanza sulla base della sua forma e delle sue connessioni
+- La **disposizione ottimale** degli ambienti
+- La **predizione automatica di label mancanti** (es. una stanza senza nome, ma facilmente classificabile come bagno)
+
+---
+
+## ✅ 2. Separazione tra geometria e semantica (decoupling)
+
+Una delle decisioni centrali è mantenere separati:
+- la **geometria grezza** (segmenti, coordinate, poligoni),
+- dalla **semantica** attribuita successivamente (muro, stanza, porta…).
+
+Questa separazione ha tre vantaggi:
+
+1. Permette una **pre-elaborazione strutturale**, anche in assenza di etichette.
+2. Rende possibile allenare modelli ML sulla sola **parte semantica**, più compatta e interpretabile.
+3. Favorisce il **riutilizzo**: la stessa planimetria può essere usata per addestrare modelli diversi (es. classificazione, generazione, simulazione), senza ridefinire la geometria.
+
+---
+
+## ✅ 3. Rende possibile l'apprendimento auto-supervisionato
+
+Nella pratica reale, la maggior parte dei PDF architettonici **non è etichettata** o lo è solo parzialmente.  
+Ma il nostro approccio genera una struttura relazionale che consente di sfruttare tecniche di **self-supervised learning**.
+
+> Anche senza sapere il nome di una stanza, possiamo inferirlo osservando le relazioni che ha con il resto del grafo.
+
+Questo approccio è scalabile:
+- Può sfruttare grandi quantità di dati grezzi,
+- Può apprendere regole strutturali implicite (es. “il bagno è quasi sempre adiacente a una camera”),
+- Può colmare lacune semantiche grazie alla coerenza topologica e geometrica del documento.
+
+---
+
+## 🧬 Conclusione
+
+La rappresentazione topologica non è solo una scelta di astrazione geometrica,  
+ma è la **porta d’ingresso naturale per l’intelligenza artificiale nei documenti architettonici**.
+
+Adottare questo approccio oggi significa:
+
+- rendere i dati più robusti,
+- mantenere separazione dei livelli (forma / significato),
+- e abilitare futuri moduli intelligenti, in grado di **capire, completare, correggere e progettare**.

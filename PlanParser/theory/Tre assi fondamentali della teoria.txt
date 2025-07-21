@@ -1,0 +1,62 @@
+# 🧠 Tre assi fondamentali della teoria planimetrica
+
+L’intero progetto PlanParser si fonda su tre assi teorici che guidano la rappresentazione computazionale della planimetria.  
+Essi definiscono **cosa è una planimetria**, **come possiamo strutturarla**, e **come possiamo ragionarci sopra**.
+
+---
+
+## 1. 📘 Assioma Semantico
+
+> **Una planimetria è un documento che esprime un significato spaziale mediante grafemi geometrici.**
+
+Ogni elemento grafico presente nella planimetria (linee, testi, forme) non è neutro.  
+Esprime **entità reali**: muri, stanze, nomi, misure, destinazioni d’uso.
+
+💡 In altre parole, **una planimetria non mostra solo geometria, ma trasmette semantica**.
+
+### Implicazione:
+Il parser deve **mappare** dai **segni grafici** (linee, testi) alle **entità semantiche** (muro, porta, bagno, quota, scala...).
+
+---
+
+## 2. 🧭 Assioma Strutturale
+
+> **Una planimetria può essere modellata come un grafo planare etichettato.**
+
+Ogni elemento grafico può essere descritto in termini di **relazioni topologiche e spaziali**:
+
+- **Vertici** = punti di intersezione o connessione tra segmenti
+- **Archi** = muri, linee, percorsi di collegamento
+- **Facce** = aree chiuse, stanze, locali funzionali
+- **Etichette** = testo che descrive elementi (nome, destinazione, misura)
+
+💡 In questa visione, una planimetria è **un grafo con geometria e semantica**, perfetto per l’analisi automatica, il reasoning e il machine learning.
+
+---
+
+## 3. 🏛 Assioma Gerarchico
+
+> **Ogni entità riconoscibile nella planimetria è parte di una gerarchia funzionale e strutturale.**
+
+Una planimetria **non è un insieme piatto di oggetti**, ma una struttura **organizzata in livelli**:
+
+- **Livello Plan** → il documento completo
+- **Livello Zone** → suddivisioni spaziali (stanze, balconi, vani tecnici…)
+- **Livello Elementi** → componenti locali (muri, aperture, arredi…)
+- **Livello Attributi** → informazioni specifiche (nome, misura, funzione…)
+
+💡 Questa struttura permette di ragionare sulla planimetria come **un oggetto architettonico coerente**, e non come un semplice disegno.
+
+---
+
+## 🧩 Sintesi
+
+| Assioma         | Cosa afferma                        | Cosa implica                    |
+|-----------------|--------------------------------------|----------------------------------|
+| Semantico       | I grafismi rappresentano significato | Serve mappatura forma → funzione |
+| Strutturale     | La planimetria è un grafo topologico | Serve rappresentazione relazionale |
+| Gerarchico      | Le entità sono organizzate a livelli | Serve una struttura multilivello  |
+
+---
+
+Questi tre assi rappresentano il **fondamento teorico** che consente a PlanParser di andare oltre l’estrazione grafica, e iniziare un percorso verso **comprensione, verifica e generazione automatica** degli spazi architettonici.
