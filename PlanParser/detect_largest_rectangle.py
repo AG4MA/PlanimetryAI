@@ -3,6 +3,7 @@ import numpy as np
 import fitz
 from PIL import Image
 import io
+import sys
 
 def render_pdf_to_image(pdf_path, zoom=2.0):
     doc = fitz.open(pdf_path)
@@ -40,7 +41,22 @@ def detect_largest_rectangle(image):
 
     debug_path = "largest_rect_debug.png"
     cv2.imwrite(debug_path, cv2.cvtColor(cv_image, cv2.COLOR_RGB2BGR))
-    print(f"🖼️ Salvataggio immagine: {debug_path}")
+    print(f"Salvataggio immagine: {debug_path}")
+
+    # After generating the debug image with the green rectangle, try to define the floor
+    try:
+        # Support running as a module or as a script from repo root
+        try:
+            from PlanParser.define_floor import define_floor as _run_define_floor
+        except Exception:  # pragma: no cover
+            from define_floor import define_floor as _run_define_floor
+        result = _run_define_floor(debug_image_path=debug_path, output_cropped_path="base_rectangle.png")
+        if result and result.get("floor"):
+            print(f"Risultato piano: {result['floor']} (conf {result.get('confidence'):.2f})")
+        else:
+            print("Nessuna etichetta piano trovata.")
+    except Exception as e:  # pragma: no cover
+        print(f"⚠️ Errore durante la definizione del piano: {e}")
 
 if __name__ == "__main__":
     pdf_path = "./data/scheda_catastale.pdf"  # cambia se serve
