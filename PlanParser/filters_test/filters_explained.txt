@@ -1,0 +1,35 @@
+GUIDA FILTRI / COMPUTER VISION
+Immagine di input: base_rectangle_section_1.png
+
+00_original.png : Immagine originale di riferimento.
+01_adaptive_gauss.png : Binarizzazione adattiva gaussiana; spesso più stabile su planimetrie.
+02_adaptive_mean.png : Binarizzazione adattiva a media locale; utile con illuminazione non uniforme.
+03_bilateral.png : Filtro bilaterale che riduce il rumore mantenendo i bordi netti (utile per testo).
+04_canny_soft.png : Edge detection Canny con soglie basse (più sensibile, più rumore).
+05_canny_strong.png : Edge detection Canny con soglie più alte (più preciso, meno falsi).
+06_clahe_gray.png : Equalizzazione adattiva del contrasto locale (CLAHE) per migliorare testo e linee deboli.
+07_dilate_small.png : Dilatazione leggera: ispessisce le linee e connette piccoli gap.
+08_distance_transform.png : Trasformata di distanza sul binario (utile per segmentazione, watershed).
+09_edge_preserve.png : Filtro edge-preserving: smoothing non lineare che mantiene i bordi (prep per threshold).
+10_erode_small.png : Erosione leggera: assottiglia le linee e rimuove punti isolati.
+11_gaussian_blur.png : Riduzione rumore gaussiana; utile prima di edge detection.
+12_gray.png : Conversione in scala di grigi; base per quasi tutte le operazioni successive.
+13_horizontal_lines.png : Estrazione linee orizzontali mediante morfologia (isolamento muri/quote).
+14_laplacian.png : Seconda derivata isotropa; evidenzia rapidi cambi di intensità (tutti i bordi).
+15_median_blur.png : Filtro mediano; efficace contro salt-and-pepper noise preservando i bordi.
+16_morph_close.png : Morph closing: chiude piccoli gap nelle linee (dilatazione + erosione).
+17_morph_gradient.png : Differenza tra dilatazione ed erosione (outline delle forme).
+18_morph_open.png : Morph opening: rimuove piccoli rumori (erosione + dilatazione).
+19_otsu.png : Binarizzazione globale automatica (Otsu) foreground scuro su fondo chiaro.
+20_otsu_inv.png : Binarizzazione Otsu inversa (foreground chiaro su sfondo scuro) per segmentazioni alternative.
+21_quantize_k4.png : Riduzione colori via K-means (k=4); semplifica la scena per clustering di regioni.
+22_scharr_x.png : Filtro Scharr orizzontale (derivata precisa) per linee verticali.
+23_scharr_y.png : Filtro Scharr verticale per linee orizzontali.
+24_skeleton.png : Scheletrizzazione morfologica: riduce le linee al loro asse centrale.
+25_sobel_x.png : Derivata orizzontale (Sobel) per evidenziare bordi verticali.
+26_sobel_y.png : Derivata verticale (Sobel) per evidenziare bordi orizzontali.
+27_vertical_lines.png : Estrazione linee verticali mediante morfologia (isolamento muri verticali).
+ch_channel_b.png : Canali B,G,R separati per analizzare differenze cromatiche localizzate.
+ch_channel_g.png : Canali B,G,R separati per analizzare differenze cromatiche localizzate.
+ch_channel_r.png : Canali B,G,R separati per analizzare differenze cromatiche localizzate.
+overlay_edges.png : Sovrapposizione bordi (Canny forte) sull'originale per verifica linee.

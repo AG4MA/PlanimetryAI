@@ -1,0 +1,3975 @@
+{
+  "type": "IfcProject",
+  "GlobalId": "FAB222B4-E635-4719-AD47-442D1A691D20",
+  "UnitsInContext": {
+    "LengthUnit": "px",
+    "ScalePxPerM": null
+  },
+  "Buildings": [
+    {
+      "type": "IfcBuilding",
+      "GlobalId": "AAEE3823-1656-4C03-964C-507798A83DF9",
+      "BuildingStoreys": [
+        {
+          "type": "IfcBuildingStorey",
+          "GlobalId": "BB1D7DFF-35EC-4EE7-8DAA-A0A2F54350A2",
+          "Name": "Piano",
+          "Elevation": 0.0,
+          "Height": 3.0,
+          "Spaces": [],
+          "Elements": {
+            "Walls": [
+              {
+                "type": "IfcWall",
+                "GlobalId": "B4F417BA-1959-4DD7-99E4-16CDBB09FE0A",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    508,
+                    387
+                  ],
+                  [
+                    597,
+                    391
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "BC540510-AB91-420D-A37C-974705055D47",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    400,
+                    374
+                  ],
+                  [
+                    512,
+                    377
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "293EDCBB-DCD5-4980-B429-57623FEC7AF2",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    593,
+                    375
+                  ],
+                  [
+                    706,
+                    375
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "D8CEAA74-BC43-4FC9-971F-2E8D18D1DAF9",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    366
+                  ],
+                  [
+                    502,
+                    369
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "0460F150-CDEA-4EE2-A86D-635ED8B1D771",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    586,
+                    354
+                  ],
+                  [
+                    616,
+                    354
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "65C42DEE-B433-4632-B716-4914BF8B87D8",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    508,
+                    339
+                  ],
+                  [
+                    706,
+                    339
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "758EF9C7-921A-4DD6-AE9A-B5D1F3B39DA0",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    497,
+                    331
+                  ],
+                  [
+                    696,
+                    331
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "36592C00-265C-4F0B-9665-47E86C44E656",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    322
+                  ],
+                  [
+                    474,
+                    328
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "6A3A940E-EE3F-4484-A100-B13D08A6467E",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    423,
+                    310
+                  ],
+                  [
+                    457,
+                    310
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "6402DEA8-DB90-49F7-9CD9-8713F0F39442",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    295
+                  ],
+                  [
+                    472,
+                    295
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "EDF5DD8A-D4C3-4ACA-B35A-51C608749529",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    287
+                  ],
+                  [
+                    472,
+                    287
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "669EF5D0-5C75-46CE-BC72-EFFF9D24A73D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    278
+                  ],
+                  [
+                    472,
+                    278
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "7C1F9079-4CD9-460E-9538-5973D00BF9F6",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    269
+                  ],
+                  [
+                    472,
+                    270
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "365AC890-D688-4420-977E-D5E138879141",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    551,
+                    264
+                  ],
+                  [
+                    579,
+                    268
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "C1BA7C66-5A30-4D30-8CB5-8E5DD6DC173D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    605,
+                    263
+                  ],
+                  [
+                    639,
+                    264
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "4FD94FD9-C662-4300-8922-4087440752A6",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    261
+                  ],
+                  [
+                    439,
+                    261
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "1F2A811D-533D-48EB-9BDE-1D45F4DC9F1E",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    253
+                  ],
+                  [
+                    439,
+                    253
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "8FD190B4-5779-4767-B0EB-AFAC6A9A5041",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    466,
+                    243
+                  ],
+                  [
+                    499,
+                    247
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "EA5660BB-9B04-40FB-8CAF-28ABEB7ED83C",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    245
+                  ],
+                  [
+                    440,
+                    245
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "BACF74AC-A88B-4D24-B95C-FFC00AA4169E",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    386,
+                    223
+                  ],
+                  [
+                    416,
+                    223
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "EDFDEA42-5DD1-42AB-89FF-629705799D11",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    453,
+                    222
+                  ],
+                  [
+                    486,
+                    226
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F070FBFE-E6B4-45FB-B4F1-BB1DD55FA92B",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    575,
+                    202
+                  ],
+                  [
+                    696,
+                    207
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "19051BF2-C079-4692-BA3C-E7DD6C83EA55",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    548,
+                    203
+                  ],
+                  [
+                    600,
+                    207
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "74CDBEB0-3612-47F1-8F0A-F37B85D8E960",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    202
+                  ],
+                  [
+                    515,
+                    205
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "EAED4594-3900-4EB5-9FD2-18367BE7E8BA",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    598,
+                    190
+                  ],
+                  [
+                    691,
+                    194
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "566756DA-B034-4BCD-8A6A-42B6583F5AB0",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    571,
+                    185
+                  ],
+                  [
+                    696,
+                    188
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "6D7046B2-8C24-4F96-AAD3-4F60EB654CA4",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    184
+                  ],
+                  [
+                    519,
+                    199
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "3F2BE750-55B7-44CB-9F0B-B0B3193AA95B",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    557,
+                    172
+                  ],
+                  [
+                    591,
+                    172
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "915BEAEF-78C5-4A04-94EB-5FC13D1BCC9B",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    499,
+                    171
+                  ],
+                  [
+                    533,
+                    174
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "71EEC264-33AB-4CC3-9126-EC139F4D6045",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    688,
+                    161
+                  ],
+                  [
+                    719,
+                    161
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "BB7BEA65-509E-40FF-962A-AE727E1AB802",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    446,
+                    126
+                  ],
+                  [
+                    478,
+                    126
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F6C34050-D98A-4F0A-B000-4D398C23C5EF",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    619,
+                    124
+                  ],
+                  [
+                    652,
+                    124
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F547494D-386F-4587-B6C2-30F36FFBD89D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    69
+                  ],
+                  [
+                    696,
+                    72
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "D5FCE2ED-5845-4058-A987-BA56B02DAB8C",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    587,
+                    61
+                  ],
+                  [
+                    706,
+                    64
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "95C345E5-5B4C-427A-BA36-47BE1E16255D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    400,
+                    61
+                  ],
+                  [
+                    575,
+                    62
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "C038BADF-047C-4A60-BA25-6A5FC8BEC6A6",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    470,
+                    367
+                  ],
+                  [
+                    470,
+                    378
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "596E373A-FCCA-498E-B699-1D741AB46938",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    441,
+                    367
+                  ],
+                  [
+                    441,
+                    378
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "7DACDE16-05C6-4F49-A58E-5A03655019C8",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    693,
+                    365
+                  ],
+                  [
+                    693,
+                    378
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E9B0EC41-614F-4212-AD24-982F1A74FF0F",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    606,
+                    365
+                  ],
+                  [
+                    606,
+                    378
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "D183A9F8-4EBD-4138-AC6D-BEC9E145693D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    595,
+                    365
+                  ],
+                  [
+                    595,
+                    392
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "3EF2EE8F-9779-40EE-822D-50B1943FE09A",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    455,
+                    362
+                  ],
+                  [
+                    455,
+                    392
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "942CCCF4-0D90-4B75-B590-B166E068D2C7",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    588,
+                    348
+                  ],
+                  [
+                    588,
+                    358
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "5574046D-BCA0-4721-AC0E-21374BE5A89D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    457,
+                    343
+                  ],
+                  [
+                    457,
+                    353
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "11A96BF9-8036-4045-9F50-07883EF55763",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    510,
+                    339
+                  ],
+                  [
+                    512,
+                    392
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F803F336-69FE-4925-A35E-BEBC9C49D079",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    676,
+                    332
+                  ],
+                  [
+                    676,
+                    342
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "932D7D2B-DECC-4FC3-967A-FAFF0B11F3F7",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    556,
+                    332
+                  ],
+                  [
+                    556,
+                    342
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "D9E189DB-9FAA-4225-8945-99497788E58D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    522,
+                    332
+                  ],
+                  [
+                    522,
+                    342
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "DF403F50-8DAC-4A8D-A7F8-31A945CF6D97",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    651,
+                    326
+                  ],
+                  [
+                    651,
+                    355
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "242B5761-9474-45A2-838A-AE5337927350",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    539,
+                    326
+                  ],
+                  [
+                    539,
+                    355
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "3F59ABF5-65EF-4CB9-B0BD-9DF5AFACE22D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    493,
+                    323
+                  ],
+                  [
+                    502,
+                    370
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "252A64C4-DAFF-40ED-BDC8-9CAB5C7DC033",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    482,
+                    317
+                  ],
+                  [
+                    482,
+                    334
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CC36BD3B-0F07-4A35-AC49-FE257F76D7AC",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    565,
+                    264
+                  ],
+                  [
+                    565,
+                    274
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "12B4B8DB-8FE5-467B-BF98-219FE84BFAC4",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    607,
+                    263
+                  ],
+                  [
+                    607,
+                    273
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "DB3072FF-EC00-4FD9-BD1E-3580E9AD6E00",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    455,
+                    262
+                  ],
+                  [
+                    455,
+                    313
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B5DD131C-2E8E-405B-909E-9D920C4BDC5B",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    423,
+                    244
+                  ],
+                  [
+                    426,
+                    313
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "83FB9C29-8309-4B9F-B741-1EA6F43563BA",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    437,
+                    243
+                  ],
+                  [
+                    439,
+                    298
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "7202492C-972E-4032-A39C-8C4AF2113691",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    469,
+                    237
+                  ],
+                  [
+                    469,
+                    329
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "EAEEC94D-3756-44F2-8768-74F8CC3AE95A",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    439,
+                    215
+                  ],
+                  [
+                    439,
+                    230
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "40F56047-3728-4FC9-A33C-EE8656440CBD",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    410,
+                    70
+                  ],
+                  [
+                    410,
+                    370
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A18247DF-99F8-405C-81B4-285DDC1EF5D3",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    502,
+                    193
+                  ],
+                  [
+                    502,
+                    203
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E41AB46A-6810-48D6-9CAB-35641489F361",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    651,
+                    191
+                  ],
+                  [
+                    653,
+                    204
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "C55B68ED-CF4F-4F79-A63C-117E4E94A00C",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    538,
+                    188
+                  ],
+                  [
+                    538,
+                    221
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A74A167D-BE6F-4970-839B-1B2C0F388536",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    633,
+                    185
+                  ],
+                  [
+                    633,
+                    196
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "8B085233-D5F8-466D-B61F-19930D93C552",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    626,
+                    185
+                  ],
+                  [
+                    626,
+                    197
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F165B1EB-5462-4574-83A1-E96CC617B1F5",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    613,
+                    185
+                  ],
+                  [
+                    615,
+                    195
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "8C490F7F-55B6-43B1-BE5D-8FC35C9F89DF",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    601,
+                    185
+                  ],
+                  [
+                    601,
+                    195
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "3587A3D5-E1BD-4F97-96DA-A9C9FB3815B2",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    593,
+                    185
+                  ],
+                  [
+                    593,
+                    195
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "DB4EAD11-2509-4A8A-97AB-BF651CCF7089",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    572,
+                    185
+                  ],
+                  [
+                    576,
+                    204
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "13FA8C44-C456-4047-B71B-6CD47DF296FC",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    516,
+                    185
+                  ],
+                  [
+                    516,
+                    204
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "800B7991-5521-4D4D-AFA0-1B3D87F98A29",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    455,
+                    185
+                  ],
+                  [
+                    461,
+                    197
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "0D8260BC-0762-4465-9856-6AA7C68452FC",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    447,
+                    185
+                  ],
+                  [
+                    447,
+                    198
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "756EA883-30EB-4DFB-B08E-97F97813D420",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    436,
+                    185
+                  ],
+                  [
+                    436,
+                    195
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B03DC0F4-5546-4086-AD57-059682CAE686",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    427,
+                    185
+                  ],
+                  [
+                    427,
+                    195
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F5B14A94-51E1-4E4B-A62C-B738496AA3DD",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    414,
+                    185
+                  ],
+                  [
+                    414,
+                    196
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "906303BB-9FB1-4006-BCA7-FE3D3A313CA2",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    538,
+                    137
+                  ],
+                  [
+                    538,
+                    171
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E488032A-C772-4D22-818D-CA6617C82CF1",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    542,
+                    107
+                  ],
+                  [
+                    542,
+                    117
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "D82404FB-F971-444D-AE9B-5E7FC22AC4B2",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    529,
+                    105
+                  ],
+                  [
+                    529,
+                    115
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "4A530F62-1A69-4AB3-A742-BE1AC4860417",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    694,
+                    70
+                  ],
+                  [
+                    694,
+                    334
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "FCAFCE65-1815-4FBD-A9B0-76CAE91D8274",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    572,
+                    70
+                  ],
+                  [
+                    576,
+                    162
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "79296495-A504-4A64-88F0-ABAED27D33DE",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    516,
+                    70
+                  ],
+                  [
+                    516,
+                    162
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "2AD9C075-3695-455A-AB0A-CF541D5B7249",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    703,
+                    62
+                  ],
+                  [
+                    703,
+                    378
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "2468FA9D-AC61-4F5D-9DFC-120B67D2AEC5",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    565,
+                    62
+                  ],
+                  [
+                    565,
+                    73
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "59EBD1E7-3234-4853-B64B-702ED46BCEC4",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    537,
+                    62
+                  ],
+                  [
+                    537,
+                    73
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B91BC354-9D43-468C-998D-94575EA5712B",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    498,
+                    62
+                  ],
+                  [
+                    498,
+                    73
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "98F71190-A8AF-4F37-860A-C7ED7932F6CD",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    464,
+                    62
+                  ],
+                  [
+                    464,
+                    73
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "FABA9EF3-25CC-45A5-B0CC-A9F637B52022",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    402,
+                    62
+                  ],
+                  [
+                    402,
+                    378
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "21ABF5A0-E700-432A-9BB2-3950085A05F6",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    588,
+                    53
+                  ],
+                  [
+                    588,
+                    65
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F9AABBC8-B349-4BFE-A665-2DDC4C99BE54",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    574,
+                    53
+                  ],
+                  [
+                    574,
+                    64
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "EE6A5706-8A80-4698-9EA9-92F7B193BCFF",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    552,
+                    48
+                  ],
+                  [
+                    552,
+                    78
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "AD3223FB-55A5-4485-93B3-19C900E2E948",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    480,
+                    47
+                  ],
+                  [
+                    480,
+                    79
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "82A4DA0C-80B2-44E6-A54A-CB1E1EA65938",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    271,
+                    6
+                  ],
+                  [
+                    297,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "7474BCEA-D239-47C6-860A-F6FCCBDE8573",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    220,
+                    6
+                  ],
+                  [
+                    235,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "0595F748-D5F6-4CE0-8137-92F4CE556A14",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    367,
+                    3
+                  ],
+                  [
+                    382,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "9C96C106-1111-4B34-A8F9-F02C40BE236D",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    264,
+                    6
+                  ],
+                  [
+                    264,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CDFEB4F6-370A-49D0-820E-948CC5288113",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    242,
+                    6
+                  ],
+                  [
+                    242,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "0414C3A0-8052-4E61-A79B-892D541659DA",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    209,
+                    6
+                  ],
+                  [
+                    209,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "6A00DE9C-9FB6-4A4B-B6DD-F12E62D8CC04",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    356,
+                    3
+                  ],
+                  [
+                    360,
+                    17
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B0D1CBC3-0BB5-462E-90C9-3B1CC31F1166",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    349,
+                    3
+                  ],
+                  [
+                    349,
+                    17
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "2C4BEF5F-3330-4512-B8A3-0FE64A8234D2",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    339,
+                    3
+                  ],
+                  [
+                    339,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "47A31713-B373-4536-A5C9-07323D2D6182",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    316,
+                    2
+                  ],
+                  [
+                    316,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A22D53D8-708C-48B6-9662-B97A712096C2",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    307,
+                    2
+                  ],
+                  [
+                    307,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "12E77861-F8C0-46B0-B66B-8ED05387E1B8",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    252,
+                    2
+                  ],
+                  [
+                    252,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "4DDF6531-1523-44BA-821E-C1D73A7602F5",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    197,
+                    2
+                  ],
+                  [
+                    197,
+                    18
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "247A6F12-6276-4F70-89BD-B3D7097B8C82",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    1102,
+                    0
+                  ],
+                  [
+                    1102,
+                    430
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "7C80A7F8-3ADD-4875-AFC0-A1FA42443EB0",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    430
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "449C9949-AFBD-42ED-88AC-7CD880DE85A2",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    1,
+                    429
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "1DF32611-415F-4923-84C3-6EFCAADF36AD",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    703,
+                    62
+                  ],
+                  [
+                    706,
+                    143
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A4DF5D09-3B06-41B1-B908-1DB3EA9A6571",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    400,
+                    61
+                  ],
+                  [
+                    403,
+                    207
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "5A3F9D67-C83C-44FB-9556-2BA76C0245BE",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    693,
+                    71
+                  ],
+                  [
+                    696,
+                    341
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CBFA994A-CA32-4961-94D8-98E32275D664",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    201
+                  ],
+                  [
+                    409,
+                    72
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "6AB2CEC7-7066-4AE5-947D-52447C055670",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    412,
+                    177
+                  ],
+                  [
+                    412,
+                    61
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "12B86A6B-1BC8-4510-8F0F-2F60DB1A09F1",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    333,
+                    14
+                  ],
+                  [
+                    384,
+                    17
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A5AB3D60-5CB7-419A-ACF7-F6B31737D355",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    571,
+                    69
+                  ],
+                  [
+                    578,
+                    161
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "5AA0FF9B-6D75-4A74-9A54-2491537DBA5F",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    521,
+                    337
+                  ],
+                  [
+                    667,
+                    341
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "9BD7E2F8-CAC1-48F5-9EE0-983B07EA0293",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    513,
+                    160
+                  ],
+                  [
+                    513,
+                    73
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "06D67A24-7B09-4FC5-A2A6-AE3FB70B8CE1",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    556,
+                    200
+                  ],
+                  [
+                    587,
+                    200
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "9A0F3828-D856-40D8-9090-2314367DFCD6",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    404,
+                    201
+                  ],
+                  [
+                    471,
+                    208
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "9D4CA377-5314-4A92-8BA3-3C524358E293",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    605,
+                    373
+                  ],
+                  [
+                    696,
+                    373
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "21AEF44E-4ECD-493E-9964-D8D43DD5AF81",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    519,
+                    148
+                  ],
+                  [
+                    519,
+                    70
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "4D0AE702-731E-4B2F-95FF-50908FE10238",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    537,
+                    137
+                  ],
+                  [
+                    540,
+                    169
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "15AEC58B-BA85-44C6-A186-243AAF98858B",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    466,
+                    237
+                  ],
+                  [
+                    472,
+                    321
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B5EB3C92-DDB1-4329-835B-513112DBF94C",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    403,
+                    259
+                  ],
+                  [
+                    403,
+                    356
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "404792A6-02CC-4D7E-A7B9-30BE754B1EFC",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    454,
+                    191
+                  ],
+                  [
+                    488,
+                    194
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CF996B6B-D869-4541-B56C-DC17B02AAEE6",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    515,
+                    330
+                  ],
+                  [
+                    617,
+                    333
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "0707C906-89EB-4C5B-BCE6-C8D4D08B3FF3",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    619,
+                    377
+                  ],
+                  [
+                    675,
+                    377
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CA274B6D-85BF-4094-897D-365C2FBCA05A",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    315,
+                    7
+                  ],
+                  [
+                    340,
+                    5
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "717A7EBE-7E30-44CE-B14B-D8F7F27B552C",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    586,
+                    184
+                  ],
+                  [
+                    674,
+                    191
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E7711D6C-CB70-4845-A815-3713AC587724",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    625,
+                    72
+                  ],
+                  [
+                    659,
+                    72
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "D1C0CA24-CE57-467C-ABA6-B5831AE45807",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    703,
+                    256
+                  ],
+                  [
+                    703,
+                    312
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "18B69E59-1C68-4424-8DD9-02927210C60E",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    454,
+                    262
+                  ],
+                  [
+                    457,
+                    312
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "05A144DA-A24F-493F-A322-7C96FA2CEBBA",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    205,
+                    11
+                  ],
+                  [
+                    243,
+                    17
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "3F5F13ED-5986-4910-B3F9-33564EF634A2",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    251,
+                    9
+                  ],
+                  [
+                    300,
+                    11
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "9DEBB524-29F4-44F2-9D5F-3858EFAFA24A",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    467,
+                    263
+                  ],
+                  [
+                    467,
+                    292
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "720B7EFA-0340-4767-A9B3-4EC54F0FD79A",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    409,
+                    281
+                  ],
+                  [
+                    409,
+                    337
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "8C0CDFCE-2C1E-462E-8F0F-9C65774DA568",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    306,
+                    12
+                  ],
+                  [
+                    341,
+                    13
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B2CF991E-5EBA-4644-92DD-D12F7A1885AE",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    702,
+                    143
+                  ],
+                  [
+                    702,
+                    177
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "83EFB12D-F0EF-4F5C-9614-A4C2E9C73FBB",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    595,
+                    198
+                  ],
+                  [
+                    629,
+                    196
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F4C8A9F5-399F-4F99-8953-FE5685720548",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    619,
+                    201
+                  ],
+                  [
+                    645,
+                    200
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F2F3B6D8-6584-4AA5-8B3A-B2B38DB5F2AE",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    348,
+                    6
+                  ],
+                  [
+                    375,
+                    5
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "FE6AA379-92C8-4B40-AF6A-14D088AE1A0A",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    196,
+                    8
+                  ],
+                  [
+                    244,
+                    13
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "551D1986-D469-49E0-9504-271697C7978E",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    703,
+                    233
+                  ],
+                  [
+                    703,
+                    180
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "795B1F36-449A-4554-8C92-725E41AB6291",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    413,
+                    64
+                  ],
+                  [
+                    439,
+                    64
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "4DE4C144-F94F-4D88-B1ED-5C66BF91DBE1",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    491,
+                    61
+                  ],
+                  [
+                    522,
+                    61
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CD1153F3-C649-41DA-B24A-14542F3951CF",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    426,
+                    187
+                  ],
+                  [
+                    469,
+                    187
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "24E53CA9-BFBA-4899-AB4E-60B1814EE112",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    588,
+                    263
+                  ],
+                  [
+                    614,
+                    268
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B9996249-E0A1-46EF-8918-850014DFD9A7",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    714,
+                    213
+                  ],
+                  [
+                    759,
+                    213
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "10389D8E-F51D-4D8B-84CF-E07DB7AEC769",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    499,
+                    369
+                  ],
+                  [
+                    499,
+                    337
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "55BD8F33-F2BF-464B-A9FF-E84048C4E008",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    609,
+                    190
+                  ],
+                  [
+                    644,
+                    187
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "FCF5B3FE-246B-43DA-8269-10C12BB93E93",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    508,
+                    389
+                  ],
+                  [
+                    508,
+                    342
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B14221E9-0110-4D4B-824B-E539015509DD",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    412,
+                    365
+                  ],
+                  [
+                    412,
+                    335
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "03966F17-F4C7-4687-AF1E-24D0153587DA",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    515,
+                    71
+                  ],
+                  [
+                    544,
+                    72
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "87DA778C-E195-40FC-9C06-402D594985FE",
+                "SectionIndex": 1,
+                "Axis": [
+                  [
+                    540,
+                    219
+                  ],
+                  [
+                    540,
+                    189
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "76D8B335-28CB-48CB-BD46-4FB31CA8BE2A",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    0,
+                    879
+                  ],
+                  [
+                    1103,
+                    879
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "5730774D-38C2-4549-9731-2C8BAB6CCED7",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    574,
+                    864
+                  ],
+                  [
+                    603,
+                    864
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "79A270DC-9D70-4AC1-992A-DBD573A504D4",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    332,
+                    857
+                  ],
+                  [
+                    787,
+                    860
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "11C78C3D-C01D-4341-AD3B-BB29D6FE11A4",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    507,
+                    741
+                  ],
+                  [
+                    571,
+                    748
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "1B2B8253-F796-488B-82ED-8BF09BD03EE3",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    400,
+                    627
+                  ],
+                  [
+                    706,
+                    630
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "6C386662-3772-4BC7-88EC-FB1CBB7EC557",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    400,
+                    582
+                  ],
+                  [
+                    502,
+                    587
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "18852F78-700A-4EE9-9A55-35E137966BAC",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    576
+                  ],
+                  [
+                    471,
+                    579
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "524AE352-0564-4B4A-9A24-66B72D0B7C08",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    588,
+                    564
+                  ],
+                  [
+                    624,
+                    564
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "12073644-0286-488C-99E0-4C8C3C2BD951",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    423,
+                    563
+                  ],
+                  [
+                    457,
+                    565
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B8818886-0A9B-4E80-93B0-668CBD8E9435",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    549
+                  ],
+                  [
+                    471,
+                    549
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "618CC3B2-7C27-4B92-BB3C-07CBA636513C",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    540
+                  ],
+                  [
+                    471,
+                    540
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "1B3E32B7-8455-4C11-B730-BFDCBF8C7423",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    532
+                  ],
+                  [
+                    471,
+                    532
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "00774EA9-9983-483A-81CF-53147492FA57",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    522
+                  ],
+                  [
+                    471,
+                    523
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "4BBE8C14-11EB-43C3-AEFE-589CFDDD06CF",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    509,
+                    519
+                  ],
+                  [
+                    706,
+                    522
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "21068639-B066-4B10-994A-E765685DB02F",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    515
+                  ],
+                  [
+                    439,
+                    515
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "78E38B81-204D-43CF-8C1A-7250C654C93D",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    503,
+                    513
+                  ],
+                  [
+                    562,
+                    514
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B2767134-F45E-4715-97CA-156CD79AB716",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    507
+                  ],
+                  [
+                    439,
+                    507
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "89EBBDA7-6FE5-4EFE-B010-3B80DB6BC65F",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    560,
+                    505
+                  ],
+                  [
+                    597,
+                    505
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "0653E10B-65F1-4AD4-98C6-14A970B8DFF3",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    498
+                  ],
+                  [
+                    440,
+                    498
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "D7254AEA-FB56-46AD-A024-08550C49A3EF",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    445,
+                    475
+                  ],
+                  [
+                    472,
+                    475
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "65DD61D5-047D-4CAF-8E93-682D6DF9D72C",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    486,
+                    442
+                  ],
+                  [
+                    520,
+                    445
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "185D3156-7EA2-436C-B4DF-59DE7C257CF9",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    411,
+                    427
+                  ],
+                  [
+                    506,
+                    433
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "2AD7B40C-21DF-4E71-BA3D-AA02CCA7CE8D",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    486,
+                    396
+                  ],
+                  [
+                    520,
+                    396
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "D45F2773-4F59-490B-BE34-7160E4CEC275",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    499,
+                    378
+                  ],
+                  [
+                    597,
+                    381
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "35AD5C61-561A-452F-B98C-D0C4D9C053FD",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    531,
+                    374
+                  ],
+                  [
+                    603,
+                    379
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E4C7CAF0-F59F-4DA3-ACCE-950F8B786827",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    547,
+                    351
+                  ],
+                  [
+                    579,
+                    351
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CA605A37-90D2-4372-82B7-FBB8C1394A03",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    486,
+                    340
+                  ],
+                  [
+                    551,
+                    343
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "4D78D30E-B2BF-4575-B1A0-AA5D2551D33A",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    411,
+                    328
+                  ],
+                  [
+                    603,
+                    330
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "8A1CF8B1-3578-410A-8C19-FE9C0DCAE09C",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    587,
+                    315
+                  ],
+                  [
+                    706,
+                    317
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "8D732B75-B8FA-4D84-9F9A-A70F8BE68C0D",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    400,
+                    314
+                  ],
+                  [
+                    576,
+                    317
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "69E17BB5-193A-492E-ADEF-8D56BA9FF92A",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    539,
+                    201
+                  ],
+                  [
+                    590,
+                    207
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "5663D19F-B84D-49F8-B288-8F63512CEE42",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    670,
+                    149
+                  ],
+                  [
+                    787,
+                    152
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "C4E21112-AA8A-42C7-8259-2060B2C7E4B3",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    332,
+                    52
+                  ],
+                  [
+                    787,
+                    55
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "9E29AA74-8B94-48E3-9DB0-3EE7F7429072",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    503,
+                    37
+                  ],
+                  [
+                    576,
+                    41
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "254C2234-AA92-4B89-A2ED-CBCDBC686011",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    994,
+                    759
+                  ],
+                  [
+                    994,
+                    783
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A036F7EC-5842-436B-AEE0-EE07D6FFF86B",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    485,
+                    568
+                  ],
+                  [
+                    485,
+                    603
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "9F4B226A-FE6A-4891-B3BA-CDCF44E2BA8C",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    510,
+                    521
+                  ],
+                  [
+                    510,
+                    590
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A10B3292-8098-4598-A83A-5F4CCB28C697",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    455,
+                    515
+                  ],
+                  [
+                    455,
+                    566
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "97A3C108-72F1-47E6-8DA1-D0913D5D7872",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    469,
+                    509
+                  ],
+                  [
+                    469,
+                    590
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "EB35F778-0EFF-4BF1-BE0A-450761150665",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    540,
+                    500
+                  ],
+                  [
+                    541,
+                    538
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "45C67C1F-B9F3-4EAB-B224-341CB4145EC3",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    424,
+                    498
+                  ],
+                  [
+                    424,
+                    566
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E3ABE0F4-4AD1-440B-A7FD-14F6151177E0",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    439,
+                    497
+                  ],
+                  [
+                    439,
+                    552
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "95139485-CCB7-4961-B959-74876B3C3018",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    410,
+                    328
+                  ],
+                  [
+                    412,
+                    580
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F5F0E93A-4E25-4817-AF9D-A35E29FE931F",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    593,
+                    377
+                  ],
+                  [
+                    595,
+                    507
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "59E46BED-CD25-4D4B-8C9B-B9BE0790A909",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    504,
+                    464
+                  ],
+                  [
+                    504,
+                    517
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "320881E5-8BC1-4C33-94F5-7FAA2F1AD1DC",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    500,
+                    456
+                  ],
+                  [
+                    500,
+                    590
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "5CF5626C-8914-411D-8237-987829C6FF82",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    500,
+                    409
+                  ],
+                  [
+                    504,
+                    434
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "6395B95D-EC1A-4D3F-BF3B-68A431D14E90",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    532,
+                    351
+                  ],
+                  [
+                    536,
+                    382
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "C0C4D71B-9A36-428C-8AE1-E85F15444D7F",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    500,
+                    351
+                  ],
+                  [
+                    504,
+                    387
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "05DD1372-651D-4B44-854D-C6CCF348E077",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    704,
+                    315
+                  ],
+                  [
+                    704,
+                    631
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "2F505E56-EDE5-451D-BCFE-C3C9D2054D44",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    597,
+                    315
+                  ],
+                  [
+                    600,
+                    523
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A81CE2E1-1B66-4BCA-903E-B7E310DA139C",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    401,
+                    315
+                  ],
+                  [
+                    401,
+                    631
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A31D32A6-82EB-44D0-AA0E-5D4090824258",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    552,
+                    294
+                  ],
+                  [
+                    552,
+                    337
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "BE350AAA-DF63-481C-8616-86B5C15423D8",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    480,
+                    294
+                  ],
+                  [
+                    480,
+                    337
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "AABE3D94-835E-4570-99F2-82A0729CFEDC",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    785,
+                    53
+                  ],
+                  [
+                    785,
+                    861
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "08C952AE-514A-4692-97B2-DCEB520F970D",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    671,
+                    53
+                  ],
+                  [
+                    671,
+                    153
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "279E1169-3889-4E35-AB55-2B56D58B3024",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    333,
+                    53
+                  ],
+                  [
+                    333,
+                    861
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B0C648F7-EB00-4D47-B580-D2436E0F5997",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    1102,
+                    0
+                  ],
+                  [
+                    1102,
+                    881
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B3AB7C1C-DF38-4BB0-917B-8D493ACE99BC",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    876
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "472FDE9F-A011-48A5-89B8-2ED2E630B763",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    10,
+                    878
+                  ],
+                  [
+                    524,
+                    878
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E752F6C3-D769-4F2D-B2BE-B642DE8DCC12",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    1,
+                    878
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "FA15314A-CD98-4A22-8790-A28032F7A157",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    784,
+                    52
+                  ],
+                  [
+                    787,
+                    860
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F1A33B0F-CF18-4398-8DBE-F84EE9C5EA11",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    332,
+                    52
+                  ],
+                  [
+                    335,
+                    858
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "2DE0E0BE-F2A6-47E7-AA89-E4E5C7BCE8D1",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    400,
+                    314
+                  ],
+                  [
+                    403,
+                    629
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "C4FFE50E-8D70-4936-8BB9-E31BA6D7D22B",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    703,
+                    314
+                  ],
+                  [
+                    706,
+                    629
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "9474C30B-430E-4D80-A875-18E46E25BC8A",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    414,
+                    508
+                  ],
+                  [
+                    414,
+                    435
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "FB02F979-2BEA-43FB-8E98-D7D721418527",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    499,
+                    455
+                  ],
+                  [
+                    502,
+                    586
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "5210541E-547A-4040-B097-66F2700A0B09",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    601,
+                    314
+                  ],
+                  [
+                    603,
+                    381
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "BCE8B60D-2973-46A6-B3E9-B9AA7ACC69AA",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    597,
+                    327
+                  ],
+                  [
+                    599,
+                    457
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "30DE201B-2C99-4635-BCC2-3494E7E5EE07",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    594,
+                    507
+                  ],
+                  [
+                    594,
+                    463
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E12FD653-F6F2-4294-8228-D77AFA3D8A8F",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    411,
+                    427
+                  ],
+                  [
+                    411,
+                    330
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F5BFFF72-8294-40EA-BC3B-3E378B267110",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    504,
+                    463
+                  ],
+                  [
+                    506,
+                    516
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "0F00589F-E32E-447B-8861-4494AD88B771",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    546,
+                    879
+                  ],
+                  [
+                    659,
+                    878
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "297BB3F7-138F-4E6A-8126-21D74F5F8C44",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    473,
+                    327
+                  ],
+                  [
+                    577,
+                    327
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E41A975B-D625-4A64-8442-D604519013C4",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    545,
+                    522
+                  ],
+                  [
+                    642,
+                    522
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A377D2A4-2325-45F4-92A4-E653173A65AA",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    409,
+                    578
+                  ],
+                  [
+                    409,
+                    523
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A7193BDA-26C1-4E83-823D-A555B0234822",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    509,
+                    513
+                  ],
+                  [
+                    512,
+                    589
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "94E5B64C-E2D5-4D65-B394-55AFF69C336F",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    670,
+                    56
+                  ],
+                  [
+                    673,
+                    150
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "0E3E24BD-2ECA-40F4-B3F0-C3663D2609C2",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    500,
+                    317
+                  ],
+                  [
+                    529,
+                    317
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "ECD95FD3-6AD7-431F-BCC5-1BC59A4C9343",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    876,
+                    878
+                  ],
+                  [
+                    932,
+                    878
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A1B11756-22B7-497E-9B51-B77AB41E1683",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    514,
+                    457
+                  ],
+                  [
+                    596,
+                    457
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "AF339AC8-25C2-493D-9929-38A00C5378C5",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    941,
+                    878
+                  ],
+                  [
+                    1092,
+                    878
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "8DA1BFD9-13A3-4A09-976B-2CAD8C9C37B7",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    963,
+                    698
+                  ],
+                  [
+                    1024,
+                    765
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "06D12319-BAFE-4123-90C8-12181B04C866",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    349,
+                    10
+                  ],
+                  [
+                    385,
+                    16
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "61AF3485-0B5A-4DDF-A776-7A4F07F306A6",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    317,
+                    6
+                  ],
+                  [
+                    342,
+                    6
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "396E564D-9F96-4B4F-9F17-DC10C2066DAB",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    812,
+                    878
+                  ],
+                  [
+                    868,
+                    878
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "AD5B2D71-E4C2-4E49-AB40-CC126927A8AE",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    268,
+                    8
+                  ],
+                  [
+                    300,
+                    15
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "51838B93-6AFD-41ED-B55F-4D441470F5B6",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    689,
+                    878
+                  ],
+                  [
+                    771,
+                    878
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "F0F8EC5F-C735-4E87-94FF-A8F91D7611C2",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    468,
+                    510
+                  ],
+                  [
+                    471,
+                    585
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "7FF7F0A9-DA06-4C1C-87C2-78BB3C46A5A7",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    213,
+                    15
+                  ],
+                  [
+                    249,
+                    17
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "711FFB0A-B5C2-4BE7-BD87-0FD5E44CE78F",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    414,
+                    354
+                  ],
+                  [
+                    414,
+                    410
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "26DE9D5B-97E9-48B6-A612-F1BCC482A23C",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    552,
+                    870
+                  ],
+                  [
+                    583,
+                    870
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "72D13EF4-D3A3-4F6F-B2CC-85FE6BC5C239",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    411,
+                    435
+                  ],
+                  [
+                    411,
+                    481
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "2F41E02E-DDC9-4089-B823-B4F47B95FC16",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    405,
+                    589
+                  ],
+                  [
+                    470,
+                    589
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "33C3B7AA-7BD4-4A91-AD6A-A9BB504D5D18",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    536,
+                    318
+                  ],
+                  [
+                    567,
+                    318
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "899C708D-6528-4C31-B9A1-71486EBB4FDA",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    612,
+                    314
+                  ],
+                  [
+                    668,
+                    314
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "2BB378BE-9FEE-4FE8-A7F5-9FCF98F88BE0",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    559,
+                    39
+                  ],
+                  [
+                    617,
+                    44
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "B269CFFF-DC3E-4106-861C-7B5A50AC8898",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    483,
+                    37
+                  ],
+                  [
+                    550,
+                    43
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "E53774DB-BE87-4728-8499-A54AD18E14C4",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    699,
+                    55
+                  ],
+                  [
+                    745,
+                    55
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CE3EF81A-F24A-42DA-88FF-1B7CAB035F77",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    529,
+                    454
+                  ],
+                  [
+                    583,
+                    454
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "893C0F9E-B42A-4D43-8888-AEB70AD9A3B2",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    537,
+                    46
+                  ],
+                  [
+                    563,
+                    46
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "EC32E5F0-37BC-4CF3-86A0-00A528E9DD7E",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    505,
+                    208
+                  ],
+                  [
+                    548,
+                    208
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "574D7282-8960-44B6-AC41-B920C09A18E0",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    811,
+                    456
+                  ],
+                  [
+                    845,
+                    456
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "C8D918BC-7948-4036-8778-1C3C815857E4",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    600,
+                    318
+                  ],
+                  [
+                    626,
+                    317
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "957BB2C9-86EA-4E84-8C9A-E4C197F03655",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    255,
+                    456
+                  ],
+                  [
+                    290,
+                    443
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "A3472B23-081E-435B-93FA-7A9770C392E0",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    964,
+                    697
+                  ],
+                  [
+                    986,
+                    722
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "269D38ED-769F-4935-AFB6-5BFDDBDAAB23",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    269,
+                    455
+                  ],
+                  [
+                    300,
+                    455
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "CF7E98CE-94BE-4C66-A8D0-F118E28A89E5",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    541,
+                    381
+                  ],
+                  [
+                    589,
+                    381
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "7EA089D4-B437-4B0C-BFC4-9E68584AAB7C",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    544,
+                    741
+                  ],
+                  [
+                    583,
+                    742
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "FA16276C-DEE3-44C8-9917-52809F830589",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    534,
+                    376
+                  ],
+                  [
+                    534,
+                    350
+                  ]
+                ]
+              },
+              {
+                "type": "IfcWall",
+                "GlobalId": "3914131A-782E-475A-BEC4-C1D9B8F5A2EB",
+                "SectionIndex": 2,
+                "Axis": [
+                  [
+                    577,
+                    871
+                  ],
+                  [
+                    602,
+                    872
+                  ]
+                ]
+              }
+            ],
+            "Doors": [],
+            "Windows": []
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -23,15 +23,23 @@ def detect_piano_lines(input_image_path, output_image_path, lines_info_path):
         word = data['text'][i]
         if word and 'piano' in word.lower():
             x, y, w, h = data['left'][i], data['top'][i], data['width'][i], data['height'][i]
-            y_center = y + h // 2
-            # Draw horizontal line only up to the left edge of the word (with small gap)
-            gap = 4  # pixels before the word starts
-            line_end_x = max(0, x - gap)
-            cv2.line(img, (0, y_center), (line_end_x, y_center), (0, 255, 0), 2)
-            # Now draw the word rectangle and label (uninterrupted by the line)
+            # Horizontal line just above the word (no overlap)
+            margin_above = 2
+            line_y = max(0, y - margin_above)
+            # Margins around the word to keep a small gap
+            gap_side = 2  # horizontal gap on each side of the word where line is omitted
+            left_seg_end = max(0, x - gap_side)
+            right_seg_start = min(x + w + gap_side, img_w - 1)
+            # Draw left segment
+            if left_seg_end > 0:
+                cv2.line(img, (0, line_y), (left_seg_end, line_y), (0, 255, 0), 2)
+            # Draw right segment
+            if right_seg_start < img_w - 1:
+                cv2.line(img, (right_seg_start, line_y), (img_w - 1, line_y), (0, 255, 0), 2)
+            # Draw the word rectangle and label
             cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
-            cv2.putText(img, word, (x, max(0, y - 10)), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
-            piano_lines.append(y_center)
+            cv2.putText(img, word, (x, max(0, y - 8)), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
+            piano_lines.append(line_y)
     if piano_lines:
         cv2.imwrite(output_image_path, img)
         print(f"[DONE] Saved: {output_image_path}")

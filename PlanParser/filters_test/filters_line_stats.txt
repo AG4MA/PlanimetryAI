@@ -1,0 +1,40 @@
+FilterName | RawLineSegments | MergedLineGroups | ContourCount
+--------------------------------------------------------------
+14_laplacian.png | 146 | 67 | 13
+17_morph_gradient.png | 127 | 59 | 1
+02_adaptive_mean.png | 116 | 57 | 19
+04_canny_soft.png | 118 | 55 | 2
+overlay_edges.png | 117 | 55 | 20
+08_distance_transform.png | 124 | 54 | 1
+01_adaptive_gauss.png | 118 | 54 | 18
+24_skeleton.png | 126 | 53 | 1
+05_canny_strong.png | 126 | 52 | 2
+21_quantize_k4.png | 125 | 52 | 18
+19_otsu.png | 124 | 51 | 12
+20_otsu_inv.png | 120 | 50 | 1
+ch_channel_b.png | 101 | 46 | 19
+ch_channel_r.png | 101 | 46 | 19
+06_clahe_gray.png | 94 | 46 | 19
+ch_channel_g.png | 92 | 46 | 18
+25_sobel_x.png | 81 | 46 | 50
+22_scharr_x.png | 85 | 45 | 51
+00_original.png | 95 | 42 | 19
+12_gray.png | 95 | 42 | 19
+18_morph_open.png | 76 | 40 | 15
+10_erode_small.png | 88 | 36 | 14
+11_gaussian_blur.png | 76 | 36 | 9
+26_sobel_y.png | 84 | 35 | 53
+23_scharr_y.png | 87 | 34 | 53
+03_bilateral.png | 56 | 34 | 6
+15_median_blur.png | 33 | 23 | 38
+09_edge_preserve.png | 24 | 18 | 3
+13_horizontal_lines.png | 42 | 14 | 1
+27_vertical_lines.png | 34 | 12 | 1
+07_dilate_small.png | 14 | 9 | 14
+16_morph_close.png | 0 | 0 | 0
+
+Notes:
+RawLineSegments = direct HoughLinesP detections after edge extraction.
+MergedLineGroups = approximate distinct structural lines after clustering.
+ContourCount = count of larger external contours (inverted binarization).
+Higher MergedLineGroups usually indicates better structural line preservation.
