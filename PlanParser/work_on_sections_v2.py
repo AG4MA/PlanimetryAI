@@ -294,7 +294,7 @@ if __name__ == "__main__":
         "ingresso","dis","dis.","disimpegno","corridoio",
         "lavanderia","ripostiglio","balcone","terrazzo",
         "giardino","portico","studio","rip.", "ripostiglio",
-        "pranzo", "soggiorno pranzo", "soggiomo", "dranzo"
+        "pranzo", "soggiorno pranzo", "soggiomo", "dranzo", "3gnos"
     ]
     for f in files:
         process_one(f, target_words, out_root="planimetry_output")
