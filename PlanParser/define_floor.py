@@ -328,19 +328,27 @@ def detect_floor_label_from_image(cropped_bgr: np.ndarray) -> dict:
         debug_img = cropped_bgr.copy()
         img_h, img_w = debug_img.shape[:2]
         piano_lines = []
+        margin_above = 6
         for (x, y, w, h, word) in ocr_boxes:
-            # Draw rectangle
+            # Draw bounding box around the word
             cv2.rectangle(debug_img, (x, y), (x + w, y + h), (0, 0, 255), 2)
-            cv2.putText(debug_img, word, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
-            # Draw horizontal line at vertical center of box
-            y_center = y + h // 2
-            cv2.line(debug_img, (0, y_center), (img_w - 1, y_center), (0, 255, 0), 2)
-            piano_lines.append(y_center)
-        cv2.imwrite("base_rectangle_piano_lines.png", debug_img)
-        print("[DEBUG] Saved image with 'piano' lines: base_rectangle_piano_lines.png")
-        # Sort lines top to bottom
+            cv2.putText(debug_img, word, (x, max(y - 10, 0)), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
+
+            # Place line ABOVE the word (previously at vertical center)
+            line_y = max(y - margin_above, 0)
+
+            # Avoid duplicates that are too close (within 3 px of an existing line)
+            if not any(abs(line_y - existing) <= 3 for existing in piano_lines):
+                cv2.line(debug_img, (0, line_y), (img_w - 1, line_y), (0, 255, 0), 2)
+                piano_lines.append(line_y)
+                print(f"[DEBUG] Placed line above word '{word}' at y={line_y} (word top={y})")
+
+        # Sort top-to-bottom
         piano_lines_sorted = sorted(piano_lines)
-        # Print section coordinates
+        cv2.imwrite("base_rectangle_piano_lines.png", debug_img)
+        print("[DEBUG] Saved image with 'piano' lines (above words): base_rectangle_piano_lines.png")
+
+        # Sections now start at each line_y (which is above the word)
         print("[DEBUG] Sections:")
         for i, y_top in enumerate(piano_lines_sorted):
             y_bottom = piano_lines_sorted[i + 1] if i + 1 < len(piano_lines_sorted) else img_h - 1
