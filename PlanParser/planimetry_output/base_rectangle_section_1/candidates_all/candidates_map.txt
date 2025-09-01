@@ -1,0 +1,18 @@
+section_n | image_split_name | ocr | tok
+1 | 0000.png | iano | iana, iano, jana, piano
+1 | 0001.png | imc | imc, rimce, rime, time
+1 | 0002.png | om | jon, om, on, one
+1 | 0003.png | l | d, ei, j2, l
+1 | 0004.png | stessa viu | onistessauile, rulsanrgritstessaulle, seepstessa, seepstessa ule, stessa uile, stessa uiui, stessa ulue, stessa uru, stessa viu, stessauiulii, stessauiulti, stessauiusft, stessauiusti, stessauluj, uile, uiui, ule, ulue, uru, viu
+1 | 0005.png | bagno | bagno
+1 | 0006.png | aameran | aameram, aameran, ameras, atei, camera, camere, daifepiaamere
+1 | 0007.png | amera | 2amera, amera, camera
+1 | 0008.png | dis | dis, is1, mis
+1 | 0009.png | lai | 21048, 72, aa, ai, alia, gio, lai, ooarredi, prec, prec 21048, ul, ul ooarredi alia, uuaina
+1 | 0010.png | predonssormadiol | aarmadio, airedoss0srmadio, asrmadio, essbs55srmacio, oo, predonssormadiol, preti, preti s oo armadio, redonssormadiol, s
+1 | 0011.png | stessaulu | stessa ua, stessa uius, stessauilz, stessaulle, stessaulu, ua, uius
+1 | 0012.png | scalan | calan, salen, scalan, scale, seas, vanoscalam, vanoscale
+1 | 0013.png | stessauiu | lipronestossa4ule, siessaune, stessauiu, stessauium, stessauiur
+1 | 0014.png | i | i, ny, pans, panst, reano
+1 | 0015.png | a | a, ac
+1 | 0016.png | soggiomo | soggiomo
