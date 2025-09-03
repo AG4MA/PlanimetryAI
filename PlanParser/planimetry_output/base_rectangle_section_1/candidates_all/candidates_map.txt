@@ -16,3 +16,9 @@ section_n | image_split_name | ocr | tok
 1 | 0014.png | i | i, ny, pans, panst, reano
 1 | 0015.png | a | a, ac
 1 | 0016.png | soggiomo | soggiomo
+1 | 0017.png | pr 3nzo | 3nzo, dranzo, pr, pr 3nzo, pranzo
+1 | 0018.png | cc | ana, cc, ce, mi, mi n ta, n, nine, ta
+1 | 0019.png | ii | can, ii, mas
+1 | 0020.png | rip | ip, ipli, rip, x1, x1li
+1 | 0021.png | balcone | balcone, balconedaibadbabt, balconedatadthla
+1 | 0022.png | stessaulll | istessaulll, stessa uil, stessauile, stessaulll, stessaulua, uil

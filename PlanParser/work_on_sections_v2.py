@@ -92,30 +92,89 @@ def extract_section_n(base_name: str) -> str:
 
 # ---------- Imaging helpers ----------
 def enhance_contrast(gray: np.ndarray) -> np.ndarray:
+    # Step 1: Create a CLAHE object
+    # CLAHE = Contrast Limited Adaptive Histogram Equalization
+    # It improves local contrast by adjusting brightness region by region
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    cla   = clahe.apply(gray)
-    blur  = cv2.GaussianBlur(cla, (0, 0), 1.2)
+
+    # Step 2: Apply CLAHE to the grayscale image
+    cla = clahe.apply(gray)
+
+    # Step 3: Apply Gaussian blur (soft blur)
+    # This removes high-frequency noise but keeps main structures
+    blur = cv2.GaussianBlur(cla, (0, 0), 1.2)
+
+    # Step 4: Combine original (enhanced) image with blurred version
+    # cv2.addWeighted does a weighted sum: (1.5 * cla - 0.5 * blur)
+    # Effect: sharpens edges and increases clarity
     return cv2.addWeighted(cla, 1.5, blur, -0.5, 0)
 
+
 def small_deskew(img_gray: np.ndarray) -> np.ndarray:
+    # Start with the original image as the "best" one
     best, best_var = img_gray, img_gray.var()
-    for ang in (-3,-2,-1,1,2,3):
-        h,w = img_gray.shape
+
+    # Try rotating a few small angles left and right
+    for ang in (-3, -2, -1, 1, 2, 3):
+        h, w = img_gray.shape
+
+        # Build a 2D rotation matrix centered on the image
         M = cv2.getRotationMatrix2D((w/2, h/2), ang, 1.0)
+
+        # Apply the rotation (warpAffine = geometric transform)
+        # borderMode=REPLICATE fills missing pixels by copying nearby values
         rot = cv2.warpAffine(img_gray, M, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+
+        # Compute variance of pixel intensities
         v = rot.var()
-        if v > best_var: best, best_var = rot, v
+
+        # Higher variance means sharper, less blurry image → better alignment
+        if v > best_var:
+            best, best_var = rot, v
+
     return best
 
+
 def ocr_variants(roi_gray: np.ndarray) -> List[np.ndarray]:
+    # Step 1: Correct small tilt in the text region (deskew)
+    # OCR works much better if text lines are horizontal
     g = small_deskew(roi_gray)
+
+    # Step 2: Enhance local contrast
+    # Makes faint letters stand out more clearly
     g = enhance_contrast(g)
+
+    # Step 3: Otsu's threshold (binary)
+    # Automatically decides the best cutoff to split black/white
     _, otsu = cv2.threshold(g, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-    _, inv  = cv2.threshold(g, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-    mean = cv2.adaptiveThreshold(g,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,31,5)
-    gaus = cv2.adaptiveThreshold(g,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,31,3)
-    bold = cv2.dilate(otsu, cv2.getStructuringElement(cv2.MORPH_RECT,(2,2)), 1)
+
+    # Step 4: Inverted Otsu
+    # Same as above but swapped colors (white text on black background)
+    _, inv = cv2.threshold(g, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+
+    # Step 5: Adaptive Mean threshold
+    # Each pixel’s threshold is the average of its neighborhood
+    # Useful when lighting is uneven
+    mean = cv2.adaptiveThreshold(
+        g, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 31, 5
+    )
+
+    # Step 6: Adaptive Gaussian threshold
+    # Like adaptive mean, but weights neighbors using a Gaussian (closer pixels count more)
+    gaus = cv2.adaptiveThreshold(
+        g, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 31, 3
+    )
+
+    # Step 7: "Bold" version
+    # Dilate the Otsu image to thicken strokes, useful if text is very faint or broken
+    bold = cv2.dilate(
+        otsu, cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2)), 1
+    )
+
+    # Return a list of all prepared variants
+    # Each one might give better OCR results depending on text quality
     return [otsu, mean, gaus, bold, inv]
+
 
 def try_ocr(roi_bgr: np.ndarray) -> str:
     gray = cv2.cvtColor(roi_bgr, cv2.COLOR_BGR2GRAY)
@@ -133,27 +192,61 @@ def try_ocr(roi_bgr: np.ndarray) -> str:
     return ""
 
 def try_ocr_tokens(roi_bgr: np.ndarray) -> List[str]:
+    # Convert the input ROI (region of interest) from color (BGR) to grayscale
     gray = cv2.cvtColor(roi_bgr, cv2.COLOR_BGR2GRAY)
-    gray = cv2.copyMakeBorder(gray, PAD, PAD, PAD, PAD, cv2.BORDER_REPLICATE)
-    gray = cv2.resize(gray, (gray.shape[1]*SCALE, gray.shape[0]*SCALE), interpolation=cv2.INTER_CUBIC)
 
-    texts = []
+    # Add a constant border around the image.
+    # Reason: OCR sometimes cuts off letters near the edge; border gives breathing space.
+    gray = cv2.copyMakeBorder(gray, PAD, PAD, PAD, PAD, cv2.BORDER_REPLICATE)
+
+    # Enlarge the image by a scaling factor.
+    # Reason: OCR (Tesseract) works better on larger, clearer text.
+    gray = cv2.resize(
+        gray,
+        (gray.shape[1] * SCALE, gray.shape[0] * SCALE),
+        interpolation=cv2.INTER_CUBIC
+    )
+
+    texts = []  # will store raw OCR results (normalized)
+
+    # Try OCR on multiple preprocessed variants of the ROI
     for prep in ocr_variants(gray):
+        # Try multiple PSM (page segmentation modes) for robustness
         for psm in PSM_TRY:
-            cfg = f'--oem {OCR_OEM} --psm {psm} -l {OCR_LANGS} -c tessedit_char_whitelist="{WHITELIST}"'
+            # Configure OCR engine:
+            # - --oem: OCR Engine mode
+            # - --psm: Page segmentation mode
+            # - -l: language models (ita+eng, etc.)
+            # - tessedit_char_whitelist: only allow certain characters
+            cfg = (
+                f'--oem {OCR_OEM} --psm {psm} '
+                f'-l {OCR_LANGS} '
+                f'-c tessedit_char_whitelist="{WHITELIST}"'
+            )
             try:
                 out = pytesseract.image_to_string(prep, config=cfg)
             except Exception:
                 out = ""
-            t = normalize_text(out)
-            if t: texts.append(t)
 
+            # Normalize the OCR output (lowercase, remove accents/punctuation, etc.)
+            t = normalize_text(out)
+
+            # If something meaningful came out, keep it
+            if t:
+                texts.append(t)
+
+    # Collect tokens from all OCR results
     tokens = set()
     for t in texts:
-        tokens.add(t)             # frase intera
-        tokens.update(t.split())  # singole parole
+        tokens.add(t)             # add full phrase as recognized
+        tokens.update(t.split())  # also add individual words
+
+    # Remove empty tokens and blacklisted ones
     tokens = {tok for tok in tokens if tok and tok not in BLACKLIST}
+
+    # Return a sorted list of tokens
     return sorted(tokens)
+
 
 def match_targets_tokens(tokens: Iterable[str], targets_canon: set[str]) -> bool:
     toks = set(tokens)
@@ -162,38 +255,94 @@ def match_targets_tokens(tokens: Iterable[str], targets_canon: set[str]) -> bool
     return ("soggiorno" in toks and "pranzo" in toks and "soggiorno pranzo" in targets_canon)
 
 def detect_text_boxes(img: np.ndarray) -> List[Tuple[int,int,int,int]]:
+    # Convert the image from color (BGR) to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # Enhance local contrast to make faint text stand out
     gray = enhance_contrast(gray)
-    top  = cv2.morphologyEx(gray, cv2.MORPH_TOPHAT,
-                            cv2.getStructuringElement(cv2.MORPH_RECT,(TOPHAT_KERNEL,TOPHAT_KERNEL)))
+
+    # Apply a morphological "top-hat" filter:
+    # highlights small bright regions (like white letters) on darker backgrounds
+    top  = cv2.morphologyEx(
+        gray, 
+        cv2.MORPH_TOPHAT,
+        cv2.getStructuringElement(cv2.MORPH_RECT, (TOPHAT_KERNEL, TOPHAT_KERNEL))
+    )
+
+    # Apply Otsu's threshold:
+    # automatically converts grayscale into a clean black/white image
     _, th = cv2.threshold(top, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-    dil   = cv2.dilate(th, cv2.getStructuringElement(cv2.MORPH_RECT,(DILATE_KERNEL,DILATE_KERNEL)), 1)
+
+    # Dilate (thicken) the white regions to reconnect broken letters/words
+    dil = cv2.dilate(
+        th, 
+        cv2.getStructuringElement(cv2.MORPH_RECT, (DILATE_KERNEL, DILATE_KERNEL)), 
+        1
+    )
+
+    # Find contours (outlines of connected white regions)
     contours, _ = cv2.findContours(dil, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     out = []
     for c in contours:
-        x,y,w,h = cv2.boundingRect(c)
-        area  = w*h
-        ratio = w/float(h) if h>0 else 1e9
-        if not (MIN_AREA <= area <= MAX_AREA):   continue
-        if not (MIN_RATIO <= ratio <= MAX_RATIO): continue
-        if not (MIN_H <= h <= MAX_H):            continue
-        out.append((x,y,w,h))
+        # Get bounding box for each contour
+        x, y, w, h = cv2.boundingRect(c)
+        area  = w * h                # area of the box
+        ratio = w / float(h) if h > 0 else 1e9  # width/height ratio
+
+        # Filter out boxes that are too small/large, weirdly shaped, or wrong height
+        if not (MIN_AREA <= area <= MAX_AREA):
+            continue
+        if not (MIN_RATIO <= ratio <= MAX_RATIO):
+            continue
+        if not (MIN_H <= h <= MAX_H):
+            continue
+
+        # Keep this box
+        out.append((x, y, w, h))
+
+    # Return boxes sorted top-to-bottom, then left-to-right
     return sorted(out, key=lambda b: (b[1], b[0]))
 
+
 def knn_edges(points: np.ndarray, k: int = K_NEIGHBOURS, max_radius_frac: float = MAX_RADIUS_FRAC):
-    if len(points) < 2: return []
-    minx, miny = points.min(axis=0); maxx, maxy = points.max(axis=0)
+    # If we have fewer than 2 points, we cannot create any edges
+    if len(points) < 2:
+        return []
+
+    # Find the bounding box of all points (min and max x/y)
+    minx, miny = points.min(axis=0)
+    maxx, maxy = points.max(axis=0)
+
+    # Compute the diagonal length of the bounding box
+    # This gives a "scale" for the whole plan
     diag = math.hypot(maxx - minx, maxy - miny)
+
+    # Define the maximum allowed connection distance
+    # (fraction of the diagonal size, e.g., 0.66 * diag)
     max_r = max_radius_frac * diag
-    edges=set()
-    for i,p in enumerate(points):
+
+    edges = set()  # use a set to avoid duplicate edges
+
+    # Loop through each point
+    for i, p in enumerate(points):
+        # Compute Euclidean distance from this point to all others
         d = np.linalg.norm(points - p, axis=1)
+
+        # Sort indices of neighbors by distance (skip the first = itself)
         idx = np.argsort(d)[1:k+1]
+
+        # For each of the k nearest neighbors
         for j in idx:
+            # Only connect if the distance is within the allowed max radius
             if d[j] <= max_r:
-                a,b = sorted((i,j)); edges.add((a,b))
+                # Sort indices so (i,j) and (j,i) are treated the same
+                a, b = sorted((i, j))
+                edges.add((a, b))  # add edge to set
+
+    # Return the edges as a sorted list of pairs (i, j)
     return sorted(edges)
+
 
 def draw_rect(img, box, color, thick=1):
     x,y,w,h = box
@@ -287,6 +436,7 @@ def process_one(path_in: str, targets: Iterable[str], out_root: str = "out") -> 
 if __name__ == "__main__":
     files = [
         r"C:\projects\extra\PlanimetryAI\PlanParser\debug_image\base_rectangle_section_1.png",
+        r"C:\projects\extra\PlanimetryAI\PlanParser\debug_image\base_rectangle_section_2.png",
     ]
 
     # files = [
