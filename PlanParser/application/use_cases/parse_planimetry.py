@@ -13,14 +13,14 @@ from typing import Any
 
 import cv2
 
-from .config import DEFAULT_CONFIG, PlanParserConfig, SourceType
-from .floor_detection import FloorDetector
-from .geometry import Point2D, Polygon, RawPlanGeometry, TextEntity
-from .image_processing import crop_region, draw_rectangles, find_largest_rectangle
-from .ocr_engine import OCRManager
-from .pdf_reader import render_pdf_page
-from .room_detection import RoomDetector
-from .scale_detection import ScaleDetector, prompt_user_for_scale, prompt_user_for_compass
+from PlanParser.domain.config import DEFAULT_CONFIG, PlanParserConfig, SourceType
+from PlanParser.extraction.floor.detector import FloorDetector
+from PlanParser.domain.models.primitives import Point2D, Polygon, RawPlanGeometry, TextEntity
+from PlanParser.extraction.image_processing import crop_region, draw_rectangles, find_largest_rectangle
+from PlanParser.infrastructure.ocr.engine import OCRManager
+from PlanParser.infrastructure.readers.pdf_reader import render_pdf_page
+from PlanParser.extraction.room.detector import RoomDetector
+from PlanParser.extraction.scale.detector import ScaleDetector, prompt_user_for_scale, prompt_user_for_compass
 
 logger = logging.getLogger(__name__)
 

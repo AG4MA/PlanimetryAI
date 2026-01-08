@@ -2,7 +2,7 @@
 OCR Engine Module
 =================
 Provides OCR backends with automatic fallback.
-Implements OCRProvider protocol from core.protocols.
+Implements OCRProvider protocol from domain.protocols.
 """
 
 from __future__ import annotations
@@ -15,10 +15,11 @@ import cv2
 import numpy as np
 from numpy.typing import NDArray
 
-from .core.protocols import OCRBox
-from .core.text_utils import normalize_text
+from PlanParser.domain.protocols import OCRBox
+from PlanParser.domain.text_utils import normalize_text
 
 if TYPE_CHECKING:
+    from PlanParser.domain.config import OCRConfig
     ImageArray = NDArray[np.uint8]
 else:
     ImageArray = Any
@@ -229,9 +230,15 @@ class OCRManager:
     Manages multiple OCR engines with automatic fallback.
     """
 
-    def __init__(self, tesseract_path: str | None = None):
+    def __init__(self, config: "OCRConfig | None" = None, tesseract_path: str | None = None):
+        # Accept either OCRConfig or direct tesseract_path
+        if config is not None:
+            _tesseract_path = config.tesseract_path
+        else:
+            _tesseract_path = tesseract_path
+        
         self.engines: list[OCREngine] = [
-            TesseractEngine(tesseract_path),
+            TesseractEngine(_tesseract_path),
             EasyOCREngine(),
         ]
         self._primary_engine = None

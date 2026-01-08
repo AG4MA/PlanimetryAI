@@ -1,44 +1,129 @@
 """
 PlanParser
 ==========
-Parses planimetry PDFs/DWG/DXF and extracts structured floor/room data.
+Parses planimetry PDFs/DWG/DXF and extracts a structured Digital Twin.
+
+The output (DigitalTwin) is the single source of truth for downstream projects:
+- Plan2HVAC: Uses topology and room types for HVAC layout
+- PlanNL: Uses all data for natural language queries
 
 Usage:
     from PlanParser import parse_planimetry
     
-    result = parse_planimetry("path/to/plan.pdf")
-    print(result.floors)
+    twin = parse_planimetry("path/to/plan.pdf")
+    print(twin.summary())
+    twin.save_json("output/plan_twin.json")
 
 CLI:
     python -m PlanParser parse --pdf path/to/plan.pdf
 """
 
-# Lazy tesseract init - only when needed, not at import
-# from .bootstrap import init_tesseract
-# _tesseract_path = init_tesseract(require=False)
+__version__ = "0.3.0"
 
-from .config import PlanParserConfig
-from .geometry import Arc, LineSegment, Point2D, Polygon, Polyline, RawPlanGeometry, TextEntity
-from .parser import ParseResult, PlanParser, parse_planimetry
+# Domain layer - core models and value objects
+from PlanParser.domain import (
+    # Config
+    PlanParserConfig,
+    DEFAULT_CONFIG,
+    SourceType,
+    
+    # Value Objects
+    Scale,
+    Compass,
+    TopologyGraph,
+    
+    # Primitives
+    Point2D,
+    LineSegment,
+    Polyline,
+    Arc,
+    Polygon,
+    TextEntity,
+    RawPlanGeometry,
+    
+    # Elements
+    Wall,
+    Door,
+    Window,
+    
+    # Spaces
+    RoomType,
+    Room,
+    
+    # Building
+    Floor,
+    Building,
+    
+    # Digital Twin (PRIMARY OUTPUT)
+    DigitalTwin,
+)
 
 # Lazy import for tesseract
 def init_tesseract(require: bool = False, silent: bool = False):
     """Initialize Tesseract OCR - only called when needed."""
-    from .bootstrap import init_tesseract as _init_tesseract
+    from PlanParser.infrastructure.ocr.bootstrap import init_tesseract as _init_tesseract
     return _init_tesseract(require=require, silent=silent)
 
-__version__ = "0.2.0"
+
+# Main API (lazy loaded to avoid import issues during refactoring)
+def parse_planimetry(source_path: str, **kwargs) -> DigitalTwin:
+    """
+    Parse a planimetry file and return a DigitalTwin.
+    
+    Args:
+        source_path: Path to PDF, image, or CAD file
+        **kwargs: Additional options passed to PlanParser
+        
+    Returns:
+        DigitalTwin with complete structured data
+    """
+    # TODO: Update to use new pipeline once refactoring is complete
+    raise NotImplementedError(
+        "parse_planimetry is being refactored to return DigitalTwin. "
+        "Use the legacy API via PlanParser.application.use_cases for now."
+    )
+
+
 __all__ = [
-    "Arc",
-    "LineSegment",
-    "ParseResult",
-    "PlanParser",
+    # Version
+    "__version__",
+    
+    # Config
     "PlanParserConfig",
+    "DEFAULT_CONFIG",
+    "SourceType",
+    
+    # Value Objects
+    "Scale",
+    "Compass",
+    "TopologyGraph",
+    
+    # Primitives
     "Point2D",
-    "Polygon",
+    "LineSegment",
     "Polyline",
-    "RawPlanGeometry",
+    "Arc",
+    "Polygon",
     "TextEntity",
+    "RawPlanGeometry",
+    
+    # Elements
+    "Wall",
+    "Door", 
+    "Window",
+    
+    # Spaces
+    "RoomType",
+    "Room",
+    
+    # Building
+    "Floor",
+    "Building",
+    
+    # Digital Twin (PRIMARY OUTPUT)
+    "DigitalTwin",
+    
+    # Functions
     "parse_planimetry",
     "init_tesseract",
 ]

@@ -8,7 +8,7 @@ Extracted from RoomDetector to follow SRP.
 import re
 from difflib import SequenceMatcher
 
-from PlanParser.core.protocols import TextMatcher, TextNormalizer
+from PlanParser.domain.protocols import TextMatcher, TextNormalizer
 
 
 class DefaultTextNormalizer(TextNormalizer):

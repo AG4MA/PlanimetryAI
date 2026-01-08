@@ -10,7 +10,7 @@ from typing import Any
 
 import cv2
 
-from PlanParser.core.protocols import ImageArray, DetectionResult
+from PlanParser.domain.protocols import ImageArray, DetectionResult
 
 
 @dataclass(frozen=True)

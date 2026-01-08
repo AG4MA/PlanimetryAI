@@ -15,16 +15,16 @@ from typing import TYPE_CHECKING
 import cv2
 import numpy as np
 
-from .config import DetectionConfig, RoomLabels
-from .core.protocols import TextMatcher
-from .core.text_utils import normalize_text
-from .image_processing import crop_region, find_text_regions
-from .ocr_engine import OCRManager
-from .services.text_matching import FuzzyTextMatcher
-from .services.visualization import VisualizationService, VisualStyle
+from PlanParser.domain.config import DetectionConfig, RoomLabels
+from PlanParser.domain.protocols import TextMatcher
+from PlanParser.domain.text_utils import normalize_text
+from PlanParser.extraction.image_processing import crop_region, find_text_regions
+from PlanParser.infrastructure.ocr.engine import OCRManager
+from PlanParser.application.text_matching import FuzzyTextMatcher
+from PlanParser.application.visualization import VisualizationService, VisualStyle
 
 if TYPE_CHECKING:
-    from .core.protocols import ImageArray
+    from PlanParser.domain.protocols import ImageArray
 
 logger = logging.getLogger(__name__)
 

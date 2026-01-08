@@ -15,7 +15,7 @@ from PlanParser.services.visualization import (
     VisualStyle,
     VisualizationService,
 )
-from PlanParser.core.protocols import DetectionResult
+from PlanParser.domain.protocols import DetectionResult
 
 # Type alias for test images
 ImageArray = NDArray[np.uint8]

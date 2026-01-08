@@ -167,12 +167,12 @@ def run_extract_lines(args):
     
     from pathlib import Path
     import cv2
-    from .extraction import LineExtractor, LineExtractionConfig
-    from .pdf_reader import render_pdf_page
-    from .image_processing import find_largest_rectangle, crop_region
-    from .floor_detection import FloorDetector
-    from .ocr_engine import OCRManager
-    from .config import OCRConfig
+    from PlanParser.extraction.geometry.line_extraction import LineExtractor, LineExtractionConfig
+    from PlanParser.infrastructure.readers.pdf_reader import render_pdf_page
+    from PlanParser.extraction.image_processing import find_largest_rectangle, crop_region
+    from PlanParser.extraction.floor.detector import FloorDetector
+    from PlanParser.infrastructure.ocr.engine import OCRManager
+    from PlanParser.domain.config import OCRConfig
     
     input_path = Path(args.input_file)
     output_path = Path(args.output)
@@ -285,10 +285,10 @@ def run_detect_rooms(args):
     
     from pathlib import Path
     import cv2
-    from .extraction import RoomPolygonDetector, RegionGrowingConfig
-    from .pdf_reader import render_pdf_page
-    from .room_detection import RoomDetector
-    from .config import OCRConfig
+    from PlanParser.extraction.geometry.room_polygon import RoomPolygonDetector, RegionGrowingConfig
+    from PlanParser.infrastructure.readers.pdf_reader import render_pdf_page
+    from PlanParser.extraction.room.detector import RoomDetector
+    from PlanParser.domain.config import OCRConfig
     
     input_path = Path(args.input_file)
     output_path = Path(args.output)
@@ -316,7 +316,7 @@ def run_detect_rooms(args):
     
     # Step 1: Find OCR labels (using existing room detector)
     print("🔤 Running OCR to find room labels...")
-    from .ocr_engine import OCRManager
+    from PlanParser.infrastructure.ocr.engine import OCRManager
     ocr_manager = OCRManager(OCRConfig())
     room_detector = RoomDetector(ocr_manager)
     detected_rooms = room_detector.detect_rooms(image)
@@ -356,7 +356,7 @@ def run_detect_rooms(args):
     
     # ===== MATHEMATICAL VALIDATION =====
     print("\n🔬 Running geometric validation...")
-    from .extraction.validation import GeometricValidator
+    from PlanParser.extraction.geometry.validation import GeometricValidator
     
     # Build label_bboxes dict for validation
     label_bboxes = {}
@@ -403,8 +403,8 @@ def run_detect_rooms(args):
 def run_parse(args):
     """Execute parse command."""
     # Lazy imports - only load tesseract/ocr when actually parsing
-    from .config import OutputConfig, PlanParserConfig, ScaleConfig, SourceType
-    from .parser import PlanParser
+    from PlanParser.domain.config import OutputConfig, PlanParserConfig, ScaleConfig, SourceType
+    from PlanParser.application.use_cases.parse_planimetry import PlanParser
     
     setup_logging(args.verbose)
     logger = logging.getLogger(__name__)
@@ -555,7 +555,7 @@ def run_parse(args):
 
 def run_info(args):
     """Show PDF information."""
-    from .pdf_reader import extract_text_from_pdf, get_pdf_metadata, get_pdf_page_count
+    from PlanParser.infrastructure.readers.pdf_reader import extract_text_from_pdf, get_pdf_metadata, get_pdf_page_count
 
     pdf_path = Path(args.pdf)
 

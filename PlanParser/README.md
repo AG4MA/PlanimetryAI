@@ -1,144 +1,198 @@
 ﻿# PlanParser
 
-**PlanParser** è il modulo per il parsing e l'analisi di planimetrie in formato PDF, DWG e DXF.
+**PlanParser** è il modulo core della suite PlanimetryAI. Estrae un **Digital Twin** strutturato da planimetrie PDF, DWG e DXF.
 
-## 🎯 Obiettivo Principale
+## 🎯 Mission
 
-Riconoscere automaticamente **piani** e **stanze** presenti in un PDF di planimetria, estraendo dati strutturati in formato JSON.
+PlanParser è la **Single Source of Truth** per i progetti downstream:
+- **Plan2HVAC**: genera layout HVAC automaticamente
+- **PlanNL**: query in linguaggio naturale sulla planimetria
 
-## ✅ Features
+I progetti downstream **non** ri-analizzano i file originali. Consumano solo l'output strutturato di PlanParser.
 
-- **PDF Parsing**: Rendering ad alta risoluzione dei PDF
-- **Floor Detection**: Rilevamento automatico delle etichette dei piani (Piano Terra, Primo Piano, etc.)
-- **Room Detection**: Riconoscimento delle stanze (bagno, camera, cucina, soggiorno, etc.)
-- **Multi-OCR**: Supporto per Tesseract e EasyOCR con fallback automatico
-- **Structured Output**: Output JSON strutturato con coordinate e confidenza
-- **Debug Images**: Generazione di immagini di debug per ogni fase
+## 🏗️ Output: Digital Twin
 
-## 📁 Struttura del Progetto
+L'output principale è un **DigitalTwin** che contiene:
+
+```
+DigitalTwin
+├── Building
+│   ├── floors: List[Floor]
+│   ├── scale: Scale (1:100, pixels_per_meter)
+│   └── compass: Compass (north_angle)
+│
+└── Floor
+    ├── rooms: List[Room]           # Spazi con poligono, tipo, area
+    ├── walls: List[Wall]           # Muri con spessore, tipo
+    ├── doors: List[Door]           # Porte con direzione apertura
+    ├── windows: List[Window]       # Finestre
+    └── topology: TopologyGraph     # Grafo di adiacenza tra stanze
+```
+
+## 📁 Architettura (Clean Architecture)
 
 ```
 PlanParser/
-├── data/                    # File PDF di esempio
-├── debug_image/             # Output immagini di debug
-├── planimetry_output/       # Output JSON risultati
-├── __init__.py              # Package exports
-├── __main__.py              # CLI entry point
-├── cli.py                   # Command-line interface
-├── config.py                # Configurazione centralizzata
-├── parser.py                # Pipeline principale
-├── pdf_reader.py            # Lettura PDF
-├── image_processing.py      # Computer vision utilities
-├── ocr_engine.py            # Motori OCR (Tesseract/EasyOCR)
-├── floor_detection.py       # Rilevamento piani
-├── room_detection.py        # Rilevamento stanze
-├── geometry.py              # Entità geometriche
-└── requirements.txt         # Dipendenze Python
+├── domain/                     # 🧠 CORE - Nessuna dipendenza esterna
+│   ├── models/
+│   │   ├── primitives.py       # Point2D, LineSegment, Polygon
+│   │   ├── elements.py         # Wall, Door, Window
+│   │   ├── spaces.py           # Room, RoomType, Stairwell
+│   │   ├── building.py         # Floor, Building
+│   │   └── digital_twin.py     # DigitalTwin (OUTPUT PRINCIPALE)
+│   ├── value_objects/
+│   │   ├── measurements.py     # Scale, Length, Area (con unità)
+│   │   ├── orientation.py      # Compass, CardinalDirection
+│   │   └── topology.py         # Adjacency, TopologyGraph
+│   ├── protocols.py            # Interfacce astratte
+│   └── config.py               # Configurazione
+│
+├── extraction/                 # 🔍 Pipeline di estrazione
+│   ├── geometry/               # Line detection, polygon extraction
+│   ├── floor/                  # Floor label detection
+│   ├── room/                   # Room detection
+│   ├── scale/                  # Scale detection
+│   ├── semantic/               # Door/window/wall classification
+│   └── topology/               # Adjacency graph construction
+│
+├── application/                # 🎯 Use cases e orchestrazione
+│   ├── use_cases/
+│   └── dto/
+│
+├── infrastructure/             # 🔌 Implementazioni concrete
+│   ├── ocr/                    # Tesseract, EasyOCR
+│   ├── readers/                # PDF, DWG, image readers
+│   └── serializers/            # JSON output
+│
+├── tests/                      # ✅ Test suite
+├── experimental/               # 🧪 Script sperimentali
+└── docs/                       # 📚 Documentazione
 ```
 
 ## 🚀 Installazione
 
-1. **Crea e attiva l'ambiente virtuale:**
-   ```bash
-   python -m venv .venv
-   
-   # Windows
-   .\.venv\Scripts\Activate.ps1
-   
-   # Linux/Mac
-   source .venv/bin/activate
-   ```
+```bash
+# 1. Crea ambiente virtuale
+python -m venv .venv
 
-2. **Installa le dipendenze:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+# Windows
+.\.venv\Scripts\Activate.ps1
+# Linux/Mac
+source .venv/bin/activate
 
-3. **Opzionale - Installa EasyOCR per OCR senza dipendenze esterne:**
-   ```bash
-   pip install easyocr
-   ```
+# 2. Installa dipendenze
+pip install -r requirements.txt
+```
 
 ## 🔍 Utilizzo
 
-### CLI - Parsing di un PDF
+### Python API (Nuovo - DigitalTwin)
+
+```python
+from PlanParser import DigitalTwin, Building, Floor, Room, RoomType
+
+# Parsing (TODO: implementazione completa)
+# twin = parse_planimetry("data/scheda_catastale.pdf")
+
+# Esempio di struttura DigitalTwin
+from PlanParser.domain.models import (
+    DigitalTwin, Building, Floor, Room, RoomType,
+    Wall, Door, Window, Point2D, Polygon
+)
+from PlanParser.domain.value_objects import Scale, Compass, TopologyGraph
+
+# Creare un Room
+room = Room(
+    id="room_1",
+    label="Soggiorno",
+    room_type=RoomType.LIVING_ROOM,
+    area_sqm=25.5,
+    centroid=Point2D(100, 200),
+    bbox=(50, 150, 100, 100),
+)
+
+print(f"Room: {room.label} ({room.room_type.value})")
+print(f"  Habitable: {room.is_habitable}")
+print(f"  Wet room: {room.is_wet_room}")
+
+# Query rooms
+# bathrooms = twin.query_rooms(room_type=RoomType.BATHROOM)
+# wet_rooms = twin.query_rooms(is_wet_room=True)
+
+# Esportare il Digital Twin per downstream
+# twin.save_json("output/plan_twin.json")
+```
+
+### Downstream: Plan2HVAC
+
+```python
+# In Plan2HVAC, consumare il DigitalTwin
+import json
+from pathlib import Path
+
+# Caricare l'output di PlanParser
+data = json.loads(Path("output/plan_twin.json").read_text())
+
+for floor in data["building"]["floors"]:
+    for room in floor["rooms"]:
+        if room["is_wet_room"]:
+            print(f"Plan drainage for: {room['label']}")
+        if room["room_type"] == "bedroom":
+            print(f"Add radiator to: {room['label']}")
+```
+
+### CLI
 
 ```bash
 # Parsing base
 python -m PlanParser parse --pdf data/scheda_catastale.pdf
 
-# Con output verbose
-python -m PlanParser parse --pdf data/scheda_catastale.pdf --verbose
+# Output JSON
+python -m PlanParser parse --pdf data/scheda_catastale.pdf --json -o result.json
 
-# Specifica directory di output
-python -m PlanParser parse --pdf data/scheda_catastale.pdf -o ./results/
-
-# Output JSON diretto
-python -m PlanParser parse --pdf data/scheda_catastale.pdf --json
-```
-
-### Python API
-
-```python
-from PlanParser import parse_planimetry, PlanParser, PlanParserConfig
-
-# Modo semplice
-result = parse_planimetry("data/scheda_catastale.pdf")
-print(f"Floors: {len(result.floors)}")
-
-for floor in result.floors:
-    print(f"\n{floor.floor_label}:")
-    for room in floor.rooms:
-        print(f"  - {room['label']}: {room['bbox']}")
-
-# Con configurazione custom
-config = PlanParserConfig()
-config.pdf_zoom = 3.0  # Risoluzione più alta
-
-parser = PlanParser(config)
-result = parser.parse("data/scheda_catastale.pdf", floor_anchor="down")
-
-# Esporta in JSON
-print(result.to_json())
-```
-
-### Info su un PDF
-
-```bash
+# Info PDF
 python -m PlanParser info data/scheda_catastale.pdf
 ```
 
-## 📊 Output
+## 📊 Output JSON Schema
 
-Il programma genera:
-
-### Debug Images (in `debug_image/`)
-- `01_original.png` - Immagine originale del PDF
-- `02_rectangle.png` - Rettangolo principale evidenziato
-- `03_base.png` - Immagine ritagliata
-- `04_floors.png` - Linee di separazione piani
-- `05_section_N_*.png` - Sezioni per piano
-- `06_section_N_*_rooms.png` - Stanze rilevate per piano
-
-### Risultato JSON (in `planimetry_output/result.json`)
 ```json
 {
+  "schema_version": "1.0",
   "success": true,
-  "source_file": "data/scheda_catastale.pdf",
-  "floors": [
-    {
-      "floor_label": "Piano Terra",
-      "floor_number": 0,
-      "rooms": [
-        {
-          "label": "soggiorno",
-          "bbox": [100, 200, 150, 80],
-          "center": [175, 240],
-          "confidence": 0.95
-        }
-      ]
-    }
-  ]
+  "metadata": {
+    "parser_version": "0.3.0",
+    "processed_at": "2026-01-08T15:00:00",
+    "source": {"file": "plan.pdf", "type": "pdf"}
+  },
+  "building": {
+    "id": "bld_1",
+    "total_floors": 2,
+    "total_rooms": 8,
+    "scale": "1:100",
+    "floors": [
+      {
+        "id": "floor_0",
+        "label": "Piano Terra",
+        "floor_number": 0,
+        "rooms": [
+          {
+            "id": "room_1",
+            "label": "Soggiorno",
+            "room_type": "living_room",
+            "area_sqm": 25.5,
+            "is_habitable": true,
+            "is_wet_room": false,
+            "polygon": {"vertices": [...]},
+            "adjacent_room_ids": ["room_2", "room_3"]
+          }
+        ],
+        "walls": [...],
+        "doors": [...],
+        "windows": [...]
+      }
+    ]
+  }
 }
 ```
 

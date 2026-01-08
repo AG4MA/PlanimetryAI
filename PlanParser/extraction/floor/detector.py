@@ -11,8 +11,8 @@ from dataclasses import dataclass
 import cv2
 import numpy as np
 
-from .core.text_utils import normalize_text
-from .ocr_engine import OCRManager
+from PlanParser.domain.text_utils import normalize_text
+from PlanParser.infrastructure.ocr.engine import OCRManager
 
 logger = logging.getLogger(__name__)
 

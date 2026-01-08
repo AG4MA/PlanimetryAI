@@ -1,16 +1,16 @@
 """
-Services Module
-===============
-Application services that orchestrate domain logic.
-These services are stateless and depend on protocols.
+Application Layer
+==================
+Use cases, services and DTOs that orchestrate domain logic.
+This layer depends on domain but not on infrastructure.
 """
 
-from PlanParser.services.text_matching import (
+from PlanParser.application.text_matching import (
     DefaultTextNormalizer,
     SequenceTextMatcher,
     FuzzyTextMatcher,
 )
-from PlanParser.services.visualization import (
+from PlanParser.application.visualization import (
     VisualStyle,
     VisualizationService,
 )

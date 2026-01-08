@@ -21,10 +21,10 @@ from typing import TYPE_CHECKING, Any
 
 import numpy as np
 
-from .config import Orientation, ScaleConfig
+from PlanParser.domain.config import Orientation, ScaleConfig
 
 if TYPE_CHECKING:
-    from .ocr_engine import OCRManager
+    from PlanParser.infrastructure.ocr.engine import OCRManager
 
 logger = logging.getLogger(__name__)
 
