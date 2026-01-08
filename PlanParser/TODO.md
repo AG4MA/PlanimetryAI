@@ -67,17 +67,18 @@ Per progettare un impianto HVAC servono queste informazioni:
   - [x] Visualizzazione con color coding (H=verde, V=blu, D=rosso)
   - [ ] Supporto per linee da PDF vettoriale (più preciso) - TODO
 
-- [ ] **1.2 Rilevamento muri**
-  - [ ] Implementare `wall_detection.py`
-  - [ ] Identificare segmenti paralleli ravvicinati → muro
-  - [ ] Calcolare spessore muri
-  - [ ] Gestire intersezioni (angoli)
+- [ ] **1.2 Rilevamento muri** (SKIPPED - approccio alternativo sotto)
 
-- [ ] **1.3 Costruzione poligoni stanza**
-  - [ ] Implementare `room_polygon.py`
-  - [ ] Algoritmo per trovare cicli chiusi nel grafo dei segmenti
-  - [ ] Associare etichette OCR ai poligoni (testo dentro quale poligono?)
-  - [ ] Calcolare area in pixel → convertire in m² usando scala
+- [x] **1.3 Costruzione poligoni stanza** ✅ FATTO (approccio Region Growing)
+  - [x] Implementato `extraction/room_polygon.py`
+  - [x] Approccio **Region Growing** da semi OCR (molto più robusto di line-based!)
+  - [x] Binarizzazione adattiva + morfologia
+  - [x] Flood fill da posizioni label
+  - [x] Contorno → poligono semplificato (Douglas-Peucker)
+  - [x] Comando CLI `detect-rooms` per debug
+  - [x] Visualizzazione con poligoni colorati
+  - [ ] Fine-tuning parametri per diversi tipi di planimetria
+  - [ ] Calcolo area in m² usando scala
 
 ### Fase 2: Rilevamento Aperture
 > Porte e finestre sono interruzioni nei muri

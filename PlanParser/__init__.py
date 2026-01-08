@@ -13,14 +13,19 @@ CLI:
     python -m PlanParser parse --pdf path/to/plan.pdf
 """
 
-# Bootstrap: ensure Tesseract is available
-from .bootstrap import init_tesseract
-
-_tesseract_path = init_tesseract(require=False)
+# Lazy tesseract init - only when needed, not at import
+# from .bootstrap import init_tesseract
+# _tesseract_path = init_tesseract(require=False)
 
 from .config import PlanParserConfig
 from .geometry import Arc, LineSegment, Point2D, Polygon, Polyline, RawPlanGeometry, TextEntity
 from .parser import ParseResult, PlanParser, parse_planimetry
+
+# Lazy import for tesseract
+def init_tesseract(require: bool = False, silent: bool = False):
+    """Initialize Tesseract OCR - only called when needed."""
+    from .bootstrap import init_tesseract as _init_tesseract
+    return _init_tesseract(require=require, silent=silent)
 
 __version__ = "0.2.0"
 __all__ = [

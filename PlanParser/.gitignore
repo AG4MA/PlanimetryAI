@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+*.egg
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing/Linting
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Generated output (debug/runtime artifacts)
+.debug/
+.output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (keep in repo but ignore large PDFs)
+# data/*.pdf
+
+# Tesseract trained data is versioned
+# !tesseract/tessdata/*.traineddata
