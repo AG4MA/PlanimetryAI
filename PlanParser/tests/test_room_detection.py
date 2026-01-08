@@ -8,6 +8,41 @@ import pytest
 from PlanParser.config import RoomLabels
 from PlanParser.ocr_engine import OCRManager
 from PlanParser.room_detection import DetectedRoom, RoomCandidate, RoomDetector
+from PlanParser.services.text_matching import FuzzyTextMatcher, SequenceTextMatcher
+
+
+class TestTextMatchers:
+    """Tests for text matching services (extracted from RoomDetector)."""
+
+    @pytest.fixture
+    def matcher(self) -> FuzzyTextMatcher:
+        """Create a fuzzy matcher for testing."""
+        return FuzzyTextMatcher()
+
+    @pytest.fixture
+    def seq_matcher(self) -> SequenceTextMatcher:
+        """Create a sequence matcher for testing."""
+        return SequenceTextMatcher()
+
+    def test_similarity_identical(self, matcher: FuzzyTextMatcher) -> None:
+        """Test similarity for identical strings."""
+        sim = matcher.similarity("camera", "camera")
+        assert sim == 1.0
+
+    def test_similarity_different(self, matcher: FuzzyTextMatcher) -> None:
+        """Test similarity for different strings."""
+        sim = matcher.similarity("camera", "cucina")
+        assert 0.0 < sim < 1.0
+
+    def test_similarity_empty(self, matcher: FuzzyTextMatcher) -> None:
+        """Test similarity with empty string."""
+        assert matcher.similarity("", "test") == 0.0
+        assert matcher.similarity("test", "") == 0.0
+
+    def test_similarity_typo(self, seq_matcher: SequenceTextMatcher) -> None:
+        """Test similarity detects typos."""
+        sim = seq_matcher.similarity("cemera", "camera")
+        assert sim >= 0.8  # Should be high for 1-char typo
 
 
 class TestRoomDetector:
@@ -28,26 +63,6 @@ class TestRoomDetector:
         assert "cucina" in targets
         assert "soggiorno" in targets
         assert "disimpegno" in targets
-
-    def test_similarity_identical(self, detector: RoomDetector) -> None:
-        """Test similarity for identical strings."""
-        sim = detector._similarity("camera", "camera")
-        assert sim == 1.0
-
-    def test_similarity_different(self, detector: RoomDetector) -> None:
-        """Test similarity for different strings."""
-        sim = detector._similarity("camera", "cucina")
-        assert 0.0 < sim < 1.0
-
-    def test_similarity_empty(self, detector: RoomDetector) -> None:
-        """Test similarity with empty string."""
-        assert detector._similarity("", "test") == 0.0
-        assert detector._similarity("test", "") == 0.0
-
-    def test_similarity_typo(self, detector: RoomDetector) -> None:
-        """Test similarity detects typos."""
-        sim = detector._similarity("cemera", "camera")
-        assert sim >= 0.8  # Should be high for 1-char typo
 
     def test_get_canonical_label_direct(self, detector: RoomDetector) -> None:
         """Test canonical label for direct match."""

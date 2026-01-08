@@ -83,8 +83,8 @@ PlanParser/planimetry_output/
 PlanParser/debug_image/
 debug_image/
 
-# Tesseract local installation (downloaded automatically)
-PlanParser/tesseract/
+# Tesseract local installation (downloaded automatically at bootstrap)
+PlanParser/tools/tesseract/
 
 # Log files
 *.log

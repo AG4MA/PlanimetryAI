@@ -2,10 +2,15 @@
 Room Detection Module
 =====================
 Detects and labels rooms from planimetry sections.
+
+Follows SRP: detection logic only, visualization delegated to services.
 """
+
+from __future__ import annotations
 
 import logging
 from dataclasses import dataclass
+from typing import TYPE_CHECKING
 
 import cv2
 import numpy as np
@@ -13,6 +18,12 @@ import numpy as np
 from .config import DetectionConfig, RoomLabels
 from .image_processing import crop_region, find_text_regions
 from .ocr_engine import OCRManager, normalize_text
+from .core.protocols import TextMatcher
+from .services.text_matching import FuzzyTextMatcher
+from .services.visualization import VisualizationService, VisualStyle
+
+if TYPE_CHECKING:
+    from .core.protocols import ImageArray
 
 logger = logging.getLogger(__name__)
 
@@ -44,17 +55,27 @@ class RoomCandidate:
 class RoomDetector:
     """
     Detects and classifies rooms in planimetry images.
+    
+    Dependencies are injected for testability and SRP compliance.
     """
 
     def __init__(
         self,
         ocr_manager: OCRManager,
-        room_labels: RoomLabels = None,
-        detection_config: DetectionConfig = None
+        room_labels: RoomLabels | None = None,
+        detection_config: DetectionConfig | None = None,
+        text_matcher: TextMatcher | None = None,
+        visualizer: VisualizationService | None = None
     ):
         self.ocr = ocr_manager
         self.labels = room_labels or RoomLabels()
         self.config = detection_config or DetectionConfig()
+        
+        # Injected services (with defaults for backward compatibility)
+        self._matcher = text_matcher or FuzzyTextMatcher()
+        self._visualizer = visualizer or VisualizationService(
+            VisualStyle(box_color=(0, 255, 0), line_thickness=2)
+        )
 
         # Build expanded target set from synonyms
         self._targets = self._build_targets()
@@ -157,14 +178,15 @@ class RoomDetector:
                     best_match = self._get_canonical_label(token)
                     matched_token = token
 
-            # Fuzzy match for typos
+            # Fuzzy match for typos using injected matcher
             else:
-                for target in self._targets:
-                    similarity = self._similarity(token, target)
-                    if similarity >= 0.75 and similarity > best_score:
-                        best_score = similarity
-                        best_match = self._get_canonical_label(target)
-                        matched_token = token
+                match_result = self._matcher.find_best_match(
+                    token, self._targets, threshold=0.75
+                )
+                if match_result and match_result[1] > best_score:
+                    best_score = match_result[1]
+                    best_match = self._get_canonical_label(match_result[0])
+                    matched_token = token
 
         if best_match:
             x, y, w, h = candidate.bbox
@@ -193,31 +215,7 @@ class RoomDetector:
 
         return token
 
-    def _similarity(self, a: str, b: str) -> float:
-        """Calculate similarity between two strings (Levenshtein-based)."""
-        if a == b:
-            return 1.0
-        if not a or not b:
-            return 0.0
-
-        # Simple Levenshtein distance
-        m, n = len(a), len(b)
-        if m > n:
-            a, b = b, a
-            m, n = n, m
-
-        current = list(range(m + 1))
-        for i in range(1, n + 1):
-            previous, current = current, [i] + [0] * m
-            for j in range(1, m + 1):
-                add, delete, change = previous[j] + 1, current[j - 1] + 1, previous[j - 1]
-                if a[j - 1] != b[i - 1]:
-                    change += 1
-                current[j] = min(add, delete, change)
-
-        distance = current[m]
-        max_len = max(len(a), len(b))
-        return 1.0 - (distance / max_len)
+    # _similarity removed: now delegated to self._matcher
 
     def detect_rooms(self, image: np.ndarray) -> list[DetectedRoom]:
         """
@@ -249,6 +247,7 @@ class RoomDetector:
     ) -> np.ndarray:
         """
         Create visualization of detected rooms.
+        Delegates to VisualizationService for actual drawing.
 
         Args:
             image: Original image
@@ -258,25 +257,30 @@ class RoomDetector:
         Returns:
             Annotated image
         """
+        from .core.protocols import DetectionResult
+
         result = image.copy()
 
-        # Draw all candidates in light blue
+        # Draw all candidates in light gray
         if candidates:
-            for cand in candidates:
-                x, y, w, h = cand.bbox
-                cv2.rectangle(result, (x, y), (x + w, y + h), (200, 200, 100), 1)
-
-        # Draw detected rooms in green
-        for room in rooms:
-            x, y, w, h = room.bbox
-            cv2.rectangle(result, (x, y), (x + w, y + h), (0, 255, 0), 2)
-
-            # Add label
-            label = f"{room.label} ({room.confidence:.0%})"
-            cv2.putText(
-                result, label,
-                (x, y - 5),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1
+            candidate_style = VisualStyle(
+                box_color=(200, 200, 100),
+                line_thickness=1
             )
+            for cand in candidates:
+                result = self._visualizer.draw_bbox(
+                    result, cand.bbox, style=candidate_style
+                )
+
+        # Convert rooms to DetectionResults and draw
+        detections = [
+            DetectionResult(
+                label=room.label,
+                confidence=room.confidence,
+                bbox=room.bbox
+            )
+            for room in rooms
+        ]
+        result = self._visualizer.draw_detections(result, detections)
 
         return result
