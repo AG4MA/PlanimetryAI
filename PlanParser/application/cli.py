@@ -9,9 +9,11 @@ import logging
 import sys
 from pathlib import Path
 
-# Lazy imports - moved to command handlers to avoid tesseract init on import
-# from .config import OutputConfig, PlanParserConfig, ScaleConfig, SourceType
-# from .parser import PlanParser
+
+def _init_ocr_bootstrap():
+    """Initialize OCR engine at startup - auto-install Tesseract if missing."""
+    from PlanParser.infrastructure.ocr.bootstrap import init_tesseract
+    return init_tesseract(require=False, silent=False)
 
 
 def setup_logging(verbose: bool = False):
@@ -27,6 +29,11 @@ def setup_logging(verbose: bool = False):
 
 def main():
     """Main CLI entry point."""
+    # ========================================
+    # BOOTSTRAP: Auto-install Tesseract OCR
+    # ========================================
+    _init_ocr_bootstrap()
+    
     parser = argparse.ArgumentParser(
         description="PlanParser - Parse planimetry files to extract floor plans, rooms, and geometry",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -137,6 +144,14 @@ Examples:
                           help="Output binarized image path")
     rooms_cmd.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
 
+    # PIPELINE command - Full pipeline 0→4
+    pipeline_cmd = subparsers.add_parser("pipeline", help="Run full pipeline (0→4) with PNG debug output")
+    pipeline_cmd.add_argument("input_file", type=str, help="Path to PDF or image file")
+    pipeline_cmd.add_argument("--output", "-o", type=str, default="./PlanParser/output/pipeline",
+                              help="Output directory for all step PNGs")
+    pipeline_cmd.add_argument("--scale", type=float, help="Override scale ratio (e.g., 100 for 1:100)")
+    pipeline_cmd.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
+
     args = parser.parse_args()
 
     if not args.command:
@@ -151,6 +166,8 @@ Examples:
         run_extract_lines(args)
     elif args.command == "detect-rooms":
         run_detect_rooms(args)
+    elif args.command == "pipeline":
+        run_pipeline(args)
 
 
 def run_extract_lines(args):

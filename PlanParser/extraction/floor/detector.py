@@ -103,28 +103,128 @@ class FloorDetector:
         # Get OCR results with bounding boxes
         results = self.ocr.recognize(image)
 
+        # Group nearby words (same line = y within threshold)
+        # This handles Tesseract returning "Piano" and "Terra" as separate words
+        grouped_results = self._group_nearby_words(results, y_threshold=20, x_threshold=80)
+        
         found_floors = []
 
-        for result in results:
-            text = normalize_text(result.text)
+        for group in grouped_results:
+            # Combine text from all words in group
+            combined_text = " ".join(r.text for r in group)
+            normalized = normalize_text(combined_text)
+            
+            # Calculate group bbox (union of all word bboxes)
+            min_x = min(r.bbox[0] for r in group if r.bbox)
+            min_y = min(r.bbox[1] for r in group if r.bbox)
+            max_x = max(r.bbox[0] + r.bbox[2] for r in group if r.bbox)
+            max_y = max(r.bbox[1] + r.bbox[3] for r in group if r.bbox)
+            group_bbox = (min_x, min_y, max_x - min_x, max_y - min_y)
+            avg_conf = sum(r.confidence for r in group) / len(group)
 
             for pattern, label, floor_num, conf in self._compiled_patterns:
+                if pattern.search(normalized):
+                    y_pos = min_y + (max_y - min_y) // 2
+                    found_floors.append((
+                        label, floor_num, y_pos,
+                        conf * avg_conf,
+                        group_bbox
+                    ))
+                    logger.debug(f"Found floor label: '{combined_text}' -> {label}")
+                    break
+
+        # Also check individual words for simple patterns like "PT"
+        for result in results:
+            text = normalize_text(result.text)
+            for pattern, label, floor_num, conf in self._compiled_patterns:
                 if pattern.search(text):
-                    # Use the y-coordinate from the bbox center
-                    if result.bbox:
+                    # Check if not already found in groups
+                    already_found = any(
+                        abs(f[2] - (result.bbox[1] + result.bbox[3] // 2)) < 30
+                        for f in found_floors
+                    )
+                    if not already_found and result.bbox:
                         y_pos = result.bbox[1] + result.bbox[3] // 2
                         found_floors.append((
                             label, floor_num, y_pos,
                             conf * result.confidence,
                             result.bbox
                         ))
-                    break
+                        break
+
+        # Remove duplicates (same floor at similar y positions)
+        found_floors = self._deduplicate_floors(found_floors)
 
         # Sort by y-position
         found_floors.sort(key=lambda f: f[2])
 
         logger.info(f"Detected {len(found_floors)} floor labels")
         return found_floors
+
+    def _group_nearby_words(
+        self,
+        results: list,
+        y_threshold: int = 20,
+        x_threshold: int = 80
+    ) -> list[list]:
+        """Group words that are on the same line and close together."""
+        if not results:
+            return []
+        
+        # Filter results with valid bboxes
+        valid_results = [r for r in results if r.bbox and r.text.strip()]
+        if not valid_results:
+            return []
+        
+        # Sort by y, then x
+        sorted_results = sorted(valid_results, key=lambda r: (r.bbox[1], r.bbox[0]))
+        
+        groups = []
+        current_group = [sorted_results[0]]
+        
+        for result in sorted_results[1:]:
+            last = current_group[-1]
+            
+            # Check if on same line (y close) and horizontally close
+            y_close = abs(result.bbox[1] - last.bbox[1]) < y_threshold
+            x_close = result.bbox[0] - (last.bbox[0] + last.bbox[2]) < x_threshold
+            
+            if y_close and x_close:
+                current_group.append(result)
+            else:
+                if len(current_group) > 1:  # Only keep multi-word groups
+                    groups.append(current_group)
+                current_group = [result]
+        
+        # Don't forget last group
+        if len(current_group) > 1:
+            groups.append(current_group)
+        
+        return groups
+
+    def _deduplicate_floors(
+        self,
+        floors: list[tuple[str, int, int, float, tuple[int, int, int, int]]]
+    ) -> list[tuple[str, int, int, float, tuple[int, int, int, int]]]:
+        """Remove duplicate floor detections at similar y positions."""
+        if not floors:
+            return []
+        
+        # Sort by confidence descending
+        sorted_floors = sorted(floors, key=lambda f: f[3], reverse=True)
+        
+        unique = []
+        for floor in sorted_floors:
+            # Check if similar floor already exists
+            duplicate = False
+            for existing in unique:
+                if floor[1] == existing[1] and abs(floor[2] - existing[2]) < 50:
+                    duplicate = True
+                    break
+            if not duplicate:
+                unique.append(floor)
+        
+        return unique
 
     def detect_floor_from_text(self, text: str) -> tuple[str, int, float] | None:
         """
