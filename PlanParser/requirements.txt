@@ -1,0 +1,14 @@
+# PlanParser - Core dependencies
+opencv-python>=4.8.0
+numpy>=1.24.0
+PyMuPDF>=1.23.0
+Pillow>=10.0.0
+
+# OCR (requires Tesseract installed on system)
+pytesseract>=0.3.10
+
+# Optional: EasyOCR as alternative (no external install needed)
+# easyocr>=1.7.0
+
+# Optional: for DWG/DXF support
+# ezdxf>=1.0.0
