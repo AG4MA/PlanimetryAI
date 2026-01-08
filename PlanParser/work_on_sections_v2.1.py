@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Pipeline (con logging massivo):
   1) base.png (copia originale)
@@ -23,15 +22,24 @@ Suggerimento:
 
 """
 
-import os, math, unicodedata, shutil, re, sys, traceback, time, json
-from typing import List, Tuple, Iterable, Optional, Callable
+import json
+import logging
+import math
+import os
+import re
+import shutil
+import sys
+import time
+import traceback
+import unicodedata
+from collections.abc import Callable, Iterable
+from datetime import datetime
+from functools import wraps
+from logging.handlers import RotatingFileHandler
+
 import cv2
 import numpy as np
 import pytesseract
-import logging
-from logging.handlers import RotatingFileHandler
-from datetime import datetime
-from functools import wraps
 
 # =========================
 # CONFIGURAZIONE GENERALE
@@ -155,7 +163,7 @@ def log_img(path: str, img: np.ndarray, logger: logging.Logger, desc: str):
 # TESTO / TARGET UTILS
 # =========================
 
-def append_map_line(path: str, line: str, logger: Optional[logging.Logger] = None) -> None:
+def append_map_line(path: str, line: str, logger: logging.Logger | None = None) -> None:
     with open(path, "a", encoding="utf-8", buffering=1) as f:
         f.write(line + "\n")
         f.flush()
@@ -209,7 +217,7 @@ def small_deskew(img_gray: np.ndarray) -> np.ndarray:
         if v > best_var: best, best_var = rot, v
     return best
 
-def ocr_variants(gray_deskewed_enhanced: np.ndarray) -> List[Tuple[str, np.ndarray]]:
+def ocr_variants(gray_deskewed_enhanced: np.ndarray) -> list[tuple[str, np.ndarray]]:
     # Genera varianti con diversi thresholding
     g = gray_deskewed_enhanced
     _, otsu = cv2.threshold(g, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
@@ -219,7 +227,7 @@ def ocr_variants(gray_deskewed_enhanced: np.ndarray) -> List[Tuple[str, np.ndarr
     bold = cv2.dilate(otsu, cv2.getStructuringElement(cv2.MORPH_RECT,(2,2)), 1)
     return [("otsu", otsu), ("mean", mean), ("gaus", gaus), ("bold", bold), ("inv", inv)]
 
-def try_ocr(roi_bgr: np.ndarray, logger: logging.Logger, audit_dir: Optional[str], crop_idx: int) -> str:
+def try_ocr(roi_bgr: np.ndarray, logger: logging.Logger, audit_dir: str | None, crop_idx: int) -> str:
     """OCR con più varianti e PSM; salva eventualmente le immagini di audit."""
     gray = cv2.cvtColor(roi_bgr, cv2.COLOR_BGR2GRAY)
     gray = cv2.copyMakeBorder(gray, PAD, PAD, PAD, PAD, cv2.BORDER_REPLICATE)
@@ -255,7 +263,7 @@ def try_ocr(roi_bgr: np.ndarray, logger: logging.Logger, audit_dir: Optional[str
 
     return out_text  # può essere "" se tutto fallisce
 
-def try_ocr_tokens(roi_bgr: np.ndarray, logger: logging.Logger, audit_dir: Optional[str], crop_idx: int) -> List[str]:
+def try_ocr_tokens(roi_bgr: np.ndarray, logger: logging.Logger, audit_dir: str | None, crop_idx: int) -> list[str]:
     gray = cv2.cvtColor(roi_bgr, cv2.COLOR_BGR2GRAY)
     gray = cv2.copyMakeBorder(gray, PAD, PAD, PAD, PAD, cv2.BORDER_REPLICATE)
     gray = cv2.resize(gray, (gray.shape[1]*SCALE, gray.shape[0]*SCALE), interpolation=cv2.INTER_CUBIC)
@@ -307,7 +315,7 @@ def match_targets_tokens(tokens: Iterable[str], targets_canon: set[str]) -> bool
     return ("soggiorno" in toks and "pranzo" in toks and "soggiorno pranzo" in targets_canon)
 
 @timeit_step("detect_text_boxes")
-def detect_text_boxes(img: np.ndarray, logger: logging.Logger, audit_dir: Optional[str] = None) -> List[Tuple[int,int,int,int]]:
+def detect_text_boxes(img: np.ndarray, logger: logging.Logger, audit_dir: str | None = None) -> list[tuple[int,int,int,int]]:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     if audit_dir:
         log_img(os.path.join(audit_dir, "00_gray.png"), gray, logger, "gray")
@@ -555,4 +563,3 @@ if __name__ == "__main__":
         sys.stderr.write("FATAL: " + str(e) + "\n")
         traceback.print_exc()
         sys.exit(1)
-        

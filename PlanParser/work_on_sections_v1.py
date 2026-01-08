@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Seleziona SOLO le parole indicate e costruisce un grafo tra di esse.
 
 Input hardcoded:
-  C:\projects\extra\PlanimetryAI\base_rectangle_section_1.png
-  C:\projects\extra\PlanimetryAI\base_rectangle_section_2.png
+  C:\\projects\\extra\\PlanimetryAI\base_rectangle_section_1.png
+  C:\\projects\\extra\\PlanimetryAI\base_rectangle_section_2.png
 
 Output per ciascun file:
   *_selected.png         -> solo i box delle parole target (verde)
@@ -15,8 +14,10 @@ Requisiti:
   pip install opencv-python numpy pytesseract
 """
 
-import os, math, unicodedata
-from typing import List, Tuple
+import math
+import os
+import unicodedata
+
 import cv2
 import numpy as np
 
@@ -54,7 +55,7 @@ def enhance_contrast(gray: np.ndarray) -> np.ndarray:
     sharp = cv2.addWeighted(cla, 1.5, blur, -0.5, 0)
     return sharp
 
-def detect_text_boxes(img: np.ndarray) -> List[Tuple[int,int,int,int]]:
+def detect_text_boxes(img: np.ndarray) -> list[tuple[int,int,int,int]]:
     """Box candidati tramite morfologia + filtri geometrici."""
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     gray = enhance_contrast(gray)
@@ -96,7 +97,7 @@ def normalize_text(s: str) -> str:
     s = " ".join(s.split())
     return s
 
-def match_targets(text: str, targets_norm: List[str]) -> bool:
+def match_targets(text: str, targets_norm: list[str]) -> bool:
     """Match esatto o contenuto (robusto a spazi/accents)."""
     if not text:
         return False
@@ -105,7 +106,7 @@ def match_targets(text: str, targets_norm: List[str]) -> bool:
             return True
     return False
 
-def centers_from_boxes(boxes: List[Tuple[int,int,int,int]]) -> np.ndarray:
+def centers_from_boxes(boxes: list[tuple[int,int,int,int]]) -> np.ndarray:
     return np.array([(x + w/2.0, y + h/2.0) for (x,y,w,h) in boxes], dtype=np.float32)
 
 def knn_edges(points: np.ndarray, k: int = K_NEIGHBOURS, max_radius_frac: float = MAX_RADIUS_FRAC):
@@ -125,7 +126,7 @@ def knn_edges(points: np.ndarray, k: int = K_NEIGHBOURS, max_radius_frac: float 
                 edges.add((a, b))
     return sorted(edges)
 
-def process_one(path_in: str, targets: List[str]) -> None:
+def process_one(path_in: str, targets: list[str]) -> None:
     """Seleziona SOLO i box che matchano le parole target e costruisce il grafo."""
     img = cv2.imread(path_in)
     if img is None:

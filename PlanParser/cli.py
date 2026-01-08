@@ -5,19 +5,18 @@ Command-line interface for parsing planimetry files.
 """
 
 import argparse
-import sys
-import json
 import logging
+import sys
 from pathlib import Path
 
-from .parser import PlanParser, parse_planimetry
-from .config import PlanParserConfig, OutputConfig
+from .config import OutputConfig, PlanParserConfig
+from .parser import PlanParser
 
 
 def setup_logging(verbose: bool = False):
     """Configure logging based on verbosity."""
     level = logging.DEBUG if verbose else logging.INFO
-    
+
     logging.basicConfig(
         level=level,
         format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
@@ -37,16 +36,16 @@ Examples:
   python -m PlanParser parse --image debug_image/section.png
         """
     )
-    
+
     subparsers = parser.add_subparsers(dest="command", help="Commands")
-    
+
     # Parse command
     parse_cmd = subparsers.add_parser("parse", help="Parse a planimetry file")
-    
+
     input_group = parse_cmd.add_mutually_exclusive_group(required=True)
     input_group.add_argument("--pdf", type=str, help="Path to PDF file")
     input_group.add_argument("--image", type=str, help="Path to image file")
-    
+
     parse_cmd.add_argument(
         "--page", type=int, default=0,
         help="PDF page number (0-indexed, default: 0)"
@@ -83,17 +82,17 @@ Examples:
         "--tesseract-path", type=str,
         help="Path to Tesseract executable (if not in PATH)"
     )
-    
+
     # Info command
     info_cmd = subparsers.add_parser("info", help="Show PDF information")
     info_cmd.add_argument("pdf", type=str, help="Path to PDF file")
-    
+
     args = parser.parse_args()
-    
+
     if not args.command:
         parser.print_help()
         sys.exit(1)
-    
+
     if args.command == "parse":
         run_parse(args)
     elif args.command == "info":
@@ -104,7 +103,7 @@ def run_parse(args):
     """Execute parse command."""
     setup_logging(args.verbose)
     logger = logging.getLogger(__name__)
-    
+
     # Build configuration
     config = PlanParserConfig(
         pdf_zoom=args.zoom,
@@ -115,13 +114,13 @@ def run_parse(args):
             log_level="DEBUG" if args.verbose else "INFO"
         )
     )
-    
+
     if args.tesseract_path:
         config.ocr.tesseract_path = args.tesseract_path
-    
+
     # Create parser
     plan_parser = PlanParser(config)
-    
+
     # Parse
     if args.pdf:
         logger.info(f"Parsing PDF: {args.pdf}")
@@ -129,7 +128,7 @@ def run_parse(args):
     else:
         logger.info(f"Parsing image: {args.image}")
         result = plan_parser.parse_image(args.image, floor_anchor=args.anchor)
-    
+
     # Output results
     if args.json:
         print(result.to_json())
@@ -137,57 +136,57 @@ def run_parse(args):
         print("\n" + "=" * 60)
         print("PARSING RESULT")
         print("=" * 60)
-        
+
         if result.success:
-            print(f"✅ SUCCESS")
+            print("✅ SUCCESS")
             print(f"Source: {result.source_file}")
             print(f"Floors detected: {len(result.floors)}")
-            
+
             for floor in result.floors:
                 print(f"\n📍 {floor.floor_label} (confidence: {floor.confidence:.0%})")
                 print(f"   Rooms: {len(floor.rooms)}")
                 for room in floor.rooms:
                     print(f"   - {room['label']}: bbox={room['bbox']}, conf={room.get('confidence', 0):.0%}")
-            
+
             if result.debug_images:
                 print(f"\n🖼️  Debug images saved to: {args.debug_dir}")
         else:
-            print(f"❌ FAILED")
+            print("❌ FAILED")
             for error in result.errors:
                 print(f"   Error: {error}")
-        
+
         print("=" * 60)
-    
+
     # Save JSON result
     output_path = Path(args.output)
     output_path.mkdir(parents=True, exist_ok=True)
-    
+
     json_path = output_path / "result.json"
     with open(json_path, "w", encoding="utf-8") as f:
         f.write(result.to_json())
-    
+
     logger.info(f"Result saved to: {json_path}")
-    
+
     sys.exit(0 if result.success else 1)
 
 
 def run_info(args):
     """Show PDF information."""
-    from .pdf_reader import get_pdf_page_count, get_pdf_metadata, extract_text_from_pdf
-    
+    from .pdf_reader import extract_text_from_pdf, get_pdf_metadata, get_pdf_page_count
+
     pdf_path = Path(args.pdf)
-    
+
     if not pdf_path.exists():
         print(f"Error: File not found: {pdf_path}")
         sys.exit(1)
-    
+
     print(f"\nPDF Info: {pdf_path}")
     print("-" * 40)
-    
+
     # Page count
     pages = get_pdf_page_count(pdf_path)
     print(f"Pages: {pages}")
-    
+
     # Metadata
     meta = get_pdf_metadata(pdf_path)
     if meta:
@@ -196,7 +195,7 @@ def run_info(args):
             print(f"Title: {meta['title']}")
         if meta.get('author'):
             print(f"Author: {meta['author']}")
-    
+
     # Embedded text
     text = extract_text_from_pdf(pdf_path)
     if text:

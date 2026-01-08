@@ -1,1 +1,118 @@
+# =================================
+# PlanimetryAI - Complete .gitignore
+# =================================
+
+# -------- Python --------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# -------- IDE/Editor --------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# -------- Jupyter --------
+.ipynb_checkpoints/
+*.ipynb
+
+# -------- Testing --------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# -------- MyPy / Type checkers --------
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# -------- Debug/Output images --------
 *.png
+*.jpg
+*.jpeg
+*.bmp
+*.tiff
+*.tif
+!**/data/*.pdf
+!**/data/*.png
+
+# -------- PlanParser specific --------
+# Output directories (generated files)
+planimetry_output/
+PlanParser/planimetry_output/
+PlanParser/debug_image/
+debug_image/
+
+# Tesseract local installation (downloaded automatically)
+PlanParser/tesseract/
+
+# Log files
+*.log
+PlanParser/**/logs/
+
+# Candidates and audit directories
+**/candidates_all/
+**/audit/
+
+# -------- OS specific --------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# -------- Distribution --------
+*.tar.gz
+*.zip
+*.whl
+
+# -------- Secrets --------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json

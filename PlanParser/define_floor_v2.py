@@ -1,8 +1,9 @@
 import os
 import re
+import unicodedata
+
 import cv2
 import numpy as np
-import unicodedata
 
 try:
     import pytesseract  # Requires Tesseract OCR to be installed on the system
@@ -24,7 +25,7 @@ def crop_base_rectangle_from_debug(
     output_cropped_path: str = "./debug_image/base_rectangle.png",
     inner_padding_px: int = 5,
 ):
-    print(f"[DEBUG] Step: crop_base_rectangle_from_debug")
+    print("[DEBUG] Step: crop_base_rectangle_from_debug")
     if not os.path.exists(debug_image_path):
         print(f"File non trovato: {debug_image_path}")
         return None, None

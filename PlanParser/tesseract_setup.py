@@ -4,13 +4,11 @@ Tesseract OCR Auto-Installer.
 Downloads and installs Tesseract OCR locally if not found.
 """
 
-import os
 import platform
 import shutil
 import subprocess
 import sys
 import urllib.request
-import zipfile
 from pathlib import Path
 
 # Tesseract download URLs (Windows portable builds)
@@ -64,11 +62,7 @@ def is_tesseract_installed() -> bool:
         Path(r"C:\Program Files\Tesseract-OCR\tesseract.exe"),
         Path(r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"),
     ]
-    for path in common_paths:
-        if path.exists():
-            return True
-
-    return False
+    return any(path.exists() for path in common_paths)
 
 
 def get_tesseract_path() -> str | None:

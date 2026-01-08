@@ -1,10 +1,11 @@
-import cv2
-import numpy as np
-import fitz
-from PIL import Image
-import io
-import sys
 import argparse
+import io
+
+import cv2
+import fitz
+import numpy as np
+from PIL import Image
+
 
 def render_pdf_to_image(pdf_path, zoom=2.0):
     doc = fitz.open(pdf_path)
@@ -20,7 +21,7 @@ def detect_largest_rectangle(image, split_anchor="up"):
     edged = cv2.Canny(blurred, 50, 150)
 
     contours, _ = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    
+
     max_area = 0
     best_rect = None
 

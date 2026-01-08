@@ -5,7 +5,6 @@ Central configuration for all parsing parameters.
 """
 
 from dataclasses import dataclass, field
-from typing import List, Set, Optional
 from pathlib import Path
 
 
@@ -27,18 +26,18 @@ class OCRConfig:
     """Parameters for OCR processing."""
     languages: str = "ita+eng"
     oem: int = 3  # OCR Engine Mode
-    psm_modes: List[int] = field(default_factory=lambda: [7, 6, 11])
+    psm_modes: list[int] = field(default_factory=lambda: [7, 6, 11])
     padding: int = 4
     scale_factor: int = 4
     whitelist: str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-_/"
-    tesseract_path: Optional[str] = None  # Set if not in PATH
+    tesseract_path: str | None = None  # Set if not in PATH
 
 
-@dataclass 
+@dataclass
 class RoomLabels:
     """Room label recognition configuration."""
     # Target room types (Italian)
-    targets: Set[str] = field(default_factory=lambda: {
+    targets: set[str] = field(default_factory=lambda: {
         "sala", "soggiorno", "soggiorno-pranzo", "pranzo",
         "camera", "letto", "stanza",
         "bagno", "wc", "servizio",
@@ -50,13 +49,13 @@ class RoomLabels:
         "studio", "ufficio",
         "cantina", "garage", "box",
     })
-    
+
     # Words to ignore
-    blacklist: Set[str] = field(default_factory=lambda: {
+    blacklist: set[str] = field(default_factory=lambda: {
         "arredo", "armadio", "altra", "uiu", "stessa",
         "scala", "scale", "ascensore",
     })
-    
+
     # Synonyms mapping (canonical -> alternatives)
     synonyms: dict = field(default_factory=lambda: {
         "soggiorno": {"sala", "soggiorno-pranzo", "living"},
@@ -72,7 +71,7 @@ class RoomLabels:
 @dataclass
 class FloorLabels:
     """Floor label patterns (Italian)."""
-    ordinals: List[str] = field(default_factory=lambda: [
+    ordinals: list[str] = field(default_factory=lambda: [
         "terra", "primo", "secondo", "terzo", "quarto",
         "quinto", "sesto", "settimo", "ottavo", "nono", "decimo"
     ])

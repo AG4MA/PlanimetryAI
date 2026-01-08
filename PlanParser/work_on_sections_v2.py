@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Pipeline:
   1) base.png (copia originale)
@@ -13,8 +12,13 @@ Requisiti:
   + Tesseract installato (ita+eng). Se non è nel PATH, imposta pytesseract.pytesseract.tesseract_cmd.
 """
 
-import os, math, unicodedata, shutil, re
-from typing import List, Tuple, Iterable
+import math
+import os
+import re
+import shutil
+import unicodedata
+from collections.abc import Iterable
+
 import cv2
 import numpy as np
 import pytesseract
@@ -135,7 +139,7 @@ def small_deskew(img_gray: np.ndarray) -> np.ndarray:
     return best
 
 
-def ocr_variants(roi_gray: np.ndarray) -> List[np.ndarray]:
+def ocr_variants(roi_gray: np.ndarray) -> list[np.ndarray]:
     # Step 1: Correct small tilt in the text region (deskew)
     # OCR works much better if text lines are horizontal
     g = small_deskew(roi_gray)
@@ -191,7 +195,7 @@ def try_ocr(roi_bgr: np.ndarray) -> str:
             if t: return t
     return ""
 
-def try_ocr_tokens(roi_bgr: np.ndarray) -> List[str]:
+def try_ocr_tokens(roi_bgr: np.ndarray) -> list[str]:
     # Convert the input ROI (region of interest) from color (BGR) to grayscale
     gray = cv2.cvtColor(roi_bgr, cv2.COLOR_BGR2GRAY)
 
@@ -254,7 +258,7 @@ def match_targets_tokens(tokens: Iterable[str], targets_canon: set[str]) -> bool
         return True
     return ("soggiorno" in toks and "pranzo" in toks and "soggiorno pranzo" in targets_canon)
 
-def detect_text_boxes(img: np.ndarray) -> List[Tuple[int,int,int,int]]:
+def detect_text_boxes(img: np.ndarray) -> list[tuple[int,int,int,int]]:
     # Convert the image from color (BGR) to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -264,7 +268,7 @@ def detect_text_boxes(img: np.ndarray) -> List[Tuple[int,int,int,int]]:
     # Apply a morphological "top-hat" filter:
     # highlights small bright regions (like white letters) on darker backgrounds
     top  = cv2.morphologyEx(
-        gray, 
+        gray,
         cv2.MORPH_TOPHAT,
         cv2.getStructuringElement(cv2.MORPH_RECT, (TOPHAT_KERNEL, TOPHAT_KERNEL))
     )
@@ -275,8 +279,8 @@ def detect_text_boxes(img: np.ndarray) -> List[Tuple[int,int,int,int]]:
 
     # Dilate (thicken) the white regions to reconnect broken letters/words
     dil = cv2.dilate(
-        th, 
-        cv2.getStructuringElement(cv2.MORPH_RECT, (DILATE_KERNEL, DILATE_KERNEL)), 
+        th,
+        cv2.getStructuringElement(cv2.MORPH_RECT, (DILATE_KERNEL, DILATE_KERNEL)),
         1
     )
 
