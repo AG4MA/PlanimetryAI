@@ -1,7 +1,7 @@
 """
 PlanParser - Main Pipeline
 ==========================
-Unified entry point for parsing planimetry PDFs.
+Unified entry point for parsing planimetry files (PDF, images, DWG, DXF).
 """
 
 import json
@@ -13,13 +13,14 @@ from typing import Any
 
 import cv2
 
-from .config import DEFAULT_CONFIG, PlanParserConfig
+from .config import DEFAULT_CONFIG, PlanParserConfig, SourceType
 from .floor_detection import FloorDetector
 from .geometry import Point2D, Polygon, RawPlanGeometry, TextEntity
 from .image_processing import crop_region, draw_rectangles, find_largest_rectangle
 from .ocr_engine import OCRManager
 from .pdf_reader import render_pdf_page
 from .room_detection import RoomDetector
+from .scale_detection import ScaleDetector, prompt_user_for_scale, prompt_user_for_compass
 
 logger = logging.getLogger(__name__)
 
@@ -39,7 +40,8 @@ class ParseResult:
     """Complete parsing result for a planimetry."""
     success: bool
     source_file: str
-    floors: list[ParsedFloor]
+    source_type: str = "unknown"
+    floors: list[ParsedFloor] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
     errors: list[str] = field(default_factory=list)
     debug_images: dict[str, str] = field(default_factory=dict)
@@ -56,11 +58,12 @@ class PlanParser:
     Main planimetry parser class.
 
     Workflow:
-    1. Load PDF → Render to image
-    2. Detect main planimetry rectangle (if needed)
-    3. Detect floor labels → Split into sections
-    4. For each floor section → Detect rooms
-    5. Output structured data + debug images
+    1. Load source file → Render/convert to image
+    2. Detect scale and orientation
+    3. Detect main planimetry rectangle (if needed)
+    4. Detect floor labels → Split into sections
+    5. For each floor section → Detect rooms
+    6. Output structured data + debug images
     """
 
     def __init__(self, config: PlanParserConfig = None):
@@ -76,10 +79,95 @@ class PlanParser:
             self.config.rooms,
             self.config.detection
         )
+        self.scale_detector = ScaleDetector(self.ocr)
 
         # Ensure output directories exist
         self.config.output.debug_dir.mkdir(parents=True, exist_ok=True)
         self.config.output.output_dir.mkdir(parents=True, exist_ok=True)
+
+    def _detect_scale_and_orientation(self, image, result: ParseResult) -> None:
+        """
+        Detect or set scale and orientation for the planimetry.
+        
+        Modifies result.metadata with scale and orientation information.
+        """
+        scale_config = self.config.scale
+        
+        # --- SCALE ---
+        if scale_config.scale_ratio:
+            # Scale was provided by user via --scale
+            result.metadata["scale"] = {
+                "ratio": scale_config.scale_ratio,
+                "detected": False,
+                "source": "user_provided"
+            }
+            logger.info(f"Using user-provided scale: 1:{int(scale_config.scale_ratio)}")
+            
+        elif self.config.use_default_scale:
+            # --noscale flag: use default without detection
+            result.metadata["scale"] = {
+                "ratio": scale_config.default_scale_ratio,
+                "detected": False,
+                "source": "default"
+            }
+            logger.info(f"Using default scale: 1:{int(scale_config.default_scale_ratio)}")
+            
+        else:
+            # Attempt auto-detection
+            logger.info("Attempting scale auto-detection...")
+            detected_config = self.scale_detector.detect_all(image)
+            
+            if detected_config.scale_ratio:
+                result.metadata["scale"] = {
+                    "ratio": detected_config.scale_ratio,
+                    "detected": True,
+                    "source": "auto_detected"
+                }
+                logger.info(f"Scale auto-detected: 1:{int(detected_config.scale_ratio)}")
+                # Store detected orientation for later use
+                scale_config.north_angle_degrees = detected_config.north_angle_degrees
+                scale_config.orientation_detected = detected_config.orientation_detected
+            else:
+                # Scale not found - prompt user
+                logger.warning("Scale not detected automatically")
+                user_scale = prompt_user_for_scale()
+                result.metadata["scale"] = {
+                    "ratio": user_scale,
+                    "detected": False,
+                    "source": "user_input"
+                }
+                # Also try to get orientation from the detection
+                scale_config.north_angle_degrees = detected_config.north_angle_degrees
+                scale_config.orientation_detected = detected_config.orientation_detected
+        
+        # --- ORIENTATION ---
+        if scale_config.north_angle_degrees is not None:
+            # Orientation was provided by user via --compass OR auto-detected
+            result.metadata["orientation"] = {
+                "north_angle_degrees": scale_config.north_angle_degrees,
+                "detected": scale_config.orientation_detected,
+                "source": "user_provided" if not scale_config.orientation_detected else "auto_detected"
+            }
+            logger.info(f"Orientation: {scale_config.north_angle_degrees}° (detected={scale_config.orientation_detected})")
+            
+        elif self.config.use_default_compass:
+            # --nocompass flag: use default without detection
+            result.metadata["orientation"] = {
+                "north_angle_degrees": scale_config.default_north_angle,
+                "detected": False,
+                "source": "default"
+            }
+            logger.info(f"Using default orientation: {scale_config.default_north_angle}° (--nocompass)")
+            
+        else:
+            # Orientation not detected and not using default - prompt user
+            logger.warning("Orientation not detected automatically")
+            user_angle = prompt_user_for_compass()
+            result.metadata["orientation"] = {
+                "north_angle_degrees": user_angle,
+                "detected": False,
+                "source": "user_input"
+            }
 
     def parse(
         self,
@@ -99,10 +187,12 @@ class PlanParser:
             ParseResult with detected floors and rooms
         """
         pdf_path = Path(pdf_path)
+        source_type = self.config.source_type or SourceType.PDF
 
         result = ParseResult(
             success=False,
             source_file=str(pdf_path),
+            source_type=source_type.value,
             floors=[],
             metadata={
                 "processed_at": datetime.now().isoformat(),
@@ -131,7 +221,10 @@ class PlanParser:
                 cv2.imwrite(str(orig_path), image)
                 result.debug_images["original"] = str(orig_path)
 
-            # Step 2: Find main rectangle (planimetry boundary)
+            # Step 2: Detect scale and orientation
+            self._detect_scale_and_orientation(image, result)
+
+            # Step 3: Find main rectangle (planimetry boundary)
             main_rect = find_largest_rectangle(image)
 
             if main_rect:
@@ -230,10 +323,12 @@ class PlanParser:
             ParseResult
         """
         image_path = Path(image_path)
+        source_type = self.config.source_type or SourceType.IMAGE
 
         result = ParseResult(
             success=False,
             source_file=str(image_path),
+            source_type=source_type.value,
             floors=[],
             metadata={
                 "processed_at": datetime.now().isoformat(),
@@ -246,6 +341,11 @@ class PlanParser:
             if image is None:
                 result.errors.append(f"Failed to load image: {image_path}")
                 return result
+
+            result.metadata["image_size"] = {"width": image.shape[1], "height": image.shape[0]}
+
+            # Detect scale and orientation
+            self._detect_scale_and_orientation(image, result)
 
             # Use same processing as PDF (skip rectangle detection for pre-cropped)
             floor_sections = self.floor_detector.split_into_floors(image, anchor=floor_anchor)

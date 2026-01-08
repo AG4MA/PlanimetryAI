@@ -1,21 +1,22 @@
 """
-OCR Engine Abstraction
-======================
-Provides a unified interface for multiple OCR backends.
-Falls back gracefully when primary OCR is unavailable.
+OCR Engine Module
+=================
+Provides OCR backends with automatic fallback.
+Implements OCRProvider protocol from core.protocols.
 """
 
 from __future__ import annotations
 
 import logging
-import unicodedata
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any
 
 import cv2
 import numpy as np
 from numpy.typing import NDArray
+
+from .core.protocols import OCRBox
+from .core.text_utils import normalize_text
 
 if TYPE_CHECKING:
     ImageArray = NDArray[np.uint8]
@@ -25,37 +26,8 @@ else:
 logger = logging.getLogger(__name__)
 
 
-@dataclass
-class OCRResult:
-    """Structured OCR result."""
-    text: str
-    confidence: float
-    bbox: tuple[int, int, int, int] | None = None  # x, y, w, h
-
-    @property
-    def normalized_text(self) -> str:
-        """Return normalized, cleaned text."""
-        return normalize_text(self.text)
-
-
-def normalize_text(s: str) -> str:
-    """Normalize text for comparison: lowercase, remove accents, clean spaces."""
-    if not s:
-        return ""
-    # NFD decomposition to separate accents
-    s = unicodedata.normalize("NFD", s)
-    # Remove combining characters (accents)
-    s = "".join(ch for ch in s if unicodedata.category(ch) != "Mn")
-    s = s.lower()
-    s = s.replace("-", " ")
-    # Keep only alphanumeric and basic punctuation
-    s = "".join(ch for ch in s if ch.isalnum() or ch in " ._/")
-    # Normalize whitespace
-    s = " ".join(s.split())
-    # Remove trailing periods from abbreviations
-    if s.endswith(".") and len(s) <= 5:
-        s = s[:-1]
-    return s.strip()
+# Backward compatibility alias
+OCRResult = OCRBox
 
 
 class OCREngine(ABC):
@@ -67,7 +39,7 @@ class OCREngine(ABC):
         pass
 
     @abstractmethod
-    def recognize(self, image: ImageArray, lang: str = "ita+eng") -> list[OCRResult]:
+    def recognize(self, image: ImageArray, lang: str = "ita+eng") -> list[OCRBox]:
         """Perform OCR on an image, return list of results."""
         pass
 
@@ -133,12 +105,12 @@ class TesseractEngine(OCREngine):
 
         return variants
 
-    def recognize(self, image: ImageArray, lang: str = "ita+eng") -> list[OCRResult]:
+    def recognize(self, image: ImageArray, lang: str = "ita+eng") -> list[OCRBox]:
         if not self.is_available():
             return []
 
         import pytesseract  # type: ignore[import-untyped]
-        results: list[OCRResult] = []
+        results: list[OCRBox] = []
 
         try:
             # Get word-level bounding boxes
@@ -153,16 +125,13 @@ class TesseractEngine(OCREngine):
                 conf = float(data['conf'][i]) if data['conf'][i] != '-1' else 0.0
 
                 if text and text.strip():
-                    bbox = (
-                        data['left'][i],
-                        data['top'][i],
-                        data['width'][i],
-                        data['height'][i]
-                    )
-                    results.append(OCRResult(
+                    results.append(OCRBox(
                         text=text.strip(),
                         confidence=conf / 100.0,
-                        bbox=bbox
+                        x=data['left'][i],
+                        y=data['top'][i],
+                        width=data['width'][i],
+                        height=data['height'][i]
                     ))
         except Exception as e:
             logger.warning(f"Tesseract recognize failed: {e}")
@@ -170,36 +139,34 @@ class TesseractEngine(OCREngine):
         return results
 
     def recognize_text(self, image: ImageArray, lang: str = "ita+eng") -> str:
+        """Fast OCR for single text regions - optimized for speed."""
         if not self.is_available():
             return ""
 
         import pytesseract  # type: ignore[import-untyped]
 
-        variants = self._preprocess(image)
-        all_texts = []
-
-        for variant in variants:
-            # Upscale for better recognition
+        try:
+            # Convert to grayscale if needed
+            if len(image.shape) == 3:
+                gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            else:
+                gray = image
+            
+            # Simple upscale for better recognition
             scaled = cv2.resize(
-                variant, None, fx=2.5, fy=2.5,
+                gray, None, fx=2.0, fy=2.0,
                 interpolation=cv2.INTER_CUBIC
             )
-
-            for psm in [6, 7, 11]:  # Block, single line, sparse
-                try:
-                    text = pytesseract.image_to_string(
-                        scaled, lang=lang,
-                        config=f"--psm {psm}"
-                    )
-                    if text and text.strip():
-                        all_texts.append(text.strip())
-                except Exception:
-                    continue
-
-        # Return the longest meaningful result
-        if all_texts:
-            return max(all_texts, key=len)
-        return ""
+            
+            # Single PSM call - fast mode
+            text = pytesseract.image_to_string(
+                scaled, lang=lang,
+                config="--psm 7 --oem 3",  # PSM 7 = single line (fastest for labels)
+                timeout=2  # 2 second timeout per crop
+            )
+            return text.strip() if text else ""
+        except Exception:
+            return ""
 
 
 class EasyOCREngine(OCREngine):
@@ -230,7 +197,7 @@ class EasyOCREngine(OCREngine):
             self._reader = easyocr.Reader(self._languages, gpu=False)
         return self._reader
 
-    def recognize(self, image: ImageArray, lang: str = "ita+eng") -> list[OCRResult]:
+    def recognize(self, image: ImageArray, lang: str = "ita+eng") -> list[OCRBox]:
         reader = self._get_reader()
         if not reader:
             return []
@@ -238,12 +205,13 @@ class EasyOCREngine(OCREngine):
         try:
             results = reader.readtext(image)
             return [
-                OCRResult(
+                OCRBox(
                     text=text,
                     confidence=conf,
-                    bbox=(int(bbox[0][0]), int(bbox[0][1]),
-                          int(bbox[2][0] - bbox[0][0]),
-                          int(bbox[2][1] - bbox[0][1]))
+                    x=int(bbox[0][0]),
+                    y=int(bbox[0][1]),
+                    width=int(bbox[2][0] - bbox[0][0]),
+                    height=int(bbox[2][1] - bbox[0][1])
                 )
                 for bbox, text, conf in results
             ]
@@ -282,7 +250,7 @@ class OCRManager:
         logger.error("No OCR engine available!")
         return None
 
-    def recognize(self, image: ImageArray, lang: str = "ita+eng") -> list[OCRResult]:
+    def recognize(self, image: ImageArray, lang: str = "ita+eng") -> list[OCRBox]:
         """Recognize text in image using best available engine."""
         engine = self.get_available_engine()
         if engine:

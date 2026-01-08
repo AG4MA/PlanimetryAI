@@ -5,7 +5,82 @@ Central configuration for all parsing parameters.
 """
 
 from dataclasses import dataclass, field
+from enum import Enum
 from pathlib import Path
+
+# Package root directory - all paths relative to this
+PACKAGE_DIR = Path(__file__).parent.resolve()
+
+
+class SourceType(Enum):
+    """Supported input source types."""
+    PDF = "pdf"
+    IMAGE = "image"  # PNG, JPG, TIFF, etc.
+    DWG = "dwg"
+    DXF = "dxf"
+    
+    @classmethod
+    def from_extension(cls, path: str | Path) -> "SourceType":
+        """Auto-detect source type from file extension."""
+        ext = Path(path).suffix.lower()
+        mapping = {
+            ".pdf": cls.PDF,
+            ".png": cls.IMAGE,
+            ".jpg": cls.IMAGE,
+            ".jpeg": cls.IMAGE,
+            ".tiff": cls.IMAGE,
+            ".tif": cls.IMAGE,
+            ".bmp": cls.IMAGE,
+            ".dwg": cls.DWG,
+            ".dxf": cls.DXF,
+        }
+        if ext not in mapping:
+            raise ValueError(f"Unsupported file extension: {ext}")
+        return mapping[ext]
+
+
+class Orientation(Enum):
+    """Cardinal orientations."""
+    NORTH = "N"
+    SOUTH = "S"
+    EAST = "E"
+    WEST = "W"
+    NORTH_EAST = "NE"
+    NORTH_WEST = "NW"
+    SOUTH_EAST = "SE"
+    SOUTH_WEST = "SW"
+    UNKNOWN = "?"
+
+
+@dataclass
+class ScaleConfig:
+    """Scale and orientation configuration."""
+    # Scale ratio (e.g., 100 means 1:100)
+    scale_ratio: float | None = None
+    
+    # Pixels per meter (calculated from scale + DPI)
+    pixels_per_meter: float | None = None
+    
+    # North orientation in degrees (0 = up, 90 = right, etc.)
+    north_angle_degrees: float | None = None
+    
+    # Was scale auto-detected or provided by user?
+    scale_detected: bool = False
+    orientation_detected: bool = False
+    
+    # Default scale when --noscale is used (1:100 is common for apartments)
+    default_scale_ratio: float = 100.0
+    
+    # Default north angle when --nocompass is used (0 = north is up)
+    default_north_angle: float = 0.0
+    
+    def get_effective_scale(self) -> float:
+        """Return detected scale or default."""
+        return self.scale_ratio if self.scale_ratio else self.default_scale_ratio
+    
+    def get_effective_north_angle(self) -> float:
+        """Return detected north angle or default."""
+        return self.north_angle_degrees if self.north_angle_degrees is not None else self.default_north_angle
 
 
 @dataclass
@@ -80,8 +155,8 @@ class FloorLabels:
 @dataclass
 class OutputConfig:
     """Output and debug configuration."""
-    debug_dir: Path = field(default_factory=lambda: Path("./debug_image"))
-    output_dir: Path = field(default_factory=lambda: Path("./planimetry_output"))
+    debug_dir: Path = field(default_factory=lambda: PACKAGE_DIR / "debug_image")
+    output_dir: Path = field(default_factory=lambda: PACKAGE_DIR / "output")
     save_intermediate: bool = True
     log_level: str = "INFO"
 
@@ -89,6 +164,15 @@ class OutputConfig:
 @dataclass
 class PlanParserConfig:
     """Master configuration combining all settings."""
+    # Source configuration
+    source_type: SourceType | None = None  # Auto-detected if None
+    
+    # Scale and orientation
+    scale: ScaleConfig = field(default_factory=ScaleConfig)
+    use_default_scale: bool = False  # --noscale flag
+    use_default_compass: bool = False  # --nocompass flag
+    
+    # Processing configs
     detection: DetectionConfig = field(default_factory=DetectionConfig)
     ocr: OCRConfig = field(default_factory=OCRConfig)
     rooms: RoomLabels = field(default_factory=RoomLabels)

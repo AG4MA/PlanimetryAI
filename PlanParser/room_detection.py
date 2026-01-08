@@ -16,9 +16,10 @@ import cv2
 import numpy as np
 
 from .config import DetectionConfig, RoomLabels
-from .image_processing import crop_region, find_text_regions
-from .ocr_engine import OCRManager, normalize_text
 from .core.protocols import TextMatcher
+from .core.text_utils import normalize_text
+from .image_processing import crop_region, find_text_regions
+from .ocr_engine import OCRManager
 from .services.text_matching import FuzzyTextMatcher
 from .services.visualization import VisualizationService, VisualStyle
 
@@ -116,6 +117,12 @@ class RoomDetector:
             min_height=self.config.min_height,
             max_height=self.config.max_height
         )
+
+        # Limit candidates to avoid OCR explosion (sort by area, take largest)
+        MAX_CANDIDATES = 50
+        if len(boxes) > MAX_CANDIDATES:
+            boxes = sorted(boxes, key=lambda b: b[2] * b[3], reverse=True)[:MAX_CANDIDATES]
+            logger.warning(f"Limiting candidates from {len(boxes)} to {MAX_CANDIDATES}")
 
         candidates = []
         for bbox in boxes:

@@ -21,6 +21,8 @@ from PlanParser.core.protocols import (
     ResultSerializer,
 )
 
+from PlanParser.core.text_utils import normalize_text, clean_ocr_text
+
 __all__ = [
     # Types
     "ImageArray",
@@ -36,4 +38,7 @@ __all__ = [
     "RegionFinder",
     "DocumentReader",
     "ResultSerializer",
+    # Utilities
+    "normalize_text",
+    "clean_ocr_text",
 ]

@@ -11,6 +11,8 @@ from typing import Any, Protocol, runtime_checkable
 import numpy as np
 from numpy.typing import NDArray
 
+from .text_utils import normalize_text
+
 
 # Type alias for images
 ImageArray = NDArray[np.uint8]
@@ -37,6 +39,11 @@ class OCRBox:
     @property
     def bbox(self) -> tuple[int, int, int, int]:
         return (self.x, self.y, self.width, self.height)
+
+    @property
+    def normalized_text(self) -> str:
+        """Return normalized text for comparison."""
+        return normalize_text(self.text)
 
 
 @runtime_checkable
