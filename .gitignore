@@ -1,9 +1,105 @@
-tesseract/
-.venv/
+# =========================
+# Python
+# =========================
 __pycache__/
-*.pyc
-.ipynb_checkpoints
-*.png
-*.jpg
-*.jpeg
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# =========================
+# Testing
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# Tesseract OCR (local install)
+# =========================
+**/tesseract/
+tesseract/
+**/testV1/tesseract/
+# Keep the setup script
+!**/setup_tesseract.py
+
+# =========================
+# Output / Debug
+# =========================
+**/output/
+**/debug_image/
+**/planimetry_output/
+**/filters_test/
 *.log
+
+# =========================
+# Images (generated)
+# =========================
+# Uncomment if you want to ignore all images:
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.bmp
+
+# =========================
+# Data (keep PDFs for testing)
+# =========================
+# Large files
+*.pdf.backup
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Misc
+# =========================
+*.bak
+*.tmp
+*.temp
