@@ -435,12 +435,12 @@ def process_one(path_in: str, targets: Iterable[str], out_root: str = "out") -> 
 # ---------- Main ----------
 if __name__ == "__main__":
     files = [
-        r"C:\projects\extra\PlanimetryAI\PlanParser\debug_image\base_rectangle_section_1.png",
-        r"C:\projects\extra\PlanimetryAI\PlanParser\debug_image\base_rectangle_section_2.png",
+        r"C:\projects\PlanimetryAI\PlanParser\debug_image\base_rectangle_section_1.png",
+        r"C:\projects\PlanimetryAI\PlanParser\debug_image\base_rectangle_section_2.png",
     ]
 
     # files = [
-    #     r"C:\projects\extra\PlanimetryAI\PlanParser\debug_image\base_rectangle_piano_lines.png"
+    #     r"C:\projects\PlanimetryAI\PlanParser\debug_image\base_rectangle_piano_lines.png"
     # ]
 
     target_words = [

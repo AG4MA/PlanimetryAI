@@ -1,0 +1,16 @@
+# PlanimetryAI - Requirements
+# Core image processing
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# PDF handling
+PyMuPDF>=1.23.0
+
+# OCR
+pytesseract>=0.3.10
+
+# Image processing
+Pillow>=10.0.0
+
+# Utilities
+scipy>=1.11.0
