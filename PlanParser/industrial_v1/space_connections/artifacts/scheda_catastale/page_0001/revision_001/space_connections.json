@@ -1,0 +1,874 @@
+{
+  "schema_version": "planparser.industrial_v1.space-connections/1.0",
+  "created_at_utc": "2026-07-17T16:00:05.391327+00:00",
+  "status": "automatic_gap_connection_candidates_not_human_approved",
+  "scope": {
+    "document": "scheda_catastale",
+    "page": "page_0001",
+    "regions": [
+      "region_001",
+      "region_002"
+    ]
+  },
+  "inputs": [
+    {
+      "role": "region_001_topology",
+      "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_001/revision_002/text_space_topology.json",
+      "sha256": "0460b42b0a4cdba3d6e5e985b448b0a44ac86112c45d0f7bf12d2481bddd07c7"
+    },
+    {
+      "role": "region_001_topology_overlay",
+      "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_001/revision_002/topology_overlay.png",
+      "sha256": "9b1b35669b6e46a512a93b6dc3530acfd1a4ccc787f2e2192499cab0430949d7"
+    },
+    {
+      "role": "region_002_topology",
+      "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_002/revision_001/text_space_topology.json",
+      "sha256": "0a8ed97e03b3fdb487280f8e3215c77fad4ab37ca65d92405f149bbda8e9c903"
+    },
+    {
+      "role": "region_002_topology_overlay",
+      "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_002/revision_001/topology_overlay.png",
+      "sha256": "c37d43ebb6c3cbe767a80826f87171abdced994d859bff28297150f85a4230f8"
+    }
+  ],
+  "method": {
+    "name": "synthetic_gap_component_opposite_space_test",
+    "ring_radius_px": 6,
+    "opposite_side_margin_px": 8,
+    "door_inference_performed": false,
+    "traversability_inference_performed": false
+  },
+  "region_audits": {
+    "region_001": {
+      "synthetic_closure_component_count": 43,
+      "closure_components_without_two_space_labels": 33,
+      "connection_hypothesis_count": 11,
+      "supported_connection_candidate_count": 0,
+      "abstained_connection_hypothesis_count": 11
+    },
+    "region_002": {
+      "synthetic_closure_component_count": 41,
+      "closure_components_without_two_space_labels": 34,
+      "connection_hypothesis_count": 9,
+      "supported_connection_candidate_count": 0,
+      "abstained_connection_hypothesis_count": 9
+    }
+  },
+  "connection_candidates": [
+    {
+      "id": "region_001_connection_001",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_001",
+      "from_space_name_hypothesis": "bagno",
+      "to_space_id": "space_candidate_004",
+      "to_space_name_hypothesis": "disimpegno",
+      "source_closure_component": "closure_component_007",
+      "bbox_crop_px_xywh": [
+        340,
+        225,
+        16,
+        13
+      ],
+      "bbox_page_px_xywh": [
+        1141,
+        909,
+        16,
+        13
+      ],
+      "area_px2": 192,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_002",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_003",
+      "from_space_name_hypothesis": "camera",
+      "to_space_id": "space_candidate_004",
+      "to_space_name_hypothesis": "disimpegno",
+      "source_closure_component": "closure_component_009",
+      "bbox_crop_px_xywh": [
+        281,
+        252,
+        13,
+        19
+      ],
+      "bbox_page_px_xywh": [
+        1082,
+        936,
+        13,
+        19
+      ],
+      "area_px2": 231,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_003",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_002",
+      "from_space_name_hypothesis": "camera",
+      "to_space_id": "space_candidate_004",
+      "to_space_name_hypothesis": "disimpegno",
+      "source_closure_component": "closure_component_010",
+      "bbox_crop_px_xywh": [
+        403,
+        252,
+        15,
+        19
+      ],
+      "bbox_page_px_xywh": [
+        1204,
+        936,
+        15,
+        19
+      ],
+      "area_px2": 269,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_004",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_003",
+      "from_space_name_hypothesis": "camera",
+      "to_space_id": "space_candidate_004",
+      "to_space_name_hypothesis": "disimpegno",
+      "source_closure_component": "closure_component_011",
+      "bbox_crop_px_xywh": [
+        251,
+        276,
+        44,
+        25
+      ],
+      "bbox_page_px_xywh": [
+        1052,
+        960,
+        44,
+        25
+      ],
+      "area_px2": 930,
+      "orientation": "horizontal",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_005",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_002",
+      "from_space_name_hypothesis": "camera",
+      "to_space_id": "space_candidate_004",
+      "to_space_name_hypothesis": "disimpegno",
+      "source_closure_component": "closure_component_012",
+      "bbox_crop_px_xywh": [
+        428,
+        276,
+        19,
+        25
+      ],
+      "bbox_page_px_xywh": [
+        1229,
+        960,
+        19,
+        25
+      ],
+      "area_px2": 405,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_006",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_004",
+      "from_space_name_hypothesis": "disimpegno",
+      "to_space_id": "space_candidate_005",
+      "to_space_name_hypothesis": "vano scala",
+      "source_closure_component": "closure_component_015",
+      "bbox_crop_px_xywh": [
+        255,
+        330,
+        78,
+        25
+      ],
+      "bbox_page_px_xywh": [
+        1056,
+        1014,
+        78,
+        25
+      ],
+      "area_px2": 735,
+      "orientation": "horizontal",
+      "opposite_side_space_labels_supported": true,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "opposite_side_support"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_007",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_004",
+      "from_space_name_hypothesis": "disimpegno",
+      "to_space_id": "space_candidate_006",
+      "to_space_name_hypothesis": "soggiorno-pranzo",
+      "source_closure_component": "closure_component_015",
+      "bbox_crop_px_xywh": [
+        255,
+        330,
+        78,
+        25
+      ],
+      "bbox_page_px_xywh": [
+        1056,
+        1014,
+        78,
+        25
+      ],
+      "area_px2": 735,
+      "orientation": "horizontal",
+      "opposite_side_space_labels_supported": true,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "opposite_side_support"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_008",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_004",
+      "from_space_name_hypothesis": "disimpegno",
+      "to_space_id": "space_candidate_006",
+      "to_space_name_hypothesis": "soggiorno-pranzo",
+      "source_closure_component": "closure_component_016",
+      "bbox_crop_px_xywh": [
+        340,
+        333,
+        16,
+        15
+      ],
+      "bbox_page_px_xywh": [
+        1141,
+        1017,
+        16,
+        15
+      ],
+      "area_px2": 224,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_009",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_006",
+      "from_space_name_hypothesis": "soggiorno-pranzo",
+      "to_space_id": "space_candidate_007",
+      "to_space_name_hypothesis": "ripostiglio",
+      "source_closure_component": "closure_component_028",
+      "bbox_crop_px_xywh": [
+        193,
+        575,
+        24,
+        25
+      ],
+      "bbox_page_px_xywh": [
+        994,
+        1259,
+        24,
+        25
+      ],
+      "area_px2": 485,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_010",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_006",
+      "from_space_name_hypothesis": "soggiorno-pranzo",
+      "to_space_id": "space_candidate_007",
+      "to_space_name_hypothesis": "ripostiglio",
+      "source_closure_component": "closure_component_030",
+      "bbox_crop_px_xywh": [
+        220,
+        586,
+        20,
+        25
+      ],
+      "bbox_page_px_xywh": [
+        1021,
+        1270,
+        20,
+        25
+      ],
+      "area_px2": 452,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_001_connection_011",
+      "region_id": "region_001",
+      "from_space_id": "space_candidate_006",
+      "from_space_name_hypothesis": "soggiorno-pranzo",
+      "to_space_id": "space_candidate_007",
+      "to_space_name_hypothesis": "ripostiglio",
+      "source_closure_component": "closure_component_032",
+      "bbox_crop_px_xywh": [
+        243,
+        604,
+        10,
+        13
+      ],
+      "bbox_page_px_xywh": [
+        1044,
+        1288,
+        10,
+        13
+      ],
+      "area_px2": 75,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_001",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_001",
+      "from_space_name_hypothesis": "disimpegno",
+      "to_space_id": "space_candidate_002",
+      "to_space_name_hypothesis": "bagno",
+      "source_closure_component": "closure_component_011",
+      "bbox_crop_px_xywh": [
+        196,
+        90,
+        140,
+        28
+      ],
+      "bbox_page_px_xywh": [
+        1025,
+        2183,
+        140,
+        28
+      ],
+      "area_px2": 2774,
+      "orientation": "horizontal",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_002",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_001",
+      "from_space_name_hypothesis": "disimpegno",
+      "to_space_id": "space_candidate_003",
+      "to_space_name_hypothesis": "cucina",
+      "source_closure_component": "closure_component_011",
+      "bbox_crop_px_xywh": [
+        196,
+        90,
+        140,
+        28
+      ],
+      "bbox_page_px_xywh": [
+        1025,
+        2183,
+        140,
+        28
+      ],
+      "area_px2": 2774,
+      "orientation": "horizontal",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_003",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_002",
+      "from_space_name_hypothesis": "bagno",
+      "to_space_id": "space_candidate_003",
+      "to_space_name_hypothesis": "cucina",
+      "source_closure_component": "closure_component_011",
+      "bbox_crop_px_xywh": [
+        196,
+        90,
+        140,
+        28
+      ],
+      "bbox_page_px_xywh": [
+        1025,
+        2183,
+        140,
+        28
+      ],
+      "area_px2": 2774,
+      "orientation": "horizontal",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_004",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_001",
+      "from_space_name_hypothesis": "disimpegno",
+      "to_space_id": "space_candidate_003",
+      "to_space_name_hypothesis": "cucina",
+      "source_closure_component": "closure_component_012",
+      "bbox_crop_px_xywh": [
+        225,
+        118,
+        15,
+        16
+      ],
+      "bbox_page_px_xywh": [
+        1054,
+        2211,
+        15,
+        16
+      ],
+      "area_px2": 224,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_005",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_001",
+      "from_space_name_hypothesis": "disimpegno",
+      "to_space_id": "space_candidate_002",
+      "to_space_name_hypothesis": "bagno",
+      "source_closure_component": "closure_component_013",
+      "bbox_crop_px_xywh": [
+        293,
+        118,
+        13,
+        15
+      ],
+      "bbox_page_px_xywh": [
+        1122,
+        2211,
+        13,
+        15
+      ],
+      "area_px2": 187,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_006",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_003",
+      "from_space_name_hypothesis": "cucina",
+      "to_space_id": "space_candidate_004",
+      "to_space_name_hypothesis": "sala",
+      "source_closure_component": "closure_component_015",
+      "bbox_crop_px_xywh": [
+        225,
+        198,
+        44,
+        28
+      ],
+      "bbox_page_px_xywh": [
+        1054,
+        2291,
+        44,
+        28
+      ],
+      "area_px2": 1038,
+      "orientation": "horizontal",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_007",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_003",
+      "from_space_name_hypothesis": "cucina",
+      "to_space_id": "space_candidate_004",
+      "to_space_name_hypothesis": "sala",
+      "source_closure_component": "closure_component_016",
+      "bbox_crop_px_xywh": [
+        225,
+        232,
+        15,
+        21
+      ],
+      "bbox_page_px_xywh": [
+        1054,
+        2325,
+        15,
+        21
+      ],
+      "area_px2": 299,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_008",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_004",
+      "from_space_name_hypothesis": "sala",
+      "to_space_id": "space_candidate_005",
+      "to_space_name_hypothesis": "vano scala",
+      "source_closure_component": "closure_component_017",
+      "bbox_crop_px_xywh": [
+        197,
+        303,
+        43,
+        22
+      ],
+      "bbox_page_px_xywh": [
+        1026,
+        2396,
+        43,
+        22
+      ],
+      "area_px2": 802,
+      "orientation": "horizontal",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    },
+    {
+      "id": "region_002_connection_009",
+      "region_id": "region_002",
+      "from_space_id": "space_candidate_004",
+      "from_space_name_hypothesis": "sala",
+      "to_space_id": "space_candidate_005",
+      "to_space_name_hypothesis": "vano scala",
+      "source_closure_component": "closure_component_018",
+      "bbox_crop_px_xywh": [
+        225,
+        328,
+        19,
+        23
+      ],
+      "bbox_page_px_xywh": [
+        1054,
+        2421,
+        19,
+        23
+      ],
+      "area_px2": 369,
+      "orientation": "compact_or_mixed",
+      "opposite_side_space_labels_supported": false,
+      "touches_region_border": false,
+      "status": "abstained_connection_hypothesis",
+      "abstained": true,
+      "reasons": [
+        "temporary_gap_closure_has_two_distinct_space_labels_nearby",
+        "ring_proximity_only"
+      ],
+      "explicit_non_claim": "this candidate is not asserted to be a door or traversable opening"
+    }
+  ],
+  "topology_edges": [
+    {
+      "id": "connection_edge_001",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_001",
+      "to": "space_candidate_004",
+      "evidence_id": "region_001_connection_001",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_002",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_003",
+      "to": "space_candidate_004",
+      "evidence_id": "region_001_connection_002",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_003",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_002",
+      "to": "space_candidate_004",
+      "evidence_id": "region_001_connection_003",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_004",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_003",
+      "to": "space_candidate_004",
+      "evidence_id": "region_001_connection_004",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_005",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_002",
+      "to": "space_candidate_004",
+      "evidence_id": "region_001_connection_005",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_006",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_004",
+      "to": "space_candidate_005",
+      "evidence_id": "region_001_connection_006",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_007",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_004",
+      "to": "space_candidate_006",
+      "evidence_id": "region_001_connection_007",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_008",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_004",
+      "to": "space_candidate_006",
+      "evidence_id": "region_001_connection_008",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_009",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_006",
+      "to": "space_candidate_007",
+      "evidence_id": "region_001_connection_009",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_010",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_006",
+      "to": "space_candidate_007",
+      "evidence_id": "region_001_connection_010",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_011",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_006",
+      "to": "space_candidate_007",
+      "evidence_id": "region_001_connection_011",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_012",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_001",
+      "to": "space_candidate_002",
+      "evidence_id": "region_002_connection_001",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_013",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_001",
+      "to": "space_candidate_003",
+      "evidence_id": "region_002_connection_002",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_014",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_002",
+      "to": "space_candidate_003",
+      "evidence_id": "region_002_connection_003",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_015",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_001",
+      "to": "space_candidate_003",
+      "evidence_id": "region_002_connection_004",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_016",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_001",
+      "to": "space_candidate_002",
+      "evidence_id": "region_002_connection_005",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_017",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_003",
+      "to": "space_candidate_004",
+      "evidence_id": "region_002_connection_006",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_018",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_003",
+      "to": "space_candidate_004",
+      "evidence_id": "region_002_connection_007",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_019",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_004",
+      "to": "space_candidate_005",
+      "evidence_id": "region_002_connection_008",
+      "status": "abstained_connection_hypothesis"
+    },
+    {
+      "id": "connection_edge_020",
+      "relation": "candidate_connection_via_temporarily_closed_gap",
+      "from": "space_candidate_004",
+      "to": "space_candidate_005",
+      "evidence_id": "region_002_connection_009",
+      "status": "abstained_connection_hypothesis"
+    }
+  ],
+  "summary": {
+    "connection_hypothesis_count": 20,
+    "supported_connection_candidate_count": 0,
+    "abstained_connection_hypothesis_count": 20
+  },
+  "explicit_non_claims": [
+    "a temporarily closed gap is not a wall",
+    "a connection candidate is not a door",
+    "a connection candidate does not prove traversability or accessibility",
+    "no passage direction is assigned",
+    "no human approval or correction has been applied"
+  ]
+}

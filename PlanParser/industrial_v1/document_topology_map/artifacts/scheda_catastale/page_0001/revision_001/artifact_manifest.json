@@ -1,0 +1,15 @@
+{
+  "schema_version": "planparser.artifact-manifest/1.0",
+  "artifacts": [
+    {
+      "path": "document_topology_map.png",
+      "sha256": "a81280056a6961fb6f7fbfe779ab7fd5eb406f5cea4b53a23b9f54fe3b4395ad",
+      "media_type": "image/png"
+    },
+    {
+      "path": "document_topology_map.json",
+      "sha256": "7cc281925b6e342e214dca901e9e48bb66c1b01db750c7eb5880069cf5cf155a",
+      "media_type": "application/json"
+    }
+  ]
+}

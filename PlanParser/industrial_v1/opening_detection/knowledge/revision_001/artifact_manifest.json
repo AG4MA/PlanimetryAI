@@ -1,0 +1,14 @@
+{
+  "schema_version": "planparser.opening-detection.knowledge-manifest/1.0",
+  "register_id": "planparser-opening-knowledge",
+  "revision": 1,
+  "artifacts": [
+    {
+      "role": "decision_register",
+      "path": "decision_register.json",
+      "media_type": "application/json",
+      "byte_size": 10790,
+      "sha256": "044389240e8f9da6a335213ae3770c0ce0d8aaef5623e79c791afd582b53aa6a"
+    }
+  ]
+}

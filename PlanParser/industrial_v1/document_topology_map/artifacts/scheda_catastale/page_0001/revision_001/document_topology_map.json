@@ -1,0 +1,3159 @@
+{
+  "schema_version": "planparser.industrial_v1.document-topology-map/1.0",
+  "created_at_utc": "2026-07-17T16:06:36.666384+00:00",
+  "status": "automatic_hierarchical_graph_not_human_approved",
+  "source": {
+    "path": "atomic_v2/ingest/artifacts/scheda_catastale/pages/page_0001.png",
+    "sha256": "54f38ab8decb10eaec769e9e1d1b996f5c03e6ee3c11e87fa4d77e10269b8d53",
+    "width_px": 2481,
+    "height_px": 3508
+  },
+  "inputs": [
+    {
+      "role": "sheet_map",
+      "path": "industrial_v1/sheet_mapper/artifacts/scheda_catastale/page_0001/revision_001/sheet_map.json",
+      "sha256": "fbe72575dd7dabf4a118b1049828bb44f116728145df2758dd0fe4e45e291867"
+    },
+    {
+      "role": "floor_units",
+      "path": "industrial_v1/floor_units/artifacts/scheda_catastale/page_0001/revision_001/floor_units.json",
+      "sha256": "858781d3a51cfa35c169c74ed80db5b69f61590c3fcf48fe1dde25e0aea29ba1"
+    },
+    {
+      "role": "region_001_topology",
+      "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_001/revision_002/text_space_topology.json",
+      "sha256": "0460b42b0a4cdba3d6e5e985b448b0a44ac86112c45d0f7bf12d2481bddd07c7"
+    },
+    {
+      "role": "region_001_topology_overlay",
+      "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_001/revision_002/topology_overlay.png",
+      "sha256": "9b1b35669b6e46a512a93b6dc3530acfd1a4ccc787f2e2192499cab0430949d7"
+    },
+    {
+      "role": "region_002_topology",
+      "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_002/revision_001/text_space_topology.json",
+      "sha256": "0a8ed97e03b3fdb487280f8e3215c77fad4ab37ca65d92405f149bbda8e9c903"
+    },
+    {
+      "role": "region_002_topology_overlay",
+      "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_002/revision_001/topology_overlay.png",
+      "sha256": "c37d43ebb6c3cbe767a80826f87171abdced994d859bff28297150f85a4230f8"
+    },
+    {
+      "role": "compass_observation",
+      "path": "industrial_v1/compass_observation/artifacts/scheda_catastale/page_0001/revision_002/compass_observation.json",
+      "sha256": "6b4dbabc81ece6bf8b53bf527aa7f8fc942d98137e7fb5ee33fd44f7b9e4ca09"
+    },
+    {
+      "role": "space_connections",
+      "path": "industrial_v1/space_connections/artifacts/scheda_catastale/page_0001/revision_001/space_connections.json",
+      "sha256": "3c39c3f0587d22a4fb919cd7653c658c1b50c1a6826bb7ed87839683f12a7be5"
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "scheda_catastale",
+        "type": "document"
+      },
+      {
+        "id": "page_0001",
+        "type": "page",
+        "width_px": 2481,
+        "height_px": 3508
+      },
+      {
+        "id": "FR-001",
+        "type": "floor_region_candidate",
+        "title_text_raw": "Piano Primo H=3.00m",
+        "designation_raw": "Primo",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 560,
+          "width": 2299,
+          "height": 895
+        },
+        "abstained": false
+      },
+      {
+        "id": "FR-002",
+        "type": "floor_region_candidate",
+        "title_text_raw": "Piano Terra H=2.45m",
+        "designation_raw": "Terra",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 1455,
+          "width": 2299,
+          "height": 1873
+        },
+        "abstained": false
+      },
+      {
+        "id": "region_001",
+        "type": "analysis_region_candidate",
+        "bbox_page_px_xywh": [
+          801,
+          684,
+          731,
+          744
+        ],
+        "status": "automatic_candidates_with_explicit_boundary_composition_not_human_approved"
+      },
+      {
+        "id": "region_001:text_node_001",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "bagno"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "bagno",
+        "center_page_px": [
+          1145.5,
+          825.5
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_001:text_node_002",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "camera"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "camera",
+        "center_page_px": [
+          1331.0,
+          861.0
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_001:text_node_003",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "camera"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "camera",
+        "center_page_px": [
+          970.5,
+          866.0
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_001:text_node_004",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "dis."
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "disimpegno",
+        "center_page_px": [
+          1150.5,
+          975.5
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_001:text_node_005",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "arredo fisso",
+          "larredo fisso"
+        ],
+        "role_hypothesis": "contained_object_label",
+        "canonical_space_name_hypothesis": null,
+        "center_page_px": [
+          1278.0,
+          995.5
+        ],
+        "ocr_abstained": true
+      },
+      {
+        "id": "region_001:text_node_006",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "arredo fisso,",
+          "arredo fisso"
+        ],
+        "role_hypothesis": "contained_object_label",
+        "canonical_space_name_hypothesis": null,
+        "center_page_px": [
+          934.0,
+          996.0
+        ],
+        "ocr_abstained": true
+      },
+      {
+        "id": "region_001:text_node_007",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "armadio"
+        ],
+        "role_hypothesis": "contained_object_label",
+        "canonical_space_name_hypothesis": null,
+        "center_page_px": [
+          1408.0,
+          1005.0
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_001:text_node_008",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "armadio",
+          "armadiol"
+        ],
+        "role_hypothesis": "contained_object_label",
+        "canonical_space_name_hypothesis": null,
+        "center_page_px": [
+          1038.0,
+          1007.0
+        ],
+        "ocr_abstained": true
+      },
+      {
+        "id": "region_001:text_node_009",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "U"
+        ],
+        "role_hypothesis": "unresolved_text",
+        "canonical_space_name_hypothesis": null,
+        "center_page_px": [
+          991.5,
+          1032.5
+        ],
+        "ocr_abstained": true
+      },
+      {
+        "id": "region_001:text_node_010",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "ste",
+          "eis"
+        ],
+        "role_hypothesis": "border_context_unresolved",
+        "canonical_space_name_hypothesis": null,
+        "center_page_px": [
+          1513.0,
+          1047.5
+        ],
+        "ocr_abstained": true
+      },
+      {
+        "id": "region_001:text_node_011",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "vano scala"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "vano scala",
+        "center_page_px": [
+          915.5,
+          1060.5
+        ],
+        "ocr_abstained": true
+      },
+      {
+        "id": "region_001:text_node_012",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "soggiorno-pranzo"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "soggiorno-pranzo",
+        "center_page_px": [
+          1253.0,
+          1154.0
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_001:text_node_013",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "rip."
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "ripostiglio",
+        "center_page_px": [
+          966.5,
+          1320.5
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_001:text_node_014",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "balcone"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "balcone",
+        "center_page_px": [
+          1277.5,
+          1332.5
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_001:space_candidate_001",
+        "type": "space_candidate",
+        "name_hypothesis": "bagno",
+        "bbox_page_px_xywh": [
+          1095,
+          751,
+          109,
+          158
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.915282,
+          "synthetic_gap_closure_ratio": 0.023256,
+          "seed_competition_ratio": 0.064784,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_001:space_candidate_002",
+        "type": "space_candidate",
+        "name_hypothesis": "camera",
+        "bbox_page_px_xywh": [
+          1219,
+          751,
+          239,
+          232
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.960581,
+          "synthetic_gap_closure_ratio": 0.039419,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_001:space_candidate_003",
+        "type": "space_candidate",
+        "name_hypothesis": "camera",
+        "bbox_page_px_xywh": [
+          873,
+          751,
+          209,
+          232
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.957871,
+          "synthetic_gap_closure_ratio": 0.042129,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_001:space_candidate_004",
+        "type": "space_candidate",
+        "name_hypothesis": "disimpegno",
+        "bbox_page_px_xywh": [
+          1095,
+          905,
+          135,
+          112
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.715068,
+          "synthetic_gap_closure_ratio": 0.234247,
+          "seed_competition_ratio": 0.053425,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_001:space_candidate_005",
+        "type": "space_candidate",
+        "name_hypothesis": "vano scala",
+        "bbox_page_px_xywh": [
+          873,
+          1031,
+          259,
+          113
+        ],
+        "abstained": true,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.695946,
+          "synthetic_gap_closure_ratio": 0.103885,
+          "seed_competition_ratio": 0.139358,
+          "unresolved_ratio": 0.060811
+        }
+      },
+      {
+        "id": "region_001:space_candidate_006",
+        "type": "space_candidate",
+        "name_hypothesis": "soggiorno-pranzo",
+        "bbox_page_px_xywh": [
+          996,
+          1031,
+          462,
+          257
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.805875,
+          "synthetic_gap_closure_ratio": 0.041507,
+          "seed_competition_ratio": 0.106003,
+          "unresolved_ratio": 0.046616
+        }
+      },
+      {
+        "id": "region_001:space_candidate_007",
+        "type": "space_candidate",
+        "name_hypothesis": "ripostiglio",
+        "bbox_page_px_xywh": [
+          873,
+          1283,
+          181,
+          78
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.914498,
+          "synthetic_gap_closure_ratio": 0.085502,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_001:space_candidate_008",
+        "type": "space_candidate",
+        "name_hypothesis": "balcone",
+        "bbox_page_px_xywh": [
+          1081,
+          1309,
+          395,
+          98
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.950175,
+          "synthetic_gap_closure_ratio": 0.049825,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_002",
+        "type": "analysis_region_candidate",
+        "bbox_page_px_xywh": [
+          829,
+          2093,
+          674,
+          729
+        ],
+        "status": "automatic_candidates_with_explicit_boundary_composition_not_human_approved"
+      },
+      {
+        "id": "region_002:text_node_0001",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "L"
+        ],
+        "role_hypothesis": "unresolved_text",
+        "canonical_space_name_hypothesis": null,
+        "center_page_px": [
+          1061.5,
+          2180.5
+        ],
+        "ocr_abstained": true
+      },
+      {
+        "id": "region_002:text_node_0002",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "dis."
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "disimpegno",
+        "center_page_px": [
+          1097.5,
+          2229.5
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_002:text_node_0003",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "bagno"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "bagno",
+        "center_page_px": [
+          1185.0,
+          2229.5
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_002:text_node_0004",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "cucina"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "cucina",
+        "center_page_px": [
+          965.0,
+          2278.0
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_002:text_node_0005",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "altra uiu"
+        ],
+        "role_hypothesis": "external_context_label",
+        "canonical_space_name_hypothesis": null,
+        "center_page_px": [
+          1377.0,
+          2378.0
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_002:text_node_0006",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "sala"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "sala",
+        "center_page_px": [
+          1157.5,
+          2406.0
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_002:text_node_composite_vano_scala",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "vano",
+          "cala",
+          "scala"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "vano scala",
+        "center_page_px": [
+          968.5,
+          2471.0
+        ],
+        "ocr_abstained": true
+      },
+      {
+        "id": "region_002:text_node_0009",
+        "type": "text_node",
+        "raw_text_alternatives": [
+          "portico"
+        ],
+        "role_hypothesis": "space_name_seed",
+        "canonical_space_name_hypothesis": "portico",
+        "center_page_px": [
+          1275.5,
+          2673.0
+        ],
+        "ocr_abstained": false
+      },
+      {
+        "id": "region_002:space_candidate_001",
+        "type": "space_candidate",
+        "name_hypothesis": "disimpegno",
+        "bbox_page_px_xywh": [
+          1069,
+          2211,
+          53,
+          64
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.83913,
+          "synthetic_gap_closure_ratio": 0.16087,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_002:space_candidate_002",
+        "type": "space_candidate",
+        "name_hypothesis": "bagno",
+        "bbox_page_px_xywh": [
+          1135,
+          2183,
+          127,
+          92
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.956221,
+          "synthetic_gap_closure_ratio": 0.043779,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_002:space_candidate_003",
+        "type": "space_candidate",
+        "name_hypothesis": "cucina",
+        "bbox_page_px_xywh": [
+          879,
+          2183,
+          175,
+          203
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.916865,
+          "synthetic_gap_closure_ratio": 0.083135,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_002:space_candidate_004",
+        "type": "space_candidate",
+        "name_hypothesis": "sala",
+        "bbox_page_px_xywh": [
+          1069,
+          2291,
+          183,
+          150
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.876506,
+          "synthetic_gap_closure_ratio": 0.123494,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_002:space_candidate_005",
+        "type": "space_candidate",
+        "name_hypothesis": "vano scala",
+        "bbox_page_px_xywh": [
+          879,
+          2399,
+          175,
+          275
+        ],
+        "abstained": true,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.832636,
+          "synthetic_gap_closure_ratio": 0.167364,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "region_002:space_candidate_006",
+        "type": "space_candidate",
+        "name_hypothesis": "portico",
+        "bbox_page_px_xywh": [
+          855,
+          2583,
+          623,
+          219
+        ],
+        "abstained": false,
+        "boundary_composition": {
+          "observed_geometry_ratio": 0.918905,
+          "synthetic_gap_closure_ratio": 0.081095,
+          "seed_competition_ratio": 0.0,
+          "unresolved_ratio": 0.0
+        }
+      },
+      {
+        "id": "CO-001",
+        "type": "sheet_level_directional_compass_glyph_candidate",
+        "bbox_page_px": {
+          "x": 2021,
+          "y": 2949,
+          "width": 175,
+          "height": 220
+        },
+        "axis_angle_clockwise_from_page_up_deg": 322.765939,
+        "north_direction_asserted": false,
+        "abstained": true
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge_document_page",
+        "relation": "document_contains_page",
+        "from": "scheda_catastale",
+        "to": "page_0001",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_page_FR-001",
+        "relation": "page_contains_floor_region_candidate",
+        "from": "page_0001",
+        "to": "FR-001",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_FR-001_region_001",
+        "relation": "floor_region_contains_analysis_region",
+        "from": "FR-001",
+        "to": "region_001",
+        "status": "coordinate_containment_observed"
+      },
+      {
+        "id": "edge_page_FR-002",
+        "relation": "page_contains_floor_region_candidate",
+        "from": "page_0001",
+        "to": "FR-002",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_FR-002_region_002",
+        "relation": "floor_region_contains_analysis_region",
+        "from": "FR-002",
+        "to": "region_002",
+        "status": "coordinate_containment_observed"
+      },
+      {
+        "id": "edge_0001",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_001",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0002",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_002",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0003",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_003",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0004",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_004",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0005",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_005",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0006",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_006",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0007",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_007",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0008",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_008",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0009",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_009",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0010",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_010",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0011",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_011",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0012",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_012",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0013",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_013",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0014",
+        "relation": "region_contains_text_node",
+        "from": "region_001",
+        "to": "region_001:text_node_014",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0015",
+        "relation": "region_contains_space_candidate",
+        "from": "region_001",
+        "to": "region_001:space_candidate_001",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0016",
+        "relation": "region_contains_space_candidate",
+        "from": "region_001",
+        "to": "region_001:space_candidate_002",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0017",
+        "relation": "region_contains_space_candidate",
+        "from": "region_001",
+        "to": "region_001:space_candidate_003",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0018",
+        "relation": "region_contains_space_candidate",
+        "from": "region_001",
+        "to": "region_001:space_candidate_004",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0019",
+        "relation": "region_contains_space_candidate",
+        "from": "region_001",
+        "to": "region_001:space_candidate_005",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0020",
+        "relation": "region_contains_space_candidate",
+        "from": "region_001",
+        "to": "region_001:space_candidate_006",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0021",
+        "relation": "region_contains_space_candidate",
+        "from": "region_001",
+        "to": "region_001:space_candidate_007",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0022",
+        "relation": "region_contains_space_candidate",
+        "from": "region_001",
+        "to": "region_001:space_candidate_008",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0023",
+        "relation": "names_space_candidate",
+        "from": "region_001:text_node_001",
+        "to": "region_001:space_candidate_001",
+        "status": "hypothesis",
+        "source_edge_id": "edge_001",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0024",
+        "relation": "names_space_candidate",
+        "from": "region_001:text_node_002",
+        "to": "region_001:space_candidate_002",
+        "status": "hypothesis",
+        "source_edge_id": "edge_002",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0025",
+        "relation": "names_space_candidate",
+        "from": "region_001:text_node_003",
+        "to": "region_001:space_candidate_003",
+        "status": "hypothesis",
+        "source_edge_id": "edge_003",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0026",
+        "relation": "names_space_candidate",
+        "from": "region_001:text_node_004",
+        "to": "region_001:space_candidate_004",
+        "status": "hypothesis",
+        "source_edge_id": "edge_004",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0027",
+        "relation": "names_space_candidate",
+        "from": "region_001:text_node_011",
+        "to": "region_001:space_candidate_005",
+        "status": "hypothesis",
+        "source_edge_id": "edge_005",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0028",
+        "relation": "names_space_candidate",
+        "from": "region_001:text_node_012",
+        "to": "region_001:space_candidate_006",
+        "status": "hypothesis",
+        "source_edge_id": "edge_006",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0029",
+        "relation": "names_space_candidate",
+        "from": "region_001:text_node_013",
+        "to": "region_001:space_candidate_007",
+        "status": "hypothesis",
+        "source_edge_id": "edge_007",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0030",
+        "relation": "names_space_candidate",
+        "from": "region_001:text_node_014",
+        "to": "region_001:space_candidate_008",
+        "status": "hypothesis",
+        "source_edge_id": "edge_008",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0031",
+        "relation": "text_node_located_in_space_candidate",
+        "from": "region_001:text_node_005",
+        "to": "region_001:space_candidate_002",
+        "status": "hypothesis",
+        "source_edge_id": "edge_009",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0032",
+        "relation": "text_node_located_in_space_candidate",
+        "from": "region_001:text_node_006",
+        "to": "region_001:space_candidate_003",
+        "status": "hypothesis",
+        "source_edge_id": "edge_010",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0033",
+        "relation": "text_node_located_in_space_candidate",
+        "from": "region_001:text_node_007",
+        "to": "region_001:space_candidate_002",
+        "status": "hypothesis",
+        "source_edge_id": "edge_011",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0034",
+        "relation": "text_node_located_in_space_candidate",
+        "from": "region_001:text_node_008",
+        "to": "region_001:space_candidate_003",
+        "status": "hypothesis",
+        "source_edge_id": "edge_012",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0035",
+        "relation": "text_node_located_in_space_candidate",
+        "from": "region_001:text_node_009",
+        "to": "region_001:space_candidate_005",
+        "status": "geometric_assignment_role_unresolved",
+        "source_edge_id": "edge_013",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0036",
+        "relation": "text_node_located_in_space_candidate",
+        "from": "region_001:text_node_010",
+        "to": "region_001:space_candidate_006",
+        "status": "hypothesis",
+        "source_edge_id": "edge_014",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0037",
+        "relation": "candidate_topological_adjacency",
+        "from": "region_001:space_candidate_001",
+        "to": "region_001:space_candidate_004",
+        "status": "competition_boundary_not_opening_proof",
+        "source_edge_id": "edge_015",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0038",
+        "relation": "candidate_topological_adjacency",
+        "from": "region_001:space_candidate_005",
+        "to": "region_001:space_candidate_006",
+        "status": "competition_boundary_not_opening_proof",
+        "source_edge_id": "edge_016",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0039",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "band_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_017",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0040",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "line_060",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_018",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0041",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "band_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_019",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0042",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "line_059",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_020",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0043",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "band_002",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_021",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0044",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "line_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_022",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0045",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "line_061",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_023",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0046",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "band_007",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_024",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0047",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "line_009",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_025",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0048",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_001",
+        "to": "line_052",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_026",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0049",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "line_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_027",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0050",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "band_004",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_028",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0051",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "line_057",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_029",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0052",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "band_001",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_030",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0053",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "line_015",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_031",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0054",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "line_056",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_032",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0055",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "band_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_033",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0056",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "line_013",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_034",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0057",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "line_011",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_035",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0058",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_002",
+        "to": "line_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_036",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0059",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "band_003",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_037",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0060",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "line_055",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_038",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0061",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "band_002",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_039",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0062",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "line_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_040",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0063",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "band_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_041",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0064",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "line_058",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_042",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0065",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "line_014",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_043",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0066",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "line_012",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_044",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0067",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_003",
+        "to": "line_051",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_045",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0068",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_013",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_046",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0069",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_061",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_047",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0070",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "band_015",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_048",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0071",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_023",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_049",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0072",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_012",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_050",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0073",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_063",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_051",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0074",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "band_007",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_052",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0075",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_010",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_053",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0076",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "band_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_054",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0077",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_059",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_055",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0078",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_021",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_056",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0079",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "band_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_057",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0080",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_060",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_058",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0081",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_015",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_059",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0082",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_004",
+        "to": "line_014",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_060",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0083",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "band_014",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_061",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0084",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_024",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_062",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0085",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_028",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_063",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0086",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "band_017",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_064",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0087",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_064",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_065",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0088",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "band_003",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_066",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0089",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_055",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_067",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0090",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_029",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_068",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0091",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_031",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_069",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0092",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_090",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_070",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0093",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_030",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_071",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0094",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "band_018",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_072",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0095",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_096",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_073",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0096",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_066",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_074",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0097",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_091",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_075",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0098",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_027",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_076",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0099",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_065",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_077",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0100",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "band_020",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_078",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0101",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_067",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_079",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0102",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_005",
+        "to": "line_033",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_080",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0103",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_044",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_081",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0104",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "band_028",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_082",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0105",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "band_004",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_083",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0106",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_057",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_084",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0107",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "band_016",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_085",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0108",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_026",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_086",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0109",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_064",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_087",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0110",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "band_015",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_088",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0111",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_025",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_089",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0112",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_063",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_090",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0113",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_092",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_091",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0114",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_110",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_092",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0115",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_069",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_093",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0116",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_070",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_094",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0117",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_109",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_095",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0118",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "band_024",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_096",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0119",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_036",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_097",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0120",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "band_026",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_098",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0121",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "band_022",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_099",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0122",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_039",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_100",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0123",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_037",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_101",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0124",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_006",
+        "to": "line_040",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_102",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0125",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "band_030",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_103",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0126",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_047",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_104",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0127",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_043",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_105",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0128",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "band_027",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_106",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0129",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "band_003",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_107",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0130",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_055",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_108",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0131",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_071",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_109",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0132",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "band_029",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_110",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0133",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_073",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_111",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0134",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_109",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_112",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0135",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_111",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_113",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0136",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_110",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_114",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0137",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_007",
+        "to": "line_064",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_115",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0138",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_046",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_116",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0139",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "band_028",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_117",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0140",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_048",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_118",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0141",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_050",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_119",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0142",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_072",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_120",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0143",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_054",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_121",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0144",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_069",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_122",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0145",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_070",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_123",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0146",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "band_029",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_124",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0147",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_106",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_125",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0148",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_074",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_126",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0149",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_001:space_candidate_008",
+        "to": "line_049",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_127",
+        "region_id": "region_001"
+      },
+      {
+        "id": "edge_0001",
+        "relation": "region_contains_text_node",
+        "from": "region_002",
+        "to": "region_002:text_node_0001",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0002",
+        "relation": "region_contains_text_node",
+        "from": "region_002",
+        "to": "region_002:text_node_0002",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0003",
+        "relation": "region_contains_text_node",
+        "from": "region_002",
+        "to": "region_002:text_node_0003",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0004",
+        "relation": "region_contains_text_node",
+        "from": "region_002",
+        "to": "region_002:text_node_0004",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0005",
+        "relation": "region_contains_text_node",
+        "from": "region_002",
+        "to": "region_002:text_node_0005",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0006",
+        "relation": "region_contains_text_node",
+        "from": "region_002",
+        "to": "region_002:text_node_0006",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0007",
+        "relation": "region_contains_text_node",
+        "from": "region_002",
+        "to": "region_002:text_node_composite_vano_scala",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0008",
+        "relation": "region_contains_text_node",
+        "from": "region_002",
+        "to": "region_002:text_node_0009",
+        "status": "observed_hierarchy"
+      },
+      {
+        "id": "edge_0009",
+        "relation": "region_contains_space_candidate",
+        "from": "region_002",
+        "to": "region_002:space_candidate_001",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0010",
+        "relation": "region_contains_space_candidate",
+        "from": "region_002",
+        "to": "region_002:space_candidate_002",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0011",
+        "relation": "region_contains_space_candidate",
+        "from": "region_002",
+        "to": "region_002:space_candidate_003",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0012",
+        "relation": "region_contains_space_candidate",
+        "from": "region_002",
+        "to": "region_002:space_candidate_004",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0013",
+        "relation": "region_contains_space_candidate",
+        "from": "region_002",
+        "to": "region_002:space_candidate_005",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0014",
+        "relation": "region_contains_space_candidate",
+        "from": "region_002",
+        "to": "region_002:space_candidate_006",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_0015",
+        "relation": "names_space_candidate",
+        "from": "region_002:text_node_0002",
+        "to": "region_002:space_candidate_001",
+        "status": "hypothesis",
+        "source_edge_id": "edge_001",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0016",
+        "relation": "names_space_candidate",
+        "from": "region_002:text_node_0003",
+        "to": "region_002:space_candidate_002",
+        "status": "hypothesis",
+        "source_edge_id": "edge_002",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0017",
+        "relation": "names_space_candidate",
+        "from": "region_002:text_node_0004",
+        "to": "region_002:space_candidate_003",
+        "status": "hypothesis",
+        "source_edge_id": "edge_003",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0018",
+        "relation": "names_space_candidate",
+        "from": "region_002:text_node_0006",
+        "to": "region_002:space_candidate_004",
+        "status": "hypothesis",
+        "source_edge_id": "edge_004",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0019",
+        "relation": "names_space_candidate",
+        "from": "region_002:text_node_composite_vano_scala",
+        "to": "region_002:space_candidate_005",
+        "status": "hypothesis",
+        "source_edge_id": "edge_005",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0020",
+        "relation": "names_space_candidate",
+        "from": "region_002:text_node_0009",
+        "to": "region_002:space_candidate_006",
+        "status": "hypothesis",
+        "source_edge_id": "edge_006",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0021",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_001",
+        "to": "band_003",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_007",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0022",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_001",
+        "to": "band_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_008",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0023",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_001",
+        "to": "line_007",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_009",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0024",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_001",
+        "to": "band_004",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_010",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0025",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_001",
+        "to": "line_037",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_011",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0026",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_001",
+        "to": "line_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_012",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0027",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_001",
+        "to": "line_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_013",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0028",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_002",
+        "to": "line_007",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_014",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0029",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_002",
+        "to": "band_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_015",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0030",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_002",
+        "to": "line_004",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_016",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0031",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_002",
+        "to": "line_031",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_017",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0032",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_002",
+        "to": "band_003",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_018",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0033",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_002",
+        "to": "line_035",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_019",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0034",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_002",
+        "to": "line_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_020",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0035",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_002",
+        "to": "line_029",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_021",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0036",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_033",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_022",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0037",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_010",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_023",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0038",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "band_008",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_024",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0039",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_004",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_025",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0040",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "band_004",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_026",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0041",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_036",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_027",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0042",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_009",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_028",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0043",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "band_007",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_029",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0044",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_039",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_030",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0045",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_028",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_031",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0046",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_032",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0047",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_008",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_033",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0048",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_003",
+        "to": "line_059",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_034",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0049",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "line_012",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_035",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0050",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "band_005",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_036",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0051",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "line_008",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_037",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0052",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "band_006",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_038",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0053",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "line_038",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_039",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0054",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "band_007",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_040",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0055",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "line_040",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_041",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0056",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "line_066",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_042",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0057",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "line_009",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_043",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0058",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "line_065",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_044",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0059",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_004",
+        "to": "line_062",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_045",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0060",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_041",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_046",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0061",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "band_008",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_047",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0062",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_011",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_048",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0063",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_033",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_049",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0064",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_048",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_050",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0065",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "band_009",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_051",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0066",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "band_016",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_052",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0067",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_046",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_053",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0068",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_065",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_054",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0069",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_070",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_055",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0070",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_013",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_056",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0071",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "band_012",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_057",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0072",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_049",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_058",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0073",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "band_015",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_059",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0074",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_017",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_060",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0075",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_045",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_061",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0076",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_051",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_062",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0077",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "band_017",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_063",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0078",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_019",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_064",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0079",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_005",
+        "to": "line_020",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_065",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0080",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "band_021",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_066",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0081",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_027",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_067",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0082",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_018",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_068",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0083",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "band_002",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_069",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0084",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_032",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_070",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0085",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "band_016",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_071",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0086",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_050",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_072",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0087",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_026",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_073",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0088",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "band_020",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_074",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0089",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "band_014",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_075",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0090",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "band_001",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_076",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0091",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_047",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_077",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0092",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_030",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_078",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0093",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_051",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_079",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0094",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_081",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_080",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0095",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_074",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_081",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0096",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_075",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_082",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0097",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_076",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_083",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0098",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_073",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_084",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0099",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_083",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_085",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0100",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_084",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_086",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0101",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_085",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_087",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0102",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_031",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_088",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0103",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_041",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_089",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_0104",
+        "relation": "bounded_by_candidate_evidence",
+        "from": "region_002:space_candidate_006",
+        "to": "line_048",
+        "status": "observed_relation_not_building_semantics",
+        "source_edge_id": "edge_090",
+        "region_id": "region_002"
+      },
+      {
+        "id": "edge_page_compass",
+        "relation": "page_contains_sheet_level_observation",
+        "from": "page_0001",
+        "to": "CO-001",
+        "status": "automatic_candidate"
+      },
+      {
+        "id": "edge_connection_region_001_connection_001",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_001",
+        "to": "region_001:space_candidate_004",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_001",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_002",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_003",
+        "to": "region_001:space_candidate_004",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_002",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_003",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_002",
+        "to": "region_001:space_candidate_004",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_003",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_004",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_003",
+        "to": "region_001:space_candidate_004",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_004",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_005",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_002",
+        "to": "region_001:space_candidate_004",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_005",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_006",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_004",
+        "to": "region_001:space_candidate_005",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_006",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_007",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_004",
+        "to": "region_001:space_candidate_006",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_007",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_008",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_004",
+        "to": "region_001:space_candidate_006",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_008",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_009",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_006",
+        "to": "region_001:space_candidate_007",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_009",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_010",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_006",
+        "to": "region_001:space_candidate_007",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_010",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_001_connection_011",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_001:space_candidate_006",
+        "to": "region_001:space_candidate_007",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_001_connection_011",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_001",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_001",
+        "to": "region_002:space_candidate_002",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_001",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_002",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_001",
+        "to": "region_002:space_candidate_003",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_002",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_003",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_002",
+        "to": "region_002:space_candidate_003",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_003",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_004",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_001",
+        "to": "region_002:space_candidate_003",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_004",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_005",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_001",
+        "to": "region_002:space_candidate_002",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_005",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_006",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_003",
+        "to": "region_002:space_candidate_004",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_006",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_007",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_003",
+        "to": "region_002:space_candidate_004",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_007",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_008",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_004",
+        "to": "region_002:space_candidate_005",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_008",
+        "abstained": true
+      },
+      {
+        "id": "edge_connection_region_002_connection_009",
+        "relation": "candidate_connection_via_temporarily_closed_gap",
+        "from": "region_002:space_candidate_004",
+        "to": "region_002:space_candidate_005",
+        "status": "abstained_connection_hypothesis",
+        "evidence_id": "region_002_connection_009",
+        "abstained": true
+      }
+    ],
+    "explicit_absent_edges": [
+      {
+        "scope": "cross_floor_space_connections",
+        "status": "not_inferred",
+        "reason": "no cross-floor relation evidence has been modeled"
+      },
+      {
+        "scope": "compass_axis_to_north_semantics",
+        "status": "not_asserted",
+        "reason": "directional axis observed but north token absent or unreliable"
+      }
+    ]
+  },
+  "summary": {
+    "floor_region_candidates": 2,
+    "analysis_regions": 2,
+    "text_nodes": 22,
+    "space_candidates": 14,
+    "space_candidates_abstained": 2,
+    "bounded_by_evidence_relations": 195,
+    "gap_connection_hypotheses": 20,
+    "gap_connection_candidates_supported": 0,
+    "sheet_level_compass_candidates": 1,
+    "north_directions_asserted": 0,
+    "graph_node_count": 43,
+    "graph_edge_count": 279
+  },
+  "explicit_non_claims": [
+    "no cross-floor space connection is inferred",
+    "space candidates are not validated rooms",
+    "bounded-by evidence does not assert walls",
+    "gap connections do not assert doors or traversability",
+    "external context is not assigned to the target property",
+    "the observed compass axis is not asserted as north",
+    "metric scale is not formalized",
+    "no human approval or correction has been applied"
+  ]
+}

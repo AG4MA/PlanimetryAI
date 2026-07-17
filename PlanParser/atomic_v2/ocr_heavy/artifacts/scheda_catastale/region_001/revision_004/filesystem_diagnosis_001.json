@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "status": "diagnosed",
+  "created_at": "2026-07-17T11:57:24.214519+00:00",
+  "constraint": "read-only diagnosis; no ACL, attribute, content, name, or path mutation on existing models",
+  "process": {
+    "user": "aless",
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "original_recognition_directory": {
+    "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec",
+    "stat_success": true,
+    "is_file": false,
+    "is_directory": true,
+    "mode": "0o40777",
+    "entries": [
+      ".cache",
+      ".gitattributes",
+      "README.md",
+      "config.json",
+      "inference.json",
+      "inference.pdiparams",
+      "inference.yml"
+    ],
+    "enumerate_success": true
+  },
+  "original_recognition_inference_yml": {
+    "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\inference.yml",
+    "stat_success": true,
+    "is_file": true,
+    "is_directory": false,
+    "size_bytes": 6817,
+    "mode": "0o100666",
+    "read_success": true,
+    "prefix_hex": "476c6f62616c3a0a20206d6f64656c5f6e616d653a206c6174696e5f50502d4f435276355f6d6f62696c655f7265630a4870693a0a20206261636b656e645f63",
+    "sha256": "0bbe984570f597af3638e50bdf2e8276f3ab26a61966096538b3b0d1849f5c84"
+  },
+  "original_recognition_directory_acl": {
+    "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec",
+    "return_code": 0,
+    "stdout": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec NT AUTHORITY\\SYSTEM:(OI)(CI)(F)\n                                                                                                                 BUILTIN\\Administrators:(OI)(CI)(F)\n                                                                                                                 OWNER RIGHTS:(OI)(CI)(F)\n\nSuccessfully processed 1 files; Failed processing 0 files\n",
+    "stderr": ""
+  },
+  "original_recognition_inference_yml_acl": {
+    "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\inference.yml",
+    "return_code": 0,
+    "stdout": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\inference.yml NT AUTHORITY\\SYSTEM:(I)(F)\n                                                                                                                               BUILTIN\\Administrators:(I)(F)\n                                                                                                                               OWNER RIGHTS:(I)(F)\n\nSuccessfully processed 1 files; Failed processing 0 files\n",
+    "stderr": ""
+  },
+  "original_recognition_expected_file_probes": {
+    ".gitattributes": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\.gitattributes",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 1575,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "2a2e377a2066696c7465723d6c667320646966663d6c6673206d657267653d6c6673202d746578740a2a2e6172726f772066696c7465723d6c66732064696666",
+      "sha256": "a3a43406012ee8c7b9b38dfab1b11610f33e8245cd864a9a9302d042616a859e"
+    },
+    "README.md": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\README.md",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 7085,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "2d2d2d0a6c6963656e73653a206170616368652d322e300a6c6962726172795f6e616d653a20506164646c654f43520a6c616e67756167653a0a2d20656e0a2d",
+      "sha256": "897e932f55386124163c5d051ee42a7481fad52ea447c9e3b009d22e5424bada"
+    },
+    "config.json": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\config.json",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 17742,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "7b0a2020202022476c6f62616c223a207b0a2020202020202020226d6f64656c5f6e616d65223a20226c6174696e5f50502d4f435276355f6d6f62696c655f72",
+      "sha256": "e0f5ccc44fe86254956f27746058bc4cf88d86145668cecf22ba5dd962483c80"
+    },
+    "inference.json": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\inference.json",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 217712,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "7b22626173655f636f6465223a7b226d61676963223a22706972222c22747261696e61626c65223a747275652c2276657273696f6e223a317d2c2270726f6772",
+      "sha256": "820b2ee8e5072de5156c3d55124c2b03c82ef278d59f453f857c0789bacb4da1"
+    },
+    "inference.pdiparams": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\inference.pdiparams",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 7965915,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "0000000000000000000000000000000004000000080510109e43b93ee4fe6fbf7f3b7cbff02d6bbf21bd58bfccd3633f78a6203f9fd0c23e2a6ecc3e3a066e3e",
+      "sha256": "53cdc8b481a7394bb108f96d0fb3432b0a8f392e22c7d18f06dbb2d42b8b25f9"
+    },
+    "inference.yml": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec\\inference.yml",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 6817,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "476c6f62616c3a0a20206d6f64656c5f6e616d653a206c6174696e5f50502d4f435276355f6d6f62696c655f7265630a4870693a0a20206261636b656e645f63",
+      "sha256": "0bbe984570f597af3638e50bdf2e8276f3ab26a61966096538b3b0d1849f5c84"
+    }
+  },
+  "original_detection_directory": {
+    "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det",
+    "stat_success": true,
+    "is_file": false,
+    "is_directory": true,
+    "mode": "0o40777",
+    "entries": [
+      ".cache",
+      ".gitattributes",
+      "README.md",
+      "config.json",
+      "inference.json",
+      "inference.pdiparams",
+      "inference.yml"
+    ],
+    "enumerate_success": true
+  },
+  "original_detection_directory_acl": {
+    "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det",
+    "return_code": 0,
+    "stdout": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det S-1-5-21-4238796491-4107473025-292401295-1217856319:(I)(OI)(CI)(M)\n                                                                                                           AGAMA_PC\\CodexSandboxUsers:(I)(OI)(CI)(M)\n                                                                                                           S-1-5-21-195442500-1840558731-1850460796-395889514:(I)(OI)(CI)(M)\n                                                                                                           BUILTIN\\Administrators:(I)(OI)(CI)(F)\n                                                                                                           NT AUTHORITY\\SYSTEM:(I)(OI)(CI)(F)\n                                                                                                           BUILTIN\\Users:(I)(OI)(CI)(RX)\n                                                                                                           NT AUTHORITY\\Authenticated Users:(I)(M)\n                                                                                                           NT AUTHORITY\\Authenticated Users:(I)(OI)(CI)(IO)(M)\n\nSuccessfully processed 1 files; Failed processing 0 files\n",
+    "stderr": ""
+  },
+  "original_detection_hashes": {
+    ".gitattributes": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det\\.gitattributes",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 1575,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "2a2e377a2066696c7465723d6c667320646966663d6c6673206d657267653d6c6673202d746578740a2a2e6172726f772066696c7465723d6c66732064696666",
+      "sha256": "a3a43406012ee8c7b9b38dfab1b11610f33e8245cd864a9a9302d042616a859e"
+    },
+    "README.md": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det\\README.md",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 15912,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "2d2d2d0a6c6963656e73653a206170616368652d322e300a6c6962726172795f6e616d653a20506164646c654f43520a6c616e67756167653a0a2d20656e0a2d",
+      "sha256": "4fd4cf7c6fc3239ede7274c3877e7a0c4424ffa7f56b2775e4e7961c24b1f107"
+    },
+    "config.json": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det\\config.json",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 2871,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "7b0a2020202022476c6f62616c223a207b0a2020202020202020226d6f64656c5f6e616d65223a202250502d4f435276355f7365727665725f646574220a2020",
+      "sha256": "436bf19010fe3879477e8599a870a0ec8ccd14ca39056805ec4ed20ab318ec04"
+    },
+    "inference.json": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det\\inference.json",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 402480,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "7b22626173655f636f6465223a7b226d61676963223a22706972222c22747261696e61626c65223a747275652c2276657273696f6e223a317d2c2270726f6772",
+      "sha256": "af5876933d8806a1b50d895867e0781e135cd92ff37381992828fc8d1b842d28"
+    },
+    "inference.pdiparams": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det\\inference.pdiparams",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 87932887,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "00000000000000000000000000000000040000000805102016f53c3cb910e3bd1cd53fbf624c883ff04f303eca8b1c3f98ed9e3ed4503b3e8e09b33beeb56a3e",
+      "sha256": "183146fe9d9910352f68482f623bcbbb9fa7b9e8fa1463b9ad288cef00524d2d"
+    },
+    "inference.yml": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det\\inference.yml",
+      "stat_success": true,
+      "is_file": true,
+      "is_directory": false,
+      "size_bytes": 903,
+      "mode": "0o100666",
+      "read_success": true,
+      "prefix_hex": "476c6f62616c3a0a20206d6f64656c5f6e616d653a2050502d4f435276355f7365727665725f6465740a4870693a0a20206261636b656e645f636f6e66696773",
+      "sha256": "28fb721efc3634fc8aa677e474b9602cb815a91cf569ef357a7a553d7b3ce685"
+    }
+  },
+  "accessible_huggingface_ref": {
+    "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\huggingface\\hub\\models--PaddlePaddle--latin_PP-OCRv5_mobile_rec\\refs\\main",
+    "stat_success": true,
+    "is_file": true,
+    "is_directory": false,
+    "size_bytes": 40,
+    "mode": "0o100666",
+    "read_success": true,
+    "prefix_hex": "61623263643563633566613633303962653265356163646665363665636132633263313237643537",
+    "sha256": "017a4410206f8ad80871e501def0a7b48e821beebbda6cef3e204fefea9a83c7",
+    "commit": "ab2cd5cc5fa6309be2e5acdfe66eca2c2c127d57"
+  },
+  "diagnosis": {
+    "scope": "whole recognition model directory, not only inference.yml",
+    "reason": "directory enumeration, ACL query, stat/read of inference.yml, and every expected file are denied to this process",
+    "workaround": "do not change ACL; build a new inherited-ACL bundle and fetch the exact official recognition commit"
+  }
+}

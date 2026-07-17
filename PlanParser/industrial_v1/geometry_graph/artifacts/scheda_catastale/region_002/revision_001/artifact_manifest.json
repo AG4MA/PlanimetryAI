@@ -1,0 +1,42 @@
+{
+  "schema_version": "planparser.industrial_v1.geometry_graph.artifact_manifest.v1",
+  "created_utc": "2026-07-17T15:44:32.212930+00:00",
+  "region_id": "region_002",
+  "crop_bbox_in_source_page_px": [
+    829,
+    2093,
+    674,
+    729
+  ],
+  "source": {
+    "path": "C:/projects/PlanimetryAI/PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_002.png",
+    "sha256": "612b583a2f244de46f1469b3acd35e8bde2de0e693f369f52a1c70fc82ebd82b"
+  },
+  "inputs": {
+    "linework": {
+      "path": "C:/projects/PlanimetryAI/PlanParser/atomic_v2/linework/artifacts/scheda_catastale/region_002/revision_001/linework.json",
+      "sha256": "ed283282b59478e4457a7b48aff93e3368310e1b7a31998050baa6170505be2e"
+    },
+    "regions": {
+      "path": "C:/projects/PlanimetryAI/PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/regions.json",
+      "sha256": "8fcc8444da5a384451e6639a9db30a55c36d1e9ff8a57cd414907ece5acf1d89"
+    }
+  },
+  "outputs": {
+    "geometry_graph.json": "8227af0c23881f93efcc8161a07734a59ea49e1ba1f1fcd339691f2045fde41a",
+    "geometry_graph_overlay.png": "d77fcd52ebc680d69e94c54badc866d198b82691baf9428b581c0702ede6f6c4"
+  },
+  "summary": {
+    "raw_segment_count": 85,
+    "node_count": 98,
+    "exact_intersection_count": 51,
+    "near_junction_count": 49,
+    "collinear_overlap_count": 2,
+    "parallel_pair_count": 1854,
+    "abstained_node_count": 48
+  },
+  "limits": [
+    "no_building_semantics",
+    "raw_revision_does_not_separate_text_glyphs_from_linework"
+  ]
+}

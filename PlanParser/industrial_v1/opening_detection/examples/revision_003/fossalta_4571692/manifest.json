@@ -1,0 +1,113 @@
+{
+  "document": {
+    "page_count": 2,
+    "pages": [
+      {
+        "page_index": 0,
+        "page_number": 1,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 407872,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 6622,
+            "unit": "pixels",
+            "width": 4682
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 400,
+            "y": 400
+          },
+          "file": "pages/page_0001.png",
+          "mime_type": "image/png",
+          "sha256": "724734181f333915fcec7509c9e8ea75e870786424473806485c41acc0ab3083"
+        },
+        "source": {
+          "crop_box": {
+            "height": 1191.819946,
+            "unit": "points",
+            "width": 842.744995
+          },
+          "display_dimensions": {
+            "height": 1191.819946,
+            "unit": "points",
+            "width": 842.744995
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 1191.819946,
+            "unit": "points",
+            "width": 842.744995
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      },
+      {
+        "page_index": 1,
+        "page_number": 2,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 372204,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 6622,
+            "unit": "pixels",
+            "width": 4682
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 400,
+            "y": 400
+          },
+          "file": "pages/page_0002.png",
+          "mime_type": "image/png",
+          "sha256": "2c3061eae541af526ce8083c1f2d19350956738d95a924e278232012e033fc5a"
+        },
+        "source": {
+          "crop_box": {
+            "height": 1191.819946,
+            "unit": "points",
+            "width": 842.744995
+          },
+          "display_dimensions": {
+            "height": 1191.819946,
+            "unit": "points",
+            "width": 842.744995
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 1191.819946,
+            "unit": "points",
+            "width": 842.744995
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      }
+    ]
+  },
+  "ingestion": {
+    "engine": {
+      "annotations_rendered": true,
+      "library": "PyMuPDF",
+      "library_version": "1.28.0",
+      "pdf_render_dpi": 400
+    },
+    "operation": "source_to_canonical_png_pages",
+    "python_version": "3.13.14"
+  },
+  "schema": "planparser.atomic_v2.ingest_manifest",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 30137,
+    "detected_format": "pdf",
+    "extension": ".pdf",
+    "filename": "asteannunci__Fossalta-di-piave-VE__4571692__8ec76bf3.pdf",
+    "mime_type": "application/pdf",
+    "reference": "PlanParser/planimetrie-scouting/harvest_output/PLANIMETRIE_PDF/asteannunci__Fossalta-di-piave-VE__4571692__8ec76bf3.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "8ec76bf3eae0214b869ba2cd7e410ec2d4c7e2ec30816110d0ee35d781c41751"
+  }
+}

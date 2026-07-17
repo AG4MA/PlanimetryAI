@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planimetry.ai/schemas/knowledge-model/1.0.0",
+  "title": "PlanimetryAI Knowledge Model",
+  "description": "Canonical contract between PlanParser and Plan2HVAC.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "document_status", "meta", "floors"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "document_status": {"enum": ["draft", "validated"]},
+    "meta": {"$ref": "#/$defs/meta"},
+    "floors": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/floor"}
+    },
+    "validation": {"$ref": "#/$defs/validationSummary"}
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "prefixItems": [{"type": "number"}, {"type": "number"}],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_file",
+        "source_type",
+        "parser_version",
+        "created_at",
+        "coordinate_system",
+        "scale",
+        "scale_factor_m_per_px",
+        "orientation_north_deg"
+      ],
+      "properties": {
+        "source_file": {"type": "string", "minLength": 1},
+        "source_type": {"enum": ["pdf", "image"]},
+        "parser_version": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string", "format": "date-time"},
+        "coordinate_system": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["unit", "origin", "x_axis", "y_axis"],
+          "properties": {
+            "unit": {"const": "pixel"},
+            "origin": {"const": "top_left"},
+            "x_axis": {"const": "right"},
+            "y_axis": {"const": "down"}
+          }
+        },
+        "scale": {"type": ["string", "null"], "pattern": "^[0-9]+(?:\\.[0-9]+)?:[0-9]+(?:\\.[0-9]+)?$"},
+        "scale_factor_m_per_px": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "orientation_north_deg": {"type": ["number", "null"], "minimum": 0, "exclusiveMaximum": 360},
+        "overall_confidence": {"$ref": "#/$defs/confidence"},
+        "warnings": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "floor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "confidence", "rooms", "topology"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "label": {"type": "string"},
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "source_rect_px": {
+          "type": ["array", "null"],
+          "prefixItems": [
+            {"type": "integer", "minimum": 0},
+            {"type": "integer", "minimum": 0},
+            {"type": "integer", "exclusiveMinimum": 0},
+            {"type": "integer", "exclusiveMinimum": 0}
+          ],
+          "items": false,
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "rooms": {"type": "array", "items": {"$ref": "#/$defs/room"}},
+        "topology": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "room": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "confidence",
+        "polygon_px",
+        "area_px2",
+        "area_m2",
+        "walls",
+        "openings",
+        "connections"
+      ],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "label": {"type": ["string", "null"]},
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "polygon_px": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/point"},
+          "minItems": 3
+        },
+        "area_px2": {"type": "number", "exclusiveMinimum": 0},
+        "area_m2": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "height_m": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "walls": {"type": "array", "items": {"$ref": "#/$defs/wall"}},
+        "openings": {"type": "array", "items": {"$ref": "#/$defs/opening"}},
+        "connections": {"type": "array", "items": {"$ref": "#/$defs/connection"}}
+      }
+    },
+    "wall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "wall_type", "start_px", "end_px", "length_px", "length_m", "confidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "wall_type": {"enum": ["external", "internal", "unknown"]},
+        "start_px": {"$ref": "#/$defs/point"},
+        "end_px": {"$ref": "#/$defs/point"},
+        "length_px": {"type": "number", "exclusiveMinimum": 0},
+        "length_m": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "confidence": {"$ref": "#/$defs/confidence"}
+      }
+    },
+    "opening": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "opening_type", "start_px", "end_px", "width_m", "wall_id", "confidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "opening_type": {"enum": ["door", "window", "passage", "unknown"]},
+        "start_px": {"$ref": "#/$defs/point"},
+        "end_px": {"$ref": "#/$defs/point"},
+        "width_m": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "wall_id": {"type": ["string", "null"]},
+        "confidence": {"$ref": "#/$defs/confidence"}
+      }
+    },
+    "connection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["to_room_id", "connection_type", "position_px", "width_m", "confidence"],
+      "properties": {
+        "to_room_id": {"type": "string", "minLength": 1},
+        "connection_type": {"enum": ["door", "passage", "window"]},
+        "position_px": {"anyOf": [{"$ref": "#/$defs/point"}, {"type": "null"}]},
+        "width_m": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "confidence": {"$ref": "#/$defs/confidence"}
+      }
+    },
+    "validationSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["validated_at", "validator_version", "errors", "warnings"],
+      "properties": {
+        "validated_at": {"type": ["string", "null"], "format": "date-time"},
+        "validator_version": {"type": "string"},
+        "errors": {"type": "integer", "minimum": 0},
+        "warnings": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

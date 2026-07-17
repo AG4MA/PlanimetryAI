@@ -1,0 +1,71 @@
+{
+  "document": {
+    "page_count": 1,
+    "pages": [
+      {
+        "page_index": 0,
+        "page_number": 1,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 723079,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 3307,
+            "unit": "pixels",
+            "width": 4678
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 400,
+            "y": 400
+          },
+          "file": "pages/page_0001.png",
+          "mime_type": "image/png",
+          "sha256": "8d7e2b7d16d575da8b821d25ad2f4ebc07327fc0b0f45305a2d4f4aa11117acb"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.0,
+            "unit": "points",
+            "width": 595.219971
+          },
+          "display_dimensions": {
+            "height": 595.219971,
+            "unit": "points",
+            "width": 842.0
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.0,
+            "unit": "points",
+            "width": 595.219971
+          },
+          "rotation_degrees_clockwise": 90
+        }
+      }
+    ]
+  },
+  "ingestion": {
+    "engine": {
+      "annotations_rendered": true,
+      "library": "PyMuPDF",
+      "library_version": "1.28.0",
+      "pdf_render_dpi": 400
+    },
+    "operation": "source_to_canonical_png_pages",
+    "python_version": "3.13.14"
+  },
+  "schema": "planparser.atomic_v2.ingest_manifest",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 94149,
+    "detected_format": "pdf",
+    "extension": ".pdf",
+    "filename": "asteannunci__Acri-CS__4594463__3375fd62.pdf",
+    "mime_type": "application/pdf",
+    "reference": "PlanParser/planimetrie-scouting/harvest_output/PLANIMETRIE_PDF/asteannunci__Acri-CS__4594463__3375fd62.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "3375fd625f4137732c3210a63fd75f9e2774489f1ff8bb3888fb30982e8f00a0"
+  }
+}

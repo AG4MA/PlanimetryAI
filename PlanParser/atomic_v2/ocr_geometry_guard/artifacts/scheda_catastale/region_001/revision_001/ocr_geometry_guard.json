@@ -1,0 +1,3292 @@
+{
+  "abstention_reason_counts": {
+    "best_candidate_already_abstained": 1,
+    "best_candidate_below_geometry_floor": 1,
+    "insufficient_independent_geometry_support": 2,
+    "low_detector_objectness": 2,
+    "no_eligible_geometric_candidate": 1,
+    "source_border_clipping": 1
+  },
+  "component": "ocr_geometry_guard",
+  "counts": {
+    "abstained": 4,
+    "confirmed": 13,
+    "geometry_candidates_total": 33,
+    "geometry_candidates_used_as_best": 15,
+    "shared_best_candidates": 2,
+    "words_total": 17
+  },
+  "created_at_utc": "2026-07-17T12:02:04.514728Z",
+  "decision_policy": {
+    "border_margin_pixels": 2.0,
+    "candidate_competition_score_delta_max": 0.08,
+    "confirmation_requires": [
+      "strong_eligible_independent_geometry",
+      "detector_objectness_at_or_above_floor",
+      "no_source_border_clipping",
+      "no_candidate_or_ocr_box_overlap_ambiguity"
+    ],
+    "geometry_confidence_floor": 0.55,
+    "moderate_support_for_ambiguity": {
+      "support_score_floor": 0.4,
+      "vertical_overlap_over_smaller_floor": 0.5,
+      "word_coverage_floor": 0.25
+    },
+    "objectness_floor": 0.45,
+    "ocr_box_overlap_coverage_floor": 0.45,
+    "raw_recognition_confidence_used": false,
+    "strong_support": {
+      "support_score_floor": 0.52,
+      "vertical_overlap_over_smaller_floor": 0.5,
+      "word_coverage_floor": 0.45
+    },
+    "support_score_formula": {
+      "candidate_coverage": 0.15,
+      "candidate_geometry_confidence": 0.05,
+      "center_score": 0.1,
+      "iou": 0.3,
+      "vertical_overlap_over_smaller": 0.15,
+      "word_coverage": 0.25
+    }
+  },
+  "inputs": {
+    "doctr_raw": {
+      "path": "ocr_doctr/artifacts/scheda_catastale/region_001/revision_002/ocr_raw.json",
+      "schema_version": "planparser.atomic_v2.ocr_doctr.raw.v2",
+      "sha256": "92ef831e9abff48cf6c5382f4fafa2dd38496a84b49dda48f39ce1adc6a6b0a4",
+      "word_count": 17
+    },
+    "geometry_candidates": {
+      "candidate_count": 33,
+      "path": "ocr_text_candidates/artifacts/scheda_catastale/region_001/revision_001/text_candidates.json",
+      "schema_version": "planparser.ocr_text_candidates.v1",
+      "sha256": "e6efd12c72924a569ea18bd8a6740b9a23109ac3716b88bbdf7a302971fb2014"
+    }
+  },
+  "limits": [
+    "A confirmed status validates only independent geometric support for a text-shaped region.",
+    "Raw transcription, spelling, language, and semantics are not corrected or validated.",
+    "Geometry candidates come from two line-suppressed preprocessing variants and can miss glyphs erased with plan linework.",
+    "Border clipping is inferred from the OCR box distance to the crop boundary, not from unseen pixels outside the crop.",
+    "Thresholds are deterministic engineering guards and are not yet calibrated on a labelled construction-plan dataset."
+  ],
+  "revision": "revision_001",
+  "schema_version": "planparser.atomic_v2.ocr_geometry_guard.v1",
+  "shared_best_candidates": {
+    "TC-010": [
+      "word_0005",
+      "word_0006"
+    ],
+    "TC-011": [
+      "word_0007",
+      "word_0008"
+    ]
+  },
+  "source": {
+    "height_pixels": 744,
+    "path": "region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+    "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a",
+    "width_pixels": 731
+  },
+  "status": "completed",
+  "words": [
+    {
+      "bbox_normalized": [
+        0.4264492134062927,
+        0.17578125,
+        0.5168968023255814,
+        0.2109375
+      ],
+      "bbox_pixels": [
+        312,
+        131,
+        378,
+        157
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9999991655349731,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 23.0,
+            "width": 63.5,
+            "x": 314.0,
+            "y": 133.0
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.818256,
+          "candidate_id": "TC-005",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              345.75,
+              144.5
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.977663,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 1460.5,
+            "iou": 0.851107,
+            "normalized_center_distance": 0.022337,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              345.0,
+              144.0
+            ],
+            "word_coverage": 0.851107
+          },
+          "support_score": 0.906788
+        },
+        "best_candidate_id": "TC-005",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 23.0,
+              "width": 63.5,
+              "x": 314.0,
+              "y": 133.0
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.818256,
+            "candidate_id": "TC-005",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                345.75,
+                144.5
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.977663,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 1460.5,
+              "iou": 0.851107,
+              "normalized_center_distance": 0.022337,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                345.0,
+                144.0
+              ],
+              "word_coverage": 0.851107
+            },
+            "support_score": 0.906788
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.4264492134062927,
+          0.17578125
+        ],
+        [
+          0.5168968023255814,
+          0.17578125
+        ],
+        [
+          0.5168968023255814,
+          0.2109375
+        ],
+        [
+          0.4264492134062927,
+          0.2109375
+        ]
+      ],
+      "id": "word_0001",
+      "line_index": 0,
+      "objectness_score_raw": 0.6902657824904979,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.4264492134062927,
+          0.17578125
+        ],
+        [
+          0.5168968023255814,
+          0.17578125
+        ],
+        [
+          0.5168968023255814,
+          0.2109375
+        ],
+        [
+          0.4264492134062927,
+          0.2109375
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          312,
+          131
+        ],
+        [
+          378,
+          131
+        ],
+        [
+          378,
+          157
+        ],
+        [
+          312,
+          157
+        ]
+      ],
+      "text_raw": "bagno",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.17796679593306725,
+        0.2353515625,
+        0.28332332808081007,
+        0.2548828125
+      ],
+      "bbox_pixels": [
+        130,
+        175,
+        207,
+        190
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9999479651451111,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 14.5,
+            "width": 77.0,
+            "x": 131.0,
+            "y": 176.0
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.890782,
+          "candidate_id": "TC-007",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              169.5,
+              183.25
+            ],
+            "candidate_coverage": 0.952978,
+            "center_score": 0.948341,
+            "horizontal_overlap_over_smaller": 0.987013,
+            "intersection_area_px2": 1064.0,
+            "iou": 0.881159,
+            "normalized_center_distance": 0.051659,
+            "vertical_overlap_over_smaller": 0.965517,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              168.5,
+              182.5
+            ],
+            "word_coverage": 0.921212
+          },
+          "support_score": 0.921798
+        },
+        "best_candidate_id": "TC-007",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 14.5,
+              "width": 77.0,
+              "x": 131.0,
+              "y": 176.0
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.890782,
+            "candidate_id": "TC-007",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                169.5,
+                183.25
+              ],
+              "candidate_coverage": 0.952978,
+              "center_score": 0.948341,
+              "horizontal_overlap_over_smaller": 0.987013,
+              "intersection_area_px2": 1064.0,
+              "iou": 0.881159,
+              "normalized_center_distance": 0.051659,
+              "vertical_overlap_over_smaller": 0.965517,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                168.5,
+                182.5
+              ],
+              "word_coverage": 0.921212
+            },
+            "support_score": 0.921798
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.17796679593306725,
+          0.2353515625
+        ],
+        [
+          0.28332332808081007,
+          0.2353515625
+        ],
+        [
+          0.28332332808081007,
+          0.2548828125
+        ],
+        [
+          0.17796679593306725,
+          0.2548828125
+        ]
+      ],
+      "id": "word_0002",
+      "line_index": 1,
+      "objectness_score_raw": 0.6679723177581279,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.17796679593306725,
+          0.2353515625
+        ],
+        [
+          0.28332332808081007,
+          0.2353515625
+        ],
+        [
+          0.28332332808081007,
+          0.2548828125
+        ],
+        [
+          0.17796679593306725,
+          0.2548828125
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          130,
+          175
+        ],
+        [
+          207,
+          175
+        ],
+        [
+          207,
+          190
+        ],
+        [
+          130,
+          190
+        ]
+      ],
+      "text_raw": "camera",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.6709558216882958,
+        0.2294921875,
+        0.7763123538360387,
+        0.2490234375
+      ],
+      "bbox_pixels": [
+        490,
+        171,
+        567,
+        185
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9999449253082275,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 14.5,
+            "width": 77.0,
+            "x": 492.5,
+            "y": 171.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.890041,
+          "candidate_id": "TC-006",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              531.0,
+              178.75
+            ],
+            "candidate_coverage": 0.900806,
+            "center_score": 0.93893,
+            "horizontal_overlap_over_smaller": 0.967532,
+            "intersection_area_px2": 1005.75,
+            "iou": 0.846057,
+            "normalized_center_distance": 0.06107,
+            "vertical_overlap_over_smaller": 0.964286,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              528.5,
+              178.0
+            ],
+            "word_coverage": 0.932978
+          },
+          "support_score": 0.90522
+        },
+        "best_candidate_id": "TC-006",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 14.5,
+              "width": 77.0,
+              "x": 492.5,
+              "y": 171.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.890041,
+            "candidate_id": "TC-006",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                531.0,
+                178.75
+              ],
+              "candidate_coverage": 0.900806,
+              "center_score": 0.93893,
+              "horizontal_overlap_over_smaller": 0.967532,
+              "intersection_area_px2": 1005.75,
+              "iou": 0.846057,
+              "normalized_center_distance": 0.06107,
+              "vertical_overlap_over_smaller": 0.964286,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                528.5,
+                178.0
+              ],
+              "word_coverage": 0.932978
+            },
+            "support_score": 0.90522
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.6709558216882958,
+          0.2294921875
+        ],
+        [
+          0.7763123538360387,
+          0.2294921875
+        ],
+        [
+          0.7763123538360387,
+          0.2490234375
+        ],
+        [
+          0.6709558216882958,
+          0.2490234375
+        ]
+      ],
+      "id": "word_0003",
+      "line_index": 2,
+      "objectness_score_raw": 0.6880030474310255,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.6709558216882958,
+          0.2294921875
+        ],
+        [
+          0.7763123538360387,
+          0.2294921875
+        ],
+        [
+          0.7763123538360387,
+          0.2490234375
+        ],
+        [
+          0.6709558216882958,
+          0.2490234375
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          490,
+          171
+        ],
+        [
+          567,
+          171
+        ],
+        [
+          567,
+          185
+        ],
+        [
+          490,
+          185
+        ]
+      ],
+      "text_raw": "camera",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.45030352257181944,
+        0.375,
+        0.504969647742818,
+        0.4072265625
+      ],
+      "bbox_pixels": [
+        329,
+        279,
+        369,
+        303
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9997686147689819,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 19.0,
+            "width": 35.0,
+            "x": 332.0,
+            "y": 282.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.79053,
+          "candidate_id": "TC-009",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              349.5,
+              292.0
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.956499,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 665.0,
+            "iou": 0.692708,
+            "normalized_center_distance": 0.043501,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              349.0,
+              291.0
+            ],
+            "word_coverage": 0.692708
+          },
+          "support_score": 0.816166
+        },
+        "best_candidate_id": "TC-009",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 19.0,
+              "width": 35.0,
+              "x": 332.0,
+              "y": 282.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.79053,
+            "candidate_id": "TC-009",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                349.5,
+                292.0
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.956499,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 665.0,
+              "iou": 0.692708,
+              "normalized_center_distance": 0.043501,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                349.0,
+                291.0
+              ],
+              "word_coverage": 0.692708
+            },
+            "support_score": 0.816166
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.45030352257181944,
+          0.375
+        ],
+        [
+          0.504969647742818,
+          0.375
+        ],
+        [
+          0.504969647742818,
+          0.4072265625
+        ],
+        [
+          0.45030352257181944,
+          0.4072265625
+        ]
+      ],
+      "id": "word_0004",
+      "line_index": 3,
+      "objectness_score_raw": 0.5602803577114065,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.45030352257181944,
+          0.375
+        ],
+        [
+          0.504969647742818,
+          0.375
+        ],
+        [
+          0.504969647742818,
+          0.4072265625
+        ],
+        [
+          0.45030352257181944,
+          0.4072265625
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          329,
+          279
+        ],
+        [
+          369,
+          279
+        ],
+        [
+          369,
+          303
+        ],
+        [
+          329,
+          303
+        ]
+      ],
+      "text_raw": "dis.",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.08950709644322846,
+        0.4013671875,
+        0.18989398084815323,
+        0.4345703125
+      ],
+      "bbox_pixels": [
+        65,
+        299,
+        139,
+        323
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9999869465827942,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 17.5,
+            "width": 83.0,
+            "x": 69.5,
+            "y": 303.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.896239,
+          "candidate_id": "TC-010",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              111.0,
+              312.25
+            ],
+            "candidate_coverage": 0.837349,
+            "center_score": 0.879706,
+            "horizontal_overlap_over_smaller": 0.939189,
+            "intersection_area_px2": 1216.25,
+            "iou": 0.604423,
+            "normalized_center_distance": 0.120294,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              102.0,
+              311.0
+            ],
+            "word_coverage": 0.684825
+          },
+          "support_score": 0.760918
+        },
+        "best_candidate_id": "TC-010",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 17.5,
+              "width": 83.0,
+              "x": 69.5,
+              "y": 303.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.896239,
+            "candidate_id": "TC-010",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                111.0,
+                312.25
+              ],
+              "candidate_coverage": 0.837349,
+              "center_score": 0.879706,
+              "horizontal_overlap_over_smaller": 0.939189,
+              "intersection_area_px2": 1216.25,
+              "iou": 0.604423,
+              "normalized_center_distance": 0.120294,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                102.0,
+                311.0
+              ],
+              "word_coverage": 0.684825
+            },
+            "support_score": 0.760918
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.08950709644322846,
+          0.4013671875
+        ],
+        [
+          0.18989398084815323,
+          0.4013671875
+        ],
+        [
+          0.18989398084815323,
+          0.4345703125
+        ],
+        [
+          0.08950709644322846,
+          0.4345703125
+        ]
+      ],
+      "id": "word_0005",
+      "line_index": 4,
+      "objectness_score_raw": 0.5842511823842692,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.08950709644322846,
+          0.4013671875
+        ],
+        [
+          0.18989398084815323,
+          0.4013671875
+        ],
+        [
+          0.18989398084815323,
+          0.4345703125
+        ],
+        [
+          0.08950709644322846,
+          0.4345703125
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          65,
+          299
+        ],
+        [
+          139,
+          299
+        ],
+        [
+          139,
+          323
+        ],
+        [
+          65,
+          323
+        ]
+      ],
+      "text_raw": "arredo",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.18989398084815323,
+        0.4013671875,
+        0.27040227428180574,
+        0.4365234375
+      ],
+      "bbox_pixels": [
+        139,
+        299,
+        198,
+        325
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9991992115974426,
+      "crop_orientation_raw": {
+        "confidence": 0.53,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 17.5,
+            "width": 83.0,
+            "x": 69.5,
+            "y": 303.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.896239,
+          "candidate_id": "TC-010",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": false,
+            "candidate_center_px": [
+              111.0,
+              312.25
+            ],
+            "candidate_coverage": 0.162651,
+            "center_score": 0.307162,
+            "horizontal_overlap_over_smaller": 0.228814,
+            "intersection_area_px2": 236.25,
+            "iou": 0.085901,
+            "normalized_center_distance": 0.692838,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": false,
+            "word_center_px": [
+              168.5,
+              312.0
+            ],
+            "word_coverage": 0.154009
+          },
+          "support_score": 0.314198
+        },
+        "best_candidate_id": "TC-010",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 17.5,
+              "width": 83.0,
+              "x": 69.5,
+              "y": 303.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.896239,
+            "candidate_id": "TC-010",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": false,
+              "candidate_center_px": [
+                111.0,
+                312.25
+              ],
+              "candidate_coverage": 0.162651,
+              "center_score": 0.307162,
+              "horizontal_overlap_over_smaller": 0.228814,
+              "intersection_area_px2": 236.25,
+              "iou": 0.085901,
+              "normalized_center_distance": 0.692838,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": false,
+              "word_center_px": [
+                168.5,
+                312.0
+              ],
+              "word_coverage": 0.154009
+            },
+            "support_score": 0.314198
+          },
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 19.0,
+              "width": 84.5,
+              "x": 195.5,
+              "y": 315.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.878049,
+            "candidate_id": "TC-013",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": false,
+              "candidate_center_px": [
+                237.75,
+                325.0
+              ],
+              "candidate_coverage": 0.014793,
+              "center_score": 0.039988,
+              "horizontal_overlap_over_smaller": 0.042373,
+              "intersection_area_px2": 23.75,
+              "iou": 0.007623,
+              "normalized_center_distance": 0.960012,
+              "vertical_overlap_over_smaller": 0.5,
+              "word_center_inside_candidate": false,
+              "word_center_px": [
+                168.5,
+                312.0
+              ],
+              "word_coverage": 0.015482
+            },
+            "support_score": 0.131278
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "insufficient_independent_geometry_support"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "abstained",
+        "support_strength": "weak"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.18989398084815323,
+          0.4013671875
+        ],
+        [
+          0.27040227428180574,
+          0.4013671875
+        ],
+        [
+          0.27040227428180574,
+          0.4365234375
+        ],
+        [
+          0.18989398084815323,
+          0.4365234375
+        ]
+      ],
+      "id": "word_0006",
+      "line_index": 4,
+      "objectness_score_raw": 0.5474922244221065,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.18989398084815323,
+          0.4013671875
+        ],
+        [
+          0.27040227428180574,
+          0.4013671875
+        ],
+        [
+          0.27040227428180574,
+          0.4365234375
+        ],
+        [
+          0.18989398084815323,
+          0.4365234375
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          139,
+          299
+        ],
+        [
+          198,
+          299
+        ],
+        [
+          198,
+          325
+        ],
+        [
+          139,
+          325
+        ]
+      ],
+      "text_raw": "fisso",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 1
+    },
+    {
+      "bbox_normalized": [
+        0.560629641797735,
+        0.4033203125,
+        0.6600225966540961,
+        0.43359375
+      ],
+      "bbox_pixels": [
+        410,
+        300,
+        482,
+        323
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9984797239303589,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 17.5,
+            "width": 83.0,
+            "x": 428.0,
+            "y": 303.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.904868,
+          "candidate_id": "TC-011",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              469.5,
+              312.25
+            ],
+            "candidate_coverage": 0.650602,
+            "center_score": 0.714996,
+            "horizontal_overlap_over_smaller": 0.75,
+            "intersection_area_px2": 945.0,
+            "iou": 0.436792,
+            "normalized_center_distance": 0.285004,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              446.0,
+              311.5
+            ],
+            "word_coverage": 0.570652
+          },
+          "support_score": 0.638034
+        },
+        "best_candidate_id": "TC-011",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 17.5,
+              "width": 83.0,
+              "x": 428.0,
+              "y": 303.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.904868,
+            "candidate_id": "TC-011",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                469.5,
+                312.25
+              ],
+              "candidate_coverage": 0.650602,
+              "center_score": 0.714996,
+              "horizontal_overlap_over_smaller": 0.75,
+              "intersection_area_px2": 945.0,
+              "iou": 0.436792,
+              "normalized_center_distance": 0.285004,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                446.0,
+                311.5
+              ],
+              "word_coverage": 0.570652
+            },
+            "support_score": 0.638034
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.560629641797735,
+          0.4033203125
+        ],
+        [
+          0.6600225966540961,
+          0.4033203125
+        ],
+        [
+          0.6600225966540961,
+          0.43359375
+        ],
+        [
+          0.560629641797735,
+          0.43359375
+        ]
+      ],
+      "id": "word_0007",
+      "line_index": 5,
+      "objectness_score_raw": 0.5818364680960632,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.560629641797735,
+          0.4033203125
+        ],
+        [
+          0.6600225966540961,
+          0.4033203125
+        ],
+        [
+          0.6600225966540961,
+          0.43359375
+        ],
+        [
+          0.560629641797735,
+          0.43359375
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          410,
+          300
+        ],
+        [
+          482,
+          300
+        ],
+        [
+          482,
+          323
+        ],
+        [
+          410,
+          323
+        ]
+      ],
+      "text_raw": "larredo",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.6620104557512234,
+        0.4013671875,
+        0.7405308900877487,
+        0.4365234375
+      ],
+      "bbox_pixels": [
+        484,
+        299,
+        541,
+        325
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9886614084243774,
+      "crop_orientation_raw": {
+        "confidence": 0.79,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 17.5,
+            "width": 83.0,
+            "x": 428.0,
+            "y": 303.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.904868,
+          "candidate_id": "TC-011",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": false,
+            "candidate_center_px": [
+              469.5,
+              312.25
+            ],
+            "candidate_coverage": 0.325301,
+            "center_score": 0.481838,
+            "horizontal_overlap_over_smaller": 0.473684,
+            "intersection_area_px2": 472.5,
+            "iou": 0.191917,
+            "normalized_center_distance": 0.518162,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": false,
+            "word_center_px": [
+              512.5,
+              312.0
+            ],
+            "word_coverage": 0.318826
+          },
+          "support_score": 0.429504
+        },
+        "best_candidate_id": "TC-011",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 17.5,
+              "width": 83.0,
+              "x": 428.0,
+              "y": 303.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.904868,
+            "candidate_id": "TC-011",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": false,
+              "candidate_center_px": [
+                469.5,
+                312.25
+              ],
+              "candidate_coverage": 0.325301,
+              "center_score": 0.481838,
+              "horizontal_overlap_over_smaller": 0.473684,
+              "intersection_area_px2": 472.5,
+              "iou": 0.191917,
+              "normalized_center_distance": 0.518162,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": false,
+              "word_center_px": [
+                512.5,
+                312.0
+              ],
+              "word_coverage": 0.318826
+            },
+            "support_score": 0.429504
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "insufficient_independent_geometry_support"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "abstained",
+        "support_strength": "moderate"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.6620104557512234,
+          0.4013671875
+        ],
+        [
+          0.7405308900877487,
+          0.4013671875
+        ],
+        [
+          0.7405308900877487,
+          0.4365234375
+        ],
+        [
+          0.6620104557512234,
+          0.4365234375
+        ]
+      ],
+      "id": "word_0008",
+      "line_index": 5,
+      "objectness_score_raw": 0.5498160865943132,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.6620104557512234,
+          0.4013671875
+        ],
+        [
+          0.7405308900877487,
+          0.4013671875
+        ],
+        [
+          0.7405308900877487,
+          0.4365234375
+        ],
+        [
+          0.6620104557512234,
+          0.4365234375
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          484,
+          299
+        ],
+        [
+          541,
+          299
+        ],
+        [
+          541,
+          325
+        ],
+        [
+          484,
+          325
+        ]
+      ],
+      "text_raw": "fisso",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 1
+    },
+    {
+      "bbox_normalized": [
+        0.26046291813152433,
+        0.41796875,
+        0.39066768899335746,
+        0.4541015625
+      ],
+      "bbox_pixels": [
+        190,
+        311,
+        286,
+        338
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9774975776672363,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 19.0,
+            "width": 84.5,
+            "x": 195.5,
+            "y": 315.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.878049,
+          "candidate_id": "TC-013",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              237.75,
+              325.0
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.981299,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 1605.5,
+            "iou": 0.619406,
+            "normalized_center_distance": 0.018701,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              238.0,
+              324.5
+            ],
+            "word_coverage": 0.619406
+          },
+          "support_score": 0.782706
+        },
+        "best_candidate_id": "TC-013",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 19.0,
+              "width": 84.5,
+              "x": 195.5,
+              "y": 315.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.878049,
+            "candidate_id": "TC-013",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                237.75,
+                325.0
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.981299,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 1605.5,
+              "iou": 0.619406,
+              "normalized_center_distance": 0.018701,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                238.0,
+                324.5
+              ],
+              "word_coverage": 0.619406
+            },
+            "support_score": 0.782706
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.26046291813152433,
+          0.41796875
+        ],
+        [
+          0.39066768899335746,
+          0.41796875
+        ],
+        [
+          0.39066768899335746,
+          0.4541015625
+        ],
+        [
+          0.26046291813152433,
+          0.4541015625
+        ]
+      ],
+      "id": "word_0009",
+      "line_index": 6,
+      "objectness_score_raw": 0.5617788835908427,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.26046291813152433,
+          0.41796875
+        ],
+        [
+          0.39066768899335746,
+          0.41796875
+        ],
+        [
+          0.39066768899335746,
+          0.4541015625
+        ],
+        [
+          0.26046291813152433,
+          0.4541015625
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          190,
+          311
+        ],
+        [
+          286,
+          311
+        ],
+        [
+          286,
+          338
+        ],
+        [
+          190,
+          338
+        ]
+      ],
+      "text_raw": "armadiol",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.771342766757866,
+        0.416015625,
+        0.891608242134063,
+        0.4462890625
+      ],
+      "bbox_pixels": [
+        564,
+        310,
+        652,
+        332
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9999943971633911,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 19.0,
+            "width": 84.5,
+            "x": 567.5,
+            "y": 312.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.888304,
+          "candidate_id": "TC-012",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              609.75,
+              322.0
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.950386,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 1605.5,
+            "iou": 0.829287,
+            "normalized_center_distance": 0.049614,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              608.0,
+              321.0
+            ],
+            "word_coverage": 0.829287
+          },
+          "support_score": 0.895562
+        },
+        "best_candidate_id": "TC-012",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 19.0,
+              "width": 84.5,
+              "x": 567.5,
+              "y": 312.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.888304,
+            "candidate_id": "TC-012",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                609.75,
+                322.0
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.950386,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 1605.5,
+              "iou": 0.829287,
+              "normalized_center_distance": 0.049614,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                608.0,
+                321.0
+              ],
+              "word_coverage": 0.829287
+            },
+            "support_score": 0.895562
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.771342766757866,
+          0.416015625
+        ],
+        [
+          0.891608242134063,
+          0.416015625
+        ],
+        [
+          0.891608242134063,
+          0.4462890625
+        ],
+        [
+          0.771342766757866,
+          0.4462890625
+        ]
+      ],
+      "id": "word_0010",
+      "line_index": 7,
+      "objectness_score_raw": 0.6408160974431975,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.771342766757866,
+          0.416015625
+        ],
+        [
+          0.891608242134063,
+          0.416015625
+        ],
+        [
+          0.891608242134063,
+          0.4462890625
+        ],
+        [
+          0.771342766757866,
+          0.4462890625
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          564,
+          310
+        ],
+        [
+          652,
+          310
+        ],
+        [
+          652,
+          332
+        ],
+        [
+          564,
+          332
+        ]
+      ],
+      "text_raw": "armadio",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.254499401504788,
+        0.4609375,
+        0.2664265560875513,
+        0.474609375
+      ],
+      "bbox_pixels": [
+        186,
+        343,
+        195,
+        353
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.8985447287559509,
+      "crop_orientation_raw": {
+        "confidence": 0.83,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": true,
+          "candidate_bbox_original_px": {
+            "height": 10.0,
+            "width": 8.5,
+            "x": 186.5,
+            "y": 345.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.214673,
+          "candidate_id": "TC-014",
+          "candidate_supporting_variants": [
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": null,
+          "eligible_independent_geometry": false,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              190.75,
+              350.5
+            ],
+            "candidate_coverage": 0.75,
+            "center_score": 0.748462,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 63.75,
+            "iou": 0.573034,
+            "normalized_center_distance": 0.251538,
+            "vertical_overlap_over_smaller": 0.75,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              190.5,
+              348.0
+            ],
+            "word_coverage": 0.708333
+          },
+          "support_score": 0.659573
+        },
+        "best_candidate_id": "TC-014",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": true,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": true,
+            "candidate_bbox_original_px": {
+              "height": 10.0,
+              "width": 8.5,
+              "x": 186.5,
+              "y": 345.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.214673,
+            "candidate_id": "TC-014",
+            "candidate_supporting_variants": [
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": null,
+            "eligible_independent_geometry": false,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                190.75,
+                350.5
+              ],
+              "candidate_coverage": 0.75,
+              "center_score": 0.748462,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 63.75,
+              "iou": 0.573034,
+              "normalized_center_distance": 0.251538,
+              "vertical_overlap_over_smaller": 0.75,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                190.5,
+                348.0
+              ],
+              "word_coverage": 0.708333
+            },
+            "support_score": 0.659573
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "low_detector_objectness",
+          "no_eligible_geometric_candidate",
+          "best_candidate_already_abstained",
+          "best_candidate_below_geometry_floor"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "abstained",
+        "support_strength": "weak"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.254499401504788,
+          0.4609375
+        ],
+        [
+          0.2664265560875513,
+          0.4609375
+        ],
+        [
+          0.2664265560875513,
+          0.474609375
+        ],
+        [
+          0.254499401504788,
+          0.474609375
+        ]
+      ],
+      "id": "word_0011",
+      "line_index": 8,
+      "objectness_score_raw": 0.33472692083429406,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.254499401504788,
+          0.4609375
+        ],
+        [
+          0.2664265560875513,
+          0.4609375
+        ],
+        [
+          0.2664265560875513,
+          0.474609375
+        ],
+        [
+          0.254499401504788,
+          0.474609375
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          186,
+          343
+        ],
+        [
+          195,
+          343
+        ],
+        [
+          195,
+          353
+        ],
+        [
+          186,
+          353
+        ]
+      ],
+      "text_raw": "U",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.11733712380300959,
+        0.48046875,
+        0.18989398084815323,
+        0.5068359375
+      ],
+      "bbox_pixels": [
+        86,
+        357,
+        139,
+        377
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9141144752502441,
+      "crop_orientation_raw": {
+        "confidence": 0.66,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 14.5,
+            "width": 49.0,
+            "x": 89.0,
+            "y": 360.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.826067,
+          "candidate_id": "TC-017",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              113.5,
+              367.75
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.958021,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 710.5,
+            "iou": 0.670283,
+            "normalized_center_distance": 0.041979,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              112.5,
+              367.0
+            ],
+            "word_coverage": 0.670283
+          },
+          "support_score": 0.805761
+        },
+        "best_candidate_id": "TC-017",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 14.5,
+              "width": 49.0,
+              "x": 89.0,
+              "y": 360.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.826067,
+            "candidate_id": "TC-017",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                113.5,
+                367.75
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.958021,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 710.5,
+              "iou": 0.670283,
+              "normalized_center_distance": 0.041979,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                112.5,
+                367.0
+              ],
+              "word_coverage": 0.670283
+            },
+            "support_score": 0.805761
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.11733712380300959,
+          0.48046875
+        ],
+        [
+          0.18989398084815323,
+          0.48046875
+        ],
+        [
+          0.18989398084815323,
+          0.5068359375
+        ],
+        [
+          0.11733712380300959,
+          0.5068359375
+        ]
+      ],
+      "id": "word_0012",
+      "line_index": 9,
+      "objectness_score_raw": 0.5893279744020428,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.11733712380300959,
+          0.48046875
+        ],
+        [
+          0.18989398084815323,
+          0.48046875
+        ],
+        [
+          0.18989398084815323,
+          0.5068359375
+        ],
+        [
+          0.11733712380300959,
+          0.5068359375
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          86,
+          357
+        ],
+        [
+          139,
+          357
+        ],
+        [
+          139,
+          377
+        ],
+        [
+          86,
+          377
+        ]
+      ],
+      "text_raw": "vano",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.9522379445964433,
+        0.474609375,
+        0.9989526333789329,
+        0.5048828125
+      ],
+      "bbox_pixels": [
+        696,
+        353,
+        730,
+        376
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.8257691264152527,
+      "crop_orientation_raw": {
+        "confidence": 0.61,
+        "value": -90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 17.5,
+            "width": 29.5,
+            "x": 699.0,
+            "y": 356.0
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.754265,
+          "candidate_id": "TC-016",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              713.75,
+              364.75
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.975409,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 516.25,
+            "iou": 0.660166,
+            "normalized_center_distance": 0.024591,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              713.0,
+              364.5
+            ],
+            "word_coverage": 0.660166
+          },
+          "support_score": 0.798345
+        },
+        "best_candidate_id": "TC-016",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": true,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 17.5,
+              "width": 29.5,
+              "x": 699.0,
+              "y": 356.0
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.754265,
+            "candidate_id": "TC-016",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                713.75,
+                364.75
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.975409,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 516.25,
+              "iou": 0.660166,
+              "normalized_center_distance": 0.024591,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                713.0,
+                364.5
+              ],
+              "word_coverage": 0.660166
+            },
+            "support_score": 0.798345
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "source_border_clipping",
+          "low_detector_objectness"
+        ],
+        "source_border_clipped": true,
+        "source_border_sides": [
+          "right"
+        ],
+        "status": "abstained",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.9989526333789329,
+          0.5048828125
+        ],
+        [
+          0.9522379445964433,
+          0.5048828125
+        ],
+        [
+          0.9522379445964433,
+          0.474609375
+        ],
+        [
+          0.9989526333789329,
+          0.474609375
+        ]
+      ],
+      "id": "word_0013",
+      "line_index": 10,
+      "objectness_score_raw": 0.41752517209464296,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.9989526333789329,
+          0.5048828125
+        ],
+        [
+          0.9522379445964433,
+          0.5048828125
+        ],
+        [
+          0.9522379445964433,
+          0.474609375
+        ],
+        [
+          0.9989526333789329,
+          0.474609375
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          730,
+          376
+        ],
+        [
+          696,
+          376
+        ],
+        [
+          696,
+          353
+        ],
+        [
+          730,
+          353
+        ]
+      ],
+      "text_raw": "eis",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.11602726794789492,
+        0.49677354097366333,
+        0.1961734844460859,
+        0.5305702090263367
+      ],
+      "bbox_pixels": [
+        85,
+        370,
+        143,
+        395
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.999160885810852,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 0
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 14.5,
+            "width": 53.5,
+            "x": 89.0,
+            "y": 378.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.826989,
+          "candidate_id": "TC-018",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              115.75,
+              385.75
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.866544,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 775.75,
+            "iou": 0.535,
+            "normalized_center_distance": 0.133456,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              114.0,
+              382.5
+            ],
+            "word_coverage": 0.535
+          },
+          "support_score": 0.722254
+        },
+        "best_candidate_id": "TC-018",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 14.5,
+              "width": 53.5,
+              "x": 89.0,
+              "y": 378.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.826989,
+            "candidate_id": "TC-018",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                115.75,
+                385.75
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.866544,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 775.75,
+              "iou": 0.535,
+              "normalized_center_distance": 0.133456,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                114.0,
+                382.5
+              ],
+              "word_coverage": 0.535
+            },
+            "support_score": 0.722254
+          },
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 14.5,
+              "width": 49.0,
+              "x": 89.0,
+              "y": 360.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.826067,
+            "candidate_id": "TC-017",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": false,
+              "candidate_center_px": [
+                113.5,
+                367.75
+              ],
+              "candidate_coverage": 0.344828,
+              "center_score": 0.409937,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 245.0,
+              "iou": 0.127904,
+              "normalized_center_distance": 0.590063,
+              "vertical_overlap_over_smaller": 0.344828,
+              "word_center_inside_candidate": false,
+              "word_center_px": [
+                114.0,
+                382.5
+              ],
+              "word_coverage": 0.168966
+            },
+            "support_score": 0.266358
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.11602726794789492,
+          0.49932175874710083
+        ],
+        [
+          0.19513071985805736,
+          0.49677354097366333
+        ],
+        [
+          0.1961734844460859,
+          0.5280219912528992
+        ],
+        [
+          0.11707003253592346,
+          0.5305702090263367
+        ]
+      ],
+      "id": "word_0014",
+      "line_index": 11,
+      "objectness_score_raw": 0.6102755704053917,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.11602726794789492,
+          0.49932175874710083
+        ],
+        [
+          0.19513071985805736,
+          0.49677354097366333
+        ],
+        [
+          0.1961734844460859,
+          0.5280219912528992
+        ],
+        [
+          0.11707003253592346,
+          0.5305702090263367
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          85,
+          371
+        ],
+        [
+          143,
+          370
+        ],
+        [
+          143,
+          393
+        ],
+        [
+          86,
+          395
+        ]
+      ],
+      "text_raw": "scala",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.4938500912505853,
+        0.6140782833099365,
+        0.7446929094077135,
+        0.6505701541900635
+      ],
+      "bbox_pixels": [
+        361,
+        457,
+        544,
+        484
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9999754428863525,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 23.5,
+            "width": 180.5,
+            "x": 363.5,
+            "y": 459.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.877917,
+          "candidate_id": "TC-022",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              453.75,
+              471.25
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.971395,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 4241.75,
+            "iou": 0.85848,
+            "normalized_center_distance": 0.028605,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              452.5,
+              470.5
+            ],
+            "word_coverage": 0.85848
+          },
+          "support_score": 0.913199
+        },
+        "best_candidate_id": "TC-022",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 23.5,
+              "width": 180.5,
+              "x": 363.5,
+              "y": 459.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.877917,
+            "candidate_id": "TC-022",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                453.75,
+                471.25
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.971395,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 4241.75,
+              "iou": 0.85848,
+              "normalized_center_distance": 0.028605,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                452.5,
+                470.5
+              ],
+              "word_coverage": 0.85848
+            },
+            "support_score": 0.913199
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.4944181246568338,
+          0.6140782833099365
+        ],
+        [
+          0.7446929094077135,
+          0.6183363199234009
+        ],
+        [
+          0.7441248456691424,
+          0.6505701541900635
+        ],
+        [
+          0.4938500912505853,
+          0.6463121175765991
+        ]
+      ],
+      "id": "word_0015",
+      "line_index": 12,
+      "objectness_score_raw": 0.619067834167391,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.4944181246568338,
+          0.6140782833099365
+        ],
+        [
+          0.7446929094077135,
+          0.6183363199234009
+        ],
+        [
+          0.7441248456691424,
+          0.6505701541900635
+        ],
+        [
+          0.4938500912505853,
+          0.6463121175765991
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          361,
+          457
+        ],
+        [
+          544,
+          460
+        ],
+        [
+          544,
+          484
+        ],
+        [
+          361,
+          481
+        ]
+      ],
+      "text_raw": "soggiorno-pranzo",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.20082720588235292,
+        0.8359375,
+        0.25052368331053354,
+        0.8759765625
+      ],
+      "bbox_pixels": [
+        147,
+        622,
+        183,
+        652
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9999274611473083,
+      "crop_orientation_raw": {
+        "confidence": 0.98,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 23.0,
+            "width": 30.5,
+            "x": 150.5,
+            "y": 626.0
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.733122,
+          "candidate_id": "TC-030",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              165.75,
+              637.5
+            ],
+            "candidate_coverage": 1.0,
+            "center_score": 0.97332,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 701.5,
+            "iou": 0.649537,
+            "normalized_center_distance": 0.02668,
+            "vertical_overlap_over_smaller": 1.0,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              165.0,
+              637.0
+            ],
+            "word_coverage": 0.649537
+          },
+          "support_score": 0.791233
+        },
+        "best_candidate_id": "TC-030",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 23.0,
+              "width": 30.5,
+              "x": 150.5,
+              "y": 626.0
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.733122,
+            "candidate_id": "TC-030",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                165.75,
+                637.5
+              ],
+              "candidate_coverage": 1.0,
+              "center_score": 0.97332,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 701.5,
+              "iou": 0.649537,
+              "normalized_center_distance": 0.02668,
+              "vertical_overlap_over_smaller": 1.0,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                165.0,
+                637.0
+              ],
+              "word_coverage": 0.649537
+            },
+            "support_score": 0.791233
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.20082720588235292,
+          0.8359375
+        ],
+        [
+          0.25052368331053354,
+          0.8359375
+        ],
+        [
+          0.25052368331053354,
+          0.8759765625
+        ],
+        [
+          0.20082720588235292,
+          0.8759765625
+        ]
+      ],
+      "id": "word_0016",
+      "line_index": 13,
+      "objectness_score_raw": 0.5060075522469194,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.20082720588235292,
+          0.8359375
+        ],
+        [
+          0.25052368331053354,
+          0.8359375
+        ],
+        [
+          0.25052368331053354,
+          0.8759765625
+        ],
+        [
+          0.20082720588235292,
+          0.8759765625
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          147,
+          622
+        ],
+        [
+          183,
+          622
+        ],
+        [
+          183,
+          652
+        ],
+        [
+          147,
+          652
+        ]
+      ],
+      "text_raw": "rip.",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    },
+    {
+      "bbox_normalized": [
+        0.597405095759234,
+        0.859375,
+        0.7057434165526676,
+        0.8828125
+      ],
+      "bbox_pixels": [
+        437,
+        639,
+        516,
+        657
+      ],
+      "block_index": 0,
+      "confidence_raw": 0.9999957084655762,
+      "crop_orientation_raw": {
+        "confidence": 1.0,
+        "value": 90
+      },
+      "geometry_guard": {
+        "best_alignment": {
+          "candidate_abstained": false,
+          "candidate_bbox_original_px": {
+            "height": 18.5,
+            "width": 80.0,
+            "x": 437.0,
+            "y": 639.5
+          },
+          "candidate_border_clipped": false,
+          "candidate_confidence_geometry": 0.910311,
+          "candidate_id": "TC-031",
+          "candidate_supporting_variants": [
+            "otsu_suppress_extra_long_axis_lines_2x",
+            "otsu_suppress_long_axis_lines_2x"
+          ],
+          "candidate_variant_agreement": 1.0,
+          "eligible_independent_geometry": true,
+          "metrics": {
+            "candidate_center_inside_word": true,
+            "candidate_center_px": [
+              477.0,
+              648.75
+            ],
+            "candidate_coverage": 0.934122,
+            "center_score": 0.958981,
+            "horizontal_overlap_over_smaller": 1.0,
+            "intersection_area_px2": 1382.5,
+            "iou": 0.909839,
+            "normalized_center_distance": 0.041019,
+            "vertical_overlap_over_smaller": 0.972222,
+            "word_center_inside_candidate": true,
+            "word_center_px": [
+              476.5,
+              648.0
+            ],
+            "word_coverage": 0.972222
+          },
+          "support_score": 0.943372
+        },
+        "best_candidate_id": "TC-031",
+        "candidate_competition": [],
+        "candidate_count_evaluated": 33,
+        "confirmation_scope": "geometry_presence_only_not_transcription_correctness",
+        "low_detector_objectness": false,
+        "ocr_box_overlap_evidence": [],
+        "overlap_ambiguous": false,
+        "overlapping_candidate_alignments": [
+          {
+            "candidate_abstained": false,
+            "candidate_bbox_original_px": {
+              "height": 18.5,
+              "width": 80.0,
+              "x": 437.0,
+              "y": 639.5
+            },
+            "candidate_border_clipped": false,
+            "candidate_confidence_geometry": 0.910311,
+            "candidate_id": "TC-031",
+            "candidate_supporting_variants": [
+              "otsu_suppress_extra_long_axis_lines_2x",
+              "otsu_suppress_long_axis_lines_2x"
+            ],
+            "candidate_variant_agreement": 1.0,
+            "eligible_independent_geometry": true,
+            "metrics": {
+              "candidate_center_inside_word": true,
+              "candidate_center_px": [
+                477.0,
+                648.75
+              ],
+              "candidate_coverage": 0.934122,
+              "center_score": 0.958981,
+              "horizontal_overlap_over_smaller": 1.0,
+              "intersection_area_px2": 1382.5,
+              "iou": 0.909839,
+              "normalized_center_distance": 0.041019,
+              "vertical_overlap_over_smaller": 0.972222,
+              "word_center_inside_candidate": true,
+              "word_center_px": [
+                476.5,
+                648.0
+              ],
+              "word_coverage": 0.972222
+            },
+            "support_score": 0.943372
+          }
+        ],
+        "raw_recognition_confidence_used_for_decision": false,
+        "reasons": [
+          "strong_independent_geometry_support",
+          "detector_objectness_above_floor",
+          "not_border_clipped",
+          "unambiguous_alignment"
+        ],
+        "source_border_clipped": false,
+        "source_border_sides": [],
+        "status": "confirmed",
+        "support_strength": "strong"
+      },
+      "geometry_raw_normalized": [
+        [
+          0.597405095759234,
+          0.859375
+        ],
+        [
+          0.7057434165526676,
+          0.859375
+        ],
+        [
+          0.7057434165526676,
+          0.8828125
+        ],
+        [
+          0.597405095759234,
+          0.8828125
+        ]
+      ],
+      "id": "word_0017",
+      "line_index": 14,
+      "objectness_score_raw": 0.6901383593764608,
+      "page_index": 0,
+      "polygon_normalized": [
+        [
+          0.597405095759234,
+          0.859375
+        ],
+        [
+          0.7057434165526676,
+          0.859375
+        ],
+        [
+          0.7057434165526676,
+          0.8828125
+        ],
+        [
+          0.597405095759234,
+          0.8828125
+        ]
+      ],
+      "polygon_pixels": [
+        [
+          437,
+          639
+        ],
+        [
+          516,
+          639
+        ],
+        [
+          516,
+          657
+        ],
+        [
+          437,
+          657
+        ]
+      ],
+      "text_raw": "balcone",
+      "upstream_abstention": {
+        "abstained": false,
+        "reasons": []
+      },
+      "word_index": 0
+    }
+  ]
+}

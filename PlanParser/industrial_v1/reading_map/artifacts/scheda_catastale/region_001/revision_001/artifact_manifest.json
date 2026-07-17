@@ -1,0 +1,15 @@
+{
+  "schema_version": "planparser.artifact-manifest/1.0",
+  "artifacts": [
+    {
+      "path": "reading_map.json",
+      "sha256": "f52bc06005c1dac7f6eeac1dbe717e273038cafc73b13cbfc0cf7f50dcde680d",
+      "media_type": "application/json"
+    },
+    {
+      "path": "reading_map.png",
+      "sha256": "b9bc528a66485215d7e85f996c1aafac161444d536f7594d737576626cca02ad",
+      "media_type": "image/png"
+    }
+  ]
+}

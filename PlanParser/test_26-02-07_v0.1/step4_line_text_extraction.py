@@ -84,8 +84,9 @@ class LineExtractor:
         )
         if lines is None:
             return []
-        return [Segment(float(l[0][0]), float(l[0][1]), float(l[0][2]), float(l[0][3]))
-                for l in lines]
+        normalized_lines = np.asarray(lines).reshape(-1, 4)
+        return [Segment(*(float(value) for value in line))
+                for line in normalized_lines]
 
     def merge_collinear(self, segments: List[Segment]) -> List[Segment]:
         """

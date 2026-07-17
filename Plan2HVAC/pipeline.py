@@ -44,6 +44,14 @@ class PipelineConfig:
     output_dir: str = "output"
     generate_svg: bool = True
     generate_json: bool = True
+    document_status: str = "BOZZA_DIAGNOSTICA"
+
+    def __post_init__(self):
+        if self.document_status != "BOZZA_DIAGNOSTICA":
+            raise ValueError(
+                "Only BOZZA_DIAGNOSTICA is currently enabled. CANTIERE requires "
+                "all acceptance gates and a recorded professional approval."
+            )
 
 
 class Plan2HVACPipeline:
@@ -70,7 +78,9 @@ class Plan2HVACPipeline:
             PipeRouterConfig(layout=self.config.piping_layout)
         )
         self.json_exporter = JSONExporter()
-        self.drawing_generator = DrawingGenerator()
+        self.drawing_generator = DrawingGenerator(
+            DrawingConfig(document_status=self.config.document_status)
+        )
     
     def _find_boiler_room(self, knowledge_model: KnowledgeModel) -> Tuple[str, Tuple[float, float]]:
         """
@@ -134,33 +144,37 @@ class Plan2HVACPipeline:
         
         # Step 3: Create boiler
         print("\n[Step 3] Sizing boiler...")
-        boiler_size = self.thermal_calculator.recommend_boiler_size(requirements)
-        
-        if self.config.boiler_room_id:
-            boiler_room_id = self.config.boiler_room_id
-            # Find room position
-            boiler_pos = (0, 0)
-            for floor in knowledge_model.floors:
-                for room in floor.rooms:
-                    if room.id == boiler_room_id:
-                        boiler_pos = room.get_centroid()
-                        break
+        boiler = None
+        if self.config.include_heating and total_heating > 0:
+            boiler_size = self.thermal_calculator.recommend_boiler_size(requirements)
+
+            if self.config.boiler_room_id:
+                boiler_room_id = self.config.boiler_room_id
+                boiler_pos = (0, 0)
+                for floor in knowledge_model.floors:
+                    for room in floor.rooms:
+                        if room.id == boiler_room_id:
+                            boiler_pos = room.get_centroid()
+                            break
+            else:
+                boiler_room_id, boiler_pos = self._find_boiler_room(knowledge_model)
+
+            boiler = Boiler(
+                id="BOILER_001",
+                position=boiler_pos,
+                room_id=boiler_room_id,
+                power_kw=boiler_size,
+                fuel_type=self.config.boiler_fuel_type
+            )
+            print(f"  Recommended boiler: {boiler_size} kW ({self.config.boiler_fuel_type})")
         else:
-            boiler_room_id, boiler_pos = self._find_boiler_room(knowledge_model)
-        
-        boiler = Boiler(
-            id="BOILER_001",
-            position=boiler_pos,
-            room_id=boiler_room_id,
-            power_kw=boiler_size,
-            fuel_type=self.config.boiler_fuel_type
-        )
-        print(f"  Recommended boiler: {boiler_size} kW ({self.config.boiler_fuel_type})")
+            print("  Skipped: no positive heating load")
         
         # Step 4: Route pipes
         print("\n[Step 4] Routing pipes...")
-        pipes = self.pipe_router.route_system(
-            boiler, radiators, knowledge_model
+        pipes = (
+            self.pipe_router.route_system(boiler, radiators, knowledge_model)
+            if boiler is not None else []
         )
         pipe_lengths = self.pipe_router.calculate_total_pipe_length(pipes)
         print(f"  Pipe layout: {self.config.piping_layout.value}")
@@ -171,7 +185,7 @@ class Plan2HVACPipeline:
             radiators=radiators,
             ac_units=ac_units,
             pipes=pipes,
-            boilers=[boiler],
+            boilers=[boiler] if boiler is not None else [],
             total_heating_power_kw=total_heating,
             total_cooling_power_kw=total_cooling
         )
@@ -188,7 +202,8 @@ class Plan2HVACPipeline:
                 knowledge_model,
                 requirements,
                 str(json_path),
-                climate_zone=self.config.climate_zone.value
+                climate_zone=self.config.climate_zone.value,
+                document_status=self.config.document_status,
             )
             print(f"  Saved: {json_path}")
         
@@ -202,7 +217,7 @@ class Plan2HVACPipeline:
             )
             print(f"  Saved: {svg_path}")
         
-        print("\n[Plan2HVAC] Complete!")
+        print(f"\n[Plan2HVAC] {self.config.document_status} generation complete")
         return hvac_system
     
     def run(

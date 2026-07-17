@@ -1,0 +1,7 @@
+# Artefatti build .NET
+bin/
+obj/
+*.user
+
+# Dati runtime della piattaforma (originali, pagine renderizzate, DB)
+data/

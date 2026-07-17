@@ -1,0 +1,43 @@
+{
+  "schema_version": "planparser.ocr_ensemble.artifact_manifest.v1",
+  "revision": "revision_001",
+  "created_at_utc": "2026-07-17T12:08:12.252519Z",
+  "generator": {
+    "path": "ocr_ensemble/build_ocr_ensemble_revision_001.py",
+    "sha256": "6c1aa6f8efb3afb273fe2031b4608d97ce0911c3e589c73427fe147117e448d5"
+  },
+  "input_manifest": {
+    "path": "ocr_ensemble/artifacts/scheda_catastale/region_001/revision_001/input_manifest.json",
+    "sha256": "b6cc0b4c84539a212dc288e34a494baaca088e1e4dd626a0575ef3ca5bb8daf3"
+  },
+  "outputs": {
+    "ocr_ensemble.json": {
+      "bytes": 311640,
+      "sha256": "8b42e5bba08120510ce495537018e91d4c1c33fb6a4dd8ee0e21a628586be07b"
+    },
+    "ocr_ensemble_overlay.png": {
+      "bytes": 133229,
+      "sha256": "3dbb0c754bfcfcd7178ce5efd1b97c0de9204888eea18d8169209629318f7c42"
+    }
+  },
+  "summary": {
+    "ppocrv5_raw_item_count": 15,
+    "doctr_raw_word_count": 17,
+    "geometric_candidate_raw_count": 33,
+    "alignment_count": 15,
+    "counts_by_classification": {
+      "consensus": 9,
+      "fuzzy_or_ambiguous_abstained": 5,
+      "conflict": 1,
+      "single_engine": 0,
+      "geometry_only": 18
+    },
+    "abstained_alignment_count": 6,
+    "consensus_alignment_count": 9,
+    "unassigned_geometry_candidate_count": 18
+  },
+  "write_policy": {
+    "exclusive_create": true,
+    "existing_outputs_overwritten": false
+  }
+}

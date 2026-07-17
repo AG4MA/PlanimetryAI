@@ -1,0 +1,382 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planimetry.ai/schemas/p1-evaluation-report/1.0.0",
+  "title": "PlanParser Point 1 Evaluation Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evaluator",
+    "report_id",
+    "status",
+    "config",
+    "config_sha256",
+    "inputs",
+    "issues",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "evaluator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"const": "PlanParser-P1-Evaluator"},
+        "version": {"type": "string", "minLength": 1}
+      }
+    },
+    "report_id": {"$ref": "#/$defs/sha256"},
+    "status": {"enum": ["valid", "invalid"]},
+    "config": {"$ref": "#/$defs/config"},
+    "config_sha256": {"$ref": "#/$defs/sha256"},
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prediction_sha256",
+        "ground_truth_sha256",
+        "source_sha256",
+        "taxonomy_sha256"
+      ],
+      "properties": {
+        "prediction_sha256": {"$ref": "#/$defs/sha256"},
+        "ground_truth_sha256": {"$ref": "#/$defs/sha256"},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "taxonomy_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/issue"}
+    },
+    "summary": {
+      "oneOf": [
+        {"type": "null"},
+        {"$ref": "#/$defs/summary"}
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "valid"}}},
+      "then": {
+        "properties": {"summary": {"$ref": "#/$defs/summary"}},
+        "required": ["summary"]
+      }
+    },
+    {
+      "if": {"properties": {"status": {"const": "invalid"}}},
+      "then": {
+        "properties": {"summary": {"type": "null"}}
+      }
+    }
+  ],
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "nullableMetric": {
+      "type": ["number", "null"]
+    },
+    "config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config_version",
+        "bbox_iou_threshold",
+        "polygon_iou_threshold",
+        "line_distance_threshold_fraction",
+        "line_min_coverage",
+        "point_distance_threshold_fraction",
+        "max_polyline_samples",
+        "max_polygon_raster_pixels",
+        "calibration_bins",
+        "calibration_binning",
+        "text_case_sensitive",
+        "text_collapse_whitespace",
+        "require_frozen_ground_truth"
+      ],
+      "properties": {
+        "config_version": {"const": "1.0.0"},
+        "bbox_iou_threshold": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "polygon_iou_threshold": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "line_distance_threshold_fraction": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "line_min_coverage": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "point_distance_threshold_fraction": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "max_polyline_samples": {"type": "integer", "minimum": 2},
+        "max_polygon_raster_pixels": {"type": "integer", "minimum": 1024},
+        "calibration_bins": {"type": "integer", "minimum": 2},
+        "calibration_binning": {"const": "equal_frequency"},
+        "text_case_sensitive": {"type": "boolean"},
+        "text_collapse_whitespace": {"type": "boolean"},
+        "require_frozen_ground_truth": {"type": "boolean"}
+      }
+    },
+    "issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "code", "path", "message"],
+      "properties": {
+        "source": {"enum": ["prediction", "ground_truth", "pair"]},
+        "code": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "message": {"type": "string", "minLength": 1}
+      }
+    },
+    "detectionStats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tp", "fp", "fn", "support", "predicted", "precision", "recall", "f1"],
+      "properties": {
+        "tp": {"type": "integer", "minimum": 0},
+        "fp": {"type": "integer", "minimum": 0},
+        "fn": {"type": "integer", "minimum": 0},
+        "support": {"type": "integer", "minimum": 0},
+        "predicted": {"type": "integer", "minimum": 0},
+        "precision": {"$ref": "#/$defs/nullableMetric"},
+        "recall": {"$ref": "#/$defs/nullableMetric"},
+        "f1": {"$ref": "#/$defs/nullableMetric"}
+      }
+    },
+    "classStats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layer", "tp", "fp", "fn", "support", "predicted", "precision", "recall", "f1"],
+      "properties": {
+        "layer": {"type": "string", "minLength": 1},
+        "tp": {"type": "integer", "minimum": 0},
+        "fp": {"type": "integer", "minimum": 0},
+        "fn": {"type": "integer", "minimum": 0},
+        "support": {"type": "integer", "minimum": 0},
+        "predicted": {"type": "integer", "minimum": 0},
+        "precision": {"$ref": "#/$defs/nullableMetric"},
+        "recall": {"$ref": "#/$defs/nullableMetric"},
+        "f1": {"$ref": "#/$defs/nullableMetric"}
+      }
+    },
+    "valueSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "mean", "median", "min", "max"],
+      "properties": {
+        "count": {"type": "integer", "minimum": 0},
+        "mean": {"$ref": "#/$defs/nullableMetric"},
+        "median": {"$ref": "#/$defs/nullableMetric"},
+        "min": {"$ref": "#/$defs/nullableMetric"},
+        "max": {"$ref": "#/$defs/nullableMetric"}
+      }
+    },
+    "metricSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "mean", "median", "min", "max", "approximate_count"],
+      "properties": {
+        "count": {"type": "integer", "minimum": 0},
+        "mean": {"$ref": "#/$defs/nullableMetric"},
+        "median": {"$ref": "#/$defs/nullableMetric"},
+        "min": {"$ref": "#/$defs/nullableMetric"},
+        "max": {"$ref": "#/$defs/nullableMetric"},
+        "approximate_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "textSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "matched_pairs",
+        "scored_pairs",
+        "unscored_pairs",
+        "character_edits",
+        "ground_truth_characters",
+        "character_error_rate",
+        "word_edits",
+        "ground_truth_words",
+        "word_error_rate",
+        "exact_match_accuracy"
+      ],
+      "properties": {
+        "matched_pairs": {"type": "integer", "minimum": 0},
+        "scored_pairs": {"type": "integer", "minimum": 0},
+        "unscored_pairs": {"type": "integer", "minimum": 0},
+        "character_edits": {"type": "integer", "minimum": 0},
+        "ground_truth_characters": {"type": "integer", "minimum": 0},
+        "character_error_rate": {"$ref": "#/$defs/nullableMetric"},
+        "word_edits": {"type": "integer", "minimum": 0},
+        "ground_truth_words": {"type": "integer", "minimum": 0},
+        "word_error_rate": {"$ref": "#/$defs/nullableMetric"},
+        "exact_match_accuracy": {"$ref": "#/$defs/nullableMetric"}
+      }
+    },
+    "calibrationBin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lower", "upper", "count", "mean_confidence", "accuracy", "gap"],
+      "properties": {
+        "lower": {"type": "number", "minimum": 0, "maximum": 1},
+        "upper": {"type": "number", "minimum": 0, "maximum": 1},
+        "count": {"type": "integer", "minimum": 0},
+        "mean_confidence": {"$ref": "#/$defs/nullableMetric"},
+        "accuracy": {"$ref": "#/$defs/nullableMetric"},
+        "gap": {"$ref": "#/$defs/nullableMetric"}
+      }
+    },
+    "match": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "page_index",
+        "layer",
+        "class_id",
+        "ground_truth_id",
+        "prediction_id",
+        "metric",
+        "value",
+        "threshold",
+        "similarity",
+        "approximate",
+        "secondary_metric",
+        "secondary_value",
+        "secondary_threshold"
+      ],
+      "properties": {
+        "page_index": {"type": "integer", "minimum": 0},
+        "layer": {"type": "string", "minLength": 1},
+        "class_id": {"type": "string", "minLength": 1},
+        "ground_truth_id": {"type": "string", "minLength": 1},
+        "prediction_id": {"type": "string", "minLength": 1},
+        "metric": {"type": "string", "minLength": 1},
+        "value": {"type": "number"},
+        "threshold": {"type": ["number", "null"]},
+        "similarity": {"type": "number", "minimum": 0, "maximum": 1},
+        "approximate": {"type": "boolean"}
+        ,"secondary_metric": {"type": ["string", "null"]}
+        ,"secondary_value": {"type": ["number", "null"]}
+        ,"secondary_threshold": {"type": ["number", "null"]}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observations",
+        "macro_f1",
+        "by_layer",
+        "by_class",
+        "geometry",
+        "text",
+        "relationships",
+        "calibration",
+        "confusion",
+        "matches",
+        "unmatched"
+      ],
+      "properties": {
+        "observations": {"$ref": "#/$defs/detectionStats"},
+        "macro_f1": {"$ref": "#/$defs/nullableMetric"},
+        "by_layer": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/detectionStats"}
+        },
+        "by_class": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/classStats"}
+        },
+        "geometry": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["by_metric", "polyline_length_relative_error"],
+          "properties": {
+            "by_metric": {
+              "type": "object",
+              "additionalProperties": {"$ref": "#/$defs/metricSummary"}
+            },
+            "polyline_length_relative_error": {"$ref": "#/$defs/valueSummary"}
+          }
+        },
+        "text": {"$ref": "#/$defs/textSummary"},
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["overall", "by_type"],
+          "properties": {
+            "overall": {"$ref": "#/$defs/detectionStats"},
+            "by_type": {
+              "type": "object",
+              "additionalProperties": {"$ref": "#/$defs/detectionStats"}
+            }
+          }
+        },
+        "calibration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "prediction_count",
+            "covered_count",
+            "abstained_count",
+            "coverage",
+            "selective_risk",
+            "brier_score",
+            "expected_calibration_error",
+            "binning",
+            "bins",
+            "risk_coverage",
+            "area_under_risk_coverage"
+          ],
+          "properties": {
+            "prediction_count": {"type": "integer", "minimum": 0},
+            "covered_count": {"type": "integer", "minimum": 0},
+            "abstained_count": {"type": "integer", "minimum": 0},
+            "coverage": {"$ref": "#/$defs/nullableMetric"},
+            "selective_risk": {"$ref": "#/$defs/nullableMetric"},
+            "brier_score": {"$ref": "#/$defs/nullableMetric"},
+            "expected_calibration_error": {"$ref": "#/$defs/nullableMetric"},
+            "binning": {"const": "equal_frequency"},
+            "bins": {"type": "array", "items": {"$ref": "#/$defs/calibrationBin"}},
+            "risk_coverage": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["coverage", "risk", "threshold", "selected"],
+                "properties": {
+                  "coverage": {"$ref": "#/$defs/nullableMetric"},
+                  "risk": {"type": "number", "minimum": 0, "maximum": 1},
+                  "threshold": {"type": "number", "minimum": 0, "maximum": 1},
+                  "selected": {"type": "integer", "minimum": 1}
+                }
+              }
+            },
+            "area_under_risk_coverage": {"$ref": "#/$defs/nullableMetric"}
+          }
+        },
+        "confusion": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {"type": "integer", "minimum": 0}
+          }
+        },
+        "matches": {"type": "array", "items": {"$ref": "#/$defs/match"}},
+        "unmatched": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ground_truth_ids", "prediction_ids"],
+          "properties": {
+            "ground_truth_ids": {
+              "type": "array",
+              "items": {"type": "string", "minLength": 1},
+              "uniqueItems": true
+            },
+            "prediction_ids": {
+              "type": "array",
+              "items": {"type": "string", "minLength": 1},
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "document": {
+    "page_count": 1,
+    "pages": [
+      {
+        "page_index": 0,
+        "page_number": 1,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 255135,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 3508,
+            "unit": "pixels",
+            "width": 2481
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 300,
+            "y": 300
+          },
+          "file": "pages/page_0001.png",
+          "mime_type": "image/png",
+          "sha256": "54f38ab8decb10eaec769e9e1d1b996f5c03e6ee3c11e87fa4d77e10269b8d53"
+        },
+        "source": {
+          "crop_box": {
+            "height": 841.920044,
+            "unit": "points",
+            "width": 595.320007
+          },
+          "display_dimensions": {
+            "height": 841.920044,
+            "unit": "points",
+            "width": 595.320007
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 841.920044,
+            "unit": "points",
+            "width": 595.320007
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      }
+    ]
+  },
+  "ingestion": {
+    "engine": {
+      "annotations_rendered": true,
+      "library": "PyMuPDF",
+      "library_version": "1.28.0",
+      "pdf_render_dpi": 300
+    },
+    "operation": "source_to_canonical_png_pages",
+    "python_version": "3.13.14"
+  },
+  "schema": "planparser.atomic_v2.ingest_manifest",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 36428,
+    "detected_format": "pdf",
+    "extension": ".pdf",
+    "filename": "scheda_catastale.pdf",
+    "mime_type": "application/pdf",
+    "reference": "PlanParser/data/scheda_catastale.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "7483495c3288534be42cde291b9423e088805d4895c63bbd369e25359f9ad3fd"
+  }
+}

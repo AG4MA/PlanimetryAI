@@ -1,0 +1,816 @@
+{
+  "schema_version": "planparser.industrial_v1.ocr_raw.v1",
+  "created_at_utc": "2026-07-17T15:46:30.327438Z",
+  "status": "completed",
+  "scope": {
+    "document": "scheda_catastale",
+    "region": "region_002"
+  },
+  "source": {
+    "path": "C:/projects/PlanimetryAI/PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_002.png",
+    "sha256": "612b583a2f244de46f1469b3acd35e8bde2de0e693f369f52a1c70fc82ebd82b"
+  },
+  "engine": {
+    "name": "PaddleOCR",
+    "pipeline": "PP-OCRv5",
+    "distribution_version": "3.7.0",
+    "detector": "PP-OCRv5_server_det",
+    "recognizer": "latin_PP-OCRv5_mobile_rec",
+    "device": "cpu",
+    "network_used": false
+  },
+  "counts": {
+    "raw_items": 9,
+    "raw_abstained": 1
+  },
+  "timings_seconds": {
+    "model_initialization": 2.526954,
+    "inference": 8.06495,
+    "total": 15.202372
+  },
+  "records": [
+    {
+      "source_ref": "paddle:item_0001",
+      "text_raw": "L",
+      "confidence_raw": 0.42758414149284363,
+      "polygon_pixels": [
+        [
+          228.0,
+          83.0
+        ],
+        [
+          237.0,
+          83.0
+        ],
+        [
+          237.0,
+          92.0
+        ],
+        [
+          228.0,
+          92.0
+        ]
+      ],
+      "bbox_pixels": [
+        228.0,
+        83.0,
+        237.0,
+        92.0
+      ],
+      "center_pixels": [
+        232.5,
+        87.5
+      ],
+      "abstention": {
+        "abstained": true,
+        "reasons": [
+          "raw_recognition_confidence_below_floor"
+        ]
+      }
+    },
+    {
+      "source_ref": "paddle:item_0002",
+      "text_raw": "dis.",
+      "confidence_raw": 0.999840259552002,
+      "polygon_pixels": [
+        [
+          243.0,
+          121.0
+        ],
+        [
+          294.0,
+          121.0
+        ],
+        [
+          294.0,
+          152.0
+        ],
+        [
+          243.0,
+          152.0
+        ]
+      ],
+      "bbox_pixels": [
+        243.0,
+        121.0,
+        294.0,
+        152.0
+      ],
+      "center_pixels": [
+        268.5,
+        136.5
+      ],
+      "abstention": {
+        "abstained": false,
+        "reasons": []
+      }
+    },
+    {
+      "source_ref": "paddle:item_0003",
+      "text_raw": "bagno",
+      "confidence_raw": 0.9999446868896484,
+      "polygon_pixels": [
+        [
+          318.0,
+          119.0
+        ],
+        [
+          395.0,
+          121.0
+        ],
+        [
+          393.0,
+          154.0
+        ],
+        [
+          317.0,
+          151.0
+        ]
+      ],
+      "bbox_pixels": [
+        317.0,
+        119.0,
+        395.0,
+        154.0
+      ],
+      "center_pixels": [
+        356.0,
+        136.5
+      ],
+      "abstention": {
+        "abstained": false,
+        "reasons": []
+      }
+    },
+    {
+      "source_ref": "paddle:item_0004",
+      "text_raw": "cucina",
+      "confidence_raw": 0.9999650120735168,
+      "polygon_pixels": [
+        [
+          98.0,
+          170.0
+        ],
+        [
+          174.0,
+          170.0
+        ],
+        [
+          174.0,
+          200.0
+        ],
+        [
+          98.0,
+          200.0
+        ]
+      ],
+      "bbox_pixels": [
+        98.0,
+        170.0,
+        174.0,
+        200.0
+      ],
+      "center_pixels": [
+        136.0,
+        185.0
+      ],
+      "abstention": {
+        "abstained": false,
+        "reasons": []
+      }
+    },
+    {
+      "source_ref": "paddle:item_0005",
+      "text_raw": "altra uiu",
+      "confidence_raw": 0.9903086423873901,
+      "polygon_pixels": [
+        [
+          502.0,
+          269.0
+        ],
+        [
+          594.0,
+          269.0
+        ],
+        [
+          594.0,
+          301.0
+        ],
+        [
+          502.0,
+          301.0
+        ]
+      ],
+      "bbox_pixels": [
+        502.0,
+        269.0,
+        594.0,
+        301.0
+      ],
+      "center_pixels": [
+        548.0,
+        285.0
+      ],
+      "abstention": {
+        "abstained": false,
+        "reasons": []
+      }
+    },
+    {
+      "source_ref": "paddle:item_0006",
+      "text_raw": "sala",
+      "confidence_raw": 0.9998750686645508,
+      "polygon_pixels": [
+        [
+          302.0,
+          298.0
+        ],
+        [
+          355.0,
+          298.0
+        ],
+        [
+          355.0,
+          328.0
+        ],
+        [
+          302.0,
+          328.0
+        ]
+      ],
+      "bbox_pixels": [
+        302.0,
+        298.0,
+        355.0,
+        328.0
+      ],
+      "center_pixels": [
+        328.5,
+        313.0
+      ],
+      "abstention": {
+        "abstained": false,
+        "reasons": []
+      }
+    },
+    {
+      "source_ref": "paddle:item_0007",
+      "text_raw": "vano",
+      "confidence_raw": 0.9778399467468262,
+      "polygon_pixels": [
+        [
+          108.0,
+          355.0
+        ],
+        [
+          167.0,
+          355.0
+        ],
+        [
+          167.0,
+          380.0
+        ],
+        [
+          108.0,
+          380.0
+        ]
+      ],
+      "bbox_pixels": [
+        108.0,
+        355.0,
+        167.0,
+        380.0
+      ],
+      "center_pixels": [
+        137.5,
+        367.5
+      ],
+      "abstention": {
+        "abstained": false,
+        "reasons": []
+      }
+    },
+    {
+      "source_ref": "paddle:item_0008",
+      "text_raw": "cala",
+      "confidence_raw": 0.8259141445159912,
+      "polygon_pixels": [
+        [
+          106.0,
+          373.0
+        ],
+        [
+          172.0,
+          370.0
+        ],
+        [
+          173.0,
+          399.0
+        ],
+        [
+          107.0,
+          401.0
+        ]
+      ],
+      "bbox_pixels": [
+        106.0,
+        370.0,
+        173.0,
+        401.0
+      ],
+      "center_pixels": [
+        139.5,
+        385.5
+      ],
+      "abstention": {
+        "abstained": false,
+        "reasons": []
+      }
+    },
+    {
+      "source_ref": "paddle:item_0009",
+      "text_raw": "portico",
+      "confidence_raw": 0.9999343156814575,
+      "polygon_pixels": [
+        [
+          405.0,
+          566.0
+        ],
+        [
+          486.0,
+          561.0
+        ],
+        [
+          488.0,
+          594.0
+        ],
+        [
+          407.0,
+          599.0
+        ]
+      ],
+      "bbox_pixels": [
+        405.0,
+        561.0,
+        488.0,
+        599.0
+      ],
+      "center_pixels": [
+        446.5,
+        580.0
+      ],
+      "abstention": {
+        "abstained": false,
+        "reasons": []
+      }
+    }
+  ],
+  "engine_export_raw": [
+    {
+      "input_path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\region_split\\artifacts\\scheda_catastale\\page_0001\\revision_002\\region_002.png",
+      "page_index": null,
+      "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_textline_orientation": false
+      },
+      "dt_polys": [
+        [
+          [
+            228,
+            83
+          ],
+          [
+            237,
+            83
+          ],
+          [
+            237,
+            92
+          ],
+          [
+            228,
+            92
+          ]
+        ],
+        [
+          [
+            243,
+            121
+          ],
+          [
+            294,
+            121
+          ],
+          [
+            294,
+            152
+          ],
+          [
+            243,
+            152
+          ]
+        ],
+        [
+          [
+            318,
+            119
+          ],
+          [
+            395,
+            121
+          ],
+          [
+            393,
+            154
+          ],
+          [
+            317,
+            151
+          ]
+        ],
+        [
+          [
+            98,
+            170
+          ],
+          [
+            174,
+            170
+          ],
+          [
+            174,
+            200
+          ],
+          [
+            98,
+            200
+          ]
+        ],
+        [
+          [
+            502,
+            269
+          ],
+          [
+            594,
+            269
+          ],
+          [
+            594,
+            301
+          ],
+          [
+            502,
+            301
+          ]
+        ],
+        [
+          [
+            302,
+            298
+          ],
+          [
+            355,
+            298
+          ],
+          [
+            355,
+            328
+          ],
+          [
+            302,
+            328
+          ]
+        ],
+        [
+          [
+            108,
+            355
+          ],
+          [
+            167,
+            355
+          ],
+          [
+            167,
+            380
+          ],
+          [
+            108,
+            380
+          ]
+        ],
+        [
+          [
+            106,
+            373
+          ],
+          [
+            172,
+            370
+          ],
+          [
+            173,
+            399
+          ],
+          [
+            107,
+            401
+          ]
+        ],
+        [
+          [
+            405,
+            566
+          ],
+          [
+            486,
+            561
+          ],
+          [
+            488,
+            594
+          ],
+          [
+            407,
+            599
+          ]
+        ]
+      ],
+      "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+      },
+      "text_type": "general",
+      "textline_orientation_angles": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "text_rec_score_thresh": 0.0,
+      "return_word_box": false,
+      "rec_texts": [
+        "L",
+        "dis.",
+        "bagno",
+        "cucina",
+        "altra uiu",
+        "sala",
+        "vano",
+        "cala",
+        "portico"
+      ],
+      "rec_scores": [
+        0.42758414149284363,
+        0.999840259552002,
+        0.9999446868896484,
+        0.9999650120735168,
+        0.9903086423873901,
+        0.9998750686645508,
+        0.9778399467468262,
+        0.8259141445159912,
+        0.9999343156814575
+      ],
+      "rec_polys": [
+        [
+          [
+            228,
+            83
+          ],
+          [
+            237,
+            83
+          ],
+          [
+            237,
+            92
+          ],
+          [
+            228,
+            92
+          ]
+        ],
+        [
+          [
+            243,
+            121
+          ],
+          [
+            294,
+            121
+          ],
+          [
+            294,
+            152
+          ],
+          [
+            243,
+            152
+          ]
+        ],
+        [
+          [
+            318,
+            119
+          ],
+          [
+            395,
+            121
+          ],
+          [
+            393,
+            154
+          ],
+          [
+            317,
+            151
+          ]
+        ],
+        [
+          [
+            98,
+            170
+          ],
+          [
+            174,
+            170
+          ],
+          [
+            174,
+            200
+          ],
+          [
+            98,
+            200
+          ]
+        ],
+        [
+          [
+            502,
+            269
+          ],
+          [
+            594,
+            269
+          ],
+          [
+            594,
+            301
+          ],
+          [
+            502,
+            301
+          ]
+        ],
+        [
+          [
+            302,
+            298
+          ],
+          [
+            355,
+            298
+          ],
+          [
+            355,
+            328
+          ],
+          [
+            302,
+            328
+          ]
+        ],
+        [
+          [
+            108,
+            355
+          ],
+          [
+            167,
+            355
+          ],
+          [
+            167,
+            380
+          ],
+          [
+            108,
+            380
+          ]
+        ],
+        [
+          [
+            106,
+            373
+          ],
+          [
+            172,
+            370
+          ],
+          [
+            173,
+            399
+          ],
+          [
+            107,
+            401
+          ]
+        ],
+        [
+          [
+            405,
+            566
+          ],
+          [
+            486,
+            561
+          ],
+          [
+            488,
+            594
+          ],
+          [
+            407,
+            599
+          ]
+        ]
+      ],
+      "rec_boxes": [
+        [
+          228,
+          83,
+          237,
+          92
+        ],
+        [
+          243,
+          121,
+          294,
+          152
+        ],
+        [
+          317,
+          119,
+          395,
+          154
+        ],
+        [
+          98,
+          170,
+          174,
+          200
+        ],
+        [
+          502,
+          269,
+          594,
+          301
+        ],
+        [
+          302,
+          298,
+          355,
+          328
+        ],
+        [
+          108,
+          355,
+          167,
+          380
+        ],
+        [
+          106,
+          370,
+          173,
+          401
+        ],
+        [
+          405,
+          561,
+          488,
+          599
+        ]
+      ]
+    }
+  ],
+  "limits": [
+    "raw confidence is not calibrated for floorplans",
+    "no dictionary, correction, or semantic assignment applied",
+    "missed text is absent from this engine output"
+  ],
+  "worker": {
+    "started_at_utc": "2026-07-17T15:46:15.126549Z",
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

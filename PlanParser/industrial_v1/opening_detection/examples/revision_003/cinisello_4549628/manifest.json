@@ -1,0 +1,71 @@
+{
+  "document": {
+    "page_count": 1,
+    "pages": [
+      {
+        "page_index": 0,
+        "page_number": 1,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 556888,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 4682,
+            "unit": "pixels",
+            "width": 3311
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 400,
+            "y": 400
+          },
+          "file": "pages/page_0001.png",
+          "mime_type": "image/png",
+          "sha256": "f0b758cafd203f743b9a2f6be7503d285c811b1008712f55fe5386a733b66e78"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.744995,
+            "unit": "points",
+            "width": 595.911011
+          },
+          "display_dimensions": {
+            "height": 842.744995,
+            "unit": "points",
+            "width": 595.911011
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.744995,
+            "unit": "points",
+            "width": 595.911011
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      }
+    ]
+  },
+  "ingestion": {
+    "engine": {
+      "annotations_rendered": true,
+      "library": "PyMuPDF",
+      "library_version": "1.28.0",
+      "pdf_render_dpi": 400
+    },
+    "operation": "source_to_canonical_png_pages",
+    "python_version": "3.13.14"
+  },
+  "schema": "planparser.atomic_v2.ingest_manifest",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 30629,
+    "detected_format": "pdf",
+    "extension": ".pdf",
+    "filename": "asteannunci__Cinisello-balsamo-MI__4549628__301f9d08.pdf",
+    "mime_type": "application/pdf",
+    "reference": "PlanParser/planimetrie-scouting/harvest_output/PLANIMETRIE_PDF/asteannunci__Cinisello-balsamo-MI__4549628__301f9d08.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "301f9d08bbbeb162e0b893fe04cebd568b035f12829edb9cfcfa316f0b2fa9fc"
+  }
+}

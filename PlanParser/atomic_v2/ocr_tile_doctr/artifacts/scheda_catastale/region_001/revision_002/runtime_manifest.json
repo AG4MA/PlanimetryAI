@@ -1,0 +1,70 @@
+{
+  "schema_version": "planparser.atomic_v2.ocr_tile_doctr.runtime.v2",
+  "status": "completed",
+  "started_at_utc": "2026-07-17T12:08:07.700953Z",
+  "completed_at_utc": "2026-07-17T12:08:33.282390Z",
+  "runtime": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "ocr_doctr/runtime/.venv/Scripts/python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "packages": {
+      "python-doctr": "1.0.1",
+      "torch": "2.13.0",
+      "numpy": "2.5.1",
+      "Pillow": "12.3.0"
+    },
+    "torch_cuda_available": false,
+    "torch_num_threads": 8
+  },
+  "immutability": {
+    "existing_runtime_access": "read_only",
+    "runtime_tree_before": {
+      "root": "ocr_doctr/runtime",
+      "file_count": 38026,
+      "byte_count": 1549317331,
+      "path_size_mtime_sha256": "cd2fcf39a51d9082098e652ea9a12943743b1145e8dc6a41bdd37f01df84289b"
+    },
+    "runtime_tree_after": {
+      "root": "ocr_doctr/runtime",
+      "file_count": 38026,
+      "byte_count": 1549317331,
+      "path_size_mtime_sha256": "cd2fcf39a51d9082098e652ea9a12943743b1145e8dc6a41bdd37f01df84289b"
+    },
+    "runtime_tree_unchanged": true,
+    "model_weight_sha256_before": "56125471b17e660253c4179c3fbf3c906c34606d898148895dbb84db257d98ba",
+    "model_weight_sha256_after": "56125471b17e660253c4179c3fbf3c906c34606d898148895dbb84db257d98ba",
+    "model_weight_unchanged": true
+  },
+  "outputs": {
+    "preflight_manifest.json": "20d7d753d3101612912689be6565dd4a40a9179fd5573c62a730d7985b9d49fc",
+    "ocr_tile_doctr_raw.json": "cc75131fb990dd13ef79f88b7fe02dcb272cc86a1c8daf8395ea4b91a0a6e820",
+    "ocr_tile_doctr_contact_sheet.png": "9f8ad19d1a93fab7b4bd89c876457fd2c4a3bff59097e20811ae8a07bf746863"
+  },
+  "counts": {
+    "input_tiles": 33,
+    "predictions": 33,
+    "original_abstained": 14,
+    "original_non_abstained": 19,
+    "empty_raw_predictions": 0
+  },
+  "timings_ms": {
+    "model_load": 489.979,
+    "image_load_and_hash": 95.02,
+    "recognition_batch": 1946.541,
+    "recognition_mean_per_input": 58.986,
+    "contact_sheet_render": 720.762,
+    "total_before_runtime_manifest_write": 25581.4
+  },
+  "runner": {
+    "path": "ocr_tile_doctr/src/run_revision_002.py",
+    "sha256": "827f12c2ef9d59ec92f41c0cb5533ca40d99f0fc2b7ea4c426f130343c06a7a0"
+  },
+  "limits": [
+    "raw_model_confidence_is_not_calibrated_for_floorplans",
+    "context_tiles_can_contain_non_text_graphics_or_more_than_one_text_fragment",
+    "recognition_only_does_not_validate_geometric_candidate_quality",
+    "no_ground_truth_accuracy_claim",
+    "no_text_correction_filtering_or_semantic_interpretation"
+  ]
+}

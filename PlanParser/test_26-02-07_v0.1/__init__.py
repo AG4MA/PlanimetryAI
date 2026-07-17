@@ -5,6 +5,7 @@ Configures paths and Tesseract OCR for the local environment.
 """
 
 import os
+import shutil
 from pathlib import Path
 
 # Paths
@@ -19,12 +20,18 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 
 
 def configure_tesseract() -> bool:
-    """Configure pytesseract to use the bundled Tesseract installation."""
+    """Configure bundled Tesseract when present, otherwise use PATH."""
     try:
         import pytesseract
-        pytesseract.pytesseract.tesseract_cmd = str(TESSERACT_EXE)
-        os.environ["TESSDATA_PREFIX"] = str(TESSDATA_DIR)
-        return True
+        if TESSERACT_EXE.exists():
+            pytesseract.pytesseract.tesseract_cmd = str(TESSERACT_EXE)
+            os.environ["TESSDATA_PREFIX"] = str(TESSDATA_DIR)
+            return True
+        system_tesseract = shutil.which("tesseract")
+        if system_tesseract:
+            pytesseract.pytesseract.tesseract_cmd = system_tesseract
+            return True
+        return False
     except ImportError:
         print("pytesseract not installed. Run: pip install pytesseract")
         return False

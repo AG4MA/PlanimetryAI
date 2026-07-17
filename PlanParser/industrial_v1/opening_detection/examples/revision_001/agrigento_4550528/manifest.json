@@ -1,0 +1,71 @@
+{
+  "document": {
+    "page_count": 1,
+    "pages": [
+      {
+        "page_index": 0,
+        "page_number": 1,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 1451611,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1754,
+            "unit": "pixels",
+            "width": 1241
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0001.png",
+          "mime_type": "image/png",
+          "sha256": "420f63c77c63d413b1232fe491184b34ccf39094f8e862ed2caa93b34ff4df67"
+        },
+        "source": {
+          "crop_box": {
+            "height": 841.890015,
+            "unit": "points",
+            "width": 595.280029
+          },
+          "display_dimensions": {
+            "height": 841.890015,
+            "unit": "points",
+            "width": 595.280029
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 841.890015,
+            "unit": "points",
+            "width": 595.280029
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      }
+    ]
+  },
+  "ingestion": {
+    "engine": {
+      "annotations_rendered": true,
+      "library": "PyMuPDF",
+      "library_version": "1.28.0",
+      "pdf_render_dpi": 150
+    },
+    "operation": "source_to_canonical_png_pages",
+    "python_version": "3.13.14"
+  },
+  "schema": "planparser.atomic_v2.ingest_manifest",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 609971,
+    "detected_format": "pdf",
+    "extension": ".pdf",
+    "filename": "asteannunci__Agrigento-AG__4550528__6442db28.pdf",
+    "mime_type": "application/pdf",
+    "reference": "PlanParser/planimetrie-scouting/harvest_output/PLANIMETRIE_PDF/asteannunci__Agrigento-AG__4550528__6442db28.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "6442db28ea68589c46bc212ff111843ed4e4d42ad9c509704edc55bf91a1aa0c"
+  }
+}

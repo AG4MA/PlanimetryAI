@@ -1,0 +1,365 @@
+{
+  "document": {
+    "page_count": 8,
+    "pages": [
+      {
+        "page_index": 0,
+        "page_number": 1,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 1264649,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1755,
+            "unit": "pixels",
+            "width": 1241
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0001.png",
+          "mime_type": "image/png",
+          "sha256": "e98b421355530fe5f3a3473566c6c704b1ab6370179fe8e99faa6abea71a0b3c"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "display_dimensions": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      },
+      {
+        "page_index": 1,
+        "page_number": 2,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 980526,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1755,
+            "unit": "pixels",
+            "width": 1241
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0002.png",
+          "mime_type": "image/png",
+          "sha256": "4462917b26f711ab45929bcce92c56a231a39be497be29996c4663fa39a29a53"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "display_dimensions": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      },
+      {
+        "page_index": 2,
+        "page_number": 3,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 753398,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1755,
+            "unit": "pixels",
+            "width": 1241
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0003.png",
+          "mime_type": "image/png",
+          "sha256": "3a662b4fc101470740bfefc9d0da709d5ddd3bbfe6bc6a37465e676f890703de"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "display_dimensions": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      },
+      {
+        "page_index": 3,
+        "page_number": 4,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 1053369,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1755,
+            "unit": "pixels",
+            "width": 1241
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0004.png",
+          "mime_type": "image/png",
+          "sha256": "6e525779fdd95539ce01172605c170b10c96f75b46029ae94275b7fd3dc21fcb"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "display_dimensions": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      },
+      {
+        "page_index": 4,
+        "page_number": 5,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 545386,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1755,
+            "unit": "pixels",
+            "width": 1241
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0005.png",
+          "mime_type": "image/png",
+          "sha256": "5156fd64ea907641ab6a1540735dc89f17c5ca27b3ad9a150304da9bd9e3f06b"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "display_dimensions": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.679993
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      },
+      {
+        "page_index": 5,
+        "page_number": 6,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 318569,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1756,
+            "unit": "pixels",
+            "width": 1242
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0006.png",
+          "mime_type": "image/png",
+          "sha256": "774a0c27fc7701988b16dbca0a6bf27ac661f193dce04cfd67875a5bad571a35"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.880005,
+            "unit": "points",
+            "width": 596.159973
+          },
+          "display_dimensions": {
+            "height": 842.880005,
+            "unit": "points",
+            "width": 596.159973
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.880005,
+            "unit": "points",
+            "width": 596.159973
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      },
+      {
+        "page_index": 6,
+        "page_number": 7,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 371342,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1755,
+            "unit": "pixels",
+            "width": 1240
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0007.png",
+          "mime_type": "image/png",
+          "sha256": "be966124bcea3e4d7af233aef725a46a91a0cbb408cead093000e287b21a8a92"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "display_dimensions": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      },
+      {
+        "page_index": 7,
+        "page_number": 8,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 255063,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 1755,
+            "unit": "pixels",
+            "width": 1240
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 150,
+            "y": 150
+          },
+          "file": "pages/page_0008.png",
+          "mime_type": "image/png",
+          "sha256": "1cf22825b527eda5ef6b854f559f6fc21d9530f95f9a5945b0e656185d481710"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "display_dimensions": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.400024,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      }
+    ]
+  },
+  "ingestion": {
+    "engine": {
+      "annotations_rendered": true,
+      "library": "PyMuPDF",
+      "library_version": "1.28.0",
+      "pdf_render_dpi": 150
+    },
+    "operation": "source_to_canonical_png_pages",
+    "python_version": "3.13.14"
+  },
+  "schema": "planparser.atomic_v2.ingest_manifest",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 974686,
+    "detected_format": "pdf",
+    "extension": ".pdf",
+    "filename": "asteannunci__Acerra-NA__4570317__164577de.pdf",
+    "mime_type": "application/pdf",
+    "reference": "PlanParser/planimetrie-scouting/harvest_output/PLANIMETRIE_PDF/asteannunci__Acerra-NA__4570317__164577de.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "164577de6d8daf56658addca4b069b14154288adad8ad665b468921136751eeb"
+  }
+}

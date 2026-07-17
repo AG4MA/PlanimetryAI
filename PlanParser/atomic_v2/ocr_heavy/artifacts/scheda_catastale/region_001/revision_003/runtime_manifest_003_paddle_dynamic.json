@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "status": "error",
+  "attempt": 3,
+  "engine": "paddle_dynamic",
+  "started_at": "2026-07-17T11:48:21.130403+00:00",
+  "input_image": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\region_split\\artifacts\\scheda_catastale\\page_0001\\revision_002\\region_001.png",
+  "output_directory": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\artifacts\\scheda_catastale\\region_001\\revision_003",
+  "runtime": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "executable": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Scripts\\python.exe",
+    "packages": {
+      "paddlepaddle": "3.3.1",
+      "paddleocr": "3.7.0",
+      "paddlex": "3.7.2"
+    }
+  },
+  "environment": {
+    "PADDLE_PDX_CACHE_HOME": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\artifacts\\scheda_catastale\\region_001\\revision_003\\runtime_cache\\attempt_003_paddle_dynamic\\paddlex",
+    "PADDLE_HOME": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\artifacts\\scheda_catastale\\region_001\\revision_003\\runtime_cache\\attempt_003_paddle_dynamic\\paddle",
+    "HF_HOME": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\huggingface",
+    "FLAGS_use_mkldnn": "0",
+    "FLAGS_enable_onednn": "0",
+    "FLAGS_use_onednn": "0",
+    "DNNL_VERBOSE": "0",
+    "MKLDNN_VERBOSE": "0",
+    "OMP_NUM_THREADS": "2"
+  },
+  "enable_mkldnn": false,
+  "model_names": {
+    "detection": "PP-OCRv5_server_det",
+    "recognition": "latin_PP-OCRv5_mobile_rec"
+  },
+  "models": {
+    "detection": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\PP-OCRv5_server_det",
+      "exists": true,
+      "readable": true,
+      "entries": [
+        ".cache",
+        ".gitattributes",
+        "README.md",
+        "config.json",
+        "inference.json",
+        "inference.pdiparams",
+        "inference.yml"
+      ]
+    },
+    "recognition": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\models\\official_models\\latin_PP-OCRv5_mobile_rec",
+      "exists": true,
+      "readable": false,
+      "error_type": "PermissionError",
+      "error": "[WinError 5] Access is denied: 'C:\\\\projects\\\\PlanimetryAI\\\\PlanParser\\\\atomic_v2\\\\ocr_heavy\\\\runtime\\\\models\\\\official_models\\\\latin_PP-OCRv5_mobile_rec'"
+    }
+  },
+  "timings_seconds": {
+    "initialization": null,
+    "inference": null,
+    "total": 2.6659877999991295
+  },
+  "finished_at": "2026-07-17T11:48:23.796393+00:00",
+  "error_type": "ValueError",
+  "error": "No valid model files were found for engine 'paddle_dynamic'.",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\run_ppocrv5_revision_003.py\", line 175, in main\n    ocr = PaddleOCR(\n        text_detection_model_name=\"PP-OCRv5_server_det\",\n    ...<10 lines>...\n        cpu_threads=2,\n    )\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddleocr\\_pipelines\\ocr.py\", line 173, in __init__\n    super().__init__(**base_params)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddleocr\\_pipelines\\base.py\", line 67, in __init__\n    self.paddlex_pipeline = self._create_paddlex_pipeline()\n                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddleocr\\_pipelines\\base.py\", line 105, in _create_paddlex_pipeline\n    return create_pipeline(config=self._merged_paddlex_config, **kwargs)\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddlex\\inference\\pipelines\\__init__.py\", line 169, in create_pipeline\n    pipeline = BasePipeline.get(pipeline_name)(\n        config=config,\n    ...<6 lines>...\n        **kwargs,\n    )\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddlex\\utils\\deps.py\", line 208, in _wrapper\n    return old_init_func(self, *args, **kwargs)\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddlex\\inference\\pipelines\\_parallel.py\", line 135, in __init__\n    self._pipeline = self._create_internal_pipeline(config, self.device)\n                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddlex\\inference\\pipelines\\_parallel.py\", line 190, in _create_internal_pipeline\n    pipeline = self._pipeline_cls(\n        config,\n    ...<6 lines>...\n        **self._init_kwargs,\n    )\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddlex\\inference\\pipelines\\ocr\\pipeline.py\", line 126, in __init__\n    self.text_det_model = self.create_model(\n                          ~~~~~~~~~~~~~~~~~^\n        text_det_config,\n        ^^^^^^^^^^^^^^^^\n    ...<6 lines>...\n        input_shape=self.input_shape,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddlex\\inference\\pipelines\\base.py\", line 143, in create_model\n    return create_predictor(\n        model_name=config[\"model_name\"],\n    ...<9 lines>...\n        **kwargs,\n    )\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddlex\\inference\\models\\__init__.py\", line 456, in create_predictor\n    requested_engine.ensure_model_files(model_dir_resolved)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddlex\\inference\\models\\engines\\_base.py\", line 113, in ensure_model_files\n    raise ValueError(\n        f\"No valid model files were found for engine {self.name!r}.\"\n    )\nValueError: No valid model files were found for engine 'paddle_dynamic'.\n"
+}

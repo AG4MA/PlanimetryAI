@@ -1,0 +1,32 @@
+{
+  "schema_version": "planparser.industrial_v1.artifact_manifest.v1",
+  "revision": "revision_001",
+  "immutable": true,
+  "created_at_utc": "2026-07-17T15:49:41.113985+00:00",
+  "artifacts": [
+    {
+      "path": "compass_observation.json",
+      "sha256": "29a401ca9ffe8dd0cb00a3223e10dcfca6c25363fae49586d967448dc2986e0b",
+      "media_type": "application/json"
+    },
+    {
+      "path": "compass_observation_overlay.png",
+      "sha256": "237b683846747843c7d5f50217db5c37144da6f16095d2081d447edaeeddf8cc",
+      "media_type": "image/png"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "industrial_v1/floor_units/artifacts/scheda_catastale/page_0001/revision_001/floor_units.json",
+      "sha256": "858781d3a51cfa35c169c74ed80db5b69f61590c3fcf48fe1dde25e0aea29ba1"
+    },
+    {
+      "path": "industrial_v1/floor_units/artifacts/scheda_catastale/page_0001/revision_001/fr_002.png",
+      "sha256": "b1a42b3bdfd6baf42f6157e379a183abf8b6060449cfd1a4911b7bbc0829668f"
+    },
+    {
+      "path": "industrial_v1/sheet_mapper/artifacts/scheda_catastale/page_0001/revision_001/sheet_map.json",
+      "sha256": "fbe72575dd7dabf4a118b1049828bb44f116728145df2758dd0fe4e45e291867"
+    }
+  ]
+}

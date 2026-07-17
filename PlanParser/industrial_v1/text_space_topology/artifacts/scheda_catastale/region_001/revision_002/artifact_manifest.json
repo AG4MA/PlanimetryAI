@@ -1,0 +1,30 @@
+{
+  "schema_version": "planparser.artifact-manifest/1.0",
+  "artifacts": [
+    {
+      "path": "text_nodes_overlay.png",
+      "sha256": "e497c32cecf9ae5ac917a2a111e1e4bd8b5fc3df699248f7d356bfb2bdfc389c",
+      "media_type": "image/png"
+    },
+    {
+      "path": "barrier_overlay.png",
+      "sha256": "f5f63525c8c24f859eae9b39646aaaf090dd7a808226d7ca84933e977c1232a3",
+      "media_type": "image/png"
+    },
+    {
+      "path": "topology_overlay.png",
+      "sha256": "9b1b35669b6e46a512a93b6dc3530acfd1a4ccc787f2e2192499cab0430949d7",
+      "media_type": "image/png"
+    },
+    {
+      "path": "text_space_topology_contact_sheet.png",
+      "sha256": "4b1c1f148779fa76732e06215854ca72685679a62b5c64d2030f250a44d68e07",
+      "media_type": "image/png"
+    },
+    {
+      "path": "text_space_topology.json",
+      "sha256": "0460b42b0a4cdba3d6e5e985b448b0a44ac86112c45d0f7bf12d2481bddd07c7",
+      "media_type": "application/json"
+    }
+  ]
+}

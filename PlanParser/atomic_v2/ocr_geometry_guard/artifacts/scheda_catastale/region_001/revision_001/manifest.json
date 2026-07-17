@@ -1,0 +1,76 @@
+{
+  "component": "ocr_geometry_guard",
+  "counts": {
+    "abstained": 4,
+    "confirmed": 13,
+    "geometry_candidates_total": 33,
+    "geometry_candidates_used_as_best": 15,
+    "shared_best_candidates": 2,
+    "words_total": 17
+  },
+  "created_at_utc": "2026-07-17T12:02:04.514728Z",
+  "immutability": "new_revision_written_exclusively_no_existing_file_modified",
+  "inputs": {
+    "crop": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\region_split\\artifacts\\scheda_catastale\\page_0001\\revision_002\\region_001.png",
+      "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a"
+    },
+    "doctr_raw": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_doctr\\artifacts\\scheda_catastale\\region_001\\revision_002\\ocr_raw.json",
+      "sha256": "92ef831e9abff48cf6c5382f4fafa2dd38496a84b49dda48f39ce1adc6a6b0a4"
+    },
+    "geometry_candidates": {
+      "path": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_text_candidates\\artifacts\\scheda_catastale\\region_001\\revision_001\\text_candidates.json",
+      "sha256": "e6efd12c72924a569ea18bd8a6740b9a23109ac3716b88bbdf7a302971fb2014"
+    }
+  },
+  "outputs": {
+    "ocr_geometry_guard.json": {
+      "bytes": 92025,
+      "sha256": "56e98c8e9a46dd5aa600fc9b97b513cde24da6c65884e7f55b002fd12f9a52e8"
+    },
+    "ocr_geometry_guard_overlay.png": {
+      "bytes": 74032,
+      "sha256": "f43fc973227db03cf648c04c3d07f786dcc382bf00d15ac3e354812df450b1b0"
+    }
+  },
+  "parameters": {
+    "border_margin_pixels": 2.0,
+    "candidate_competition_score_delta_max": 0.08,
+    "confirmation_requires": [
+      "strong_eligible_independent_geometry",
+      "detector_objectness_at_or_above_floor",
+      "no_source_border_clipping",
+      "no_candidate_or_ocr_box_overlap_ambiguity"
+    ],
+    "geometry_confidence_floor": 0.55,
+    "moderate_support_for_ambiguity": {
+      "support_score_floor": 0.4,
+      "vertical_overlap_over_smaller_floor": 0.5,
+      "word_coverage_floor": 0.25
+    },
+    "objectness_floor": 0.45,
+    "ocr_box_overlap_coverage_floor": 0.45,
+    "raw_recognition_confidence_used": false,
+    "strong_support": {
+      "support_score_floor": 0.52,
+      "vertical_overlap_over_smaller_floor": 0.5,
+      "word_coverage_floor": 0.45
+    },
+    "support_score_formula": {
+      "candidate_coverage": 0.15,
+      "candidate_geometry_confidence": 0.05,
+      "center_score": 0.1,
+      "iou": 0.3,
+      "vertical_overlap_over_smaller": 0.15,
+      "word_coverage": 0.25
+    }
+  },
+  "revision": "revision_001",
+  "schema_version": "planparser.atomic_v2.ocr_geometry_guard.manifest.v1",
+  "script": {
+    "path": "run_guard_revision_001.py",
+    "sha256": "fe732b190d1bf747eedc89e0a194a73214b99b44e23ef1105fde6d5e43c4e369"
+  },
+  "status": "completed"
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "planparser.ocr_ensemble.input_manifest.v1",
+  "revision": "revision_001",
+  "created_at_utc": "2026-07-17T12:02:06.0535606Z",
+  "mode": "read_only_inputs_additive_output",
+  "source_canvas": {
+    "width_px": 731,
+    "height_px": 744
+  },
+  "inputs": [
+    {
+      "role": "ppocrv5_raw",
+      "path": "ocr_heavy/artifacts/scheda_catastale/region_001/revision_004/ppocrv5_raw_001_paddle.json",
+      "bytes": 18229,
+      "sha256": "82285568013acc4b7dfdb42ed2410ced027c151d021abab409f4d0a795b6dd52"
+    },
+    {
+      "role": "doctr_raw",
+      "path": "ocr_doctr/artifacts/scheda_catastale/region_001/revision_002/ocr_raw.json",
+      "bytes": 55935,
+      "sha256": "92ef831e9abff48cf6c5382f4fafa2dd38496a84b49dda48f39ce1adc6a6b0a4"
+    },
+    {
+      "role": "geometric_text_candidates",
+      "path": "ocr_text_candidates/artifacts/scheda_catastale/region_001/revision_001/text_candidates.json",
+      "bytes": 168145,
+      "sha256": "e6efd12c72924a569ea18bd8a6740b9a23109ac3716b88bbdf7a302971fb2014"
+    },
+    {
+      "role": "original_crop",
+      "path": "region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+      "bytes": 108149,
+      "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a"
+    }
+  ],
+  "immutability": {
+    "inputs_opened_read_only": true,
+    "existing_files_modified": false,
+    "output_revision_must_not_exist_before_run": true
+  }
+}

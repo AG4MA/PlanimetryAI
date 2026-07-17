@@ -1,0 +1,2615 @@
+{
+  "schema_version": "planparser.industrial_v1.sheet_map.v1",
+  "mapper_version": "0.1.0",
+  "status": "completed_with_explicit_abstentions",
+  "created_at_utc": "2026-07-17T15:06:26.528795Z",
+  "source": {
+    "path": "atomic_v2/ingest/artifacts/scheda_catastale/pages/page_0001.png",
+    "sha256": "54f38ab8decb10eaec769e9e1d1b996f5c03e6ee3c11e87fa4d77e10269b8d53",
+    "width_px": 2481,
+    "height_px": 3508,
+    "coordinate_system": {
+      "origin": "top_left",
+      "x_positive": "right",
+      "y_positive": "down",
+      "bbox_encoding": "x_y_width_height_half_open",
+      "unit": "source_page_pixel"
+    },
+    "preservation": {
+      "authoritative_raster_unchanged": true,
+      "raw_source_reference_retained": true,
+      "pixel_data_copied_or_rewritten": false
+    }
+  },
+  "method": {
+    "name": "evidence_first_sheet_mapper",
+    "automatic": true,
+    "fixed_floor_count_assumption": false,
+    "stages": [
+      "long_line_closed_frame_detection",
+      "outside_frame_header_titleblock_mapping",
+      "offline_full_page_ocr_observation",
+      "floor_title_candidate_detection",
+      "connected_structural_linework_observation",
+      "title_to_linework_association",
+      "dominant_axis_floor_region_partition_or_abstention",
+      "unclassified_content_preservation_audit"
+    ],
+    "legacy_evidence": {
+      "consulted_read_only": [
+        "from_pdf_to_floors.v2.py",
+        "define_floor_v2.py",
+        "atomic_v2/region_split/split_regions.py"
+      ],
+      "changes_in_this_mapper": [
+        "no_largest_area_only_frame_selection",
+        "no_exactly_two_regions_assumption",
+        "no_one_floor_per_page_assumption",
+        "uncertainty_is_retained_instead_of_discarded"
+      ]
+    }
+  },
+  "runtime": {
+    "ocr": {
+      "engine": "docTR",
+      "engine_version": "v1.0.1",
+      "backend": "PyTorch CPU",
+      "detector": "db_resnet50",
+      "recognizer": "parseq",
+      "network_used": false,
+      "model_source": "existing_local_read_only_cache",
+      "model_load_ms": 803.915,
+      "inference_ms": 4393.368,
+      "word_count": 113,
+      "limits": [
+        "raw_confidence_is_not_calibrated_for_cadastral_floorplans",
+        "recognition_is_evidence_not_ground_truth"
+      ]
+    }
+  },
+  "observations": {
+    "primary_planimetric_frame": {
+      "id": "SF-001",
+      "observation_type": "primary_planimetric_frame_candidate",
+      "bbox_page_px": {
+        "x": 12,
+        "y": 560,
+        "width": 2299,
+        "height": 2768
+      },
+      "confidence": 0.995,
+      "abstained": false,
+      "reasons": [
+        "closed_rectangle_supported_by_independent_long_horizontal_and_vertical_line_evidence",
+        "selected_by_perimeter_continuity_before_area",
+        "does_not_assume_fixed_page_template"
+      ],
+      "measurements": {
+        "edge_support": {
+          "top": 1.0,
+          "bottom": 1.0,
+          "left": 1.0,
+          "right": 1.0
+        },
+        "area_ratio_page": 0.730589
+      }
+    },
+    "alternative_frame_hypotheses": [
+      {
+        "id": "SF-ALT-001",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 560,
+          "width": 2299,
+          "height": 2774
+        },
+        "area_ratio_page": 0.732173,
+        "edge_support": {
+          "top": 1.0,
+          "bottom": 1.0,
+          "left": 1.0,
+          "right": 1.0
+        },
+        "score": 1.0,
+        "abstained": true,
+        "reason": "lower_ranked_frame_hypothesis_retained_for_audit"
+      },
+      {
+        "id": "SF-ALT-002",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 560,
+          "width": 2303,
+          "height": 2774
+        },
+        "area_ratio_page": 0.733447,
+        "edge_support": {
+          "top": 1.0,
+          "bottom": 1.0,
+          "left": 1.0,
+          "right": 1.0
+        },
+        "score": 1.0,
+        "abstained": true,
+        "reason": "lower_ranked_frame_hypothesis_retained_for_audit"
+      },
+      {
+        "id": "SF-ALT-003",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 560,
+          "width": 2303,
+          "height": 2768
+        },
+        "area_ratio_page": 0.73186,
+        "edge_support": {
+          "top": 1.0,
+          "bottom": 0.999131,
+          "left": 1.0,
+          "right": 1.0
+        },
+        "score": 0.999335,
+        "abstained": true,
+        "reason": "lower_ranked_frame_hypothesis_retained_for_audit"
+      },
+      {
+        "id": "SF-ALT-004",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 537,
+          "width": 2303,
+          "height": 2797
+        },
+        "area_ratio_page": 0.739531,
+        "edge_support": {
+          "top": 0.673762,
+          "bottom": 1.0,
+          "left": 1.0,
+          "right": 0.992847
+        },
+        "score": 0.750106,
+        "abstained": true,
+        "reason": "lower_ranked_frame_hypothesis_retained_for_audit"
+      },
+      {
+        "id": "SF-ALT-005",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 537,
+          "width": 2303,
+          "height": 2791
+        },
+        "area_ratio_page": 0.737944,
+        "edge_support": {
+          "top": 0.673762,
+          "bottom": 0.999131,
+          "left": 1.0,
+          "right": 0.992832
+        },
+        "score": 0.750066,
+        "abstained": true,
+        "reason": "lower_ranked_frame_hypothesis_retained_for_audit"
+      }
+    ],
+    "header_titleblock": {
+      "id": "HC-001",
+      "observation_type": "sheet_header_titleblock_candidate",
+      "bbox_page_px": {
+        "x": 10,
+        "y": 50,
+        "width": 2307,
+        "height": 511
+      },
+      "confidence": 0.94,
+      "abstained": false,
+      "reasons": [
+        "ink_bearing_content_outside_and_above_primary_planimetric_frame",
+        "raw_content_preserved_without_forcing_field_semantics"
+      ],
+      "measurements": {
+        "ink_pixels": 107800,
+        "macro_component_count": 6
+      },
+      "component_ids": [
+        "HC-COMP-001",
+        "HC-COMP-002",
+        "HC-COMP-003",
+        "HC-COMP-004",
+        "HC-COMP-005",
+        "HC-COMP-006"
+      ]
+    },
+    "header_titleblock_components": [
+      {
+        "id": "HC-COMP-001",
+        "bbox_page_px": {
+          "x": 0,
+          "y": 37,
+          "width": 2332,
+          "height": 524
+        },
+        "classification": "header_or_titleblock_spatial_component",
+        "confidence": 0.89,
+        "abstained": false,
+        "semantic_fields_status": "not_asserted"
+      },
+      {
+        "id": "HC-COMP-002",
+        "bbox_page_px": {
+          "x": 110,
+          "y": 126,
+          "width": 546,
+          "height": 253
+        },
+        "classification": "header_or_titleblock_spatial_component",
+        "confidence": 0.89,
+        "abstained": false,
+        "semantic_fields_status": "not_asserted"
+      },
+      {
+        "id": "HC-COMP-003",
+        "bbox_page_px": {
+          "x": 1967,
+          "y": 184,
+          "width": 164,
+          "height": 51
+        },
+        "classification": "header_or_titleblock_spatial_component",
+        "confidence": 0.89,
+        "abstained": false,
+        "semantic_fields_status": "not_asserted"
+      },
+      {
+        "id": "HC-COMP-004",
+        "bbox_page_px": {
+          "x": 1533,
+          "y": 367,
+          "width": 395,
+          "height": 82
+        },
+        "classification": "header_or_titleblock_spatial_component",
+        "confidence": 0.89,
+        "abstained": false,
+        "semantic_fields_status": "not_asserted"
+      },
+      {
+        "id": "HC-COMP-005",
+        "bbox_page_px": {
+          "x": 2083,
+          "y": 468,
+          "width": 160,
+          "height": 50
+        },
+        "classification": "header_or_titleblock_spatial_component",
+        "confidence": 0.89,
+        "abstained": false,
+        "semantic_fields_status": "not_asserted"
+      },
+      {
+        "id": "HC-COMP-006",
+        "bbox_page_px": {
+          "x": 1534,
+          "y": 469,
+          "width": 456,
+          "height": 51
+        },
+        "classification": "header_or_titleblock_spatial_component",
+        "confidence": 0.89,
+        "abstained": false,
+        "semantic_fields_status": "not_asserted"
+      }
+    ],
+    "ocr_words": [
+      {
+        "id": "OCR-0001",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 0,
+        "word_index": 0,
+        "text_raw": "Dichiarazione",
+        "confidence_raw": 0.99999356,
+        "bbox_page_px": {
+          "x": 784,
+          "y": 58,
+          "width": 286,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0002",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 0,
+        "word_index": 1,
+        "text_raw": "protocollo",
+        "confidence_raw": 0.99997586,
+        "bbox_page_px": {
+          "x": 1076,
+          "y": 58,
+          "width": 216,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0003",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 0,
+        "word_index": 2,
+        "text_raw": "n.",
+        "confidence_raw": 0.99997842,
+        "bbox_page_px": {
+          "x": 1302,
+          "y": 65,
+          "width": 52,
+          "height": 31
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0004",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 1,
+        "word_index": 0,
+        "text_raw": "del",
+        "confidence_raw": 0.99999696,
+        "bbox_page_px": {
+          "x": 1569,
+          "y": 61,
+          "width": 73,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0005",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 2,
+        "word_index": 0,
+        "text_raw": "Agenzia",
+        "confidence_raw": 0.99998254,
+        "bbox_page_px": {
+          "x": 161,
+          "y": 133,
+          "width": 182,
+          "height": 52
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0006",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 2,
+        "word_index": 1,
+        "text_raw": "delle",
+        "confidence_raw": 0.99999076,
+        "bbox_page_px": {
+          "x": 346,
+          "y": 130,
+          "width": 117,
+          "height": 52
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0007",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 2,
+        "word_index": 2,
+        "text_raw": "Entrate",
+        "confidence_raw": 0.9999699,
+        "bbox_page_px": {
+          "x": 469,
+          "y": 137,
+          "width": 149,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0008",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 3,
+        "word_index": 0,
+        "text_raw": "Comune",
+        "confidence_raw": 0.99985987,
+        "bbox_page_px": {
+          "x": 784,
+          "y": 119,
+          "width": 138,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0009",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 3,
+        "word_index": 1,
+        "text_raw": "di",
+        "confidence_raw": 0.99999475,
+        "bbox_page_px": {
+          "x": 932,
+          "y": 123,
+          "width": 55,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0010",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 3,
+        "word_index": 2,
+        "text_raw": "Cornate",
+        "confidence_raw": 0.99999475,
+        "bbox_page_px": {
+          "x": 993,
+          "y": 123,
+          "width": 156,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0011",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 3,
+        "word_index": 3,
+        "text_raw": "D'adda",
+        "confidence_raw": 0.99999839,
+        "bbox_page_px": {
+          "x": 1158,
+          "y": 119,
+          "width": 138,
+          "height": 43
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0012",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 4,
+        "word_index": 0,
+        "text_raw": "CATASTO",
+        "confidence_raw": 0.99999446,
+        "bbox_page_px": {
+          "x": 123,
+          "y": 205,
+          "width": 227,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0013",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 4,
+        "word_index": 1,
+        "text_raw": "FABBRICATI",
+        "confidence_raw": 0.99999541,
+        "bbox_page_px": {
+          "x": 363,
+          "y": 202,
+          "width": 282,
+          "height": 49
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0014",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 5,
+        "word_index": 0,
+        "text_raw": "Via",
+        "confidence_raw": 0.99998593,
+        "bbox_page_px": {
+          "x": 791,
+          "y": 195,
+          "width": 70,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0015",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 5,
+        "word_index": 1,
+        "text_raw": "G.",
+        "confidence_raw": 0.99999255,
+        "bbox_page_px": {
+          "x": 870,
+          "y": 188,
+          "width": 59,
+          "height": 45
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0016",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 5,
+        "word_index": 2,
+        "text_raw": "Donizetti",
+        "confidence_raw": 0.99999875,
+        "bbox_page_px": {
+          "x": 935,
+          "y": 191,
+          "width": 200,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0017",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 6,
+        "word_index": 0,
+        "text_raw": "civ.",
+        "confidence_raw": 0.99982285,
+        "bbox_page_px": {
+          "x": 1973,
+          "y": 188,
+          "width": 94,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0018",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 6,
+        "word_index": 1,
+        "text_raw": "36",
+        "confidence_raw": 0.99999964,
+        "bbox_page_px": {
+          "x": 2072,
+          "y": 191,
+          "width": 49,
+          "height": 36
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0019",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 7,
+        "word_index": 0,
+        "text_raw": "Ufficio",
+        "confidence_raw": 0.99999744,
+        "bbox_page_px": {
+          "x": 168,
+          "y": 267,
+          "width": 127,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0020",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 7,
+        "word_index": 1,
+        "text_raw": "Provinciale",
+        "confidence_raw": 0.99997842,
+        "bbox_page_px": {
+          "x": 308,
+          "y": 267,
+          "width": 227,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0021",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 7,
+        "word_index": 2,
+        "text_raw": "di",
+        "confidence_raw": 0.99999857,
+        "bbox_page_px": {
+          "x": 541,
+          "y": 267,
+          "width": 42,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0022",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 8,
+        "word_index": 0,
+        "text_raw": "Identificativi",
+        "confidence_raw": 0.9999843,
+        "bbox_page_px": {
+          "x": 791,
+          "y": 287,
+          "width": 296,
+          "height": 29
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0023",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 8,
+        "word_index": 1,
+        "text_raw": "Catastali:",
+        "confidence_raw": 0.99998933,
+        "bbox_page_px": {
+          "x": 1103,
+          "y": 287,
+          "width": 210,
+          "height": 29
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0024",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 9,
+        "word_index": 0,
+        "text_raw": "Compilata",
+        "confidence_raw": 0.99998939,
+        "bbox_page_px": {
+          "x": 1541,
+          "y": 280,
+          "width": 197,
+          "height": 43
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0025",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 9,
+        "word_index": 1,
+        "text_raw": "da:",
+        "confidence_raw": 0.99996334,
+        "bbox_page_px": {
+          "x": 1747,
+          "y": 277,
+          "width": 73,
+          "height": 46
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0026",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 10,
+        "word_index": 0,
+        "text_raw": "Milano",
+        "confidence_raw": 0.99999887,
+        "bbox_page_px": {
+          "x": 315,
+          "y": 322,
+          "width": 165,
+          "height": 52
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0027",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 11,
+        "word_index": 0,
+        "text_raw": "Sezione:",
+        "confidence_raw": 0.9999975,
+        "bbox_page_px": {
+          "x": 839,
+          "y": 335,
+          "width": 176,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0028",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 12,
+        "word_index": 0,
+        "text_raw": "Piccoli",
+        "confidence_raw": 0.99998426,
+        "bbox_page_px": {
+          "x": 1541,
+          "y": 311,
+          "width": 159,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0029",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 12,
+        "word_index": 1,
+        "text_raw": "Paolo",
+        "confidence_raw": 0.99998891,
+        "bbox_page_px": {
+          "x": 1706,
+          "y": 311,
+          "width": 117,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0030",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 13,
+        "word_index": 0,
+        "text_raw": "Foglio:",
+        "confidence_raw": 0.99997246,
+        "bbox_page_px": {
+          "x": 860,
+          "y": 383,
+          "width": 155,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0031",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 13,
+        "word_index": 1,
+        "text_raw": "6",
+        "confidence_raw": 0.99998343,
+        "bbox_page_px": {
+          "x": 1028,
+          "y": 380,
+          "width": 35,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0032",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 14,
+        "word_index": 0,
+        "text_raw": "Iscritto",
+        "confidence_raw": 0.99896133,
+        "bbox_page_px": {
+          "x": 1538,
+          "y": 373,
+          "width": 179,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0033",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 14,
+        "word_index": 1,
+        "text_raw": "all'albo:",
+        "confidence_raw": 0.99997628,
+        "bbox_page_px": {
+          "x": 1726,
+          "y": 373,
+          "width": 197,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0034",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 15,
+        "word_index": 0,
+        "text_raw": "Geometri",
+        "confidence_raw": 0.99999547,
+        "bbox_page_px": {
+          "x": 1541,
+          "y": 404,
+          "width": 183,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0035",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 16,
+        "word_index": 0,
+        "text_raw": "Particella:",
+        "confidence_raw": 0.99995518,
+        "bbox_page_px": {
+          "x": 774,
+          "y": 431,
+          "width": 237,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0036",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 16,
+        "word_index": 1,
+        "text_raw": "191",
+        "confidence_raw": 0.99999952,
+        "bbox_page_px": {
+          "x": 1028,
+          "y": 431,
+          "width": 76,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0037",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 17,
+        "word_index": 0,
+        "text_raw": "Planimetria",
+        "confidence_raw": 0.99997973,
+        "bbox_page_px": {
+          "x": 17,
+          "y": 459,
+          "width": 251,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0038",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 18,
+        "word_index": 0,
+        "text_raw": "Subalterno:",
+        "confidence_raw": 0.99995786,
+        "bbox_page_px": {
+          "x": 778,
+          "y": 483,
+          "width": 233,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0039",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 18,
+        "word_index": 1,
+        "text_raw": "701",
+        "confidence_raw": 0.99999887,
+        "bbox_page_px": {
+          "x": 1031,
+          "y": 486,
+          "width": 70,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0040",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 19,
+        "word_index": 0,
+        "text_raw": "Prov.",
+        "confidence_raw": 0.99996102,
+        "bbox_page_px": {
+          "x": 1541,
+          "y": 476,
+          "width": 115,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0041",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 19,
+        "word_index": 1,
+        "text_raw": "Monza",
+        "confidence_raw": 0.99999762,
+        "bbox_page_px": {
+          "x": 1655,
+          "y": 476,
+          "width": 117,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0042",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 19,
+        "word_index": 2,
+        "text_raw": "E",
+        "confidence_raw": 0.9999671,
+        "bbox_page_px": {
+          "x": 1778,
+          "y": 476,
+          "width": 39,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0043",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 19,
+        "word_index": 3,
+        "text_raw": "Brianza",
+        "confidence_raw": 0.9999975,
+        "bbox_page_px": {
+          "x": 1822,
+          "y": 476,
+          "width": 159,
+          "height": 38
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0044",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 20,
+        "word_index": 0,
+        "text_raw": "N.",
+        "confidence_raw": 0.99995452,
+        "bbox_page_px": {
+          "x": 2090,
+          "y": 476,
+          "width": 49,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0045",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 20,
+        "word_index": 1,
+        "text_raw": "1130",
+        "confidence_raw": 0.9999994,
+        "bbox_page_px": {
+          "x": 2141,
+          "y": 472,
+          "width": 93,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0046",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 21,
+        "word_index": 0,
+        "text_raw": "Scheda",
+        "confidence_raw": 0.99999118,
+        "bbox_page_px": {
+          "x": 14,
+          "y": 510,
+          "width": 144,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0047",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 21,
+        "word_index": 1,
+        "text_raw": "n.",
+        "confidence_raw": 0.99996895,
+        "bbox_page_px": {
+          "x": 157,
+          "y": 513,
+          "width": 63,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0048",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 21,
+        "word_index": 2,
+        "text_raw": "1",
+        "confidence_raw": 0.99999285,
+        "bbox_page_px": {
+          "x": 219,
+          "y": 510,
+          "width": 35,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0049",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 22,
+        "word_index": 0,
+        "text_raw": "Scala",
+        "confidence_raw": 0.99912405,
+        "bbox_page_px": {
+          "x": 390,
+          "y": 513,
+          "width": 118,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0050",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 22,
+        "word_index": 1,
+        "text_raw": "1:",
+        "confidence_raw": 0.99992537,
+        "bbox_page_px": {
+          "x": 514,
+          "y": 510,
+          "width": 59,
+          "height": 45
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0051",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 22,
+        "word_index": 2,
+        "text_raw": "200",
+        "confidence_raw": 0.99999946,
+        "bbox_page_px": {
+          "x": 565,
+          "y": 510,
+          "width": 73,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0052",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 23,
+        "word_index": 0,
+        "text_raw": "Piano",
+        "confidence_raw": 0.99999762,
+        "bbox_page_px": {
+          "x": 418,
+          "y": 599,
+          "width": 110,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0053",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 23,
+        "word_index": 1,
+        "text_raw": "Primo",
+        "confidence_raw": 0.99999923,
+        "bbox_page_px": {
+          "x": 534,
+          "y": 599,
+          "width": 107,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0054",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 23,
+        "word_index": 2,
+        "text_raw": "H=3.00m",
+        "confidence_raw": 0.99954635,
+        "bbox_page_px": {
+          "x": 647,
+          "y": 599,
+          "width": 169,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0055",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 24,
+        "word_index": 0,
+        "text_raw": "stessa",
+        "confidence_raw": 0.99998921,
+        "bbox_page_px": {
+          "x": 1117,
+          "y": 668,
+          "width": 76,
+          "height": 28
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0056",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 24,
+        "word_index": 1,
+        "text_raw": "uiu",
+        "confidence_raw": 0.99970275,
+        "bbox_page_px": {
+          "x": 1189,
+          "y": 664,
+          "width": 45,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0057",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 25,
+        "word_index": 0,
+        "text_raw": "bagno",
+        "confidence_raw": 0.99999249,
+        "bbox_page_px": {
+          "x": 1110,
+          "y": 815,
+          "width": 76,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0058",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 26,
+        "word_index": 0,
+        "text_raw": "camera",
+        "confidence_raw": 0.99972469,
+        "bbox_page_px": {
+          "x": 928,
+          "y": 853,
+          "width": 90,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0059",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 27,
+        "word_index": 0,
+        "text_raw": "camera",
+        "confidence_raw": 0.99994254,
+        "bbox_page_px": {
+          "x": 1288,
+          "y": 849,
+          "width": 90,
+          "height": 28
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0060",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 28,
+        "word_index": 0,
+        "text_raw": "dis.",
+        "confidence_raw": 0.99493659,
+        "bbox_page_px": {
+          "x": 1127,
+          "y": 959,
+          "width": 42,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0061",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 29,
+        "word_index": 0,
+        "text_raw": "arredofisso",
+        "confidence_raw": 0.9984901,
+        "bbox_page_px": {
+          "x": 860,
+          "y": 976,
+          "width": 145,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0062",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 29,
+        "word_index": 1,
+        "text_raw": "armadiol",
+        "confidence_raw": 0.99311936,
+        "bbox_page_px": {
+          "x": 983,
+          "y": 976,
+          "width": 124,
+          "height": 66
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0063",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 30,
+        "word_index": 0,
+        "text_raw": "[arredofisso",
+        "confidence_raw": 0.98555654,
+        "bbox_page_px": {
+          "x": 1199,
+          "y": 976,
+          "width": 155,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0064",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 30,
+        "word_index": 1,
+        "text_raw": "a",
+        "confidence_raw": 0.49085978,
+        "bbox_page_px": {
+          "x": 1339,
+          "y": 986,
+          "width": 36,
+          "height": 32
+        },
+        "abstained": true,
+        "abstention_reasons": [
+          "raw_ocr_confidence_below_0.50"
+        ]
+      },
+      {
+        "id": "OCR-0065",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 30,
+        "word_index": 2,
+        "text_raw": "armadio",
+        "confidence_raw": 0.99995106,
+        "bbox_page_px": {
+          "x": 1356,
+          "y": 986,
+          "width": 108,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0066",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 31,
+        "word_index": 0,
+        "text_raw": "LE",
+        "confidence_raw": 0.8533684,
+        "bbox_page_px": {
+          "x": 1048,
+          "y": 1007,
+          "width": 73,
+          "height": 45
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0067",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 32,
+        "word_index": 0,
+        "text_raw": "un",
+        "confidence_raw": 0.95875812,
+        "bbox_page_px": {
+          "x": 1243,
+          "y": 1017,
+          "width": 39,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0068",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 33,
+        "word_index": 0,
+        "text_raw": "stessa",
+        "confidence_raw": 0.99996644,
+        "bbox_page_px": {
+          "x": 692,
+          "y": 1038,
+          "width": 80,
+          "height": 31
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0069",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 33,
+        "word_index": 1,
+        "text_raw": "uiu",
+        "confidence_raw": 0.99952513,
+        "bbox_page_px": {
+          "x": 760,
+          "y": 1038,
+          "width": 49,
+          "height": 31
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0070",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 33,
+        "word_index": 2,
+        "text_raw": "sania",
+        "confidence_raw": 0.72125578,
+        "bbox_page_px": {
+          "x": 880,
+          "y": 1031,
+          "width": 77,
+          "height": 59
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0071",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 34,
+        "word_index": 0,
+        "text_raw": "stessa",
+        "confidence_raw": 0.99999315,
+        "bbox_page_px": {
+          "x": 1497,
+          "y": 1034,
+          "width": 76,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0072",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 34,
+        "word_index": 1,
+        "text_raw": "uiu",
+        "confidence_raw": 0.99983662,
+        "bbox_page_px": {
+          "x": 1569,
+          "y": 1034,
+          "width": 42,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0073",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 35,
+        "word_index": 0,
+        "text_raw": "soggiorno-pranzo",
+        "confidence_raw": 0.99998647,
+        "bbox_page_px": {
+          "x": 1158,
+          "y": 1137,
+          "width": 196,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0074",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 36,
+        "word_index": 0,
+        "text_raw": "rip.",
+        "confidence_raw": 0.99993205,
+        "bbox_page_px": {
+          "x": 945,
+          "y": 1305,
+          "width": 42,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0075",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 37,
+        "word_index": 0,
+        "text_raw": "balcone",
+        "confidence_raw": 0.99997157,
+        "bbox_page_px": {
+          "x": 1230,
+          "y": 1315,
+          "width": 97,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0076",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 38,
+        "word_index": 0,
+        "text_raw": "stessa",
+        "confidence_raw": 0.99993855,
+        "bbox_page_px": {
+          "x": 1086,
+          "y": 1421,
+          "width": 83,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0077",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 38,
+        "word_index": 1,
+        "text_raw": "uiu",
+        "confidence_raw": 0.99980903,
+        "bbox_page_px": {
+          "x": 1158,
+          "y": 1421,
+          "width": 49,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0078",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 39,
+        "word_index": 0,
+        "text_raw": "Piano",
+        "confidence_raw": 0.99999332,
+        "bbox_page_px": {
+          "x": 425,
+          "y": 1490,
+          "width": 117,
+          "height": 52
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0079",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 39,
+        "word_index": 1,
+        "text_raw": "Terra",
+        "confidence_raw": 0.9999994,
+        "bbox_page_px": {
+          "x": 541,
+          "y": 1497,
+          "width": 107,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0080",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 39,
+        "word_index": 2,
+        "text_raw": "H=2.45m",
+        "confidence_raw": 0.99952567,
+        "bbox_page_px": {
+          "x": 654,
+          "y": 1497,
+          "width": 166,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0081",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 40,
+        "word_index": 0,
+        "text_raw": "VIAD",
+        "confidence_raw": 0.99500608,
+        "bbox_page_px": {
+          "x": 1007,
+          "y": 1562,
+          "width": 63,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0082",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 40,
+        "word_index": 1,
+        "text_raw": "DON",
+        "confidence_raw": 0.99999255,
+        "bbox_page_px": {
+          "x": 1055,
+          "y": 1565,
+          "width": 66,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0083",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 40,
+        "word_index": 2,
+        "text_raw": "ALBERTO",
+        "confidence_raw": 0.99999803,
+        "bbox_page_px": {
+          "x": 1113,
+          "y": 1569,
+          "width": 125,
+          "height": 28
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0084",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 40,
+        "word_index": 3,
+        "text_raw": "VILLA",
+        "confidence_raw": 0.99999511,
+        "bbox_page_px": {
+          "x": 1233,
+          "y": 1569,
+          "width": 73,
+          "height": 28
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0085",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 41,
+        "word_index": 0,
+        "text_raw": "mappale",
+        "confidence_raw": 0.99984169,
+        "bbox_page_px": {
+          "x": 1452,
+          "y": 1692,
+          "width": 111,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0086",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 41,
+        "word_index": 1,
+        "text_raw": "naptraiez",
+        "confidence_raw": 0.79288417,
+        "bbox_page_px": {
+          "x": 1466,
+          "y": 1661,
+          "width": 152,
+          "height": 80
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0087",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 42,
+        "word_index": 0,
+        "text_raw": "area",
+        "confidence_raw": 0.99989378,
+        "bbox_page_px": {
+          "x": 1058,
+          "y": 1904,
+          "width": 63,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0088",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 42,
+        "word_index": 1,
+        "text_raw": "di",
+        "confidence_raw": 0.9999916,
+        "bbox_page_px": {
+          "x": 1110,
+          "y": 1901,
+          "width": 35,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0089",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 42,
+        "word_index": 2,
+        "text_raw": "proprieta'",
+        "confidence_raw": 0.9995268,
+        "bbox_page_px": {
+          "x": 1134,
+          "y": 1901,
+          "width": 117,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0090",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 43,
+        "word_index": 0,
+        "text_raw": "dis.",
+        "confidence_raw": 0.99884951,
+        "bbox_page_px": {
+          "x": 1069,
+          "y": 2213,
+          "width": 49,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0091",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 43,
+        "word_index": 1,
+        "text_raw": "bagno",
+        "confidence_raw": 0.99999142,
+        "bbox_page_px": {
+          "x": 1144,
+          "y": 2209,
+          "width": 83,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0092",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 44,
+        "word_index": 0,
+        "text_raw": "cucina",
+        "confidence_raw": 0.99998063,
+        "bbox_page_px": {
+          "x": 928,
+          "y": 2267,
+          "width": 73,
+          "height": 29
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0093",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 45,
+        "word_index": 0,
+        "text_raw": "altra",
+        "confidence_raw": 0.99994057,
+        "bbox_page_px": {
+          "x": 1332,
+          "y": 2367,
+          "width": 56,
+          "height": 28
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0094",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 45,
+        "word_index": 1,
+        "text_raw": "uiu",
+        "confidence_raw": 0.99925441,
+        "bbox_page_px": {
+          "x": 1377,
+          "y": 2367,
+          "width": 49,
+          "height": 28
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0095",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 46,
+        "word_index": 0,
+        "text_raw": "sala",
+        "confidence_raw": 0.99995601,
+        "bbox_page_px": {
+          "x": 1130,
+          "y": 2391,
+          "width": 56,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0096",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 47,
+        "word_index": 0,
+        "text_raw": "mastaulist",
+        "confidence_raw": 0.77318859,
+        "bbox_page_px": {
+          "x": 497,
+          "y": 2387,
+          "width": 165,
+          "height": 80
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0097",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 48,
+        "word_index": 0,
+        "text_raw": "vano",
+        "confidence_raw": 0.99962044,
+        "bbox_page_px": {
+          "x": 939,
+          "y": 2449,
+          "width": 55,
+          "height": 28
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0098",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 49,
+        "word_index": 0,
+        "text_raw": "maptpaut",
+        "confidence_raw": 0.8051365,
+        "bbox_page_px": {
+          "x": 1672,
+          "y": 2404,
+          "width": 124,
+          "height": 73
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0099",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 49,
+        "word_index": 1,
+        "text_raw": "96193",
+        "confidence_raw": 0.75641632,
+        "bbox_page_px": {
+          "x": 1750,
+          "y": 2408,
+          "width": 87,
+          "height": 69
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0100",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 50,
+        "word_index": 0,
+        "text_raw": "scala",
+        "confidence_raw": 0.99986631,
+        "bbox_page_px": {
+          "x": 935,
+          "y": 2463,
+          "width": 66,
+          "height": 31
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0101",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 51,
+        "word_index": 0,
+        "text_raw": "1",
+        "confidence_raw": 0.62780404,
+        "bbox_page_px": {
+          "x": 1004,
+          "y": 2672,
+          "width": 38,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0102",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 52,
+        "word_index": 0,
+        "text_raw": "portico",
+        "confidence_raw": 0.99994701,
+        "bbox_page_px": {
+          "x": 1237,
+          "y": 2661,
+          "width": 79,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0103",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 53,
+        "word_index": 0,
+        "text_raw": "D",
+        "confidence_raw": 0.63056797,
+        "bbox_page_px": {
+          "x": 846,
+          "y": 2778,
+          "width": 35,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0104",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 54,
+        "word_index": 0,
+        "text_raw": "D",
+        "confidence_raw": 0.61562568,
+        "bbox_page_px": {
+          "x": 1048,
+          "y": 2774,
+          "width": 42,
+          "height": 36
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0105",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 55,
+        "word_index": 0,
+        "text_raw": "L",
+        "confidence_raw": 0.73649794,
+        "bbox_page_px": {
+          "x": 1240,
+          "y": 2771,
+          "width": 56,
+          "height": 45
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0106",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 56,
+        "word_index": 0,
+        "text_raw": "area",
+        "confidence_raw": 0.9999029,
+        "bbox_page_px": {
+          "x": 1058,
+          "y": 3031,
+          "width": 63,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0107",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 56,
+        "word_index": 1,
+        "text_raw": "di",
+        "confidence_raw": 0.99999344,
+        "bbox_page_px": {
+          "x": 1110,
+          "y": 3028,
+          "width": 35,
+          "height": 35
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0108",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 56,
+        "word_index": 2,
+        "text_raw": "proprieta'",
+        "confidence_raw": 0.99992812,
+        "bbox_page_px": {
+          "x": 1134,
+          "y": 3028,
+          "width": 117,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0109",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 57,
+        "word_index": 0,
+        "text_raw": "0",
+        "confidence_raw": 0.3187083,
+        "bbox_page_px": {
+          "x": 2076,
+          "y": 3024,
+          "width": 21,
+          "height": 22
+        },
+        "abstained": true,
+        "abstention_reasons": [
+          "raw_ocr_confidence_below_0.50"
+        ]
+      },
+      {
+        "id": "OCR-0110",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 58,
+        "word_index": 0,
+        "text_raw": "DAS",
+        "confidence_raw": 0.76947683,
+        "bbox_page_px": {
+          "x": 2090,
+          "y": 3042,
+          "width": 66,
+          "height": 62
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0111",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 59,
+        "word_index": 0,
+        "text_raw": "ST",
+        "confidence_raw": 0.52871037,
+        "bbox_page_px": {
+          "x": 2124,
+          "y": 3096,
+          "width": 35,
+          "height": 32
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0112",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 60,
+        "word_index": 0,
+        "text_raw": "VIAI",
+        "confidence_raw": 0.98576242,
+        "bbox_page_px": {
+          "x": 1093,
+          "y": 3278,
+          "width": 62,
+          "height": 42
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      },
+      {
+        "id": "OCR-0113",
+        "page_index": 0,
+        "block_index": 0,
+        "line_index": 60,
+        "word_index": 1,
+        "text_raw": "DONIZETTI",
+        "confidence_raw": 0.99998623,
+        "bbox_page_px": {
+          "x": 1141,
+          "y": 3285,
+          "width": 138,
+          "height": 39
+        },
+        "abstained": false,
+        "abstention_reasons": []
+      }
+    ],
+    "floor_title_candidates": [
+      {
+        "id": "FT-001",
+        "observation_type": "floor_title_candidate",
+        "text_raw": "Piano Primo H=3.00m",
+        "designation_raw": "Primo",
+        "bbox_page_px": {
+          "x": 418,
+          "y": 599,
+          "width": 398,
+          "height": 42
+        },
+        "ocr_word_ids": [
+          "OCR-0052",
+          "OCR-0053",
+          "OCR-0054"
+        ],
+        "confidence": 0.995,
+        "abstained": false,
+        "reasons": [
+          "ocr_line_contains_exact_floor_keyword_token",
+          "floor_designator_token_detected"
+        ],
+        "semantic_scope": "candidate_title_only"
+      },
+      {
+        "id": "FT-002",
+        "observation_type": "floor_title_candidate",
+        "text_raw": "Piano Terra H=2.45m",
+        "designation_raw": "Terra",
+        "bbox_page_px": {
+          "x": 425,
+          "y": 1490,
+          "width": 395,
+          "height": 52
+        },
+        "ocr_word_ids": [
+          "OCR-0078",
+          "OCR-0079",
+          "OCR-0080"
+        ],
+        "confidence": 0.995,
+        "abstained": false,
+        "reasons": [
+          "ocr_line_contains_exact_floor_keyword_token",
+          "floor_designator_token_detected"
+        ],
+        "semantic_scope": "candidate_title_only"
+      }
+    ],
+    "structural_linework_candidates": [
+      {
+        "bbox_page_px": {
+          "x": 809,
+          "y": 692,
+          "width": 715,
+          "height": 728
+        },
+        "confidence": 0.96,
+        "abstained": true,
+        "observation_type": "connected_structural_linework_candidate",
+        "semantic_hypothesis": null,
+        "measurements": {
+          "joined_component_area_px": 177673,
+          "source_ink_pixels": 34448,
+          "source_ink_ratio": 0.06618,
+          "width_ratio_frame": 0.311005,
+          "height_ratio_frame": 0.263006
+        },
+        "reasons": [
+          "connected_horizontal_and_vertical_linework",
+          "semantic_identity_not_proven"
+        ],
+        "id": "SC-001"
+      },
+      {
+        "bbox_page_px": {
+          "x": 697,
+          "y": 1599,
+          "width": 968,
+          "height": 1710
+        },
+        "confidence": 0.786084,
+        "abstained": true,
+        "observation_type": "connected_structural_linework_candidate",
+        "semantic_hypothesis": null,
+        "measurements": {
+          "joined_component_area_px": 127409,
+          "source_ink_pixels": 14127,
+          "source_ink_ratio": 0.008535,
+          "width_ratio_frame": 0.421053,
+          "height_ratio_frame": 0.617775
+        },
+        "reasons": [
+          "connected_horizontal_and_vertical_linework",
+          "semantic_identity_not_proven"
+        ],
+        "id": "SC-002"
+      },
+      {
+        "bbox_page_px": {
+          "x": 837,
+          "y": 2101,
+          "width": 658,
+          "height": 713
+        },
+        "confidence": 0.96,
+        "abstained": true,
+        "observation_type": "connected_structural_linework_candidate",
+        "semantic_hypothesis": null,
+        "measurements": {
+          "joined_component_area_px": 150310,
+          "source_ink_pixels": 22313,
+          "source_ink_ratio": 0.04756,
+          "width_ratio_frame": 0.286211,
+          "height_ratio_frame": 0.257587
+        },
+        "reasons": [
+          "connected_horizontal_and_vertical_linework",
+          "semantic_identity_not_proven"
+        ],
+        "id": "SC-003"
+      }
+    ],
+    "floor_regions": [
+      {
+        "id": "FR-001",
+        "observation_type": "floor_region_candidate",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 560,
+          "width": 2299,
+          "height": 895
+        },
+        "title_candidate_id": "FT-001",
+        "structural_candidate_ids": [
+          "SC-001"
+        ],
+        "association_scores": {
+          "SC-001": 0.755132
+        },
+        "confidence": 0.934524,
+        "abstained": false,
+        "reasons": [
+          "region_seeded_by_detected_floor_title",
+          "layout_axis=vertical",
+          "one_or_more_structural_components_associated",
+          "adjacent_regions_separated_without_observed_content_overlap"
+        ],
+        "internal_content_semantics": "unclassified_preserved"
+      },
+      {
+        "id": "FR-002",
+        "observation_type": "floor_region_candidate",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 1455,
+          "width": 2299,
+          "height": 1873
+        },
+        "title_candidate_id": "FT-002",
+        "structural_candidate_ids": [
+          "SC-002",
+          "SC-003"
+        ],
+        "association_scores": {
+          "SC-002": 0.743864,
+          "SC-003": 0.438794
+        },
+        "confidence": 0.932496,
+        "abstained": false,
+        "reasons": [
+          "region_seeded_by_detected_floor_title",
+          "layout_axis=vertical",
+          "one_or_more_structural_components_associated",
+          "adjacent_regions_separated_without_observed_content_overlap"
+        ],
+        "internal_content_semantics": "unclassified_preserved"
+      }
+    ],
+    "floor_layout": {
+      "axis": "vertical",
+      "normalized_title_spread_x": 0.002392,
+      "normalized_title_spread_y": 0.323699,
+      "abstained": false,
+      "reason": "dominant_title_arrangement_axis"
+    }
+  },
+  "unclassified_content": {
+    "policy": "preserve_first_classify_later",
+    "raw_source_is_authoritative": true,
+    "floor_region_raster_scopes": [
+      {
+        "region_id": "FR-001",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 560,
+          "width": 2299,
+          "height": 895
+        },
+        "classification": "raw_content_preserved_semantics_unresolved",
+        "abstained": true
+      },
+      {
+        "region_id": "FR-002",
+        "bbox_page_px": {
+          "x": 12,
+          "y": 1455,
+          "width": 2299,
+          "height": 1873
+        },
+        "classification": "raw_content_preserved_semantics_unresolved",
+        "abstained": true
+      }
+    ],
+    "unresolved_ocr_word_ids_by_scope": {
+      "header_or_titleblock": [
+        "OCR-0001",
+        "OCR-0002",
+        "OCR-0003",
+        "OCR-0004",
+        "OCR-0005",
+        "OCR-0006",
+        "OCR-0007",
+        "OCR-0008",
+        "OCR-0009",
+        "OCR-0010",
+        "OCR-0011",
+        "OCR-0012",
+        "OCR-0013",
+        "OCR-0014",
+        "OCR-0015",
+        "OCR-0016",
+        "OCR-0017",
+        "OCR-0018",
+        "OCR-0019",
+        "OCR-0020",
+        "OCR-0021",
+        "OCR-0022",
+        "OCR-0023",
+        "OCR-0024",
+        "OCR-0025",
+        "OCR-0026",
+        "OCR-0027",
+        "OCR-0028",
+        "OCR-0029",
+        "OCR-0030",
+        "OCR-0031",
+        "OCR-0032",
+        "OCR-0033",
+        "OCR-0034",
+        "OCR-0035",
+        "OCR-0036",
+        "OCR-0037",
+        "OCR-0038",
+        "OCR-0039",
+        "OCR-0040",
+        "OCR-0041",
+        "OCR-0042",
+        "OCR-0043",
+        "OCR-0044",
+        "OCR-0045",
+        "OCR-0046",
+        "OCR-0047",
+        "OCR-0048",
+        "OCR-0049",
+        "OCR-0050",
+        "OCR-0051"
+      ],
+      "floor_regions": [
+        "OCR-0055",
+        "OCR-0056",
+        "OCR-0057",
+        "OCR-0058",
+        "OCR-0059",
+        "OCR-0060",
+        "OCR-0061",
+        "OCR-0062",
+        "OCR-0063",
+        "OCR-0064",
+        "OCR-0065",
+        "OCR-0066",
+        "OCR-0067",
+        "OCR-0068",
+        "OCR-0069",
+        "OCR-0070",
+        "OCR-0071",
+        "OCR-0072",
+        "OCR-0073",
+        "OCR-0074",
+        "OCR-0075",
+        "OCR-0076",
+        "OCR-0077",
+        "OCR-0081",
+        "OCR-0082",
+        "OCR-0083",
+        "OCR-0084",
+        "OCR-0085",
+        "OCR-0086",
+        "OCR-0087",
+        "OCR-0088",
+        "OCR-0089",
+        "OCR-0090",
+        "OCR-0091",
+        "OCR-0092",
+        "OCR-0093",
+        "OCR-0094",
+        "OCR-0095",
+        "OCR-0096",
+        "OCR-0097",
+        "OCR-0098",
+        "OCR-0099",
+        "OCR-0100",
+        "OCR-0101",
+        "OCR-0102",
+        "OCR-0103",
+        "OCR-0104",
+        "OCR-0105",
+        "OCR-0106",
+        "OCR-0107",
+        "OCR-0108",
+        "OCR-0109",
+        "OCR-0110",
+        "OCR-0111",
+        "OCR-0112",
+        "OCR-0113"
+      ],
+      "outside_mapped_spatial_regions": []
+    },
+    "external_unclassified_ink_pixels": 33232,
+    "external_unclassified_ink_components": [
+      {
+        "id": "UC-EXT-001",
+        "bbox_page_px": {
+          "x": 10,
+          "y": 561,
+          "width": 2307,
+          "height": 2775
+        },
+        "ink_pixels": 33232,
+        "classification": "unclassified_external_ink_preserved",
+        "abstained": true
+      }
+    ]
+  },
+  "abstentions": [
+    {
+      "id": "ABS-001",
+      "scope": "structural_linework_semantics",
+      "status": "abstained",
+      "reason": "geometry_alone_does_not_prove_building_wall_room_or_property_membership",
+      "affected_ids": [
+        "SC-001",
+        "SC-002",
+        "SC-003"
+      ]
+    },
+    {
+      "id": "ABS-002",
+      "scope": "floor_region_internal_semantics",
+      "status": "abstained",
+      "reason": "sheet_mapper_assigns_spatial_regions_only",
+      "affected_ids": [
+        "FR-001",
+        "FR-002"
+      ]
+    },
+    {
+      "id": "ABS-003",
+      "scope": "orientation_and_compass",
+      "status": "not_attempted",
+      "reason": "outside_this_first_sheet_mapping_component",
+      "affected_ids": []
+    }
+  ],
+  "summary": {
+    "frame_detected": true,
+    "header_titleblock_candidates": 1,
+    "header_macro_components": 6,
+    "ocr_words": 113,
+    "floor_title_candidates": 2,
+    "floor_region_candidates": 2,
+    "floor_regions_abstained": 0,
+    "structural_linework_candidates": 3,
+    "semantic_wall_or_room_assignments": 0
+  }
+}

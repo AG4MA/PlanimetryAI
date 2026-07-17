@@ -1,0 +1,61 @@
+{
+  "schema_version": "planparser.atomic_v2.ocr_doctr.runtime.v1",
+  "status": "completed",
+  "started_at_utc": "2026-07-17T15:46:07.737784Z",
+  "completed_at_utc": "2026-07-17T15:46:14.246151Z",
+  "runtime": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "runtime/.venv/Scripts/python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "packages": {
+      "python-doctr": "1.0.1",
+      "torch": "2.13.0+cpu",
+      "torchvision": "0.28.0+cpu",
+      "numpy": "2.5.1",
+      "Pillow": "12.3.0",
+      "opencv-python": "4.13.0.92"
+    },
+    "torch_cuda_available": false,
+    "torch_num_threads": 12
+  },
+  "models": {
+    "detector": "db_resnet50",
+    "recognizer": "parseq",
+    "pretrained": true,
+    "cache_root": "runtime/models/doctr",
+    "cached_files": [
+      {
+        "path": "runtime/models/doctr/models/db_resnet50-79bd7d70.pt",
+        "bytes": 102021912,
+        "sha256": "79bd7d702506703b89cf11afa42d12aebf5cf25c3618e6ffd5f85772240ca483"
+      },
+      {
+        "path": "runtime/models/doctr/models/mobilenet_v3_small_crop_orientation-f0847a18.pt",
+        "bytes": 6233146,
+        "sha256": "f0847a18a134c8e471951de24300bee2c3af6e8bba5aa7986e4aeb96f63f0a28"
+      },
+      {
+        "path": "runtime/models/doctr/models/mobilenet_v3_small_page_orientation-8e60325c.pt",
+        "bytes": 6233146,
+        "sha256": "8e60325c099cf70ba4203923d8ec15546b11d33f0f18fdd9d526040d60337674"
+      },
+      {
+        "path": "runtime/models/doctr/models/parseq-56125471.pt",
+        "bytes": 95457349,
+        "sha256": "56125471b17e660253c4179c3fbf3c906c34606d898148895dbb84db257d98ba"
+      }
+    ]
+  },
+  "source_sha256": "612b583a2f244de46f1469b3acd35e8bde2de0e693f369f52a1c70fc82ebd82b",
+  "outputs": {
+    "ocr_raw.json": "2a419cac738b4c2fad5a4f679288f98b345c890ad20b4480eea5d89d4d1b1617",
+    "ocr_overlay.png": "a209a0aa21422596e0b2de0621f3f68541e98b7b11aaefca217cb27523bfec44"
+  },
+  "timings_ms": {
+    "model_load": 844.797,
+    "document_load": 9.166,
+    "inference": 1816.322,
+    "total_before_manifest_write": 6508.346
+  }
+}

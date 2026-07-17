@@ -1,0 +1,263 @@
+{
+  "schema_version": "planparser.opening-detection.decision-register/1.0",
+  "register_id": "planparser-opening-knowledge",
+  "revision": 1,
+  "predecessor_sha256": null,
+  "scopes": [
+    {
+      "scope_key": "global:opening-symbols",
+      "kind": "global"
+    },
+    {
+      "scope_key": "page:10b5799141f8606e6b5f19fddef6ca3f49d0402f088ff25b887df89f7d65ab12:1",
+      "kind": "page",
+      "source": {
+        "filename": "asteannunci__Arba-PN__4584455__10b57991.pdf",
+        "document_sha256": "10b5799141f8606e6b5f19fddef6ca3f49d0402f088ff25b887df89f7d65ab12",
+        "page_number": 1,
+        "page_image_sha256": "9004319b4f883103cc878374701958ba09b025fb84719bd221ef1dc0affe6fb3",
+        "dimensions_px": [3311, 4682],
+        "render_dpi": 400,
+        "coordinate_frame": "canonical_page_px_top_left_xywh"
+      }
+    },
+    {
+      "scope_key": "page:8ec76bf3eae0214b869ba2cd7e410ec2d4c7e2ec30816110d0ee35d781c41751:1",
+      "kind": "page",
+      "source": {
+        "filename": "asteannunci__Fossalta-di-piave-VE__4571692__8ec76bf3.pdf",
+        "document_sha256": "8ec76bf3eae0214b869ba2cd7e410ec2d4c7e2ec30816110d0ee35d781c41751",
+        "page_number": 1,
+        "page_image_sha256": "724734181f333915fcec7509c9e8ea75e870786424473806485c41acc0ab3083",
+        "dimensions_px": [4682, 6622],
+        "render_dpi": 400,
+        "coordinate_frame": "canonical_page_px_top_left_xywh"
+      }
+    },
+    {
+      "scope_key": "page:301f9d08bbbeb162e0b893fe04cebd568b035f12829edb9cfcfa316f0b2fa9fc:1",
+      "kind": "page",
+      "source": {
+        "filename": "asteannunci__Cinisello-balsamo-MI__4549628__301f9d08.pdf",
+        "document_sha256": "301f9d08bbbeb162e0b893fe04cebd568b035f12829edb9cfcfa316f0b2fa9fc",
+        "page_number": 1,
+        "page_image_sha256": "f0b758cafd203f743b9a2f6be7503d285c811b1008712f55fe5386a733b66e78",
+        "dimensions_px": [3311, 4682],
+        "render_dpi": 400,
+        "coordinate_frame": "canonical_page_px_top_left_xywh"
+      }
+    },
+    {
+      "scope_key": "page:3375fd625f4137732c3210a63fd75f9e2774489f1ff8bb3888fb30982e8f00a0:1",
+      "kind": "page",
+      "source": {
+        "filename": "asteannunci__Acri-CS__4594463__3375fd62.pdf",
+        "document_sha256": "3375fd625f4137732c3210a63fd75f9e2774489f1ff8bb3888fb30982e8f00a0",
+        "page_number": 1,
+        "page_image_sha256": "8d7e2b7d16d575da8b821d25ad2f4ebc07327fc0b0f45305a2d4f4aa11117acb",
+        "dimensions_px": [4678, 3307],
+        "render_dpi": 400,
+        "coordinate_frame": "canonical_page_px_top_left_xywh"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "decision:opening-symbols:variable-grammar",
+      "status": "confirmed",
+      "topic": "symbol_variability",
+      "assertion": "Le rappresentazioni di porte e finestre cambiano spesso; non esiste un unico glifo universale.",
+      "scope_key": "global:opening-symbols",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Il riconoscimento deve usare famiglie di evidenze e contesto murario, non un template unico."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:door:perpendicular-line-at-wall-break",
+      "status": "confirmed",
+      "topic": "door_symbol_family",
+      "assertion": "Una convenzione di porta è una linea isolata perpendicolare al muro nel punto in cui il muro è interrotto.",
+      "scope_key": "global:opening-symbols",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Questa è una famiglia grafica, non l'unica rappresentazione possibile di una porta."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:window:typically-embedded-in-wall",
+      "status": "confirmed",
+      "topic": "window_wall_relation",
+      "assertion": "Di solito le finestre sono inserite dentro i muri e vengono segnalate in quella posizione.",
+      "scope_key": "global:opening-symbols",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "La relazione è frequente ma non universale; le eccezioni devono poter restare sconosciute."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:portafinestra:context-dependent",
+      "status": "confirmed",
+      "topic": "window_vs_french_door",
+      "assertion": "La classificazione come portafinestra dipende dal caso e non può essere assegnata automaticamente a ogni apertura ambigua.",
+      "scope_key": "global:opening-symbols",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Portafinestra non viene silenziosamente normalizzata a finestra."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:arba:doors-perpendicular-lines",
+      "status": "confirmed",
+      "topic": "door_example",
+      "assertion": "Nella pagina di Arba le linee perpendicolari isolate nei varchi murari sono porte.",
+      "scope_key": "page:10b5799141f8606e6b5f19fddef6ca3f49d0402f088ff25b887df89f7d65ab12:1",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Le singole istanze devono ancora ricevere geometrie pixel precise."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:arba:windows-embedded-rectangles",
+      "status": "confirmed",
+      "topic": "window_example",
+      "assertion": "Nella pagina di Arba i piccoli elementi rettangolari o lineari inseriti nel muro esterno sopra le due camere e la cucina sono finestre.",
+      "scope_key": "page:10b5799141f8606e6b5f19fddef6ca3f49d0402f088ff25b887df89f7d65ab12:1",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Questa etichetta non distingue ancora finestra da portafinestra in altri esempi."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:fossalta:door-parallel-line-light-continuation",
+      "status": "confirmed",
+      "topic": "door_example",
+      "assertion": "Nella pagina di Fossalta esiste una famiglia di porte rappresentata da una linea parallela ai muri più un tratto di continuazione del muro reso in chiaro.",
+      "scope_key": "page:8ec76bf3eae0214b869ba2cd7e410ec2d4c7e2ec30816110d0ee35d781c41751:1",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "La geometria esatta del tratto in chiaro deve essere localizzata prima di trasformarla in una regola algoritmica."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:cinisello:entry-perpendicular-door",
+      "status": "confirmed",
+      "topic": "door_example",
+      "assertion": "Nella pagina di Cinisello la linea perpendicolare all'ingresso rappresenta una porta.",
+      "scope_key": "page:301f9d08bbbeb162e0b893fe04cebd568b035f12829edb9cfcfa316f0b2fa9fc:1",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "La geometria pixel dell'istanza deve ancora essere annotata."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:cinisello:unmarked-gap-is-passage",
+      "status": "confirmed",
+      "topic": "passage_example",
+      "assertion": "Nella pagina di Cinisello il varco senza simbolo porta tra regioni non è una porta, ma indica che si può passare tra gli ambienti; la classe è passaggio.",
+      "scope_key": "page:301f9d08bbbeb162e0b893fe04cebd568b035f12829edb9cfcfa316f0b2fa9fc:1",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Non ogni gap può essere generalizzato automaticamente a passaggio."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:cinisello:virtual-semantic-separator",
+      "status": "confirmed",
+      "topic": "virtual_separator_construction",
+      "assertion": "Per separare semanticamente gli ambienti attraversati da un passaggio si prolungano le linee murarie nella loro direzione e inclinazione fino alla prima intersezione con un'altra linea strutturale valida.",
+      "scope_key": "page:301f9d08bbbeb162e0b893fe04cebd568b035f12829edb9cfcfa316f0b2fa9fc:1",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Testo, quote, arredi e simboli non arrestano il prolungamento.",
+        "Il separatore è inferito, non è un muro fisico e non blocca il passaggio."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:acri:doors-have-quarter-turn-swing",
+      "status": "confirmed",
+      "topic": "door_example",
+      "assertion": "Nella pagina di Acri le porte sono disegnate con una curva a 90 gradi che indica il lato e il verso di apertura.",
+      "scope_key": "page:3375fd625f4137732c3210a63fd75f9e2774489f1ff8bb3888fb30982e8f00a0:1",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Questa è una famiglia classica ma non universale di simboli porta."
+      ],
+      "supersedes": null
+    },
+    {
+      "decision_id": "decision:acri:windows-have-internal-frame-marker",
+      "status": "confirmed",
+      "topic": "window_example",
+      "assertion": "Nella pagina di Acri le finestre sono rettangoli inseriti nel muro che contengono una linea o un elemento d'infisso; il semplice rettangolo bianco non basta.",
+      "scope_key": "page:3375fd625f4137732c3210a63fd75f9e2774489f1ff8bb3888fb30982e8f00a0:1",
+      "evidence": {
+        "actor": "project_owner",
+        "method": "explicit_confirmation"
+      },
+      "constraints": [
+        "Il segno interno di Acri non deve essere imposto a tutte le famiglie di finestra."
+      ],
+      "supersedes": null
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "question:acri:p1:pranzo:south-opening:type:v1",
+      "question_key": "acri:p1:pranzo:south-opening:type",
+      "status": "open",
+      "topic": "window_vs_french_door",
+      "prompt": "L'apertura larga sul muro inferiore del PRANZO è una finestra oppure una portafinestra?",
+      "scope_key": "page:3375fd625f4137732c3210a63fd75f9e2774489f1ff8bb3888fb30982e8f00a0:1",
+      "target": {
+        "locator_description": "Apertura larga con linee interne sul muro inferiore del locale PRANZO.",
+        "geometry_page_px": null
+      },
+      "resolution": null,
+      "supersedes": null
+    }
+  ]
+}

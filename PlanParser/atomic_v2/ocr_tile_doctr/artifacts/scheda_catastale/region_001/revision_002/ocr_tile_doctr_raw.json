@@ -1,0 +1,917 @@
+{
+  "schema_version": "planparser.atomic_v2.ocr_tile_doctr.raw.v2",
+  "status": "completed",
+  "created_at_utc": "2026-07-17T12:08:25.365038Z",
+  "component": "ocr_tile_doctr",
+  "revision": "revision_002",
+  "predecessor_revision": "revision_001_failed_immutable",
+  "input": {
+    "manifest_path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/ocr_tiles_manifest.json",
+    "manifest_sha256": "3f90ce70fb61bd50d599f9876edd6441a6b4b952b1269f6b87ff21f0698d6c05",
+    "tile_variant": "ocr_ready_4x",
+    "count": 33
+  },
+  "engine": {
+    "name": "docTR",
+    "distribution": "python-doctr",
+    "version": "1.0.1",
+    "backend": "PyTorch",
+    "torch_version": "2.13.0+cpu",
+    "architecture": "parseq",
+    "mode": "recognition_only",
+    "device": "cpu",
+    "model_weight_path": "ocr_doctr/runtime/models/doctr/models/parseq-56125471.pt",
+    "model_weight_sha256": "56125471b17e660253c4179c3fbf3c906c34606d898148895dbb84db257d98ba",
+    "model_local_legacy_compatibility_loader": true,
+    "split_wide_crops": true,
+    "symmetric_pad": true,
+    "batch_size": 16
+  },
+  "policy": {
+    "raw_predictions_retained_unfiltered": true,
+    "original_abstention_state_preserved": true,
+    "derived_abstention_applied": false,
+    "text_correction_applied": false,
+    "semantic_assignment_applied": false
+  },
+  "counts": {
+    "input_tiles": 33,
+    "predictions": 33,
+    "original_abstained": 14,
+    "original_non_abstained": 19,
+    "empty_raw_predictions": 0
+  },
+  "timings_ms": {
+    "model_load": 489.979,
+    "image_load_and_hash": 95.02,
+    "recognition_batch": 1946.541,
+    "recognition_mean_per_input": 58.986
+  },
+  "records": [
+    {
+      "candidate_id": "TC-001",
+      "sheet_index": 1,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.48,
+        "input_candidate_record_sha256": "91189cfb41e25cbc1745f40b5c7503232d637f093ca6d8090cec7098ad3ff67e"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-001_context_4x.png",
+        "sha256": "aca9573b505d72523b18667f0bab81930e4d0999b73050b81a6f61012a3ca2a2",
+        "width_px": 484,
+        "height_px": 128,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.9854835271835327,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-002",
+      "sheet_index": 2,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.612924,
+        "input_candidate_record_sha256": "63702415bd162c930ef01afce63693c232fbf45a9908b683992d2a7620eed603"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-002_context_4x.png",
+        "sha256": "bf4e5af7afe89b514d8d3c3cc1e2c12a4ffd8d509fd39c55a87795d5095078ae",
+        "width_px": 316,
+        "height_px": 200,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.8402507305145264,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-003",
+      "sheet_index": 3,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.219296,
+        "input_candidate_record_sha256": "b85b7688098861d32a0aa76efd4cf010ddc3768afd85ed60c72ae223934962a6"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-003_context_4x.png",
+        "sha256": "f26f2cd6aefe66dd6f0d514366b2e099361b74fe0e2ba8a5b59e609d9584e9a0",
+        "width_px": 192,
+        "height_px": 136,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.6409438848495483,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-004",
+      "sheet_index": 4,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.219296,
+        "input_candidate_record_sha256": "b03daeeeca7e80a835149cc07d5875ce08a72ab46236d28fa20d34cc12d31992"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-004_context_4x.png",
+        "sha256": "78486e013b9d99966ec20e163c186ff0fda8bc8cb12dcc1a438f2d7c33c73e64",
+        "width_px": 192,
+        "height_px": 136,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.5462259650230408,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-005",
+      "sheet_index": 5,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.818256,
+        "input_candidate_record_sha256": "8bddad9df78fd2778ec76b62810aafa671ce09b507c9dbcbb67f2a40e7218d27"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-005_context_4x.png",
+        "sha256": "fa2e4e838286db5bdae0e771bed558eacf601aafab5af333ddc46f2d96c7b1df",
+        "width_px": 488,
+        "height_px": 252,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "bagno",
+        "confidence": 0.9962493181228638,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-006",
+      "sheet_index": 6,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.890041,
+        "input_candidate_record_sha256": "212cc328cdc68efbbf21eefbd0c04c1c2bec0d21644c1b1ea250e919ca6c7eec"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-006_context_4x.png",
+        "sha256": "2d5d67f97dc06795d8377d91037fb46604c1f8e1f1f4939b8b2a0dde3712b29e",
+        "width_px": 464,
+        "height_px": 164,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "camera",
+        "confidence": 0.9997678399085999,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-007",
+      "sheet_index": 7,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.890782,
+        "input_candidate_record_sha256": "015719667805d2a4b688fa498b68c2de90f6c11647e411dd553deeb07cfce81e"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-007_context_4x.png",
+        "sha256": "9e9c2670fdfec973dbffb775e14cd1dc56531056e9e021764494f76fcab07a2b",
+        "width_px": 460,
+        "height_px": 164,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "camera",
+        "confidence": 0.9997500777244568,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-008",
+      "sheet_index": 8,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.626324,
+        "input_candidate_record_sha256": "a85acf51655fe56872288cb0d7d5aa84471e0a0c6ed79dec7a9cbfe143b5fd16"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-008_context_4x.png",
+        "sha256": "06506b0ba41d6a100db22e6ad44215dfc9da2b33e0f4e7cc85253bc805f755de",
+        "width_px": 348,
+        "height_px": 256,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "H",
+        "confidence": 0.5210137367248535,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-009",
+      "sheet_index": 9,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.79053,
+        "input_candidate_record_sha256": "770415e1ebf5646b2f3f5c1b343d07c170f6d298d3e8be4c8a2a3315d5e663c9"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-009_context_4x.png",
+        "sha256": "5a5d9f153d96dcc68d27076ef144a6d3a68fb2fecda4e5303f4e1439499f546b",
+        "width_px": 332,
+        "height_px": 216,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "dis.-",
+        "confidence": 0.9322754144668579,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-010",
+      "sheet_index": 10,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.896239,
+        "input_candidate_record_sha256": "887d37d444203ea29c648e1179083fe078dd79a7cf656cbc82f123bad29c8e93"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-010_context_4x.png",
+        "sha256": "41e805cbd138a4aa640143453c200bd8477472c2017140154529514f287a8178",
+        "width_px": 512,
+        "height_px": 192,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "arredofiss",
+        "confidence": 0.9643152952194214,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-011",
+      "sheet_index": 11,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.904868,
+        "input_candidate_record_sha256": "9a607b49386962b9097140ce6afcfba3620d0e5f4b4f89b98266ca265a62de2d"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-011_context_4x.png",
+        "sha256": "bf19aecc8eaf9a8efcb1db7102c2637e73ad8493028da1d66c6db4c342d147df",
+        "width_px": 508,
+        "height_px": 192,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "jarredofisse",
+        "confidence": 0.9086083769798279,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-012",
+      "sheet_index": 12,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.888304,
+        "input_candidate_record_sha256": "ca6fa39e8ad070c47b368af5f9a61b29ef1fa7de8f4b8c76d947084f15e07f60"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-012_context_4x.png",
+        "sha256": "c5b797a9b8f831f183edf77f7bd00e817fb5480bc833afd4661a3e6c9f889dbc",
+        "width_px": 532,
+        "height_px": 216,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "armadio",
+        "confidence": 0.9978508949279785,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-013",
+      "sheet_index": 13,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.878049,
+        "input_candidate_record_sha256": "1bb6a270b2e3fb37365fd9b93252a62275b555615b149137d2d572b6abc1e9b0"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-013_context_4x.png",
+        "sha256": "db84e6f92cb80fca832cae14a485c767016230e57c8403c5d2c319800986225b",
+        "width_px": 532,
+        "height_px": 216,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "Sarmadiol",
+        "confidence": 0.9426046013832092,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-014",
+      "sheet_index": 14,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.214673,
+        "input_candidate_record_sha256": "7197eb15e8f3c3a19cb2e215e5dac4dfe748a24b54d829d079d5c7e23f610e8a"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-014_context_4x.png",
+        "sha256": "2f122e842c482677d1b6513849d012d1be725f0cf8e7cc57803ab9ac52564e98",
+        "width_px": 192,
+        "height_px": 128,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.9945001602172852,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-015",
+      "sheet_index": 15,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.586313,
+        "input_candidate_record_sha256": "9c85830a30f75a4216195bf6aed11fcc27afb19e413982200daf4fa050141719"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-015_context_4x.png",
+        "sha256": "5878d497c0b57b6fa2e340716b71219b5e83880c02298ac0832fca4a6903db6c",
+        "width_px": 220,
+        "height_px": 152,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "E",
+        "confidence": 0.6806256771087646,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-016",
+      "sheet_index": 16,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.754265,
+        "input_candidate_record_sha256": "3da31075a43e4ef1416e4ec9e607b8aa28040cc62647f11d615b6e8f1f3f891b"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-016_context_4x.png",
+        "sha256": "1c937e9af2863ce85ab26c95a9b998c9a0a7025a06f07a411b331d3d44059faf",
+        "width_px": 216,
+        "height_px": 192,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "ste",
+        "confidence": 0.9902369379997253,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-017",
+      "sheet_index": 17,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.826067,
+        "input_candidate_record_sha256": "faef7601aad1e38a33940580d93dc0d7a28ff0498d27178f103d3175bdb9000e"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-017_context_4x.png",
+        "sha256": "9235b83bfd1ce2a845ef9af8049ebd69d3b25351a497e085da18d60ca9f832c2",
+        "width_px": 348,
+        "height_px": 164,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "vano",
+        "confidence": 0.9788270592689514,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-018",
+      "sheet_index": 18,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.826989,
+        "input_candidate_record_sha256": "10514fb97de08523777db4a285892e9d8661d3f5b5cecceffbd81cf1a0d763ea"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-018_context_4x.png",
+        "sha256": "b09273a73432a2e3698dbb4b224086059e805865b9394c67caf7db2ff91f487f",
+        "width_px": 368,
+        "height_px": 164,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-scala",
+        "confidence": 0.9954781532287598,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-019",
+      "sheet_index": 19,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.229856,
+        "input_candidate_record_sha256": "56d3299dc7593e59335d8c73b8e22065968344460f35161da516d671934680d6"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-019_context_4x.png",
+        "sha256": "5e385c9f44e97917251bfbb1b0fb6b8619866f94d636f843a7a5e463e02480d7",
+        "width_px": 192,
+        "height_px": 128,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.3205181956291199,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-020",
+      "sheet_index": 20,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.8058,
+        "input_candidate_record_sha256": "35763d925dd4a11514f644ba60ca32a19038103143e2e76cdf86874d08167ec2"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-020_context_4x.png",
+        "sha256": "dba2505cd3697c5945d509d1ed087a8a254232725f60efcdc5ec3129cb6d7452",
+        "width_px": 400,
+        "height_px": 192,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "E",
+        "confidence": 0.6980307698249817,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-021",
+      "sheet_index": 21,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.660778,
+        "input_candidate_record_sha256": "e5151e92249e03625c46f5433c13950546f12a649b2d9aba4449fc69d383d41c"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-021_context_4x.png",
+        "sha256": "56a02a879970ccd7a24a14ee19aec62cdbde50028e9d58c39257962d2ab02b06",
+        "width_px": 392,
+        "height_px": 276,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "A",
+        "confidence": 0.9330195188522339,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-022",
+      "sheet_index": 22,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.877917,
+        "input_candidate_record_sha256": "0e9440ebced5adf8ece2e5f5f26bc53551da04fee0d35c5d01d15c0e62526c3c"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-022_context_4x.png",
+        "sha256": "6ea7b11a39245920e9b60cd255241a02647d66bbb29c70fb4fc267fe1f1f5abd",
+        "width_px": 964,
+        "height_px": 256,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "soggiomo-pranzo",
+        "confidence": 0.9930132627487183,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-023",
+      "sheet_index": 23,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.29365,
+        "input_candidate_record_sha256": "7836e03eb1cd3fbeb9441687ffa371126787fb2cfc667f119e6796a7d4d06df8"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-023_context_4x.png",
+        "sha256": "c68298126dc0498ff3510b32a8db9f132977753b7a5f9bf30f71b6e70c5ff50f",
+        "width_px": 192,
+        "height_px": 152,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "A",
+        "confidence": 0.5689980387687683,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-024",
+      "sheet_index": 24,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.46354,
+        "input_candidate_record_sha256": "e8cb4a6d0a737b537bc8b16f63bed39ae390e06eae333a47c000373c3affaa86"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-024_context_4x.png",
+        "sha256": "045a4cfcfa5687042d2f59bc84cf917df3462ab5104804ca2c68fd39d81e7ca2",
+        "width_px": 192,
+        "height_px": 128,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.9192987084388733,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-025",
+      "sheet_index": 25,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.276523,
+        "input_candidate_record_sha256": "473e5eee326c9cf2df7c3693f711c15e4a553d47770c5a8a0ba3256465346989"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-025_context_4x.png",
+        "sha256": "3ed3795d70b1362e8da08078f4db883cebcfbb0c15a7ba3d9769eb319cd19e04",
+        "width_px": 344,
+        "height_px": 292,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "I",
+        "confidence": 0.8660591244697571,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-026",
+      "sheet_index": 26,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.209422,
+        "input_candidate_record_sha256": "2e6cf5202042275329dba4c94294904fa6803aecbfb235bcce951e51d175e256"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-026_context_4x.png",
+        "sha256": "44107ce3cdc6965f2a78e0c99d3dbc7c9661aadbd2de3eaaa4914e51d6c9e31e",
+        "width_px": 192,
+        "height_px": 128,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.9611804485321045,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-027",
+      "sheet_index": 27,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.48694,
+        "input_candidate_record_sha256": "dc3279726c7733d2af2cce51542681e7e0e9fc44ed92815a7055a20b5ef23c0c"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-027_context_4x.png",
+        "sha256": "6a35234f2cf2ba72c6c9d62c9943029f4b7138cede2f65928d11cb77b4a9b3c1",
+        "width_px": 192,
+        "height_px": 128,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.9413356184959412,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-028",
+      "sheet_index": 28,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.206953,
+        "input_candidate_record_sha256": "2787929db9d446a8c99a8efc643bd83d720290043762dac8efe16b9b97c93858"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-028_context_4x.png",
+        "sha256": "c8b2532572fd83d3f72d10cfe2eebae285964da33ee4fd76b7e2ce04129f9ef1",
+        "width_px": 192,
+        "height_px": 128,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.8460401296615601,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-029",
+      "sheet_index": 29,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.219296,
+        "input_candidate_record_sha256": "ec0fe363baacdcffa152a8457145fb4a20bb7edd37b73908ed716b4aa9a1028a"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-029_context_4x.png",
+        "sha256": "0a6de4e1cfa735248de1fab5312261d95a65b2cb0ccb3c7277465045b1baf6f1",
+        "width_px": 292,
+        "height_px": 304,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.8008473515510559,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-030",
+      "sheet_index": 30,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.733122,
+        "input_candidate_record_sha256": "100d2983f5d04eec57bf4ad7987d459ececcf9382e55457843a22cfe2ded4ef2"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-030_context_4x.png",
+        "sha256": "2a2175b92aba4e4f6522a47ba96518f7a0bd208fe9a059ec6217286cd8d516af",
+        "width_px": 356,
+        "height_px": 252,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "-",
+        "confidence": 0.36587682366371155,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-031",
+      "sheet_index": 31,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": false,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.910311,
+        "input_candidate_record_sha256": "8e33f5f351ac6ffd4cc065b76a6743d5106ec60727342af9732a7656572311e7"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-031_context_4x.png",
+        "sha256": "7e9e477113b2e75e61d5b91caaae133889b5c454eda72347eca0a5875119e6e7",
+        "width_px": 512,
+        "height_px": 204,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "balcone",
+        "confidence": 0.9996979832649231,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-032",
+      "sheet_index": 32,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.294517,
+        "input_candidate_record_sha256": "ff157d5fcb6bf8ec9df262aafff39a13647e4dd2669e9772638f2ac189bd5067"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-032_context_4x.png",
+        "sha256": "a778696e8dcf3931030a21551049859024d7ce0dc9bc1dc543b9ca55cb94e4c0",
+        "width_px": 260,
+        "height_px": 192,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "E",
+        "confidence": 0.5179359316825867,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    },
+    {
+      "candidate_id": "TC-033",
+      "sheet_index": 33,
+      "status": "completed",
+      "input_candidate_state": {
+        "abstained": true,
+        "abstention_preservation": "verbatim_from_ocr_tiles_manifest",
+        "input_confidence_geometry": 0.50314,
+        "input_candidate_record_sha256": "e598f95ecb99b02e8bfaa20fdff5ffc9e6d1202f7e36cf703dfc7beba33926a3"
+      },
+      "input_tile": {
+        "path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/tiles_ocr_ready/TC-033_context_4x.png",
+        "sha256": "23794b7f9393febcf3e17d59fe3327ae21548676d145eca51f462eea919b8508",
+        "width_px": 292,
+        "height_px": 292,
+        "mode_used": "RGB"
+      },
+      "raw_prediction": {
+        "text": "L",
+        "confidence": 0.8224912285804749,
+        "retained_unfiltered": true
+      },
+      "derived_abstention_applied": false,
+      "text_correction_applied": false,
+      "semantic_assignment_applied": false
+    }
+  ],
+  "limits": [
+    "raw_model_confidence_is_not_calibrated_for_floorplans",
+    "context_tiles_can_contain_non_text_graphics_or_more_than_one_text_fragment",
+    "recognition_only_does_not_validate_geometric_candidate_quality",
+    "no_ground_truth_accuracy_claim",
+    "no_text_correction_filtering_or_semantic_interpretation"
+  ]
+}

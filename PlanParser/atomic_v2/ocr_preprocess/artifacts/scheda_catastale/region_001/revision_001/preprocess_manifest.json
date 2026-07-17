@@ -1,0 +1,619 @@
+{
+  "accuracy_claim": null,
+  "contact_sheet": {
+    "filename": "preprocess_contact_sheet.png",
+    "height_px": 1212,
+    "layout": {
+      "columns": 3,
+      "rows": 3
+    },
+    "sha256": "80c9424b65046bb5c6879c98749b64f26345ea697344025995abfce76add0094",
+    "width_px": 1068
+  },
+  "deterministic": true,
+  "generator": "ocr_preprocess/build_preprocess.py",
+  "notes": [
+    "These are deterministic OCR input candidates, not OCR recognition results.",
+    "No OCR accuracy or floor-plan interpretation claim is made.",
+    "Inverse coordinate matrices map variant pixel-center coordinates back to the source crop."
+  ],
+  "schema_version": "planparser.ocr_preprocess.manifest.v1",
+  "source": {
+    "channels": 3,
+    "dtype": "uint8",
+    "height_px": 744,
+    "path": "region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+    "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a",
+    "width_px": 731
+  },
+  "variant_count": 9,
+  "variants": [
+    {
+      "color_space": "BGR_sRGB",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "filename": "01_normalized_original.png",
+      "height_px": 744,
+      "id": "normalized_original",
+      "purpose": "Stable PNG decode in source coordinates; no enhancement.",
+      "sha256": "34e692a9c27c3e1f9d98d2fd8f44b9919d05612cc0aef246ca2ca540f925d9fa",
+      "transform_chain": [
+        {
+          "mode": "BGR_8bit",
+          "operation": "decode_png"
+        }
+      ],
+      "width_px": 731
+    },
+    {
+      "color_space": "BGR_sRGB",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            2.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "filename": "02_normalized_2x.png",
+      "height_px": 1488,
+      "id": "normalized_2x",
+      "purpose": "Two-times color enlargement for OCR engines that benefit from larger glyphs.",
+      "sha256": "4cabdc4c378c153bb65bdd6c73046ffb0ac625f6957a609c4d3bcbcbfc4a9a32",
+      "transform_chain": [
+        {
+          "mode": "BGR_8bit",
+          "operation": "decode_png"
+        },
+        {
+          "interpolation": "LANCZOS4",
+          "operation": "resize",
+          "scale_x": 2.0,
+          "scale_y": 2.0
+        }
+      ],
+      "width_px": 1462
+    },
+    {
+      "color_space": "BGR_sRGB",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            4.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            0.25,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "filename": "03_normalized_4x.png",
+      "height_px": 2976,
+      "id": "normalized_4x",
+      "purpose": "Four-times color enlargement for small printed labels.",
+      "sha256": "4a191144d6dbd3c82b292e162e4405a2f82ad11c32aa67e3b247c40baf1bec97",
+      "transform_chain": [
+        {
+          "mode": "BGR_8bit",
+          "operation": "decode_png"
+        },
+        {
+          "interpolation": "LANCZOS4",
+          "operation": "resize",
+          "scale_x": 4.0,
+          "scale_y": 4.0
+        }
+      ],
+      "width_px": 2924
+    },
+    {
+      "color_space": "GRAY_8bit",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            2.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "filename": "04_grayscale_clahe_2x.png",
+      "height_px": 1488,
+      "id": "grayscale_clahe_2x",
+      "purpose": "Local-contrast grayscale branch without binarization.",
+      "sha256": "038e67e6ad7563b9bacfaccaebd4b97c976507c56690ea928ea7ce5aa1ae9cfd",
+      "transform_chain": [
+        {
+          "mode": "BGR_8bit",
+          "operation": "decode_png"
+        },
+        {
+          "interpolation": "LANCZOS4",
+          "operation": "resize",
+          "scale_x": 2.0,
+          "scale_y": 2.0
+        },
+        {
+          "from": "BGR",
+          "operation": "convert_color",
+          "to": "GRAY"
+        },
+        {
+          "clip_limit": 2.0,
+          "operation": "CLAHE",
+          "tile_grid_size": [
+            8,
+            8
+          ]
+        }
+      ],
+      "width_px": 1462
+    },
+    {
+      "color_space": "GRAY_BINARY_8bit",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            2.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "filename": "05_adaptive_threshold_2x.png",
+      "height_px": 1488,
+      "id": "adaptive_threshold_2x",
+      "purpose": "Locally adaptive binary branch for uneven paper/background intensity.",
+      "sha256": "a79ec740ccc4ff179a14fdb6ff694f2c0855ed9bb78ca75b7cb77ac147d33242",
+      "transform_chain": [
+        {
+          "operation": "inherit",
+          "variant": "grayscale_clahe_2x"
+        },
+        {
+          "block_size": 41,
+          "c": 15,
+          "method": "GAUSSIAN_C",
+          "operation": "adaptive_threshold",
+          "threshold_type": "BINARY"
+        }
+      ],
+      "width_px": 1462
+    },
+    {
+      "color_space": "GRAY_BINARY_8bit",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            2.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "filename": "06_otsu_threshold_2x.png",
+      "height_px": 1488,
+      "id": "otsu_threshold_2x",
+      "purpose": "Global binary branch after a conservative Gaussian prefilter.",
+      "sha256": "cb37b60c7221ce3edac2b56578e67aa77937936f769f6230945ea811ca93a02f",
+      "transform_chain": [
+        {
+          "operation": "inherit",
+          "variant": "grayscale_clahe_2x"
+        },
+        {
+          "kernel_size": [
+            3,
+            3
+          ],
+          "operation": "gaussian_blur",
+          "sigma": 0.0
+        },
+        {
+          "operation": "otsu_threshold",
+          "selected_threshold": 176.0,
+          "threshold_type": "BINARY"
+        }
+      ],
+      "width_px": 1462
+    },
+    {
+      "color_space": "GRAY_8bit",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            2.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "deskew_measurement": {
+        "algorithm": "canny_hough_axis_weighted_median",
+        "candidate_count": 110,
+        "candidate_total_length_px": 20726.7835,
+        "canny_thresholds": [
+          60,
+          180
+        ],
+        "deadband_degrees": 0.12,
+        "estimated_skew_degrees": 0.0,
+        "horizontal_candidate_count": 83,
+        "hough_theta_degrees": 0.25,
+        "max_axis_residual_degrees": 5.0,
+        "max_line_gap_px": 11,
+        "measurable": true,
+        "min_line_length_px": 88,
+        "minimum_total_length_px": 877.2,
+        "reason": "measurable_within_deadband",
+        "vertical_candidate_count": 27,
+        "weighted_mad_degrees": 0.0
+      },
+      "filename": "07_deskew_clahe_2x.png",
+      "height_px": 1488,
+      "id": "deskew_clahe_2x",
+      "purpose": "CLAHE branch with deskew applied only when near-axis support is measurable and outside the deadband.",
+      "sha256": "038e67e6ad7563b9bacfaccaebd4b97c976507c56690ea928ea7ce5aa1ae9cfd",
+      "transform_chain": [
+        {
+          "operation": "inherit",
+          "variant": "grayscale_clahe_2x"
+        },
+        {
+          "applied": false,
+          "border_mode": "NONE",
+          "interpolation": "NONE",
+          "operation": "conditional_deskew",
+          "rotation_degrees": 0.0
+        }
+      ],
+      "width_px": 1462
+    },
+    {
+      "color_space": "GRAY_BINARY_8bit",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            2.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "diagnostics": {
+        "removed_mask_foreground_pixels": 144079,
+        "removed_mask_fraction": 0.06622933
+      },
+      "filename": "08_otsu_suppress_long_axis_lines_2x.png",
+      "height_px": 1488,
+      "id": "otsu_suppress_long_axis_lines_2x",
+      "purpose": "Conservative OCR branch removing only long horizontal/vertical binary runs.",
+      "sha256": "1f47ef93e11152dc92acc6ab05f336eb2b6aa44a53d0627ed6c227f342eb8df2",
+      "transform_chain": [
+        {
+          "operation": "inherit",
+          "variant": "otsu_threshold_2x"
+        },
+        {
+          "horizontal_kernel": [
+            111,
+            1
+          ],
+          "mask_dilation_iterations": 1,
+          "mask_dilation_kernel": [
+            3,
+            3
+          ],
+          "operation": "axis_line_morphological_open_and_remove",
+          "vertical_kernel": [
+            1,
+            111
+          ]
+        }
+      ],
+      "width_px": 1462
+    },
+    {
+      "color_space": "GRAY_BINARY_8bit",
+      "coordinates": {
+        "convention": "pixel_centers_xy_from_top_left",
+        "source_to_variant_homogeneous_3x3": [
+          [
+            2.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "variant_to_source_homogeneous_3x3": [
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "diagnostics": {
+        "removed_mask_foreground_pixels": 114367,
+        "removed_mask_fraction": 0.05257151
+      },
+      "filename": "09_otsu_suppress_extra_long_axis_lines_2x.png",
+      "height_px": 1488,
+      "id": "otsu_suppress_extra_long_axis_lines_2x",
+      "purpose": "More conservative OCR branch restricted to extra-long horizontal/vertical binary runs.",
+      "sha256": "8201ebf5b5044d61f110820f7405cff76928ff9b73c4b8aa9d7c1d2bc3588e54",
+      "transform_chain": [
+        {
+          "operation": "inherit",
+          "variant": "otsu_threshold_2x"
+        },
+        {
+          "horizontal_kernel": [
+            183,
+            1
+          ],
+          "mask_dilation_iterations": 1,
+          "mask_dilation_kernel": [
+            3,
+            3
+          ],
+          "operation": "axis_line_morphological_open_and_remove",
+          "vertical_kernel": [
+            1,
+            183
+          ]
+        }
+      ],
+      "width_px": 1462
+    }
+  ]
+}

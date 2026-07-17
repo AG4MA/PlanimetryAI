@@ -1,0 +1,64 @@
+{
+  "elements": [],
+  "engine_records": [],
+  "output": {
+    "overlay_file": null,
+    "overlay_generated": false
+  },
+  "provenance": {
+    "binding": "pytesseract",
+    "binding_version": "0.3.13",
+    "confidence_threshold": 0.6,
+    "engine": "tesseract",
+    "engine_available": false,
+    "engine_executable": null,
+    "parent_region": {
+      "bbox_px": [
+        801,
+        684,
+        731,
+        744
+      ],
+      "id": "region_001",
+      "metadata_path": "PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/regions.json",
+      "metadata_sha256": "8fcc8444da5a384451e6639a9db30a55c36d1e9ff8a57cd414907ece5acf1d89"
+    },
+    "semantic_assignment": false,
+    "text_correction": false
+  },
+  "region": {
+    "abstained": true,
+    "bbox_px_local": [
+      0,
+      0,
+      731,
+      744
+    ],
+    "bbox_px_parent": [
+      801,
+      684,
+      731,
+      744
+    ],
+    "confidence": null,
+    "id": "region_001",
+    "reasons": [
+      "ocr_engine_unavailable: pytesseract is installed but the Tesseract executable was not found"
+    ],
+    "transcription_raw": null
+  },
+  "schema": "planparser.atomic_v2.raw_ocr",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 108149,
+    "dimensions_px": [
+      731,
+      744
+    ],
+    "mode": "RGB",
+    "path": "PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+    "reference_kind": "project_relative",
+    "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a"
+  },
+  "status": "abstained"
+}

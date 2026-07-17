@@ -1,0 +1,703 @@
+{
+  "schema_version": "planparser.industrial_v1.text_nodes.v1",
+  "created_at_utc": "2026-07-17T15:46:38.294794Z",
+  "status": "completed_conservative_two_engine_alignment",
+  "scope": {
+    "document": "scheda_catastale",
+    "region": "region_002",
+    "coordinate_space": "region_002_crop_pixels",
+    "width_px": 674,
+    "height_px": 729
+  },
+  "architecture": {
+    "node_type": "text_observation",
+    "separate_from_geometry_graph": true,
+    "line_or_wall_membership_assigned": false,
+    "intended_next_relation": "text_node_to_surrounding_space"
+  },
+  "inputs": {
+    "paddle_raw": {
+      "path": "C:/projects/PlanimetryAI/PlanParser/industrial_v1/text_nodes/artifacts/scheda_catastale/region_002/revision_001/paddle_raw.json",
+      "sha256": "cd305f72efadd01abf062a5d4341ed6d6bbe90a33f9e211a0ef416f010c9eed1"
+    },
+    "doctr_raw": {
+      "path": "C:/projects/PlanimetryAI/PlanParser/industrial_v1/text_nodes/artifacts/scheda_catastale/region_002/revision_001/doctr_raw.json",
+      "sha256": "27ccafc457dce76ff9b1be08627887a7d292026d746cf1c8f2cf479bb5eeb341"
+    },
+    "source_sha256": "612b583a2f244de46f1469b3acd35e8bde2de0e693f369f52a1c70fc82ebd82b"
+  },
+  "policy": {
+    "spatial_alignment_precedes_text_comparison": true,
+    "normalization": "Unicode NFKC + casefold + whitespace collapse; no spelling correction",
+    "consensus_requires": [
+      "spatial overlap",
+      "exact normalized transcription",
+      "all raw confidences >= 0.80",
+      "no raw engine abstention"
+    ],
+    "all_non_consensus_nodes_abstain": true,
+    "candidate_roles_are_not_final_semantics": true
+  },
+  "counts": {
+    "total": 9,
+    "consensus": 6,
+    "conflict_or_ambiguous": 1,
+    "single_engine": 2,
+    "role_candidates": 5,
+    "role_abstained": 4
+  },
+  "text_nodes": [
+    {
+      "node_id": "text_node_0001",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        228.0,
+        83.0,
+        237.0,
+        92.0
+      ],
+      "center_pixels": [
+        232.5,
+        87.5
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0001"
+          ],
+          "text_raw": "L",
+          "confidence_raw": 0.42758414149284363
+        }
+      ],
+      "decision": {
+        "classification": "single_engine",
+        "consensus_text": null,
+        "abstained": true,
+        "reasons": [
+          "no spatially aligned docTR observation"
+        ],
+        "normalized_exact": false,
+        "fuzzy_similarity": null
+      },
+      "candidate_role": {
+        "classification": "unresolved",
+        "abstained": true,
+        "evidence": [
+          "role inference disabled without exact two-engine consensus"
+        ]
+      },
+      "relations": []
+    },
+    {
+      "node_id": "text_node_0002",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        243.0,
+        121.0,
+        294.0,
+        152.0
+      ],
+      "center_pixels": [
+        268.5,
+        136.5
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0002"
+          ],
+          "text_raw": "dis.",
+          "confidence_raw": 0.999840259552002
+        },
+        {
+          "engine": "doctr",
+          "source_refs": [
+            "doctr:word_0001"
+          ],
+          "text_raw": "dis.",
+          "confidence_raw": [
+            0.9997828006744385
+          ]
+        }
+      ],
+      "decision": {
+        "classification": "consensus",
+        "consensus_text": "dis.",
+        "abstained": false,
+        "reasons": [
+          "exact normalized transcription",
+          "spatially overlapping engine observations"
+        ],
+        "normalized_exact": true,
+        "fuzzy_similarity": 1.0
+      },
+      "candidate_role": {
+        "classification": "distribution_space_label_candidate",
+        "abstained": true,
+        "evidence": [
+          "abbreviation or context-dependent label; semantic decision deferred"
+        ]
+      },
+      "relations": []
+    },
+    {
+      "node_id": "text_node_0003",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        317.0,
+        119.0,
+        395.0,
+        154.0
+      ],
+      "center_pixels": [
+        356.0,
+        136.5
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0003"
+          ],
+          "text_raw": "bagno",
+          "confidence_raw": 0.9999446868896484
+        },
+        {
+          "engine": "doctr",
+          "source_refs": [
+            "doctr:word_0002"
+          ],
+          "text_raw": "bagno",
+          "confidence_raw": [
+            0.9999991655349731
+          ]
+        }
+      ],
+      "decision": {
+        "classification": "consensus",
+        "consensus_text": "bagno",
+        "abstained": false,
+        "reasons": [
+          "exact normalized transcription",
+          "spatially overlapping engine observations"
+        ],
+        "normalized_exact": true,
+        "fuzzy_similarity": 1.0
+      },
+      "candidate_role": {
+        "classification": "room_label_candidate",
+        "abstained": false,
+        "evidence": [
+          "exact two-engine transcription consensus",
+          "exact lexical class match"
+        ],
+        "not_a_final_semantic_assignment": true
+      },
+      "relations": []
+    },
+    {
+      "node_id": "text_node_0004",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        98.0,
+        170.0,
+        174.0,
+        200.0
+      ],
+      "center_pixels": [
+        136.0,
+        185.0
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0004"
+          ],
+          "text_raw": "cucina",
+          "confidence_raw": 0.9999650120735168
+        },
+        {
+          "engine": "doctr",
+          "source_refs": [
+            "doctr:word_0003"
+          ],
+          "text_raw": "cucina",
+          "confidence_raw": [
+            0.9999783635139465
+          ]
+        }
+      ],
+      "decision": {
+        "classification": "consensus",
+        "consensus_text": "cucina",
+        "abstained": false,
+        "reasons": [
+          "exact normalized transcription",
+          "spatially overlapping engine observations"
+        ],
+        "normalized_exact": true,
+        "fuzzy_similarity": 1.0
+      },
+      "candidate_role": {
+        "classification": "room_label_candidate",
+        "abstained": false,
+        "evidence": [
+          "exact two-engine transcription consensus",
+          "exact lexical class match"
+        ],
+        "not_a_final_semantic_assignment": true
+      },
+      "relations": []
+    },
+    {
+      "node_id": "text_node_0005",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        502.0,
+        269.0,
+        594.0,
+        301.0
+      ],
+      "center_pixels": [
+        548.0,
+        285.0
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0005"
+          ],
+          "text_raw": "altra uiu",
+          "confidence_raw": 0.9903086423873901
+        },
+        {
+          "engine": "doctr",
+          "source_refs": [
+            "doctr:word_0004",
+            "doctr:word_0005"
+          ],
+          "text_raw": "altra uiu",
+          "confidence_raw": [
+            0.9999860525131226,
+            0.999432384967804
+          ]
+        }
+      ],
+      "decision": {
+        "classification": "consensus",
+        "consensus_text": "altra uiu",
+        "abstained": false,
+        "reasons": [
+          "exact normalized transcription",
+          "spatially overlapping engine observations"
+        ],
+        "normalized_exact": true,
+        "fuzzy_similarity": 1.0
+      },
+      "candidate_role": {
+        "classification": "adjacent_unit_context_candidate",
+        "abstained": false,
+        "evidence": [
+          "exact two-engine transcription consensus",
+          "exact lexical class match"
+        ],
+        "not_a_final_semantic_assignment": true
+      },
+      "relations": []
+    },
+    {
+      "node_id": "text_node_0006",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        302.0,
+        298.0,
+        355.0,
+        328.0
+      ],
+      "center_pixels": [
+        328.5,
+        313.0
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0006"
+          ],
+          "text_raw": "sala",
+          "confidence_raw": 0.9998750686645508
+        },
+        {
+          "engine": "doctr",
+          "source_refs": [
+            "doctr:word_0006"
+          ],
+          "text_raw": "sala",
+          "confidence_raw": [
+            0.9999921321868896
+          ]
+        }
+      ],
+      "decision": {
+        "classification": "consensus",
+        "consensus_text": "sala",
+        "abstained": false,
+        "reasons": [
+          "exact normalized transcription",
+          "spatially overlapping engine observations"
+        ],
+        "normalized_exact": true,
+        "fuzzy_similarity": 1.0
+      },
+      "candidate_role": {
+        "classification": "room_label_candidate",
+        "abstained": false,
+        "evidence": [
+          "exact two-engine transcription consensus",
+          "exact lexical class match"
+        ],
+        "not_a_final_semantic_assignment": true
+      },
+      "relations": []
+    },
+    {
+      "node_id": "text_node_0007",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        108.0,
+        355.0,
+        168.0,
+        397.0
+      ],
+      "center_pixels": [
+        138.0,
+        376.0
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0007"
+          ],
+          "text_raw": "vano",
+          "confidence_raw": 0.9778399467468262
+        },
+        {
+          "engine": "doctr",
+          "source_refs": [
+            "doctr:word_0007",
+            "doctr:word_0008"
+          ],
+          "text_raw": "vano scala",
+          "confidence_raw": [
+            0.9888679385185242,
+            0.9999362826347351
+          ]
+        }
+      ],
+      "decision": {
+        "classification": "conflict_or_ambiguous",
+        "consensus_text": null,
+        "abstained": true,
+        "reasons": [
+          "two engines aligned spatially but exact conservative consensus not met"
+        ],
+        "normalized_exact": false,
+        "fuzzy_similarity": 0.571429
+      },
+      "candidate_role": {
+        "classification": "unresolved",
+        "abstained": true,
+        "evidence": [
+          "role inference disabled without exact two-engine consensus"
+        ]
+      },
+      "relations": []
+    },
+    {
+      "node_id": "text_node_0008",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        106.0,
+        370.0,
+        173.0,
+        401.0
+      ],
+      "center_pixels": [
+        139.5,
+        385.5
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0008"
+          ],
+          "text_raw": "cala",
+          "confidence_raw": 0.8259141445159912
+        }
+      ],
+      "decision": {
+        "classification": "single_engine",
+        "consensus_text": null,
+        "abstained": true,
+        "reasons": [
+          "no spatially aligned docTR observation"
+        ],
+        "normalized_exact": false,
+        "fuzzy_similarity": null
+      },
+      "candidate_role": {
+        "classification": "unresolved",
+        "abstained": true,
+        "evidence": [
+          "role inference disabled without exact two-engine consensus"
+        ]
+      },
+      "relations": []
+    },
+    {
+      "node_id": "text_node_0009",
+      "node_type": "text_observation",
+      "geometry_separation": {
+        "stored_as_geometry_primitive": false,
+        "line_or_wall_membership_assigned": false,
+        "future_relation_target": "spatial_context_or_space_node"
+      },
+      "bbox_pixels": [
+        405.0,
+        561.0,
+        488.0,
+        599.0
+      ],
+      "center_pixels": [
+        446.5,
+        580.0
+      ],
+      "raw_alternatives": [
+        {
+          "engine": "paddle",
+          "source_refs": [
+            "paddle:item_0009"
+          ],
+          "text_raw": "portico",
+          "confidence_raw": 0.9999343156814575
+        },
+        {
+          "engine": "doctr",
+          "source_refs": [
+            "doctr:word_0009"
+          ],
+          "text_raw": "portico",
+          "confidence_raw": [
+            0.9999938011169434
+          ]
+        }
+      ],
+      "decision": {
+        "classification": "consensus",
+        "consensus_text": "portico",
+        "abstained": false,
+        "reasons": [
+          "exact normalized transcription",
+          "spatially overlapping engine observations"
+        ],
+        "normalized_exact": true,
+        "fuzzy_similarity": 1.0
+      },
+      "candidate_role": {
+        "classification": "exterior_or_semi_exterior_space_label_candidate",
+        "abstained": false,
+        "evidence": [
+          "exact two-engine transcription consensus",
+          "exact lexical class match"
+        ],
+        "not_a_final_semantic_assignment": true
+      },
+      "relations": []
+    }
+  ],
+  "alignment_assignment_audit": [
+    {
+      "paddle_ref": "paddle:item_0001",
+      "doctr_refs": [],
+      "pair_metrics": [],
+      "node_id": "text_node_0001"
+    },
+    {
+      "paddle_ref": "paddle:item_0002",
+      "doctr_refs": [
+        "doctr:word_0001"
+      ],
+      "pair_metrics": [
+        {
+          "intersection_over_smaller": 1.0,
+          "intersection_over_union": 0.622391,
+          "center_distance_px": 2.061553,
+          "center_distance_by_height": 0.066502
+        }
+      ],
+      "node_id": "text_node_0002"
+    },
+    {
+      "paddle_ref": "paddle:item_0003",
+      "doctr_refs": [
+        "doctr:word_0002"
+      ],
+      "pair_metrics": [
+        {
+          "intersection_over_smaller": 1.0,
+          "intersection_over_union": 0.595238,
+          "center_distance_px": 1.802776,
+          "center_distance_by_height": 0.051508
+        }
+      ],
+      "node_id": "text_node_0003"
+    },
+    {
+      "paddle_ref": "paddle:item_0004",
+      "doctr_refs": [
+        "doctr:word_0003"
+      ],
+      "pair_metrics": [
+        {
+          "intersection_over_smaller": 1.0,
+          "intersection_over_union": 0.587719,
+          "center_distance_px": 1.5,
+          "center_distance_by_height": 0.05
+        }
+      ],
+      "node_id": "text_node_0004"
+    },
+    {
+      "paddle_ref": "paddle:item_0005",
+      "doctr_refs": [
+        "doctr:word_0004",
+        "doctr:word_0005"
+      ],
+      "pair_metrics": [
+        {
+          "intersection_over_smaller": 1.0,
+          "intersection_over_union": 0.3125,
+          "center_distance_px": 18.027756,
+          "center_distance_by_height": 0.563367
+        },
+        {
+          "intersection_over_smaller": 1.0,
+          "intersection_over_union": 0.203804,
+          "center_distance_px": 25.019992,
+          "center_distance_by_height": 0.781875
+        }
+      ],
+      "node_id": "text_node_0005"
+    },
+    {
+      "paddle_ref": "paddle:item_0006",
+      "doctr_refs": [
+        "doctr:word_0006"
+      ],
+      "pair_metrics": [
+        {
+          "intersection_over_smaller": 1.0,
+          "intersection_over_union": 0.525786,
+          "center_distance_px": 0.707107,
+          "center_distance_by_height": 0.02357
+        }
+      ],
+      "node_id": "text_node_0006"
+    },
+    {
+      "paddle_ref": "paddle:item_0007",
+      "doctr_refs": [
+        "doctr:word_0007",
+        "doctr:word_0008"
+      ],
+      "pair_metrics": [
+        {
+          "intersection_over_smaller": 1.0,
+          "intersection_over_union": 0.669831,
+          "center_distance_px": 2.061553,
+          "center_distance_by_height": 0.082462
+        },
+        {
+          "intersection_over_smaller": 0.256293,
+          "intersection_over_union": 0.137143,
+          "center_distance_px": 18.11077,
+          "center_distance_by_height": 0.724431
+        }
+      ],
+      "node_id": "text_node_0007"
+    },
+    {
+      "paddle_ref": "paddle:item_0008",
+      "doctr_refs": [],
+      "pair_metrics": [],
+      "node_id": "text_node_0008"
+    },
+    {
+      "paddle_ref": "paddle:item_0009",
+      "doctr_refs": [
+        "doctr:word_0009"
+      ],
+      "pair_metrics": [
+        {
+          "intersection_over_smaller": 1.0,
+          "intersection_over_union": 0.57863,
+          "center_distance_px": 1.802776,
+          "center_distance_by_height": 0.047441
+        }
+      ],
+      "node_id": "text_node_0009"
+    }
+  ],
+  "limits": [
+    "consensus is engine agreement, not ground truth",
+    "no geometry or room containment relation is asserted in this revision",
+    "candidate roles are conservative lexical candidates and may abstain",
+    "no human review or correction was used"
+  ]
+}

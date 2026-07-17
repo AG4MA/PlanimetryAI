@@ -1,0 +1,46 @@
+{
+  "schema_version": "planparser.atomic_v2.ocr_doctr.preflight.v1",
+  "status": "preflight_completed_before_inference",
+  "created_at_utc": "2026-07-17T11:52:42.865046Z",
+  "source": {
+    "path": "region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+    "bytes": 108149,
+    "modified_time_ns": 1784285992797762100,
+    "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a"
+  },
+  "planned_runtime": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "runtime/.venv/Scripts/python.exe",
+    "device": "cpu",
+    "detector": "db_resnet50",
+    "recognizer": "parseq",
+    "network_required": false
+  },
+  "model_cache_before_inference": [
+    {
+      "path": "runtime/models/doctr/models/db_resnet50-79bd7d70.pt",
+      "bytes": 102021912,
+      "modified_time_ns": 1784288946389588800,
+      "sha256": "79bd7d702506703b89cf11afa42d12aebf5cf25c3618e6ffd5f85772240ca483"
+    },
+    {
+      "path": "runtime/models/doctr/models/mobilenet_v3_small_crop_orientation-f0847a18.pt",
+      "bytes": 6233146,
+      "modified_time_ns": 1784288952262694100,
+      "sha256": "f0847a18a134c8e471951de24300bee2c3af6e8bba5aa7986e4aeb96f63f0a28"
+    },
+    {
+      "path": "runtime/models/doctr/models/mobilenet_v3_small_page_orientation-8e60325c.pt",
+      "bytes": 6233146,
+      "modified_time_ns": 1784288952984691400,
+      "sha256": "8e60325c099cf70ba4203923d8ec15546b11d33f0f18fdd9d526040d60337674"
+    },
+    {
+      "path": "runtime/models/doctr/models/parseq-56125471.pt",
+      "bytes": 95457349,
+      "modified_time_ns": 1784288951332777500,
+      "sha256": "56125471b17e660253c4179c3fbf3c906c34606d898148895dbb84db257d98ba"
+    }
+  ],
+  "cache_policy": "reuse_existing_files_without_writes; verify byte/hash/mtime snapshot after inference"
+}
