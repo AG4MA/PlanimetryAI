@@ -1,0 +1,7 @@
+# Machine contracts are content-addressed; never rewrite their bytes on checkout.
+PlanParser/atomic_v2/**/artifacts/**/*.json -text -diff
+PlanParser/industrial_v1/floor_units/artifacts/**/*.json -text -diff
+PlanParser/industrial_v1/text_nodes/artifacts/**/*.json -text -diff
+PlanParser/industrial_v1/text_space_topology/artifacts/**/*.json -text -diff
+PlanParser/industrial_v1/topology_engine/**/*.json -text
+PlanParser/industrial_v1/topology_engine/artifacts/**/*.json -diff

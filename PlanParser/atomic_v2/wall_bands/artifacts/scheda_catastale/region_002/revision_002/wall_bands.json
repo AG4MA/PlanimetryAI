@@ -1,0 +1,922 @@
+{
+  "schema_version": "1.0.0",
+  "provenance": {
+    "source_crop": "C:/projects/PlanimetryAI/PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_002.png",
+    "source_crop_sha256": "612b583a2f244de46f1469b3acd35e8bde2de0e693f369f52a1c70fc82ebd82b",
+    "source_linework": "C:/projects/PlanimetryAI/PlanParser/atomic_v2/linework/artifacts/scheda_catastale/region_002/revision_002/linework.json",
+    "source_linework_sha256": "2dc6aaf6a589a431ead584609828c79438c6e7e35f80e6b2921eff1313e0ae1b",
+    "detector": "parallel-edge-wall-band-proposer",
+    "detector_version": "1.0.0"
+  },
+  "summary": {
+    "candidate_count": 21,
+    "solid_count": 21,
+    "uncertain_count": 0
+  },
+  "candidates": [
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          21.0,
+          58
+        ],
+        [
+          23.0,
+          58
+        ],
+        [
+          23.0,
+          713
+        ],
+        [
+          21.0,
+          713
+        ]
+      ],
+      "bbox_px": [
+        21.0,
+        58,
+        2.0,
+        655
+      ],
+      "source_edge_ids": [
+        "line_030"
+      ],
+      "observed_thickness_px": 2.0,
+      "length_px": 655.0,
+      "confidence": 0.874,
+      "evidence_type": "robust_perimeter_edge",
+      "reasons": [
+        "long continuous source edge near crop perimeter",
+        "single-edge exception restricted to robust perimeter evidence"
+      ],
+      "abstained": false,
+      "id": "band_001",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          651.0,
+          58
+        ],
+        [
+          653.0,
+          58
+        ],
+        [
+          653.0,
+          713
+        ],
+        [
+          651.0,
+          713
+        ]
+      ],
+      "bbox_px": [
+        651.0,
+        58,
+        2.0,
+        655
+      ],
+      "source_edge_ids": [
+        "line_032"
+      ],
+      "observed_thickness_px": 2.0,
+      "length_px": 655.0,
+      "confidence": 0.874,
+      "evidence_type": "robust_perimeter_edge",
+      "reasons": [
+        "long continuous source edge near crop perimeter",
+        "single-edge exception restricted to robust perimeter evidence"
+      ],
+      "abstained": false,
+      "id": "band_002",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          294,
+          134
+        ],
+        [
+          302,
+          134
+        ],
+        [
+          302,
+          181
+        ],
+        [
+          294,
+          181
+        ]
+      ],
+      "bbox_px": [
+        294,
+        134,
+        8,
+        47
+      ],
+      "source_edge_ids": [
+        "line_034",
+        "line_035"
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 47,
+      "confidence": 0.835,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 47px",
+        "overlap ratio=1.000",
+        "observed separation=8px"
+      ],
+      "abstained": false,
+      "id": "band_003",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          228,
+          135
+        ],
+        [
+          236,
+          135
+        ],
+        [
+          236,
+          205
+        ],
+        [
+          228,
+          205
+        ]
+      ],
+      "bbox_px": [
+        228,
+        135,
+        8,
+        70
+      ],
+      "source_edge_ids": [
+        "line_036",
+        "line_037"
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 70,
+      "confidence": 0.866,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 70px",
+        "overlap ratio=1.000",
+        "observed separation=8px"
+      ],
+      "abstained": false,
+      "id": "band_004",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          238,
+          185
+        ],
+        [
+          425,
+          185
+        ],
+        [
+          425,
+          194
+        ],
+        [
+          238,
+          194
+        ]
+      ],
+      "bbox_px": [
+        238,
+        185,
+        187,
+        9
+      ],
+      "source_edge_ids": [
+        "line_007",
+        "line_008"
+      ],
+      "observed_thickness_px": 9,
+      "length_px": 187,
+      "confidence": 0.948,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 187px",
+        "overlap ratio=0.944",
+        "observed separation=9px"
+      ],
+      "abstained": false,
+      "id": "band_005",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          426,
+          193
+        ],
+        [
+          436,
+          193
+        ],
+        [
+          436,
+          352
+        ],
+        [
+          426,
+          352
+        ]
+      ],
+      "bbox_px": [
+        426,
+        193,
+        10,
+        159
+      ],
+      "source_edge_ids": [
+        "line_031",
+        "line_038"
+      ],
+      "observed_thickness_px": 10,
+      "length_px": 159,
+      "confidence": 0.966,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 159px",
+        "overlap ratio=1.000",
+        "observed separation=10px"
+      ],
+      "abstained": false,
+      "id": "band_006",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          228,
+          254
+        ],
+        [
+          236,
+          254
+        ],
+        [
+          236,
+          301
+        ],
+        [
+          228,
+          301
+        ]
+      ],
+      "bbox_px": [
+        228,
+        254,
+        8,
+        47
+      ],
+      "source_edge_ids": [
+        "line_039",
+        "line_040"
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 47,
+      "confidence": 0.833,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 47px",
+        "overlap ratio=1.000",
+        "observed separation=8px"
+      ],
+      "abstained": false,
+      "id": "band_007",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          47,
+          296
+        ],
+        [
+          219,
+          296
+        ],
+        [
+          219,
+          302
+        ],
+        [
+          47,
+          302
+        ]
+      ],
+      "bbox_px": [
+        47,
+        296,
+        172,
+        6
+      ],
+      "source_edge_ids": [
+        "line_010",
+        "line_011"
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 172,
+      "confidence": 0.96,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 172px",
+        "overlap ratio=0.989",
+        "observed separation=6px"
+      ],
+      "abstained": false,
+      "id": "band_008",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          228,
+          368
+        ],
+        [
+          236,
+          368
+        ],
+        [
+          236,
+          472
+        ],
+        [
+          228,
+          472
+        ]
+      ],
+      "bbox_px": [
+        228,
+        368,
+        8,
+        104
+      ],
+      "source_edge_ids": [
+        "line_041",
+        "line_042"
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 104,
+      "confidence": 0.922,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 104px",
+        "overlap ratio=1.000",
+        "observed separation=8px"
+      ],
+      "abstained": false,
+      "id": "band_009",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          426,
+          368
+        ],
+        [
+          436,
+          368
+        ],
+        [
+          436,
+          455
+        ],
+        [
+          426,
+          455
+        ]
+      ],
+      "bbox_px": [
+        426,
+        368,
+        10,
+        87
+      ],
+      "source_edge_ids": [
+        "line_031",
+        "line_043"
+      ],
+      "observed_thickness_px": 10,
+      "length_px": 87,
+      "confidence": 0.898,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 87px",
+        "overlap ratio=1.000",
+        "observed separation=10px"
+      ],
+      "abstained": false,
+      "id": "band_010",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          22,
+          437
+        ],
+        [
+          40,
+          437
+        ],
+        [
+          40,
+          607
+        ],
+        [
+          22,
+          607
+        ]
+      ],
+      "bbox_px": [
+        22,
+        437,
+        18,
+        170
+      ],
+      "source_edge_ids": [
+        "line_030",
+        "line_044"
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 170,
+      "confidence": 0.963,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 170px",
+        "overlap ratio=1.000",
+        "observed separation=18px"
+      ],
+      "abstained": false,
+      "id": "band_011",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          41,
+          440
+        ],
+        [
+          96,
+          440
+        ],
+        [
+          96,
+          458
+        ],
+        [
+          41,
+          458
+        ]
+      ],
+      "bbox_px": [
+        41,
+        440,
+        55,
+        18
+      ],
+      "source_edge_ids": [
+        "line_013",
+        "line_015"
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 55,
+      "confidence": 0.844,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 55px",
+        "overlap ratio=1.000",
+        "observed separation=18px"
+      ],
+      "abstained": false,
+      "id": "band_012",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          41,
+          458
+        ],
+        [
+          96,
+          458
+        ],
+        [
+          96,
+          476
+        ],
+        [
+          41,
+          476
+        ]
+      ],
+      "bbox_px": [
+        41,
+        458,
+        55,
+        18
+      ],
+      "source_edge_ids": [
+        "line_015",
+        "line_017"
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 55,
+      "confidence": 0.844,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 55px",
+        "overlap ratio=1.000",
+        "observed separation=18px"
+      ],
+      "abstained": false,
+      "id": "band_013",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          248,
+          474
+        ],
+        [
+          355,
+          474
+        ],
+        [
+          355,
+          486
+        ],
+        [
+          248,
+          486
+        ]
+      ],
+      "bbox_px": [
+        248,
+        474,
+        107,
+        12
+      ],
+      "source_edge_ids": [
+        "line_016",
+        "line_018"
+      ],
+      "observed_thickness_px": 12,
+      "length_px": 107,
+      "confidence": 0.9,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 107px",
+        "overlap ratio=0.892",
+        "observed separation=12px"
+      ],
+      "abstained": false,
+      "id": "band_014",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          41,
+          476
+        ],
+        [
+          98,
+          476
+        ],
+        [
+          98,
+          492
+        ],
+        [
+          41,
+          492
+        ]
+      ],
+      "bbox_px": [
+        41,
+        476,
+        57,
+        16
+      ],
+      "source_edge_ids": [
+        "line_017",
+        "line_019"
+      ],
+      "observed_thickness_px": 16,
+      "length_px": 57,
+      "confidence": 0.846,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 57px",
+        "overlap ratio=1.000",
+        "observed separation=16px"
+      ],
+      "abstained": false,
+      "id": "band_015",
+      "status": "solid"
+    },
+    {
+      "orientation": "vertical",
+      "polygon_px": [
+        [
+          228,
+          489
+        ],
+        [
+          249,
+          489
+        ],
+        [
+          249,
+          626
+        ],
+        [
+          228,
+          626
+        ]
+      ],
+      "bbox_px": [
+        228,
+        489,
+        21,
+        137
+      ],
+      "source_edge_ids": [
+        "line_041",
+        "line_050"
+      ],
+      "observed_thickness_px": 21,
+      "length_px": 137,
+      "confidence": 0.962,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 137px",
+        "overlap ratio=1.000",
+        "observed separation=21px"
+      ],
+      "abstained": false,
+      "id": "band_016",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          41,
+          492
+        ],
+        [
+          98,
+          492
+        ],
+        [
+          98,
+          510
+        ],
+        [
+          41,
+          510
+        ]
+      ],
+      "bbox_px": [
+        41,
+        492,
+        57,
+        18
+      ],
+      "source_edge_ids": [
+        "line_019",
+        "line_020"
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 57,
+      "confidence": 0.853,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 57px",
+        "overlap ratio=1.000",
+        "observed separation=18px"
+      ],
+      "abstained": false,
+      "id": "band_017",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          41,
+          510
+        ],
+        [
+          162,
+          510
+        ],
+        [
+          162,
+          527
+        ],
+        [
+          41,
+          527
+        ]
+      ],
+      "bbox_px": [
+        41,
+        510,
+        121,
+        17
+      ],
+      "source_edge_ids": [
+        "line_020",
+        "line_021"
+      ],
+      "observed_thickness_px": 17,
+      "length_px": 121,
+      "confidence": 0.938,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 121px",
+        "overlap ratio=1.000",
+        "observed separation=17px"
+      ],
+      "abstained": false,
+      "id": "band_018",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          41,
+          527
+        ],
+        [
+          162,
+          527
+        ],
+        [
+          162,
+          546
+        ],
+        [
+          41,
+          546
+        ]
+      ],
+      "bbox_px": [
+        41,
+        527,
+        121,
+        19
+      ],
+      "source_edge_ids": [
+        "line_021",
+        "line_022"
+      ],
+      "observed_thickness_px": 19,
+      "length_px": 121,
+      "confidence": 0.938,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 121px",
+        "overlap ratio=1.000",
+        "observed separation=19px"
+      ],
+      "abstained": false,
+      "id": "band_019",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          41,
+          606
+        ],
+        [
+          162,
+          606
+        ],
+        [
+          162,
+          626
+        ],
+        [
+          41,
+          626
+        ]
+      ],
+      "bbox_px": [
+        41,
+        606,
+        121,
+        20
+      ],
+      "source_edge_ids": [
+        "line_024",
+        "line_026"
+      ],
+      "observed_thickness_px": 20,
+      "length_px": 121,
+      "confidence": 0.94,
+      "evidence_type": "parallel_edge_pair",
+      "reasons": [
+        "two parallel source edges overlap by 121px",
+        "overlap ratio=1.000",
+        "observed separation=20px"
+      ],
+      "abstained": false,
+      "id": "band_020",
+      "status": "solid"
+    },
+    {
+      "orientation": "horizontal",
+      "polygon_px": [
+        [
+          21,
+          711.0
+        ],
+        [
+          651,
+          711.0
+        ],
+        [
+          651,
+          713.0
+        ],
+        [
+          21,
+          713.0
+        ]
+      ],
+      "bbox_px": [
+        21,
+        711.0,
+        630,
+        2.0
+      ],
+      "source_edge_ids": [
+        "line_027"
+      ],
+      "observed_thickness_px": 2.0,
+      "length_px": 630.0,
+      "confidence": 0.874,
+      "evidence_type": "robust_perimeter_edge",
+      "reasons": [
+        "long continuous source edge near crop perimeter",
+        "single-edge exception restricted to robust perimeter evidence"
+      ],
+      "abstained": false,
+      "id": "band_021",
+      "status": "solid"
+    }
+  ],
+  "excluded_inferences": [
+    "internal_or_external",
+    "rooms",
+    "openings",
+    "adjacency",
+    "scale"
+  ]
+}

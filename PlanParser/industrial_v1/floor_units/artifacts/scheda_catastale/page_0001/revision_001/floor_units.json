@@ -1,0 +1,87 @@
+{
+  "schema_version": "planparser.industrial_v1.floor_units.v1",
+  "created_at_utc": "2026-07-17T15:33:03.381796+00:00",
+  "status": "automatic_candidates_not_human_approved",
+  "source": {
+    "path": "atomic_v2/ingest/artifacts/scheda_catastale/pages/page_0001.png",
+    "sha256": "54f38ab8decb10eaec769e9e1d1b996f5c03e6ee3c11e87fa4d77e10269b8d53",
+    "width_px": 2481,
+    "height_px": 3508
+  },
+  "input_sheet_map": {
+    "path": "industrial_v1/sheet_mapper/artifacts/scheda_catastale/page_0001/revision_001/sheet_map.json",
+    "sha256": "fbe72575dd7dabf4a118b1049828bb44f116728145df2758dd0fe4e45e291867",
+    "revision": "revision_001"
+  },
+  "method": {
+    "name": "materialize_sheet_mapper_floor_regions",
+    "new_detection_performed": false,
+    "split_axis": "vertical",
+    "crop_policy": "exact_half_open_floor_region_bbox_from_sheet_map",
+    "preserve_full_frame_width": true
+  },
+  "floor_units": [
+    {
+      "id": "FR-001",
+      "status": "automatic_floor_region_candidate",
+      "title_candidate_id": "FT-001",
+      "title_text_raw": "Piano Primo H=3.00m",
+      "designation_raw": "Primo",
+      "bbox_page_px": {
+        "x": 12,
+        "y": 560,
+        "width": 2299,
+        "height": 895
+      },
+      "width_px": 2299,
+      "height_px": 895,
+      "confidence_from_sheet_mapper": 0.934524,
+      "abstained_from_sheet_mapper": false,
+      "structural_candidate_ids": [
+        "SC-001"
+      ],
+      "artifact": "fr_001.png",
+      "artifact_sha256": "de619ec19c3258c2a89be39e5a19c8ca47c390341b77d8a532f4c932c4c5d9b5",
+      "scope_policy": "full_horizontal_slice_inside_primary_planimetric_frame",
+      "unclassified_content_preserved": true
+    },
+    {
+      "id": "FR-002",
+      "status": "automatic_floor_region_candidate",
+      "title_candidate_id": "FT-002",
+      "title_text_raw": "Piano Terra H=2.45m",
+      "designation_raw": "Terra",
+      "bbox_page_px": {
+        "x": 12,
+        "y": 1455,
+        "width": 2299,
+        "height": 1873
+      },
+      "width_px": 2299,
+      "height_px": 1873,
+      "confidence_from_sheet_mapper": 0.932496,
+      "abstained_from_sheet_mapper": false,
+      "structural_candidate_ids": [
+        "SC-002",
+        "SC-003"
+      ],
+      "artifact": "fr_002.png",
+      "artifact_sha256": "b1a42b3bdfd6baf42f6157e379a183abf8b6060449cfd1a4911b7bbc0829668f",
+      "scope_policy": "full_horizontal_slice_inside_primary_planimetric_frame",
+      "unclassified_content_preserved": true
+    }
+  ],
+  "summary": {
+    "count": 2,
+    "all_source_pixels_inside_each_region_preserved": true,
+    "human_review_applied": false
+  },
+  "explicit_non_claims": [
+    "a floor-region candidate is not a validated floor",
+    "content inside a floor crop is not automatically part of the target property",
+    "no wall, room, door, window or building-element semantics are assigned",
+    "no geometric scale calibration is performed",
+    "north or compass orientation is not inferred",
+    "no human approval or correction has been applied"
+  ]
+}

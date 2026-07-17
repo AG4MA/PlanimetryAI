@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "PlanParser/atomic_v2/ingest/artifacts/scheda_catastale/pages/page_0001.png",
+    "sha256": "54f38ab8decb10eaec769e9e1d1b996f5c03e6ee3c11e87fa4d77e10269b8d53",
+    "width_px": 2481,
+    "height_px": 3508
+  },
+  "method": {
+    "name": "connected-linework-region-split",
+    "version": "1.0.0",
+    "automatic": true,
+    "ocr_used": false
+  },
+  "regions": [
+    {
+      "id": "region_001",
+      "bbox_px": [
+        801,
+        684,
+        731,
+        744
+      ],
+      "confidence": 0.956,
+      "reasons": [
+        "connected horizontal/vertical linework component below the cadastral header",
+        "component dimensions are consistent with a plan drawing rather than a text line",
+        "measured ink ratio=0.0662"
+      ],
+      "abstained": false
+    },
+    {
+      "id": "region_002",
+      "bbox_px": [
+        829,
+        2093,
+        674,
+        729
+      ],
+      "confidence": 0.939,
+      "reasons": [
+        "connected horizontal/vertical linework component below the cadastral header",
+        "component dimensions are consistent with a plan drawing rather than a text line",
+        "measured ink ratio=0.0476"
+      ],
+      "abstained": false
+    }
+  ],
+  "abstained": false
+}

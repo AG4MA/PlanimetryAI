@@ -1,0 +1,5091 @@
+{
+  "schema_version": "planparser.industrial_v1.text-space-topology/1.1",
+  "created_at_utc": "2026-07-17T15:49:50.582400+00:00",
+  "status": "automatic_candidates_with_explicit_boundary_composition_not_human_approved",
+  "source": {
+    "path": "atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+    "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a",
+    "width_px": 731,
+    "height_px": 744,
+    "bbox_page_px_xywh": [
+      801,
+      684,
+      731,
+      744
+    ]
+  },
+  "inputs": [
+    {
+      "role": "region_contract",
+      "path": "atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/regions.json",
+      "sha256": "8fcc8444da5a384451e6639a9db30a55c36d1e9ff8a57cd414907ece5acf1d89"
+    },
+    {
+      "role": "ocr_text_nodes",
+      "path": "atomic_v2/ocr_ensemble/artifacts/scheda_catastale/region_001/revision_001/ocr_ensemble.json",
+      "sha256": "8b42e5bba08120510ce495537018e91d4c1c33fb6a4dd8ee0e21a628586be07b"
+    },
+    {
+      "role": "raw_linework",
+      "path": "atomic_v2/linework/artifacts/scheda_catastale/region_001/revision_001/linework.json",
+      "sha256": "5984c7868bd288d05c9373bb0634aef642e387b6578394d660e4c3a364881592"
+    },
+    {
+      "role": "parallel_edge_band_hypotheses",
+      "path": "atomic_v2/wall_bands/artifacts/scheda_catastale/region_001/revision_001/wall_bands.json",
+      "sha256": "b29e46c39c50567e0c8df543b0d5355386bc0aa0a68a8cf84ca717c76de982aa"
+    }
+  ],
+  "method": {
+    "name": "text_anchored_geodesic_space_expansion_with_boundary_provenance",
+    "text_geometry_separation": true,
+    "expansion": "multi_source_four_connected_geodesic_wavefront",
+    "boundary_composition": [
+      "observed_geometry",
+      "synthetic_gap_closure",
+      "seed_competition",
+      "unresolved"
+    ],
+    "radial_hits_linked_to_source_ids": true,
+    "space_boundaries_linked_to_source_ids": true,
+    "confidence_calibrated": false
+  },
+  "text_nodes": [
+    {
+      "id": "text_node_001",
+      "source_alignment_ids": [
+        "ALIGN-001"
+      ],
+      "raw_text_alternatives": [
+        "bagno"
+      ],
+      "bbox_crop_px_xyxy": [
+        304.0,
+        123.0,
+        385.0,
+        160.0
+      ],
+      "center_crop_px": [
+        344.5,
+        141.5
+      ],
+      "role_hypothesis": "space_name_seed",
+      "canonical_space_name_hypothesis": "bagno",
+      "role_reasons": [
+        "lexical_room_anchor:bagno"
+      ],
+      "ocr_classification": "consensus",
+      "ocr_abstained": false,
+      "composite": false,
+      "space_label_index": 1,
+      "expansion_seed_crop_px": [
+        344,
+        142
+      ],
+      "seed_displacement_px": 0.707,
+      "space_candidate_id": "space_candidate_001",
+      "center_page_px": [
+        1145.5,
+        825.5
+      ]
+    },
+    {
+      "id": "text_node_002",
+      "source_alignment_ids": [
+        "ALIGN-002"
+      ],
+      "raw_text_alternatives": [
+        "camera"
+      ],
+      "bbox_crop_px_xyxy": [
+        487.0,
+        165.0,
+        573.0,
+        189.0
+      ],
+      "center_crop_px": [
+        530.0,
+        177.0
+      ],
+      "role_hypothesis": "space_name_seed",
+      "canonical_space_name_hypothesis": "camera",
+      "role_reasons": [
+        "lexical_room_anchor:camera"
+      ],
+      "ocr_classification": "consensus",
+      "ocr_abstained": false,
+      "composite": false,
+      "space_label_index": 2,
+      "expansion_seed_crop_px": [
+        530,
+        177
+      ],
+      "seed_displacement_px": 0.0,
+      "space_candidate_id": "space_candidate_002",
+      "center_page_px": [
+        1331.0,
+        861.0
+      ]
+    },
+    {
+      "id": "text_node_003",
+      "source_alignment_ids": [
+        "ALIGN-003"
+      ],
+      "raw_text_alternatives": [
+        "camera"
+      ],
+      "bbox_crop_px_xyxy": [
+        126.0,
+        170.0,
+        213.0,
+        194.0
+      ],
+      "center_crop_px": [
+        169.5,
+        182.0
+      ],
+      "role_hypothesis": "space_name_seed",
+      "canonical_space_name_hypothesis": "camera",
+      "role_reasons": [
+        "lexical_room_anchor:camera"
+      ],
+      "ocr_classification": "consensus",
+      "ocr_abstained": false,
+      "composite": false,
+      "space_label_index": 3,
+      "expansion_seed_crop_px": [
+        170,
+        182
+      ],
+      "seed_displacement_px": 0.5,
+      "space_candidate_id": "space_candidate_003",
+      "center_page_px": [
+        970.5,
+        866.0
+      ]
+    },
+    {
+      "id": "text_node_004",
+      "source_alignment_ids": [
+        "ALIGN-004"
+      ],
+      "raw_text_alternatives": [
+        "dis."
+      ],
+      "bbox_crop_px_xyxy": [
+        326.0,
+        276.0,
+        373.0,
+        307.0
+      ],
+      "center_crop_px": [
+        349.5,
+        291.5
+      ],
+      "role_hypothesis": "space_name_seed",
+      "canonical_space_name_hypothesis": "disimpegno",
+      "role_reasons": [
+        "lexical_room_anchor:dis"
+      ],
+      "ocr_classification": "consensus",
+      "ocr_abstained": false,
+      "composite": false,
+      "space_label_index": 4,
+      "expansion_seed_crop_px": [
+        350,
+        292
+      ],
+      "seed_displacement_px": 0.707,
+      "space_candidate_id": "space_candidate_004",
+      "center_page_px": [
+        1150.5,
+        975.5
+      ]
+    },
+    {
+      "id": "text_node_005",
+      "source_alignment_ids": [
+        "ALIGN-005"
+      ],
+      "raw_text_alternatives": [
+        "arredo fisso",
+        "larredo fisso"
+      ],
+      "bbox_crop_px_xyxy": [
+        408.0,
+        296.0,
+        546.0,
+        327.0
+      ],
+      "center_crop_px": [
+        477.0,
+        311.5
+      ],
+      "role_hypothesis": "contained_object_label",
+      "canonical_space_name_hypothesis": null,
+      "role_reasons": [
+        "lexical_contained_object:arredo fisso"
+      ],
+      "ocr_classification": "fuzzy_or_ambiguous_abstained",
+      "ocr_abstained": true,
+      "composite": false,
+      "located_in_space_candidate_id": "space_candidate_002",
+      "center_page_px": [
+        1278.0,
+        995.5
+      ]
+    },
+    {
+      "id": "text_node_006",
+      "source_alignment_ids": [
+        "ALIGN-006"
+      ],
+      "raw_text_alternatives": [
+        "arredo fisso,",
+        "arredo fisso"
+      ],
+      "bbox_crop_px_xyxy": [
+        65.0,
+        298.0,
+        201.0,
+        326.0
+      ],
+      "center_crop_px": [
+        133.0,
+        312.0
+      ],
+      "role_hypothesis": "contained_object_label",
+      "canonical_space_name_hypothesis": null,
+      "role_reasons": [
+        "lexical_contained_object:arredo fisso"
+      ],
+      "ocr_classification": "fuzzy_or_ambiguous_abstained",
+      "ocr_abstained": true,
+      "composite": false,
+      "located_in_space_candidate_id": "space_candidate_003",
+      "center_page_px": [
+        934.0,
+        996.0
+      ]
+    },
+    {
+      "id": "text_node_007",
+      "source_alignment_ids": [
+        "ALIGN-007"
+      ],
+      "raw_text_alternatives": [
+        "armadio"
+      ],
+      "bbox_crop_px_xyxy": [
+        558.0,
+        306.0,
+        656.0,
+        336.0
+      ],
+      "center_crop_px": [
+        607.0,
+        321.0
+      ],
+      "role_hypothesis": "contained_object_label",
+      "canonical_space_name_hypothesis": null,
+      "role_reasons": [
+        "lexical_contained_object:armadio"
+      ],
+      "ocr_classification": "consensus",
+      "ocr_abstained": false,
+      "composite": false,
+      "located_in_space_candidate_id": "space_candidate_002",
+      "center_page_px": [
+        1408.0,
+        1005.0
+      ]
+    },
+    {
+      "id": "text_node_008",
+      "source_alignment_ids": [
+        "ALIGN-008"
+      ],
+      "raw_text_alternatives": [
+        "armadio",
+        "armadiol"
+      ],
+      "bbox_crop_px_xyxy": [
+        188.0,
+        307.0,
+        286.0,
+        339.0
+      ],
+      "center_crop_px": [
+        237.0,
+        323.0
+      ],
+      "role_hypothesis": "contained_object_label",
+      "canonical_space_name_hypothesis": null,
+      "role_reasons": [
+        "lexical_contained_object:armadio"
+      ],
+      "ocr_classification": "fuzzy_or_ambiguous_abstained",
+      "ocr_abstained": true,
+      "composite": false,
+      "located_in_space_candidate_id": "space_candidate_003",
+      "center_page_px": [
+        1038.0,
+        1007.0
+      ]
+    },
+    {
+      "id": "text_node_009",
+      "source_alignment_ids": [
+        "ALIGN-009"
+      ],
+      "raw_text_alternatives": [
+        "U"
+      ],
+      "bbox_crop_px_xyxy": [
+        186.0,
+        343.0,
+        195.0,
+        354.0
+      ],
+      "center_crop_px": [
+        190.5,
+        348.5
+      ],
+      "role_hypothesis": "unresolved_text",
+      "canonical_space_name_hypothesis": null,
+      "role_reasons": [
+        "no_supported_role_mapping"
+      ],
+      "ocr_classification": "fuzzy_or_ambiguous_abstained",
+      "ocr_abstained": true,
+      "composite": false,
+      "located_in_space_candidate_id": "space_candidate_005",
+      "center_page_px": [
+        991.5,
+        1032.5
+      ]
+    },
+    {
+      "id": "text_node_010",
+      "source_alignment_ids": [
+        "ALIGN-010"
+      ],
+      "raw_text_alternatives": [
+        "ste",
+        "eis"
+      ],
+      "bbox_crop_px_xyxy": [
+        693.0,
+        349.0,
+        731.0,
+        378.0
+      ],
+      "center_crop_px": [
+        712.0,
+        363.5
+      ],
+      "role_hypothesis": "border_context_unresolved",
+      "canonical_space_name_hypothesis": null,
+      "role_reasons": [
+        "touches_region_border"
+      ],
+      "ocr_classification": "conflict",
+      "ocr_abstained": true,
+      "composite": false,
+      "located_in_space_candidate_id": "space_candidate_006",
+      "center_page_px": [
+        1513.0,
+        1047.5
+      ]
+    },
+    {
+      "id": "text_node_011",
+      "source_alignment_ids": [
+        "ALIGN-011",
+        "ALIGN-012"
+      ],
+      "raw_text_alternatives": [
+        "vano scala"
+      ],
+      "bbox_crop_px_xyxy": [
+        82.0,
+        355.0,
+        147.0,
+        398.0
+      ],
+      "center_crop_px": [
+        114.5,
+        376.5
+      ],
+      "role_hypothesis": "space_name_seed",
+      "canonical_space_name_hypothesis": "vano scala",
+      "role_reasons": [
+        "spatially_clustered_text_nodes",
+        "center_distance_px:17.564"
+      ],
+      "ocr_classification": "composite_mixed_evidence",
+      "ocr_abstained": true,
+      "composite": true,
+      "space_label_index": 5,
+      "expansion_seed_crop_px": [
+        114,
+        376
+      ],
+      "seed_displacement_px": 0.707,
+      "space_candidate_id": "space_candidate_005",
+      "center_page_px": [
+        915.5,
+        1060.5
+      ]
+    },
+    {
+      "id": "text_node_012",
+      "source_alignment_ids": [
+        "ALIGN-013"
+      ],
+      "raw_text_alternatives": [
+        "soggiorno-pranzo"
+      ],
+      "bbox_crop_px_xyxy": [
+        358.0,
+        455.0,
+        546.0,
+        485.0
+      ],
+      "center_crop_px": [
+        452.0,
+        470.0
+      ],
+      "role_hypothesis": "space_name_seed",
+      "canonical_space_name_hypothesis": "soggiorno-pranzo",
+      "role_reasons": [
+        "lexical_room_anchor:soggiorno-pranzo"
+      ],
+      "ocr_classification": "consensus",
+      "ocr_abstained": false,
+      "composite": false,
+      "space_label_index": 6,
+      "expansion_seed_crop_px": [
+        452,
+        470
+      ],
+      "seed_displacement_px": 0.0,
+      "space_candidate_id": "space_candidate_006",
+      "center_page_px": [
+        1253.0,
+        1154.0
+      ]
+    },
+    {
+      "id": "text_node_013",
+      "source_alignment_ids": [
+        "ALIGN-014"
+      ],
+      "raw_text_alternatives": [
+        "rip."
+      ],
+      "bbox_crop_px_xyxy": [
+        142.0,
+        618.0,
+        189.0,
+        655.0
+      ],
+      "center_crop_px": [
+        165.5,
+        636.5
+      ],
+      "role_hypothesis": "space_name_seed",
+      "canonical_space_name_hypothesis": "ripostiglio",
+      "role_reasons": [
+        "lexical_room_anchor:rip"
+      ],
+      "ocr_classification": "consensus",
+      "ocr_abstained": false,
+      "composite": false,
+      "space_label_index": 7,
+      "expansion_seed_crop_px": [
+        166,
+        636
+      ],
+      "seed_displacement_px": 0.707,
+      "space_candidate_id": "space_candidate_007",
+      "center_page_px": [
+        966.5,
+        1320.5
+      ]
+    },
+    {
+      "id": "text_node_014",
+      "source_alignment_ids": [
+        "ALIGN-015"
+      ],
+      "raw_text_alternatives": [
+        "balcone"
+      ],
+      "bbox_crop_px_xyxy": [
+        432.0,
+        634.0,
+        521.0,
+        663.0
+      ],
+      "center_crop_px": [
+        476.5,
+        648.5
+      ],
+      "role_hypothesis": "space_name_seed",
+      "canonical_space_name_hypothesis": "balcone",
+      "role_reasons": [
+        "lexical_room_anchor:balcone"
+      ],
+      "ocr_classification": "consensus",
+      "ocr_abstained": false,
+      "composite": false,
+      "space_label_index": 8,
+      "expansion_seed_crop_px": [
+        476,
+        648
+      ],
+      "seed_displacement_px": 0.707,
+      "space_candidate_id": "space_candidate_008",
+      "center_page_px": [
+        1277.5,
+        1332.5
+      ]
+    }
+  ],
+  "geometry_barrier_audit": {
+    "line_candidates": [
+      {
+        "id": "line_001",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_002",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_003",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_004",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_005",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_006",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_007",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_008",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_009",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_010",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_011",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_012",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_013",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_014",
+        "text_overlap_ratio": 0.605381,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_015",
+        "text_overlap_ratio": 0.515419,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_016",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_017",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_018",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_019",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_020",
+        "text_overlap_ratio": 0.967742,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_021",
+        "text_overlap_ratio": 0.418033,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_022",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_023",
+        "text_overlap_ratio": 0.336634,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_024",
+        "text_overlap_ratio": 0.068063,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_025",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_026",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_027",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_028",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_029",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_030",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_031",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_032",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_033",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_034",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_035",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_036",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_037",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_038",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_039",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_040",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_041",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_042",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_043",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_044",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_045",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_046",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_047",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_048",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_049",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_050",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_051",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_052",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_053",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_054",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_055",
+        "text_overlap_ratio": 0.051696,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_056",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_057",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_058",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_059",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_060",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_061",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_062",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_063",
+        "text_overlap_ratio": 0.030769,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_064",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_065",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_066",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_067",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_068",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_069",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_070",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_071",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_072",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_073",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_074",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_075",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_076",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_077",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_078",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_079",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_080",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_081",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_082",
+        "text_overlap_ratio": 0.970588,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_083",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_084",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_085",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_086",
+        "text_overlap_ratio": 0.678161,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_087",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_088",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_089",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_090",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_091",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_092",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_093",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_094",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_095",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_096",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_097",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_098",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_099",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_100",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_101",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_102",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_103",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_104",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_105",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_106",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_107",
+        "text_overlap_ratio": 0.823529,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_108",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_stroke"
+      },
+      {
+        "id": "line_109",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_110",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      },
+      {
+        "id": "line_111",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_structural_candidate"
+      }
+    ],
+    "band_candidates": [
+      {
+        "id": "band_001",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_002",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_003",
+        "text_overlap_ratio": 0.008481,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_004",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_005",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_006",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_007",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_008",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_009",
+        "text_overlap_ratio": 0.709677,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_010",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_011",
+        "text_overlap_ratio": 0.777778,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_012",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_013",
+        "text_overlap_ratio": 0.946237,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_014",
+        "text_overlap_ratio": 0.200957,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_015",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_016",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_017",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_018",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_019",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_020",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_021",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_022",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_023",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_024",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_025",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_026",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_027",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_028",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_029",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_030",
+        "text_overlap_ratio": 0.0,
+        "used_as_barrier": true,
+        "reason": "retained_parallel_edge_hypothesis"
+      },
+      {
+        "id": "band_031",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_032",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_033",
+        "text_overlap_ratio": 0.655172,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_034",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_035",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_036",
+        "text_overlap_ratio": 0.494253,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_037",
+        "text_overlap_ratio": 0.5,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_038",
+        "text_overlap_ratio": 0.5,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_039",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      },
+      {
+        "id": "band_040",
+        "text_overlap_ratio": 1.0,
+        "used_as_barrier": false,
+        "reason": "excluded_probable_text_band"
+      }
+    ],
+    "observed_barrier_pixels": 95823,
+    "synthetic_gap_closure_pixels": 24711
+  },
+  "expansion_seed_audit": [
+    {
+      "text_node_id": "text_node_001",
+      "space_label_index": 1,
+      "seed_crop_px": [
+        344,
+        142
+      ],
+      "seed_displacement_px": 0.707
+    },
+    {
+      "text_node_id": "text_node_002",
+      "space_label_index": 2,
+      "seed_crop_px": [
+        530,
+        177
+      ],
+      "seed_displacement_px": 0.0
+    },
+    {
+      "text_node_id": "text_node_003",
+      "space_label_index": 3,
+      "seed_crop_px": [
+        170,
+        182
+      ],
+      "seed_displacement_px": 0.5
+    },
+    {
+      "text_node_id": "text_node_004",
+      "space_label_index": 4,
+      "seed_crop_px": [
+        350,
+        292
+      ],
+      "seed_displacement_px": 0.707
+    },
+    {
+      "text_node_id": "text_node_011",
+      "space_label_index": 5,
+      "seed_crop_px": [
+        114,
+        376
+      ],
+      "seed_displacement_px": 0.707
+    },
+    {
+      "text_node_id": "text_node_012",
+      "space_label_index": 6,
+      "seed_crop_px": [
+        452,
+        470
+      ],
+      "seed_displacement_px": 0.0
+    },
+    {
+      "text_node_id": "text_node_013",
+      "space_label_index": 7,
+      "seed_crop_px": [
+        166,
+        636
+      ],
+      "seed_displacement_px": 0.707
+    },
+    {
+      "text_node_id": "text_node_014",
+      "space_label_index": 8,
+      "seed_crop_px": [
+        476,
+        648
+      ],
+      "seed_displacement_px": 0.707
+    }
+  ],
+  "space_candidates": [
+    {
+      "id": "space_candidate_001",
+      "name_text_node_id": "text_node_001",
+      "name_hypothesis": "bagno",
+      "bbox_crop_px_xywh": [
+        294,
+        67,
+        109,
+        158
+      ],
+      "bbox_page_px_xywh": [
+        1095,
+        751,
+        109,
+        158
+      ],
+      "polygon_crop_px": [
+        [
+          294,
+          67
+        ],
+        [
+          294,
+          220
+        ],
+        [
+          332,
+          220
+        ],
+        [
+          332,
+          199
+        ],
+        [
+          337,
+          196
+        ],
+        [
+          340,
+          199
+        ],
+        [
+          340,
+          224
+        ],
+        [
+          402,
+          224
+        ],
+        [
+          402,
+          67
+        ],
+        [
+          366,
+          67
+        ],
+        [
+          366,
+          76
+        ],
+        [
+          363,
+          79
+        ],
+        [
+          358,
+          76
+        ],
+        [
+          358,
+          67
+        ]
+      ],
+      "area_px2": 16798,
+      "boundary_composition": {
+        "observed_geometry_ratio": 0.915282,
+        "synthetic_gap_closure_ratio": 0.023256,
+        "seed_competition_ratio": 0.064784,
+        "unresolved_ratio": 0.0
+      },
+      "boundary_evidence": [
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_006",
+          "support_pixels_near_space_boundary": 327,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_060",
+          "support_pixels_near_space_boundary": 327,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_005",
+          "support_pixels_near_space_boundary": 319,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_059",
+          "support_pixels_near_space_boundary": 319,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_002",
+          "support_pixels_near_space_boundary": 228,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_006",
+          "support_pixels_near_space_boundary": 228,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_061",
+          "support_pixels_near_space_boundary": 110,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_007",
+          "support_pixels_near_space_boundary": 98,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_009",
+          "support_pixels_near_space_boundary": 98,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_052",
+          "support_pixels_near_space_boundary": 54,
+          "source_status": "solid",
+          "source_abstained": false
+        }
+      ],
+      "confidence_uncalibrated": 0.831661,
+      "abstained": false,
+      "abstention_reasons": [],
+      "radial_boundary_observations": [
+        {
+          "direction": "north",
+          "hit_crop_px": [
+            344,
+            66
+          ],
+          "distance_px": 76.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_002",
+            "line_006"
+          ]
+        },
+        {
+          "direction": "north_east",
+          "hit_crop_px": [
+            403,
+            83
+          ],
+          "distance_px": 83.439,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_006",
+            "line_060"
+          ]
+        },
+        {
+          "direction": "east",
+          "hit_crop_px": [
+            403,
+            142
+          ],
+          "distance_px": 59.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_006",
+            "line_060"
+          ]
+        },
+        {
+          "direction": "south_east",
+          "hit_crop_px": [
+            403,
+            201
+          ],
+          "distance_px": 83.439,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_006",
+            "line_060"
+          ]
+        },
+        {
+          "direction": "south",
+          "hit_crop_px": [
+            344,
+            225
+          ],
+          "distance_px": 83.0,
+          "hit_kind": "synthetic_gap_closure",
+          "nearby_source_ids": []
+        },
+        {
+          "direction": "south_west",
+          "hit_crop_px": [
+            293,
+            193
+          ],
+          "distance_px": 72.125,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_005",
+            "line_059"
+          ]
+        },
+        {
+          "direction": "west",
+          "hit_crop_px": [
+            293,
+            142
+          ],
+          "distance_px": 51.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_005",
+            "line_059"
+          ]
+        },
+        {
+          "direction": "north_west",
+          "hit_crop_px": [
+            293,
+            91
+          ],
+          "distance_px": 72.125,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_005",
+            "line_059"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_candidate_002",
+      "name_text_node_id": "text_node_002",
+      "name_hypothesis": "camera",
+      "bbox_crop_px_xywh": [
+        418,
+        67,
+        239,
+        232
+      ],
+      "bbox_page_px_xywh": [
+        1219,
+        751,
+        239,
+        232
+      ],
+      "polygon_crop_px": [
+        [
+          418,
+          67
+        ],
+        [
+          418,
+          270
+        ],
+        [
+          444,
+          270
+        ],
+        [
+          447,
+          298
+        ],
+        [
+          656,
+          298
+        ],
+        [
+          656,
+          254
+        ],
+        [
+          643,
+          251
+        ],
+        [
+          646,
+          246
+        ],
+        [
+          656,
+          246
+        ],
+        [
+          656,
+          67
+        ]
+      ],
+      "area_px2": 54554,
+      "boundary_composition": {
+        "observed_geometry_ratio": 0.960581,
+        "synthetic_gap_closure_ratio": 0.039419,
+        "seed_competition_ratio": 0.0,
+        "unresolved_ratio": 0.0
+      },
+      "boundary_evidence": [
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_006",
+          "support_pixels_near_space_boundary": 490,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_004",
+          "support_pixels_near_space_boundary": 474,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_057",
+          "support_pixels_near_space_boundary": 474,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_001",
+          "support_pixels_near_space_boundary": 445,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_015",
+          "support_pixels_near_space_boundary": 431,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_056",
+          "support_pixels_near_space_boundary": 375,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_006",
+          "support_pixels_near_space_boundary": 374,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_013",
+          "support_pixels_near_space_boundary": 65,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_011",
+          "support_pixels_near_space_boundary": 58,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_005",
+          "support_pixels_near_space_boundary": 57,
+          "source_status": "solid",
+          "source_abstained": false
+        }
+      ],
+      "confidence_uncalibrated": 0.855021,
+      "abstained": false,
+      "abstention_reasons": [],
+      "radial_boundary_observations": [
+        {
+          "direction": "north",
+          "hit_crop_px": [
+            530,
+            66
+          ],
+          "distance_px": 111.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_001",
+            "line_006"
+          ]
+        },
+        {
+          "direction": "north_east",
+          "hit_crop_px": [
+            641,
+            66
+          ],
+          "distance_px": 156.978,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_001",
+            "line_005",
+            "line_006"
+          ]
+        },
+        {
+          "direction": "east",
+          "hit_crop_px": [
+            657,
+            177
+          ],
+          "distance_px": 127.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_004",
+            "line_057"
+          ]
+        },
+        {
+          "direction": "south_east",
+          "hit_crop_px": [
+            652,
+            299
+          ],
+          "distance_px": 172.534,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_015"
+          ]
+        },
+        {
+          "direction": "south",
+          "hit_crop_px": [
+            530,
+            299
+          ],
+          "distance_px": 122.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_015"
+          ]
+        },
+        {
+          "direction": "south_west",
+          "hit_crop_px": [
+            436,
+            271
+          ],
+          "distance_px": 132.936,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_013"
+          ]
+        },
+        {
+          "direction": "west",
+          "hit_crop_px": [
+            417,
+            177
+          ],
+          "distance_px": 113.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_006",
+            "line_056"
+          ]
+        },
+        {
+          "direction": "north_west",
+          "hit_crop_px": [
+            419,
+            66
+          ],
+          "distance_px": 156.978,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_006",
+            "line_006",
+            "line_056"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_candidate_003",
+      "name_text_node_id": "text_node_003",
+      "name_hypothesis": "camera",
+      "bbox_crop_px_xywh": [
+        72,
+        67,
+        209,
+        232
+      ],
+      "bbox_page_px_xywh": [
+        873,
+        751,
+        209,
+        232
+      ],
+      "polygon_crop_px": [
+        [
+          72,
+          67
+        ],
+        [
+          72,
+          298
+        ],
+        [
+          250,
+          298
+        ],
+        [
+          253,
+          270
+        ],
+        [
+          280,
+          270
+        ],
+        [
+          280,
+          67
+        ],
+        [
+          218,
+          67
+        ],
+        [
+          215,
+          79
+        ],
+        [
+          210,
+          76
+        ],
+        [
+          210,
+          67
+        ]
+      ],
+      "area_px2": 47573,
+      "boundary_composition": {
+        "observed_geometry_ratio": 0.957871,
+        "synthetic_gap_closure_ratio": 0.042129,
+        "seed_competition_ratio": 0.0,
+        "unresolved_ratio": 0.0
+      },
+      "boundary_evidence": [
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_003",
+          "support_pixels_near_space_boundary": 476,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_055",
+          "support_pixels_near_space_boundary": 476,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_002",
+          "support_pixels_near_space_boundary": 428,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_006",
+          "support_pixels_near_space_boundary": 428,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_005",
+          "support_pixels_near_space_boundary": 374,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_058",
+          "support_pixels_near_space_boundary": 374,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_014",
+          "support_pixels_near_space_boundary": 370,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_012",
+          "support_pixels_near_space_boundary": 67,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_051",
+          "support_pixels_near_space_boundary": 54,
+          "source_status": "solid",
+          "source_abstained": false
+        }
+      ],
+      "confidence_uncalibrated": 0.853991,
+      "abstained": false,
+      "abstention_reasons": [],
+      "radial_boundary_observations": [
+        {
+          "direction": "north",
+          "hit_crop_px": [
+            170,
+            66
+          ],
+          "distance_px": 116.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_002",
+            "line_006"
+          ]
+        },
+        {
+          "direction": "north_east",
+          "hit_crop_px": [
+            281,
+            71
+          ],
+          "distance_px": 156.978,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_005",
+            "line_058"
+          ]
+        },
+        {
+          "direction": "east",
+          "hit_crop_px": [
+            281,
+            182
+          ],
+          "distance_px": 111.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_005",
+            "line_058"
+          ]
+        },
+        {
+          "direction": "south_east",
+          "hit_crop_px": [
+            259,
+            271
+          ],
+          "distance_px": 125.865,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_012"
+          ]
+        },
+        {
+          "direction": "south",
+          "hit_crop_px": [
+            170,
+            299
+          ],
+          "distance_px": 117.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_014"
+          ]
+        },
+        {
+          "direction": "south_west",
+          "hit_crop_px": [
+            71,
+            281
+          ],
+          "distance_px": 140.007,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_003",
+            "line_055"
+          ]
+        },
+        {
+          "direction": "west",
+          "hit_crop_px": [
+            71,
+            182
+          ],
+          "distance_px": 99.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_003",
+            "line_055"
+          ]
+        },
+        {
+          "direction": "north_west",
+          "hit_crop_px": [
+            71,
+            83
+          ],
+          "distance_px": 140.007,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_003",
+            "line_055"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_candidate_004",
+      "name_text_node_id": "text_node_004",
+      "name_hypothesis": "disimpegno",
+      "bbox_crop_px_xywh": [
+        294,
+        221,
+        135,
+        112
+      ],
+      "bbox_page_px_xywh": [
+        1095,
+        905,
+        135,
+        112
+      ],
+      "polygon_crop_px": [
+        [
+          294,
+          221
+        ],
+        [
+          294,
+          270
+        ],
+        [
+          322,
+          270
+        ],
+        [
+          325,
+          273
+        ],
+        [
+          322,
+          278
+        ],
+        [
+          295,
+          278
+        ],
+        [
+          295,
+          329
+        ],
+        [
+          332,
+          329
+        ],
+        [
+          332,
+          306
+        ],
+        [
+          337,
+          303
+        ],
+        [
+          340,
+          306
+        ],
+        [
+          340,
+          332
+        ],
+        [
+          428,
+          332
+        ],
+        [
+          427,
+          278
+        ],
+        [
+          374,
+          278
+        ],
+        [
+          371,
+          275
+        ],
+        [
+          374,
+          270
+        ],
+        [
+          402,
+          270
+        ],
+        [
+          402,
+          238
+        ],
+        [
+          340,
+          238
+        ],
+        [
+          340,
+          268
+        ],
+        [
+          335,
+          271
+        ],
+        [
+          332,
+          268
+        ],
+        [
+          332,
+          221
+        ]
+      ],
+      "area_px2": 11409,
+      "boundary_composition": {
+        "observed_geometry_ratio": 0.715068,
+        "synthetic_gap_closure_ratio": 0.234247,
+        "seed_competition_ratio": 0.053425,
+        "unresolved_ratio": 0.0
+      },
+      "boundary_evidence": [
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_013",
+          "support_pixels_near_space_boundary": 180,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_061",
+          "support_pixels_near_space_boundary": 172,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_015",
+          "support_pixels_near_space_boundary": 151,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_023",
+          "support_pixels_near_space_boundary": 151,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_012",
+          "support_pixels_near_space_boundary": 128,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_063",
+          "support_pixels_near_space_boundary": 116,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_007",
+          "support_pixels_near_space_boundary": 98,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_010",
+          "support_pixels_near_space_boundary": 98,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_005",
+          "support_pixels_near_space_boundary": 67,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_059",
+          "support_pixels_near_space_boundary": 67,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_021",
+          "support_pixels_near_space_boundary": 43,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_006",
+          "support_pixels_near_space_boundary": 33,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_060",
+          "support_pixels_near_space_boundary": 33,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_015",
+          "support_pixels_near_space_boundary": 8,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_014",
+          "support_pixels_near_space_boundary": 4,
+          "source_status": "solid",
+          "source_abstained": false
+        }
+      ],
+      "confidence_uncalibrated": 0.756658,
+      "abstained": false,
+      "abstention_reasons": [],
+      "radial_boundary_observations": [
+        {
+          "direction": "north",
+          "hit_crop_px": [
+            350,
+            237
+          ],
+          "distance_px": 55.0,
+          "hit_kind": "synthetic_gap_closure",
+          "nearby_source_ids": [
+            "line_010"
+          ]
+        },
+        {
+          "direction": "north_east",
+          "hit_crop_px": [
+            403,
+            239
+          ],
+          "distance_px": 74.953,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_006",
+            "band_007",
+            "line_010",
+            "line_060"
+          ]
+        },
+        {
+          "direction": "east",
+          "hit_crop_px": [
+            428,
+            292
+          ],
+          "distance_px": 78.0,
+          "hit_kind": "synthetic_gap_closure",
+          "nearby_source_ids": []
+        },
+        {
+          "direction": "south_east",
+          "hit_crop_px": [
+            391,
+            333
+          ],
+          "distance_px": 57.983,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_015",
+            "line_023"
+          ]
+        },
+        {
+          "direction": "south",
+          "hit_crop_px": [
+            350,
+            333
+          ],
+          "distance_px": 41.0,
+          "hit_kind": "synthetic_gap_closure",
+          "nearby_source_ids": [
+            "line_023"
+          ]
+        },
+        {
+          "direction": "south_west",
+          "hit_crop_px": [
+            337,
+            305
+          ],
+          "distance_px": 18.385,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_063"
+          ]
+        },
+        {
+          "direction": "west",
+          "hit_crop_px": [
+            294,
+            292
+          ],
+          "distance_px": 56.0,
+          "hit_kind": "synthetic_gap_closure",
+          "nearby_source_ids": []
+        },
+        {
+          "direction": "north_west",
+          "hit_crop_px": [
+            293,
+            235
+          ],
+          "distance_px": 80.61,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_005",
+            "line_059"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_candidate_005",
+      "name_text_node_id": "text_node_011",
+      "name_hypothesis": "vano scala",
+      "bbox_crop_px_xywh": [
+        72,
+        347,
+        259,
+        113
+      ],
+      "bbox_page_px_xywh": [
+        873,
+        1031,
+        259,
+        113
+      ],
+      "polygon_crop_px": [
+        [
+          330,
+          347
+        ],
+        [
+          281,
+          347
+        ],
+        [
+          279,
+          359
+        ],
+        [
+          256,
+          359
+        ],
+        [
+          254,
+          348
+        ],
+        [
+          72,
+          348
+        ],
+        [
+          72,
+          376
+        ],
+        [
+          84,
+          379
+        ],
+        [
+          81,
+          384
+        ],
+        [
+          72,
+          384
+        ],
+        [
+          72,
+          421
+        ],
+        [
+          127,
+          422
+        ],
+        [
+          130,
+          459
+        ],
+        [
+          187,
+          458
+        ],
+        [
+          187,
+          386
+        ],
+        [
+          157,
+          386
+        ],
+        [
+          154,
+          381
+        ],
+        [
+          225,
+          378
+        ],
+        [
+          225,
+          386
+        ],
+        [
+          195,
+          386
+        ],
+        [
+          195,
+          418
+        ],
+        [
+          252,
+          418
+        ],
+        [
+          255,
+          431
+        ],
+        [
+          195,
+          434
+        ],
+        [
+          195,
+          451
+        ],
+        [
+          255,
+          451
+        ],
+        [
+          330,
+          376
+        ]
+      ],
+      "area_px2": 20647,
+      "boundary_composition": {
+        "observed_geometry_ratio": 0.695946,
+        "synthetic_gap_closure_ratio": 0.103885,
+        "seed_competition_ratio": 0.139358,
+        "unresolved_ratio": 0.060811
+      },
+      "boundary_evidence": [
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_014",
+          "support_pixels_near_space_boundary": 378,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_024",
+          "support_pixels_near_space_boundary": 378,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_028",
+          "support_pixels_near_space_boundary": 278,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_017",
+          "support_pixels_near_space_boundary": 240,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_064",
+          "support_pixels_near_space_boundary": 178,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_003",
+          "support_pixels_near_space_boundary": 158,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_055",
+          "support_pixels_near_space_boundary": 158,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_029",
+          "support_pixels_near_space_boundary": 128,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_031",
+          "support_pixels_near_space_boundary": 114,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_090",
+          "support_pixels_near_space_boundary": 108,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_030",
+          "support_pixels_near_space_boundary": 95,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_018",
+          "support_pixels_near_space_boundary": 88,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_096",
+          "support_pixels_near_space_boundary": 84,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_066",
+          "support_pixels_near_space_boundary": 81,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_091",
+          "support_pixels_near_space_boundary": 80,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_027",
+          "support_pixels_near_space_boundary": 54,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_065",
+          "support_pixels_near_space_boundary": 8,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_020",
+          "support_pixels_near_space_boundary": 3,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_067",
+          "support_pixels_near_space_boundary": 2,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_033",
+          "support_pixels_near_space_boundary": 1,
+          "source_status": "solid",
+          "source_abstained": false
+        }
+      ],
+      "confidence_uncalibrated": 0.654443,
+      "abstained": true,
+      "abstention_reasons": [
+        "name_node_contains_abstained_ocr_evidence"
+      ],
+      "radial_boundary_observations": [
+        {
+          "direction": "north",
+          "hit_crop_px": [
+            114,
+            347
+          ],
+          "distance_px": 29.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_014",
+            "line_024"
+          ]
+        },
+        {
+          "direction": "north_east",
+          "hit_crop_px": [
+            143,
+            347
+          ],
+          "distance_px": 41.012,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_014",
+            "line_024"
+          ]
+        },
+        {
+          "direction": "east",
+          "hit_crop_px": [
+            657,
+            376
+          ],
+          "distance_px": 543.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_004",
+            "line_057"
+          ]
+        },
+        {
+          "direction": "south_east",
+          "hit_crop_px": [
+            188,
+            450
+          ],
+          "distance_px": 104.652,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_064"
+          ]
+        },
+        {
+          "direction": "south",
+          "hit_crop_px": [
+            114,
+            423
+          ],
+          "distance_px": 47.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_018",
+            "line_030"
+          ]
+        },
+        {
+          "direction": "south_west",
+          "hit_crop_px": [
+            71,
+            419
+          ],
+          "distance_px": 60.811,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_003",
+            "band_018",
+            "line_030",
+            "line_055"
+          ]
+        },
+        {
+          "direction": "west",
+          "hit_crop_px": [
+            71,
+            376
+          ],
+          "distance_px": 43.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_003",
+            "line_027",
+            "line_055"
+          ]
+        },
+        {
+          "direction": "north_west",
+          "hit_crop_px": [
+            85,
+            347
+          ],
+          "distance_px": 41.012,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_014",
+            "line_024"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_candidate_006",
+      "name_text_node_id": "text_node_012",
+      "name_hypothesis": "soggiorno-pranzo",
+      "bbox_crop_px_xywh": [
+        195,
+        347,
+        462,
+        257
+      ],
+      "bbox_page_px_xywh": [
+        996,
+        1031,
+        462,
+        257
+      ],
+      "polygon_crop_px": [
+        [
+          195,
+          452
+        ],
+        [
+          195,
+          574
+        ],
+        [
+          219,
+          574
+        ],
+        [
+          221,
+          585
+        ],
+        [
+          242,
+          585
+        ],
+        [
+          244,
+          603
+        ],
+        [
+          332,
+          603
+        ],
+        [
+          335,
+          591
+        ],
+        [
+          340,
+          603
+        ],
+        [
+          566,
+          603
+        ],
+        [
+          569,
+          591
+        ],
+        [
+          574,
+          603
+        ],
+        [
+          656,
+          603
+        ],
+        [
+          656,
+          348
+        ],
+        [
+          473,
+          348
+        ],
+        [
+          471,
+          359
+        ],
+        [
+          449,
+          359
+        ],
+        [
+          447,
+          348
+        ],
+        [
+          340,
+          348
+        ],
+        [
+          335,
+          376
+        ],
+        [
+          331,
+          347
+        ],
+        [
+          331,
+          376
+        ],
+        [
+          255,
+          452
+        ]
+      ],
+      "area_px2": 105180,
+      "boundary_composition": {
+        "observed_geometry_ratio": 0.805875,
+        "synthetic_gap_closure_ratio": 0.041507,
+        "seed_competition_ratio": 0.106003,
+        "unresolved_ratio": 0.046616
+      },
+      "boundary_evidence": [
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_044",
+          "support_pixels_near_space_boundary": 819,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_028",
+          "support_pixels_near_space_boundary": 771,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_004",
+          "support_pixels_near_space_boundary": 524,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_057",
+          "support_pixels_near_space_boundary": 524,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_016",
+          "support_pixels_near_space_boundary": 379,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_026",
+          "support_pixels_near_space_boundary": 379,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_064",
+          "support_pixels_near_space_boundary": 257,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_015",
+          "support_pixels_near_space_boundary": 189,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_025",
+          "support_pixels_near_space_boundary": 189,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_063",
+          "support_pixels_near_space_boundary": 120,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_092",
+          "support_pixels_near_space_boundary": 77,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_110",
+          "support_pixels_near_space_boundary": 64,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_069",
+          "support_pixels_near_space_boundary": 54,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_070",
+          "support_pixels_near_space_boundary": 54,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_109",
+          "support_pixels_near_space_boundary": 43,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_024",
+          "support_pixels_near_space_boundary": 21,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_036",
+          "support_pixels_near_space_boundary": 18,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_026",
+          "support_pixels_near_space_boundary": 17,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_022",
+          "support_pixels_near_space_boundary": 16,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_039",
+          "support_pixels_near_space_boundary": 4,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_037",
+          "support_pixels_near_space_boundary": 1,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_040",
+          "support_pixels_near_space_boundary": 1,
+          "source_status": "solid",
+          "source_abstained": false
+        }
+      ],
+      "confidence_uncalibrated": 0.780971,
+      "abstained": false,
+      "abstention_reasons": [],
+      "radial_boundary_observations": [
+        {
+          "direction": "north",
+          "hit_crop_px": [
+            452,
+            358
+          ],
+          "distance_px": 112.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_092"
+          ]
+        },
+        {
+          "direction": "north_east",
+          "hit_crop_px": [
+            575,
+            347
+          ],
+          "distance_px": 173.948,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_016",
+            "line_026"
+          ]
+        },
+        {
+          "direction": "east",
+          "hit_crop_px": [
+            657,
+            470
+          ],
+          "distance_px": 205.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_004",
+            "line_057"
+          ]
+        },
+        {
+          "direction": "south_east",
+          "hit_crop_px": [
+            586,
+            604
+          ],
+          "distance_px": 189.505,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_028",
+            "line_044"
+          ]
+        },
+        {
+          "direction": "south",
+          "hit_crop_px": [
+            452,
+            604
+          ],
+          "distance_px": 134.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_028",
+            "line_044"
+          ]
+        },
+        {
+          "direction": "south_west",
+          "hit_crop_px": [
+            318,
+            604
+          ],
+          "distance_px": 189.505,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_028",
+            "line_044"
+          ]
+        },
+        {
+          "direction": "west",
+          "hit_crop_px": [
+            194,
+            470
+          ],
+          "distance_px": 258.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_064"
+          ]
+        },
+        {
+          "direction": "north_west",
+          "hit_crop_px": [
+            339,
+            357
+          ],
+          "distance_px": 159.806,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_063"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_candidate_007",
+      "name_text_node_id": "text_node_013",
+      "name_hypothesis": "ripostiglio",
+      "bbox_crop_px_xywh": [
+        72,
+        599,
+        181,
+        78
+      ],
+      "bbox_page_px_xywh": [
+        873,
+        1283,
+        181,
+        78
+      ],
+      "polygon_crop_px": [
+        [
+          72,
+          599
+        ],
+        [
+          72,
+          676
+        ],
+        [
+          158,
+          676
+        ],
+        [
+          158,
+          667
+        ],
+        [
+          161,
+          664
+        ],
+        [
+          166,
+          667
+        ],
+        [
+          166,
+          676
+        ],
+        [
+          252,
+          676
+        ],
+        [
+          252,
+          617
+        ],
+        [
+          240,
+          617
+        ],
+        [
+          238,
+          611
+        ],
+        [
+          217,
+          611
+        ],
+        [
+          215,
+          609
+        ],
+        [
+          215,
+          600
+        ]
+      ],
+      "area_px2": 13488,
+      "boundary_composition": {
+        "observed_geometry_ratio": 0.914498,
+        "synthetic_gap_closure_ratio": 0.085502,
+        "seed_competition_ratio": 0.0,
+        "unresolved_ratio": 0.0
+      },
+      "boundary_evidence": [
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_030",
+          "support_pixels_near_space_boundary": 372,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_047",
+          "support_pixels_near_space_boundary": 372,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_043",
+          "support_pixels_near_space_boundary": 254,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_027",
+          "support_pixels_near_space_boundary": 233,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_003",
+          "support_pixels_near_space_boundary": 168,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_055",
+          "support_pixels_near_space_boundary": 168,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_071",
+          "support_pixels_near_space_boundary": 132,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_029",
+          "support_pixels_near_space_boundary": 113,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_073",
+          "support_pixels_near_space_boundary": 54,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_109",
+          "support_pixels_near_space_boundary": 43,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_111",
+          "support_pixels_near_space_boundary": 39,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_110",
+          "support_pixels_near_space_boundary": 28,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_064",
+          "support_pixels_near_space_boundary": 8,
+          "source_status": "solid",
+          "source_abstained": false
+        }
+      ],
+      "confidence_uncalibrated": 0.837509,
+      "abstained": false,
+      "abstention_reasons": [],
+      "radial_boundary_observations": [
+        {
+          "direction": "north",
+          "hit_crop_px": [
+            166,
+            598
+          ],
+          "distance_px": 38.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_027",
+            "line_043"
+          ]
+        },
+        {
+          "direction": "north_east",
+          "hit_crop_px": [
+            203,
+            599
+          ],
+          "distance_px": 52.326,
+          "hit_kind": "synthetic_gap_closure",
+          "nearby_source_ids": [
+            "line_043"
+          ]
+        },
+        {
+          "direction": "east",
+          "hit_crop_px": [
+            253,
+            636
+          ],
+          "distance_px": 87.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_029",
+            "line_071"
+          ]
+        },
+        {
+          "direction": "south_east",
+          "hit_crop_px": [
+            207,
+            677
+          ],
+          "distance_px": 57.983,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_030",
+            "line_047"
+          ]
+        },
+        {
+          "direction": "south",
+          "hit_crop_px": [
+            166,
+            677
+          ],
+          "distance_px": 41.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_030",
+            "line_047",
+            "line_073"
+          ]
+        },
+        {
+          "direction": "south_west",
+          "hit_crop_px": [
+            125,
+            677
+          ],
+          "distance_px": 57.983,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_030",
+            "line_047"
+          ]
+        },
+        {
+          "direction": "west",
+          "hit_crop_px": [
+            71,
+            636
+          ],
+          "distance_px": 95.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_003",
+            "line_055",
+            "line_111"
+          ]
+        },
+        {
+          "direction": "north_west",
+          "hit_crop_px": [
+            128,
+            598
+          ],
+          "distance_px": 53.74,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_027",
+            "line_043"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space_candidate_008",
+      "name_text_node_id": "text_node_014",
+      "name_hypothesis": "balcone",
+      "bbox_crop_px_xywh": [
+        280,
+        625,
+        395,
+        98
+      ],
+      "bbox_page_px_xywh": [
+        1081,
+        1309,
+        395,
+        98
+      ],
+      "polygon_crop_px": [
+        [
+          280,
+          625
+        ],
+        [
+          282,
+          722
+        ],
+        [
+          446,
+          722
+        ],
+        [
+          452,
+          671
+        ],
+        [
+          478,
+          673
+        ],
+        [
+          480,
+          692
+        ],
+        [
+          674,
+          692
+        ],
+        [
+          674,
+          625
+        ],
+        [
+          574,
+          625
+        ],
+        [
+          571,
+          655
+        ],
+        [
+          566,
+          652
+        ],
+        [
+          566,
+          625
+        ],
+        [
+          340,
+          625
+        ],
+        [
+          337,
+          655
+        ],
+        [
+          332,
+          652
+        ],
+        [
+          332,
+          625
+        ]
+      ],
+      "area_px2": 30835,
+      "boundary_composition": {
+        "observed_geometry_ratio": 0.950175,
+        "synthetic_gap_closure_ratio": 0.049825,
+        "seed_competition_ratio": 0.0,
+        "unresolved_ratio": 0.0
+      },
+      "boundary_evidence": [
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_046",
+          "support_pixels_near_space_boundary": 798,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_028",
+          "support_pixels_near_space_boundary": 765,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_048",
+          "support_pixels_near_space_boundary": 415,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_050",
+          "support_pixels_near_space_boundary": 342,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_072",
+          "support_pixels_near_space_boundary": 152,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_054",
+          "support_pixels_near_space_boundary": 148,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_069",
+          "support_pixels_near_space_boundary": 126,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_070",
+          "support_pixels_near_space_boundary": 126,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "parallel_edge_band_hypothesis",
+          "source_id": "band_029",
+          "support_pixels_near_space_boundary": 114,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_106",
+          "support_pixels_near_space_boundary": 86,
+          "source_status": "uncertain",
+          "source_abstained": true
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_074",
+          "support_pixels_near_space_boundary": 53,
+          "source_status": "solid",
+          "source_abstained": false
+        },
+        {
+          "source_type": "raw_linework_candidate",
+          "source_id": "line_049",
+          "support_pixels_near_space_boundary": 11,
+          "source_status": "solid",
+          "source_abstained": false
+        }
+      ],
+      "confidence_uncalibrated": 0.851066,
+      "abstained": false,
+      "abstention_reasons": [],
+      "radial_boundary_observations": [
+        {
+          "direction": "north",
+          "hit_crop_px": [
+            476,
+            624
+          ],
+          "distance_px": 24.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_028",
+            "line_046"
+          ]
+        },
+        {
+          "direction": "north_east",
+          "hit_crop_px": [
+            500,
+            624
+          ],
+          "distance_px": 33.941,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_028",
+            "line_046"
+          ]
+        },
+        {
+          "direction": "east",
+          "hit_crop_px": [
+            567,
+            648
+          ],
+          "distance_px": 91.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_070"
+          ]
+        },
+        {
+          "direction": "south_east",
+          "hit_crop_px": [
+            521,
+            693
+          ],
+          "distance_px": 63.64,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_048"
+          ]
+        },
+        {
+          "direction": "south",
+          "hit_crop_px": [
+            476,
+            674
+          ],
+          "distance_px": 26.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_106"
+          ]
+        },
+        {
+          "direction": "south_west",
+          "hit_crop_px": [
+            452,
+            672
+          ],
+          "distance_px": 33.941,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_074",
+            "line_106"
+          ]
+        },
+        {
+          "direction": "west",
+          "hit_crop_px": [
+            339,
+            648
+          ],
+          "distance_px": 137.0,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "line_069"
+          ]
+        },
+        {
+          "direction": "north_west",
+          "hit_crop_px": [
+            452,
+            624
+          ],
+          "distance_px": 33.941,
+          "hit_kind": "thickened_barrier",
+          "nearby_source_ids": [
+            "band_028",
+            "line_046"
+          ]
+        }
+      ]
+    }
+  ],
+  "topology_edges": [
+    {
+      "id": "edge_001",
+      "relation": "names_space_candidate",
+      "from": "text_node_001",
+      "to": "space_candidate_001",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_002",
+      "relation": "names_space_candidate",
+      "from": "text_node_002",
+      "to": "space_candidate_002",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_003",
+      "relation": "names_space_candidate",
+      "from": "text_node_003",
+      "to": "space_candidate_003",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_004",
+      "relation": "names_space_candidate",
+      "from": "text_node_004",
+      "to": "space_candidate_004",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_005",
+      "relation": "names_space_candidate",
+      "from": "text_node_011",
+      "to": "space_candidate_005",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_006",
+      "relation": "names_space_candidate",
+      "from": "text_node_012",
+      "to": "space_candidate_006",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_007",
+      "relation": "names_space_candidate",
+      "from": "text_node_013",
+      "to": "space_candidate_007",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_008",
+      "relation": "names_space_candidate",
+      "from": "text_node_014",
+      "to": "space_candidate_008",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_009",
+      "relation": "text_node_located_in_space_candidate",
+      "from": "text_node_005",
+      "to": "space_candidate_002",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_010",
+      "relation": "text_node_located_in_space_candidate",
+      "from": "text_node_006",
+      "to": "space_candidate_003",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_011",
+      "relation": "text_node_located_in_space_candidate",
+      "from": "text_node_007",
+      "to": "space_candidate_002",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_012",
+      "relation": "text_node_located_in_space_candidate",
+      "from": "text_node_008",
+      "to": "space_candidate_003",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_013",
+      "relation": "text_node_located_in_space_candidate",
+      "from": "text_node_009",
+      "to": "space_candidate_005",
+      "status": "geometric_assignment_role_unresolved"
+    },
+    {
+      "id": "edge_014",
+      "relation": "text_node_located_in_space_candidate",
+      "from": "text_node_010",
+      "to": "space_candidate_006",
+      "status": "hypothesis"
+    },
+    {
+      "id": "edge_015",
+      "relation": "candidate_topological_adjacency",
+      "from": "space_candidate_001",
+      "to": "space_candidate_004",
+      "contact_length_px": 39,
+      "status": "competition_boundary_not_opening_proof"
+    },
+    {
+      "id": "edge_016",
+      "relation": "candidate_topological_adjacency",
+      "from": "space_candidate_005",
+      "to": "space_candidate_006",
+      "contact_length_px": 241,
+      "status": "competition_boundary_not_opening_proof"
+    },
+    {
+      "id": "edge_017",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "band_006",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 327,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_018",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "line_060",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 327,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_019",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "band_005",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 319,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_020",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "line_059",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 319,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_021",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "band_002",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 228,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_022",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "line_006",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 228,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_023",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "line_061",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 110,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_024",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "band_007",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 98,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_025",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "line_009",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 98,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_026",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_001",
+      "to": "line_052",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 54,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_027",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "line_006",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 490,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_028",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "band_004",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 474,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_029",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "line_057",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 474,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_030",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "band_001",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 445,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_031",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "line_015",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 431,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_032",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "line_056",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 375,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_033",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "band_006",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 374,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_034",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "line_013",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 65,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_035",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "line_011",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 58,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_036",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_002",
+      "to": "line_005",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 57,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_037",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "band_003",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 476,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_038",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "line_055",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 476,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_039",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "band_002",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 428,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_040",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "line_006",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 428,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_041",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "band_005",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 374,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_042",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "line_058",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 374,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_043",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "line_014",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 370,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_044",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "line_012",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 67,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_045",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_003",
+      "to": "line_051",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 54,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_046",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_013",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 180,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_047",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_061",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 172,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_048",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "band_015",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 151,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_049",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_023",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 151,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_050",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_012",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 128,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_051",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_063",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 116,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_052",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "band_007",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 98,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_053",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_010",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 98,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_054",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "band_005",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 67,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_055",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_059",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 67,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_056",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_021",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 43,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_057",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "band_006",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 33,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_058",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_060",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 33,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_059",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_015",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 8,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_060",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_004",
+      "to": "line_014",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 4,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_061",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "band_014",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 378,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_062",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_024",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 378,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_063",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_028",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 278,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_064",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "band_017",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 240,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_065",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_064",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 178,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_066",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "band_003",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 158,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_067",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_055",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 158,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_068",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_029",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 128,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_069",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_031",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 114,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_070",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_090",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 108,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_071",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_030",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 95,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_072",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "band_018",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 88,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_073",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_096",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 84,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_074",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_066",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 81,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_075",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_091",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 80,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_076",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_027",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 54,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_077",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_065",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 8,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_078",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "band_020",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 3,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_079",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_067",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 2,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_080",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_005",
+      "to": "line_033",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 1,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_081",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_044",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 819,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_082",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "band_028",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 771,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_083",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "band_004",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 524,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_084",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_057",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 524,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_085",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "band_016",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 379,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_086",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_026",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 379,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_087",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_064",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 257,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_088",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "band_015",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 189,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_089",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_025",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 189,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_090",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_063",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 120,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_091",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_092",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 77,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_092",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_110",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 64,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_093",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_069",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 54,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_094",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_070",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 54,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_095",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_109",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 43,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_096",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "band_024",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 21,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_097",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_036",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 18,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_098",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "band_026",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 17,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_099",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "band_022",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 16,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_100",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_039",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 4,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_101",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_037",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 1,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_102",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_006",
+      "to": "line_040",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 1,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_103",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "band_030",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 372,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_104",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_047",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 372,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_105",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_043",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 254,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_106",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "band_027",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 233,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_107",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "band_003",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 168,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_108",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_055",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 168,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_109",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_071",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 132,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_110",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "band_029",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 113,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_111",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_073",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 54,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_112",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_109",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 43,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_113",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_111",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 39,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_114",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_110",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 28,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_115",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_007",
+      "to": "line_064",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 8,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_116",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_046",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 798,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_117",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "band_028",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 765,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_118",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_048",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 415,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_119",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_050",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 342,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_120",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_072",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 152,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_121",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_054",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 148,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_122",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_069",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 126,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_123",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_070",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 126,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_124",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "band_029",
+      "target_type": "parallel_edge_band_hypothesis",
+      "support_pixels": 114,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_125",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_106",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 86,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_126",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_074",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 53,
+      "status": "observed_relation_not_building_semantics"
+    },
+    {
+      "id": "edge_127",
+      "relation": "bounded_by_candidate_evidence",
+      "from": "space_candidate_008",
+      "to": "line_049",
+      "target_type": "raw_linework_candidate",
+      "support_pixels": 11,
+      "status": "observed_relation_not_building_semantics"
+    }
+  ],
+  "summary": {
+    "text_node_count": 14,
+    "space_name_seed_count": 8,
+    "space_candidate_count": 8,
+    "space_candidate_abstained_count": 1,
+    "topology_edge_count": 127,
+    "bounded_by_evidence_edge_count": 111
+  },
+  "explicit_non_claims": [
+    "OCR glyphs are not geometric building lines",
+    "a normalized text value does not replace the preserved raw OCR value",
+    "a text role hypothesis is not a validated semantic label",
+    "a wavefront region is not a validated room",
+    "temporary gap closures are not walls and do not prove doors",
+    "competition boundaries are not observed physical boundaries",
+    "topological contact does not prove a traversable opening",
+    "walls, doors, windows, property membership, scale and north are not inferred",
+    "no human approval or correction has been applied"
+  ]
+}

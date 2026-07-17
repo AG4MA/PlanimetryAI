@@ -1,0 +1,84 @@
+{
+  "schema_version": "planparser.topology-engine.job/1.0",
+  "document_id": "scheda_catastale",
+  "page_id": "page_0001",
+  "fail_on_baseline_difference": true,
+  "engine_config": {
+    "path": "industrial_v1/topology_engine/profiles/legacy_v1.json",
+    "sha256": "489342311a3781871cfb861c3848316ac61c9ce2e34c69c57f399c54940a9fad"
+  },
+  "page_image": {
+    "path": "atomic_v2/ingest/artifacts/scheda_catastale/pages/page_0001.png",
+    "sha256": "54f38ab8decb10eaec769e9e1d1b996f5c03e6ee3c11e87fa4d77e10269b8d53"
+  },
+  "floor_units": {
+    "path": "industrial_v1/floor_units/artifacts/scheda_catastale/page_0001/revision_001/floor_units.json",
+    "sha256": "858781d3a51cfa35c169c74ed80db5b69f61590c3fcf48fe1dde25e0aea29ba1"
+  },
+  "regions": [
+    {
+      "region_id": "region_001",
+      "floor_id": "FR-001",
+      "text_adapter": "ocr_ensemble_v1",
+      "config_overrides": {
+        "text_assignment_policy": "legacy_region1"
+      },
+      "source_image": {
+        "path": "atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+        "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a"
+      },
+      "region_contract": {
+        "path": "atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/regions.json",
+        "sha256": "8fcc8444da5a384451e6639a9db30a55c36d1e9ff8a57cd414907ece5acf1d89"
+      },
+      "text_input": {
+        "path": "atomic_v2/ocr_ensemble/artifacts/scheda_catastale/region_001/revision_001/ocr_ensemble.json",
+        "sha256": "8b42e5bba08120510ce495537018e91d4c1c33fb6a4dd8ee0e21a628586be07b"
+      },
+      "linework": {
+        "path": "atomic_v2/linework/artifacts/scheda_catastale/region_001/revision_001/linework.json",
+        "sha256": "5984c7868bd288d05c9373bb0634aef642e387b6578394d660e4c3a364881592"
+      },
+      "wall_bands": {
+        "path": "atomic_v2/wall_bands/artifacts/scheda_catastale/region_001/revision_001/wall_bands.json",
+        "sha256": "b29e46c39c50567e0c8df543b0d5355386bc0aa0a68a8cf84ca717c76de982aa"
+      },
+      "baseline": {
+        "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_001/revision_002/text_space_topology.json",
+        "sha256": "0460b42b0a4cdba3d6e5e985b448b0a44ac86112c45d0f7bf12d2481bddd07c7"
+      }
+    },
+    {
+      "region_id": "region_002",
+      "floor_id": "FR-002",
+      "text_adapter": "industrial_text_nodes_v1",
+      "config_overrides": {
+        "text_assignment_policy": "none"
+      },
+      "source_image": {
+        "path": "atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_002.png",
+        "sha256": "612b583a2f244de46f1469b3acd35e8bde2de0e693f369f52a1c70fc82ebd82b"
+      },
+      "region_contract": {
+        "path": "atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/regions.json",
+        "sha256": "8fcc8444da5a384451e6639a9db30a55c36d1e9ff8a57cd414907ece5acf1d89"
+      },
+      "text_input": {
+        "path": "industrial_v1/text_nodes/artifacts/scheda_catastale/region_002/revision_002/text_nodes.json",
+        "sha256": "2af0578a55de5df173b6973ea892f42a33f12efdca28c88713db5de314b79586"
+      },
+      "linework": {
+        "path": "atomic_v2/linework/artifacts/scheda_catastale/region_002/revision_002/linework.json",
+        "sha256": "2dc6aaf6a589a431ead584609828c79438c6e7e35f80e6b2921eff1313e0ae1b"
+      },
+      "wall_bands": {
+        "path": "atomic_v2/wall_bands/artifacts/scheda_catastale/region_002/revision_002/wall_bands.json",
+        "sha256": "774f24ac124409312b0b800bc9fea5b0cbce5afb11efdd5a7619a53642d16d77"
+      },
+      "baseline": {
+        "path": "industrial_v1/text_space_topology/artifacts/scheda_catastale/region_002/revision_001/text_space_topology.json",
+        "sha256": "0a8ed97e03b3fdb487280f8e3215c77fad4ab37ca65d92405f149bbda8e9c903"
+      }
+    }
+  ]
+}
