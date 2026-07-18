@@ -1,0 +1,25 @@
+{
+  "schema_version": "planparser.artifact-manifest/1.0",
+  "artifacts": [
+    {
+      "path": "fr_001.png",
+      "sha256": "de619ec19c3258c2a89be39e5a19c8ca47c390341b77d8a532f4c932c4c5d9b5",
+      "media_type": "image/png"
+    },
+    {
+      "path": "fr_002.png",
+      "sha256": "b1a42b3bdfd6baf42f6157e379a183abf8b6060449cfd1a4911b7bbc0829668f",
+      "media_type": "image/png"
+    },
+    {
+      "path": "floor_units_contact_sheet.png",
+      "sha256": "51b98e5dc9d3cfc68635911f5df1fbc1841c2713588b2743a4ed868bbe251b47",
+      "media_type": "image/png"
+    },
+    {
+      "path": "floor_units.json",
+      "sha256": "858781d3a51cfa35c169c74ed80db5b69f61590c3fcf48fe1dde25e0aea29ba1",
+      "media_type": "application/json"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "planparser.atomic_v2.ocr_tile_doctr.preflight.v1",
+  "status": "preflight_completed_before_model_load",
+  "created_at_utc": "2026-07-17T12:05:17.142109Z",
+  "input": {
+    "manifest_path": "ocr_tiles/artifacts/scheda_catastale/region_001/revision_001/ocr_tiles_manifest.json",
+    "manifest_sha256": "3f90ce70fb61bd50d599f9876edd6441a6b4b952b1269f6b87ff21f0698d6c05",
+    "candidate_count": 33,
+    "candidate_ids": [
+      "TC-001",
+      "TC-002",
+      "TC-003",
+      "TC-004",
+      "TC-005",
+      "TC-006",
+      "TC-007",
+      "TC-008",
+      "TC-009",
+      "TC-010",
+      "TC-011",
+      "TC-012",
+      "TC-013",
+      "TC-014",
+      "TC-015",
+      "TC-016",
+      "TC-017",
+      "TC-018",
+      "TC-019",
+      "TC-020",
+      "TC-021",
+      "TC-022",
+      "TC-023",
+      "TC-024",
+      "TC-025",
+      "TC-026",
+      "TC-027",
+      "TC-028",
+      "TC-029",
+      "TC-030",
+      "TC-031",
+      "TC-032",
+      "TC-033"
+    ],
+    "ocr_ready_tiles_verified_by_sha256": 33,
+    "original_abstained_count": 14,
+    "original_non_abstained_count": 19
+  },
+  "planned_engine": {
+    "name": "docTR",
+    "architecture": "parseq",
+    "mode": "recognition_only",
+    "device": "cpu",
+    "pretrained_weight_path": "ocr_doctr/runtime/models/doctr/models/parseq-56125471.pt",
+    "pretrained_weight_sha256": "56125471b17e660253c4179c3fbf3c906c34606d898148895dbb84db257d98ba",
+    "model_loading": "direct_local_state_dict; pretrained=False factory; no downloader call",
+    "network_required": false
+  },
+  "immutability": {
+    "existing_runtime_access": "read_only",
+    "runtime_tree_before": {
+      "root": "ocr_doctr/runtime",
+      "file_count": 38026,
+      "byte_count": 1549317331,
+      "path_size_mtime_sha256": "cd2fcf39a51d9082098e652ea9a12943743b1145e8dc6a41bdd37f01df84289b"
+    },
+    "new_output_namespace": "ocr_tile_doctr/artifacts/scheda_catastale/region_001/revision_001"
+  }
+}

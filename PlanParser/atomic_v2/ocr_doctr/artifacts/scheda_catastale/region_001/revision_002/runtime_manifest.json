@@ -1,0 +1,82 @@
+{
+  "schema_version": "planparser.atomic_v2.ocr_doctr.runtime.v2",
+  "status": "completed",
+  "started_at_utc": "2026-07-17T11:52:42.620762Z",
+  "completed_at_utc": "2026-07-17T11:52:54.235631Z",
+  "runtime": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "runtime/.venv/Scripts/python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "packages": {
+      "python-doctr": "1.0.1",
+      "torch": "2.13.0+cpu",
+      "torchvision": "0.28.0+cpu",
+      "numpy": "2.5.1",
+      "Pillow": "12.3.0",
+      "opencv-python": "4.13.0.92"
+    },
+    "torch_cuda_available": false,
+    "torch_num_threads": 12
+  },
+  "models": {
+    "detector": "db_resnet50",
+    "recognizer": "parseq",
+    "pretrained": true,
+    "cache_root": "runtime/models/doctr",
+    "cache_reused_without_content_or_mtime_change": true,
+    "cached_files": [
+      {
+        "path": "runtime/models/doctr/models/db_resnet50-79bd7d70.pt",
+        "bytes": 102021912,
+        "modified_time_ns": 1784288946389588800,
+        "sha256": "79bd7d702506703b89cf11afa42d12aebf5cf25c3618e6ffd5f85772240ca483"
+      },
+      {
+        "path": "runtime/models/doctr/models/mobilenet_v3_small_crop_orientation-f0847a18.pt",
+        "bytes": 6233146,
+        "modified_time_ns": 1784288952262694100,
+        "sha256": "f0847a18a134c8e471951de24300bee2c3af6e8bba5aa7986e4aeb96f63f0a28"
+      },
+      {
+        "path": "runtime/models/doctr/models/mobilenet_v3_small_page_orientation-8e60325c.pt",
+        "bytes": 6233146,
+        "modified_time_ns": 1784288952984691400,
+        "sha256": "8e60325c099cf70ba4203923d8ec15546b11d33f0f18fdd9d526040d60337674"
+      },
+      {
+        "path": "runtime/models/doctr/models/parseq-56125471.pt",
+        "bytes": 95457349,
+        "modified_time_ns": 1784288951332777500,
+        "sha256": "56125471b17e660253c4179c3fbf3c906c34606d898148895dbb84db257d98ba"
+      }
+    ]
+  },
+  "source_sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a",
+  "outputs": {
+    "preflight_manifest.json": "ec822278accf65ec63a738a32e58f706bd18b9acf6cdff74f8bc1faeafd08412",
+    "ocr_raw.json": "92ef831e9abff48cf6c5382f4fafa2dd38496a84b49dda48f39ce1adc6a6b0a4",
+    "ocr_overlay.png": "8270ac67f6e3451ddafcc8dbce73aee8f86c2aed834a0459179011af950b7e7a"
+  },
+  "counts": {
+    "pages": 1,
+    "blocks": 1,
+    "lines": 15,
+    "words_total": 17,
+    "words_not_abstained": 17,
+    "words_abstained": 0
+  },
+  "timings_ms": {
+    "model_load": 1460.594,
+    "document_load": 13.416,
+    "inference": 3006.398,
+    "total_before_manifest_write": 11614.832
+  },
+  "limits": [
+    "single_crop_single_pass_only",
+    "no_ground_truth_accuracy_claim",
+    "raw_confidence_not_calibrated_for_floorplans",
+    "no_text_correction_or_semantic_interpretation",
+    "text_not_detected_by_the_detector_is_absent_from_this_output"
+  ]
+}

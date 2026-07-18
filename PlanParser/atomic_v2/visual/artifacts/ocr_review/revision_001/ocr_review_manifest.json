@@ -1,0 +1,32 @@
+{
+  "revision": "revision_001",
+  "status": "visual_review_candidate",
+  "page_count": 4,
+  "inputs_read_only": {
+    "original": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\region_split\\artifacts\\scheda_catastale\\page_0001\\revision_002\\region_001.png",
+    "text_candidates": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_text_candidates\\artifacts\\scheda_catastale\\region_001\\revision_001\\text_candidates_overlay.png",
+    "contact_sheet": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_tiles\\artifacts\\scheda_catastale\\region_001\\revision_001\\ocr_tiles_contact_sheet.png",
+    "doctr": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_doctr\\artifacts\\scheda_catastale\\region_001\\revision_002\\ocr_overlay.png",
+    "ppocr": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\artifacts\\scheda_catastale\\region_001\\revision_004\\ppocrv5_overlay_001_paddle.png",
+    "guard": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_geometry_guard\\artifacts\\scheda_catastale\\region_001\\revision_001\\ocr_geometry_guard_overlay.png"
+  },
+  "outputs": {
+    "comparison": "ocr_comparison.png",
+    "pdf": "ocr_review.pdf",
+    "page_pngs": [
+      "ocr_review_page_01.png",
+      "ocr_review_page_02.png",
+      "ocr_review_page_03.png",
+      "ocr_review_page_04.png"
+    ],
+    "pdf_renders": [
+      "ocr_review_pdf_render_page_01.png",
+      "ocr_review_pdf_render_page_02.png",
+      "ocr_review_pdf_render_page_03.png",
+      "ocr_review_pdf_render_page_04.png"
+    ]
+  },
+  "excluded": [
+    "ocr_ensemble"
+  ]
+}

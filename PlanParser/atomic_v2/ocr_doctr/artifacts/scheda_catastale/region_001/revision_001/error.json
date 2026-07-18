@@ -1,0 +1,13 @@
+{
+  "schema_version": "planparser.atomic_v2.ocr_doctr.error.v1",
+  "status": "failed",
+  "started_at_utc": "2026-07-17T11:48:55.418478Z",
+  "failed_at_utc": "2026-07-17T11:49:15.827161Z",
+  "stage": "model_load_or_inference_or_artifact_write",
+  "error_type": "TypeError",
+  "error_message": "Object of type ndarray is not JSON serializable",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_doctr\\run_doctr.py\", line 315, in run\n    write_json(OUTPUT / \"ocr_raw.json\", raw_payload)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_doctr\\run_doctr.py\", line 169, in write_json\n    json.dumps(json_safe(payload), ensure_ascii=False, indent=2) + \"\\n\",\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\aless\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py\", line 242, in dumps\n    **kw).encode(obj)\n          ~~~~~~^^^^^\n  File \"C:\\Users\\aless\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\encoder.py\", line 202, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n  File \"C:\\Users\\aless\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\encoder.py\", line 263, in iterencode\n    return _iterencode(o, 0)\n  File \"C:\\Users\\aless\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\encoder.py\", line 182, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\n                    f'is not JSON serializable')\nTypeError: Object of type ndarray is not JSON serializable\n",
+  "source": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\region_split\\artifacts\\scheda_catastale\\page_0001\\revision_002\\region_001.png",
+  "detector": "db_resnet50",
+  "recognizer": "parseq"
+}

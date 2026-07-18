@@ -1,0 +1,26 @@
+{
+  "schema_version": "planparser.atomic_v2.linework.artifact_manifest.v2",
+  "created_utc": "2026-07-17T15:48:28.632746+00:00",
+  "region_id": "region_002",
+  "source_sha256": "612b583a2f244de46f1469b3acd35e8bde2de0e693f369f52a1c70fc82ebd82b",
+  "outputs": {
+    "linework.json": "2dc6aaf6a589a431ead584609828c79438c6e7e35f80e6b2921eff1313e0ae1b",
+    "linework_overlay.png": "cbff05edb0167c5d8a171ea64092fe27c5e2b89503d84dbefca7fc524b986796",
+    "text_masked_crop.png": "fc0466f648d5313827bb48a54978d2ed596c31dfb2453b0789e195fa90f81458"
+  },
+  "summary": {
+    "input_candidate_count": 85,
+    "retained_geometric_candidate_count": 70,
+    "text_contaminated_candidate_count": 15,
+    "text_contaminated_candidate_ratio": 0.176471,
+    "input_candidate_length_px": 9601.0,
+    "excluded_text_candidate_length_px": 551.0,
+    "excluded_text_candidate_length_ratio": 0.05739,
+    "ocr_text_node_count": 9
+  },
+  "limits": [
+    "OCR-supported text strokes removed from downstream linework",
+    "OCR misses can leave residual glyph strokes",
+    "text nodes preserved for future text-to-space graph"
+  ]
+}

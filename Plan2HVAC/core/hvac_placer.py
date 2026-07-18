@@ -123,7 +123,7 @@ class HVACPlacer:
     def calculate_radiator_position(
         self,
         room: Room,
-        wall: Wall,
+        wall: Optional[Wall],
         radiator_width_mm: int
     ) -> Tuple[float, float]:
         """
@@ -132,7 +132,7 @@ class HVACPlacer:
         Returns position in room coordinates (center point).
         """
         # For simplicity, center on wall
-        if wall.start_point and wall.end_point:
+        if wall and wall.start_point and wall.end_point:
             cx = (wall.start_point[0] + wall.end_point[0]) / 2
             cy = (wall.start_point[1] + wall.end_point[1]) / 2
             return (cx, cy)

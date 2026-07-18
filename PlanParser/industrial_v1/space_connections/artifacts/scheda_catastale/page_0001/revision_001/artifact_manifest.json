@@ -1,0 +1,15 @@
+{
+  "schema_version": "planparser.artifact-manifest/1.0",
+  "artifacts": [
+    {
+      "path": "space_connections_contact_sheet.png",
+      "sha256": "e2fda1281f4127d4219b1e3a8936e02616ce312d620b88f38fb05499a02cbf76",
+      "media_type": "image/png"
+    },
+    {
+      "path": "space_connections.json",
+      "sha256": "3c39c3f0587d22a4fb919cd7653c658c1b50c1a6826bb7ed87839683f12a7be5",
+      "media_type": "application/json"
+    }
+  ]
+}

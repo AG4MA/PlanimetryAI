@@ -1,0 +1,349 @@
+{
+  "schema_version": "planparser.industrial_v1.compass_observation.v1",
+  "created_at_utc": "2026-07-17T15:51:25.036965+00:00",
+  "status": "automatic_sheet_observation_with_semantic_abstention",
+  "source": {
+    "page_path": "atomic_v2/ingest/artifacts/scheda_catastale/pages/page_0001.png",
+    "page_sha256": "54f38ab8decb10eaec769e9e1d1b996f5c03e6ee3c11e87fa4d77e10269b8d53",
+    "width_px": 2481,
+    "height_px": 3508
+  },
+  "inputs": [
+    {
+      "path": "industrial_v1/floor_units/artifacts/scheda_catastale/page_0001/revision_001/floor_units.json",
+      "sha256": "858781d3a51cfa35c169c74ed80db5b69f61590c3fcf48fe1dde25e0aea29ba1"
+    },
+    {
+      "path": "industrial_v1/floor_units/artifacts/scheda_catastale/page_0001/revision_001/fr_002.png",
+      "sha256": "b1a42b3bdfd6baf42f6157e379a183abf8b6060449cfd1a4911b7bbc0829668f"
+    },
+    {
+      "path": "industrial_v1/sheet_mapper/artifacts/scheda_catastale/page_0001/revision_001/sheet_map.json",
+      "sha256": "fbe72575dd7dabf4a118b1049828bb44f116728145df2758dd0fe4e45e291867"
+    }
+  ],
+  "method": {
+    "name": "connected_ink_island_plus_ring_oblique_axis_and_pointed_end_geometry",
+    "detection_scope": "FR-002_full_width_floor_region_then_mapped_to_source_page",
+    "binarization": "opencv_otsu_binary_inverse",
+    "otsu_threshold": 167.0,
+    "minimum_component_area_px": 450,
+    "maximum_component_dimension_px": 450,
+    "compass_screen_threshold": 0.65,
+    "ring_support_threshold": 0.65,
+    "oblique_line_share_threshold": 0.5,
+    "pointed_end_ratio_threshold": 1.35,
+    "human_review_used": false
+  },
+  "component_screening": {
+    "connected_components_excluding_background": 202,
+    "geometry_analyzed_components": 1,
+    "passed_compass_glyph_screen": 1,
+    "preanalysis_rejection_counts": {
+      "bbox_ink_density_outside_symbol_screen": 62,
+      "bbox_too_large_for_isolated_glyph_screen": 3,
+      "bbox_too_thin_for_compass_glyph_screen": 198,
+      "ink_area_below_symbol_screen": 198,
+      "touches_floor_crop_boundary": 1
+    },
+    "ranked_analyzed_components": [
+      {
+        "component_label": 173,
+        "bbox_floor_px": {
+          "x": 2009,
+          "y": 1494,
+          "width": 175,
+          "height": 220
+        },
+        "score": 0.808531,
+        "passed": true
+      }
+    ]
+  },
+  "observations": [
+    {
+      "id": "CO-001",
+      "observation_type": "isolated_directional_compass_glyph_candidate",
+      "scope": "sheet_level",
+      "floor_unit_context": "FR-002",
+      "bbox_floor_px": {
+        "x": 2009,
+        "y": 1494,
+        "width": 175,
+        "height": 220
+      },
+      "bbox_page_px": {
+        "x": 2021,
+        "y": 2949,
+        "width": 175,
+        "height": 220
+      },
+      "geometric_candidate_confidence": 0.808531,
+      "geometric_evidence": {
+        "connected_component_label": 173,
+        "ink_area_px": 2566,
+        "bbox_ink_density": 0.066649,
+        "clearance_to_other_ink_components_px": 0.0,
+        "ring": {
+          "center_floor_px": {
+            "x": 2122.5,
+            "y": 1643.5
+          },
+          "center_page_px": {
+            "x": 2134.5,
+            "y": 3098.5
+          },
+          "radius_px": 50.5,
+          "circumference_edge_support": 0.988889
+        },
+        "lines": {
+          "hough_line_count": 41,
+          "oblique_length_share": 0.950753,
+          "length_weighted_mean_undirected_axis_deg": 142.704807,
+          "longest_lines_local_to_bbox": [
+            {
+              "xyxy_local_px": [
+                31,
+                51,
+                174,
+                194
+              ],
+              "length_px": 202.2325394193526,
+              "axis_angle_clockwise_from_up_deg": 135.0
+            },
+            {
+              "xyxy_local_px": [
+                16,
+                19,
+                128,
+                146
+              ],
+              "length_px": 169.33103672983285,
+              "axis_angle_clockwise_from_up_deg": 138.59125903720553
+            },
+            {
+              "xyxy_local_px": [
+                3,
+                2,
+                89,
+                137
+              ],
+              "length_px": 160.0656115472652,
+              "axis_angle_clockwise_from_up_deg": 147.50135405552038
+            },
+            {
+              "xyxy_local_px": [
+                0,
+                2,
+                86,
+                135
+              ],
+              "length_px": 158.38244852255568,
+              "axis_angle_clockwise_from_up_deg": 147.11262292598497
+            },
+            {
+              "xyxy_local_px": [
+                24,
+                26,
+                90,
+                137
+              ],
+              "length_px": 129.1394595001853,
+              "axis_angle_clockwise_from_up_deg": 149.26451229807992
+            },
+            {
+              "xyxy_local_px": [
+                42,
+                50,
+                104,
+                140
+              ],
+              "length_px": 109.288608738514,
+              "axis_angle_clockwise_from_up_deg": 145.43747535111817
+            },
+            {
+              "xyxy_local_px": [
+                43,
+                51,
+                105,
+                140
+              ],
+              "length_px": 108.4665847162157,
+              "axis_angle_clockwise_from_up_deg": 145.13780385308513
+            },
+            {
+              "xyxy_local_px": [
+                44,
+                49,
+                112,
+                125
+              ],
+              "length_px": 101.9803902718557,
+              "axis_angle_clockwise_from_up_deg": 138.17983011986428
+            },
+            {
+              "xyxy_local_px": [
+                63,
+                73,
+                128,
+                147
+              ],
+              "length_px": 98.49365461794989,
+              "axis_angle_clockwise_from_up_deg": 138.70462744207714
+            },
+            {
+              "xyxy_local_px": [
+                44,
+                54,
+                97,
+                137
+              ],
+              "length_px": 98.47842403288143,
+              "axis_angle_clockwise_from_up_deg": 147.43956201884657
+            },
+            {
+              "xyxy_local_px": [
+                98,
+                148,
+                144,
+                219
+              ],
+              "length_px": 84.59905436823747,
+              "axis_angle_clockwise_from_up_deg": 147.0613094570445
+            },
+            {
+              "xyxy_local_px": [
+                9,
+                10,
+                65,
+                72
+              ],
+              "length_px": 83.54639429682169,
+              "axis_angle_clockwise_from_up_deg": 137.91083782616772
+            }
+          ]
+        },
+        "pca": {
+          "major_eigenvalue": 4017.74003132488,
+          "minor_eigenvalue": 473.3523069296059,
+          "anisotropy": 0.789203930234229,
+          "undirected_axis_clockwise_from_up_deg": 142.57670968651428
+        },
+        "pointed_end_ratio": 2.529621
+      },
+      "direction_observation": {
+        "reference": "source_page_raster",
+        "zero_axis": "page_up",
+        "positive_rotation": "clockwise",
+        "page_up_is_north_assumption": false,
+        "axis_center_floor_px": {
+          "x": 2122.5,
+          "y": 1643.5
+        },
+        "axis_center_page_px": {
+          "x": 2134.5,
+          "y": 3098.5
+        },
+        "pointed_end_floor_px": {
+          "x": 2012.6538461538462,
+          "y": 1498.9615384615386
+        },
+        "pointed_end_page_px": {
+          "x": 2024.6538461538462,
+          "y": 2953.9615384615386
+        },
+        "pointed_end_angle_clockwise_from_page_up_deg": 322.765939,
+        "undirected_axis_clockwise_from_page_up_deg": 142.765939,
+        "status": "observed_directional_axis_candidate"
+      },
+      "spatial_evidence": {
+        "overlap_with_sheet_mapper_structural_candidates": [
+          {
+            "structural_candidate_id": "SC-001",
+            "candidate_bbox_intersection_ratio": 0.0
+          },
+          {
+            "structural_candidate_id": "SC-002",
+            "candidate_bbox_intersection_ratio": 0.0
+          },
+          {
+            "structural_candidate_id": "SC-003",
+            "candidate_bbox_intersection_ratio": 0.0
+          }
+        ],
+        "outside_all_structural_candidate_bboxes": true
+      },
+      "ocr_evidence_near_glyph": [
+        {
+          "ocr_id": "OCR-0109",
+          "text_raw": "0",
+          "normalized": "",
+          "confidence_raw": 0.3187083,
+          "bbox_page_px": {
+            "x": 2076,
+            "y": 3024,
+            "width": 21,
+            "height": 22
+          },
+          "north_lexicon_match": false,
+          "usable_as_north_evidence": false
+        },
+        {
+          "ocr_id": "OCR-0110",
+          "text_raw": "DAS",
+          "normalized": "DAS",
+          "confidence_raw": 0.76947683,
+          "bbox_page_px": {
+            "x": 2090,
+            "y": 3042,
+            "width": 66,
+            "height": 62
+          },
+          "north_lexicon_match": false,
+          "usable_as_north_evidence": false
+        },
+        {
+          "ocr_id": "OCR-0111",
+          "text_raw": "ST",
+          "normalized": "ST",
+          "confidence_raw": 0.52871037,
+          "bbox_page_px": {
+            "x": 2124,
+            "y": 3096,
+            "width": 35,
+            "height": 32
+          },
+          "north_lexicon_match": false,
+          "usable_as_north_evidence": false
+        }
+      ],
+      "semantic_decision": {
+        "compass_or_orientation_glyph": "automatic_candidate",
+        "north_direction_asserted": false,
+        "status": "abstained",
+        "reason": "geometry_supports_an_isolated_ringed_directional_glyph_but_no_reliable_N_or_NORD_token_proves_which_pointed_end_denotes_north",
+        "usable_north_token_count": 0
+      }
+    }
+  ],
+  "summary": {
+    "sheet_level_compass_glyph_candidates": 1,
+    "directional_axis_candidates": 1,
+    "north_directions_asserted": 0,
+    "semantic_abstentions": 1,
+    "prior_artifacts_modified": false
+  },
+  "explicit_non_claims": [
+    "page-up is not assumed to be north",
+    "the pointed end is not asserted to denote north without reliable textual or semantic corroboration",
+    "the floor-region context does not make the glyph part of a floor model",
+    "no wall, room, property-membership or scale semantics are assigned",
+    "no human approval or correction has been applied"
+  ],
+  "revision": "revision_002",
+  "publication": {
+    "mode": "staged_directory_then_atomic_rename",
+    "target_was_absent": true,
+    "prior_revision_modified": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "planparser.atomic_v2.ocr_tile_doctr.error.v1",
+  "status": "failed",
+  "started_at_utc": "2026-07-17T12:05:13.414178Z",
+  "failed_at_utc": "2026-07-17T12:05:23.442818Z",
+  "stage": "preflight_or_local_model_load_or_recognition_or_artifact_write",
+  "error_type": "RuntimeError",
+  "error_message": "Error(s) in loading state_dict for PARSeq:\n\tUnexpected key(s) in state_dict: \"decoder.attention_norm.weight\", \"decoder.attention_norm.bias\", \"decoder.cross_attention_norm.weight\", \"decoder.cross_attention_norm.bias\". ",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_tile_doctr\\src\\run_revision_001.py\", line 262, in run\n    model.load_state_dict(state_dict, strict=True)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_doctr\\runtime\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 2638, in load_state_dict\n    raise RuntimeError(\n    ...<3 lines>...\n    )\nRuntimeError: Error(s) in loading state_dict for PARSeq:\n\tUnexpected key(s) in state_dict: \"decoder.attention_norm.weight\", \"decoder.attention_norm.bias\", \"decoder.cross_attention_norm.weight\", \"decoder.cross_attention_norm.bias\". \n",
+  "recognition_only_technically_valid": false,
+  "existing_inputs_modified": false
+}

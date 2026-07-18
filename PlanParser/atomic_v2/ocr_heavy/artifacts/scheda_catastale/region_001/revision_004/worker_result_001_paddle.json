@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "status": "success",
+  "attempt": 1,
+  "engine": "paddle",
+  "started_at": "2026-07-17T11:57:29.396652+00:00",
+  "finished_at": "2026-07-17T11:57:52.758398+00:00",
+  "text_count": 15,
+  "enable_mkldnn": false,
+  "environment": {
+    "PADDLE_PDX_CACHE_HOME": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\artifacts\\scheda_catastale\\region_001\\revision_004\\runtime_cache\\paddle\\paddlex",
+    "PADDLE_HOME": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\artifacts\\scheda_catastale\\region_001\\revision_004\\runtime_cache\\paddle\\paddle",
+    "HF_HOME": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\revision_004\\huggingface_cache",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK": "1",
+    "FLAGS_use_mkldnn": "0",
+    "FLAGS_enable_onednn": "0",
+    "FLAGS_use_onednn": "0",
+    "DNNL_VERBOSE": "0",
+    "MKLDNN_VERBOSE": "0",
+    "OMP_NUM_THREADS": "2"
+  },
+  "timings_seconds": {
+    "initialization": 5.224386600000798,
+    "inference": 18.067080400000123,
+    "total": 23.36175319999893
+  },
+  "outputs": {
+    "raw_json": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\artifacts\\scheda_catastale\\region_001\\revision_004\\ppocrv5_raw_001_paddle.json",
+    "overlay_png": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\artifacts\\scheda_catastale\\region_001\\revision_004\\ppocrv5_overlay_001_paddle.png"
+  }
+}

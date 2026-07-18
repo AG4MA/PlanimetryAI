@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PlanimetryAI · Piattaforma</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">◧</span>
+      <span class="brand-name">PlanimetryAI</span>
+      <span class="brand-sub">piattaforma documenti &amp; labelling</span>
+    </div>
+  </header>
+
+  <main id="view-list" class="container">
+    <section id="dropzone" tabindex="0" aria-label="Carica documenti">
+      <input type="file" id="file-input" multiple hidden
+             accept=".pdf,.png,.jpg,.jpeg,.tif,.tiff,.bmp,.webp">
+      <p class="dz-title">Trascina qui PDF o immagini di planimetrie</p>
+      <p class="dz-sub">oppure <button id="pick-files" class="linklike" type="button">scegli i file</button></p>
+      <ul id="upload-status" class="upload-status"></ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>Documenti</h2>
+      <p id="empty-hint" class="muted" hidden>Nessun documento caricato. Il primo tocca a te.</p>
+      <div id="doc-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <main id="view-doc" class="viewer" hidden>
+    <div class="doc-toolbar">
+      <button id="back" type="button">← Documenti</button>
+      <div id="doc-title" class="doc-title"></div>
+
+      <div class="tool-group" role="toolbar" aria-label="Strumenti">
+        <button id="tool-pan" type="button" class="tool active" title="Naviga (1)">✋ Naviga</button>
+        <button id="tool-bbox" type="button" class="tool" title="Rettangolo (2)">▭ Rettangolo</button>
+        <button id="tool-poly" type="button" class="tool" title="Poligono (3)">⬠ Poligono</button>
+      </div>
+
+      <div class="tool-group" role="toolbar" aria-label="Snap">
+        <button id="snap-lines" type="button" class="tool active"
+                title="Calamita sui tratti del disegno — tieni premuto Alt per disattivarla al volo">🧲 Linee</button>
+        <button id="snap-angle" type="button" class="tool active"
+                title="Aggancia i lati del poligono a 0° / 45° / 90° rispetto al vertice precedente">📐 90°</button>
+      </div>
+
+      <select id="class-select" title="Classe della tassonomia P1"></select>
+
+      <div class="zoom-controls">
+        <button id="zoom-out" type="button" title="Riduci">−</button>
+        <span id="zoom-level">100%</span>
+        <button id="zoom-in" type="button" title="Ingrandisci">+</button>
+        <button id="zoom-fit" type="button" title="Adatta alla finestra">Adatta</button>
+      </div>
+    </div>
+
+    <div id="tool-hint" class="tool-hint" hidden>
+      <span id="tool-hint-text"></span>
+      <span class="hint-actions">
+        <button id="poly-finish" type="button" class="hint-btn ok" hidden>✓ Chiudi poligono</button>
+        <button id="draw-cancel" type="button" class="hint-btn" hidden>✕ Annulla</button>
+      </span>
+    </div>
+
+    <div class="doc-body">
+      <aside id="page-list" class="page-list" aria-label="Pagine"></aside>
+      <div id="stage" class="stage">
+        <div id="canvas" class="canvas">
+          <img id="page-image" alt="Pagina del documento" draggable="false">
+          <svg id="overlay" class="overlay" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+      <aside id="anno-panel" class="anno-panel" aria-label="Annotazioni">
+        <h3>Annotazioni <span id="anno-count" class="muted"></span></h3>
+        <p id="anno-empty" class="muted small">Nessuna annotazione su questa pagina. Scegli Rettangolo o Poligono e disegna.</p>
+        <div id="anno-list"></div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

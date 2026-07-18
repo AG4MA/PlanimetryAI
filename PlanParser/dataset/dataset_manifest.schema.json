@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planimetry.ai/schemas/dataset-manifest/1.0.0",
+  "title": "PlanimetryAI Point 1 Dataset Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_id",
+    "release_version",
+    "created_at",
+    "status",
+    "taxonomy",
+    "decomposition_schema",
+    "split_policy",
+    "assets"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "dataset_id": {"type": "string", "minLength": 1},
+    "release_version": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["draft", "reviewed", "frozen_benchmark"]},
+    "taxonomy": {"$ref": "#/$defs/versionedResource"},
+    "decomposition_schema": {"$ref": "#/$defs/versionedResource"},
+    "split_policy": {"$ref": "#/$defs/splitPolicy"},
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/asset"}
+    },
+    "notes": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "versionedResource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "sha256"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "splitPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strategy", "seed", "group_key", "frozen_splits"],
+      "properties": {
+        "strategy": {"const": "grouped_deterministic"},
+        "seed": {"type": "integer", "minimum": 0},
+        "group_key": {"const": "leakage_group_id"},
+        "frozen_splits": {
+          "type": "array",
+          "items": {"enum": ["validation", "test"]},
+          "uniqueItems": true,
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["filename", "media_type", "sha256", "page_count", "provenance_id"],
+      "properties": {
+        "filename": {"type": "string", "minLength": 1},
+        "media_type": {
+          "enum": [
+            "application/pdf",
+            "image/png",
+            "image/jpeg",
+            "image/tiff",
+            "image/webp"
+          ]
+        },
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "page_count": {"type": "integer", "minimum": 1},
+        "provenance_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "license_id",
+        "permitted_uses",
+        "authorization_verified",
+        "privacy_review_status"
+      ],
+      "properties": {
+        "license_id": {"type": "string", "minLength": 1},
+        "permitted_uses": {
+          "type": "array",
+          "items": {"enum": ["labeling", "training", "evaluation"]},
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "authorization_verified": {"type": "boolean"},
+        "privacy_review_status": {
+          "enum": ["not_required", "approved", "pending", "rejected"]
+        }
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relative_path", "sha256", "dataset_status"],
+      "properties": {
+        "relative_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?![A-Za-z]:)(?![/\\\\])(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$"
+        },
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "dataset_status": {
+          "enum": ["draft", "reviewed", "frozen_ground_truth"]
+        }
+      }
+    },
+    "augmentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["is_augmented", "parent_asset_id", "recipe_id"],
+      "properties": {
+        "is_augmented": {"type": "boolean"},
+        "parent_asset_id": {"type": ["string", "null"]},
+        "recipe_id": {"type": ["string", "null"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"is_augmented": {"const": true}}},
+          "then": {
+            "properties": {
+              "parent_asset_id": {"type": "string", "minLength": 1},
+              "recipe_id": {"type": "string", "minLength": 1}
+            }
+          },
+          "else": {
+            "properties": {
+              "parent_asset_id": {"type": "null"},
+              "recipe_id": {"type": "null"}
+            }
+          }
+        }
+      ]
+    },
+    "strata": {
+      "type": "object",
+      "additionalProperties": {"type": "string", "minLength": 1},
+      "required": ["document_type", "capture_type", "source_quality", "locale"],
+      "properties": {
+        "document_type": {"type": "string", "minLength": 1},
+        "capture_type": {"type": "string", "minLength": 1},
+        "source_quality": {"type": "string", "minLength": 1},
+        "locale": {"type": "string", "minLength": 1}
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_id",
+        "source",
+        "rights",
+        "split",
+        "leakage_group_id",
+        "annotation",
+        "augmentation",
+        "strata"
+      ],
+      "properties": {
+        "asset_id": {"type": "string", "minLength": 1},
+        "source": {"$ref": "#/$defs/source"},
+        "rights": {"$ref": "#/$defs/rights"},
+        "split": {"enum": ["train", "validation", "test"]},
+        "leakage_group_id": {"type": "string", "minLength": 1},
+        "annotation": {"$ref": "#/$defs/annotation"},
+        "augmentation": {"$ref": "#/$defs/augmentation"},
+        "strata": {"$ref": "#/$defs/strata"}
+      }
+    }
+  }
+}

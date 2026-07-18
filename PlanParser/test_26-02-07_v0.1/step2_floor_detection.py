@@ -331,6 +331,7 @@ def split_floors(
             logger.warning("  No rectangle found, using full image")
         cropped = image.copy()
         rect = (0, 0, img_w, img_h)
+        crop_rect = rect
     else:
         x, y, w, h = rect
         padding = 5
@@ -339,6 +340,7 @@ def split_floors(
         x2 = min(x + w - padding, img_w)
         y2 = min(y + h - padding, img_h)
         cropped = image[y1:y2, x1:x2]
+        crop_rect = (x1, y1, x2 - x1, y2 - y1)
 
     if debug_dir:
         debug_img = image.copy()
@@ -370,7 +372,7 @@ def split_floors(
             image=cropped,
             label=label,
             confidence=confidence,
-            source_rect=rect,
+            source_rect=crop_rect,
         )]
 
     # 3. Compute split lines from piano positions (anchor = "up")
@@ -400,14 +402,14 @@ def split_floors(
         if y_bottom - y_top < 50:  # Skip tiny sections
             continue
         section_img = cropped[y_top:y_bottom, :]
-        sections.append(section_img)
+        sections.append((section_img, y_top))
 
     if not sections:
-        sections = [cropped]
+        sections = [(cropped, 0)]
 
     # 5. Identify floor labels for each section
     floors = []
-    for i, section in enumerate(sections):
+    for i, (section, section_y) in enumerate(sections):
         gray = cv2.cvtColor(section, cv2.COLOR_BGR2GRAY)
         gray = cv2.bilateralFilter(gray, d=7, sigmaColor=50, sigmaSpace=50)
         variants = _ocr_variants(gray)
@@ -424,7 +426,12 @@ def split_floors(
             image=section,
             label=label,
             confidence=confidence,
-            source_rect=rect,
+            source_rect=(
+                crop_rect[0],
+                crop_rect[1] + section_y,
+                section.shape[1],
+                section.shape[0],
+            ),
         ))
 
         if logger:

@@ -1,0 +1,1910 @@
+{
+  "schema_version": "1.0.0",
+  "provenance": {
+    "source_crop": "PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+    "source_crop_sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a",
+    "source_linework": "PlanParser/atomic_v2/linework/artifacts/scheda_catastale/region_001/revision_001/linework.json",
+    "source_linework_sha256": "5984c7868bd288d05c9373bb0634aef642e387b6578394d660e4c3a364881592",
+    "source_wall_bands": "PlanParser/atomic_v2/wall_bands/artifacts/scheda_catastale/region_001/revision_001/wall_bands.json",
+    "source_wall_bands_sha256": "b29e46c39c50567e0c8df543b0d5355386bc0aa0a68a8cf84ca717c76de982aa",
+    "builder": "geometric-band-network",
+    "builder_version": "1.0.0"
+  },
+  "summary": {
+    "source_band_count": 40,
+    "retained_member_count": 40,
+    "component_count": 6,
+    "primary_count": 29,
+    "secondary_count": 1,
+    "abstention_count": 10
+  },
+  "observed_thickness_clusters": [
+    {
+      "center_px": 18,
+      "member_count": 8
+    },
+    {
+      "center_px": 6,
+      "member_count": 6
+    },
+    {
+      "center_px": 16,
+      "member_count": 6
+    },
+    {
+      "center_px": 8,
+      "member_count": 4
+    },
+    {
+      "center_px": 20,
+      "member_count": 3
+    },
+    {
+      "center_px": 12,
+      "member_count": 2
+    },
+    {
+      "center_px": 14,
+      "member_count": 1
+    }
+  ],
+  "components": [
+    {
+      "id": "component_001",
+      "source_band_ids": [
+        "band_001",
+        "band_002",
+        "band_003",
+        "band_004",
+        "band_005",
+        "band_006",
+        "band_007",
+        "band_008",
+        "band_009",
+        "band_010",
+        "band_011",
+        "band_012",
+        "band_013",
+        "band_014",
+        "band_015",
+        "band_016",
+        "band_018",
+        "band_019",
+        "band_020",
+        "band_021",
+        "band_022",
+        "band_023",
+        "band_024",
+        "band_025",
+        "band_026",
+        "band_027",
+        "band_028",
+        "band_029",
+        "band_030",
+        "band_033",
+        "band_034",
+        "band_035",
+        "band_036",
+        "band_037",
+        "band_038"
+      ],
+      "bbox_px": [
+        52,
+        45,
+        626,
+        653
+      ],
+      "total_length_px": 4819.0,
+      "member_count": 35,
+      "orientations": [
+        "horizontal",
+        "vertical"
+      ],
+      "observed_thickness_median_px": 16.0,
+      "observed_thickness_range_px": [
+        6.0,
+        20.0
+      ],
+      "network_evidence": {
+        "spatial_span_ratio": [
+          0.856,
+          0.878
+        ],
+        "has_horizontal_and_vertical": true,
+        "connection_count": 55
+      },
+      "primary_component": true,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred"
+      ]
+    },
+    {
+      "id": "component_002",
+      "source_band_ids": [
+        "band_017"
+      ],
+      "bbox_px": [
+        199,
+        422,
+        52,
+        8
+      ],
+      "total_length_px": 52.0,
+      "member_count": 1,
+      "orientations": [
+        "horizontal"
+      ],
+      "observed_thickness_median_px": 8.0,
+      "observed_thickness_range_px": [
+        8.0,
+        8.0
+      ],
+      "network_evidence": {
+        "spatial_span_ratio": [
+          0.071,
+          0.011
+        ],
+        "has_horizontal_and_vertical": false,
+        "connection_count": 0
+      },
+      "primary_component": false,
+      "reasons": [
+        "connected component contains 1 band(s)",
+        "total observed band length=52.0px",
+        "spatial span ratios x=0.071, y=0.011",
+        "classification uses geometry only; semantic role not inferred"
+      ]
+    },
+    {
+      "id": "component_003",
+      "source_band_ids": [
+        "band_031"
+      ],
+      "bbox_px": [
+        494,
+        176,
+        74,
+        7
+      ],
+      "total_length_px": 74.0,
+      "member_count": 1,
+      "orientations": [
+        "horizontal"
+      ],
+      "observed_thickness_median_px": 7.0,
+      "observed_thickness_range_px": [
+        7.0,
+        7.0
+      ],
+      "network_evidence": {
+        "spatial_span_ratio": [
+          0.101,
+          0.009
+        ],
+        "has_horizontal_and_vertical": false,
+        "connection_count": 0
+      },
+      "primary_component": false,
+      "reasons": [
+        "connected component contains 1 band(s)",
+        "total observed band length=74.0px",
+        "spatial span ratios x=0.101, y=0.009",
+        "classification uses geometry only; semantic role not inferred"
+      ]
+    },
+    {
+      "id": "component_004",
+      "source_band_ids": [
+        "band_032"
+      ],
+      "bbox_px": [
+        143,
+        177,
+        55,
+        8
+      ],
+      "total_length_px": 55.0,
+      "member_count": 1,
+      "orientations": [
+        "horizontal"
+      ],
+      "observed_thickness_median_px": 8.0,
+      "observed_thickness_range_px": [
+        8.0,
+        8.0
+      ],
+      "network_evidence": {
+        "spatial_span_ratio": [
+          0.075,
+          0.011
+        ],
+        "has_horizontal_and_vertical": false,
+        "connection_count": 0
+      },
+      "primary_component": false,
+      "reasons": [
+        "connected component contains 1 band(s)",
+        "total observed band length=55.0px",
+        "spatial span ratios x=0.075, y=0.011",
+        "classification uses geometry only; semantic role not inferred"
+      ]
+    },
+    {
+      "id": "component_005",
+      "source_band_ids": [
+        "band_039"
+      ],
+      "bbox_px": [
+        476,
+        467,
+        64,
+        7
+      ],
+      "total_length_px": 64.0,
+      "member_count": 1,
+      "orientations": [
+        "horizontal"
+      ],
+      "observed_thickness_median_px": 7.0,
+      "observed_thickness_range_px": [
+        7.0,
+        7.0
+      ],
+      "network_evidence": {
+        "spatial_span_ratio": [
+          0.088,
+          0.009
+        ],
+        "has_horizontal_and_vertical": false,
+        "connection_count": 0
+      },
+      "primary_component": false,
+      "reasons": [
+        "connected component contains 1 band(s)",
+        "total observed band length=64.0px",
+        "spatial span ratios x=0.088, y=0.009",
+        "classification uses geometry only; semantic role not inferred"
+      ]
+    },
+    {
+      "id": "component_006",
+      "source_band_ids": [
+        "band_040"
+      ],
+      "bbox_px": [
+        460,
+        648,
+        55,
+        6
+      ],
+      "total_length_px": 55.0,
+      "member_count": 1,
+      "orientations": [
+        "horizontal"
+      ],
+      "observed_thickness_median_px": 6.0,
+      "observed_thickness_range_px": [
+        6.0,
+        6.0
+      ],
+      "network_evidence": {
+        "spatial_span_ratio": [
+          0.075,
+          0.008
+        ],
+        "has_horizontal_and_vertical": false,
+        "connection_count": 0
+      },
+      "primary_component": false,
+      "reasons": [
+        "connected component contains 1 band(s)",
+        "total observed band length=55.0px",
+        "spatial span ratios x=0.075, y=0.008",
+        "classification uses geometry only; semantic role not inferred"
+      ]
+    }
+  ],
+  "members": [
+    {
+      "source_band_id": "band_001",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          438,
+          45
+        ],
+        [
+          660,
+          45
+        ],
+        [
+          660,
+          63
+        ],
+        [
+          438,
+          63
+        ]
+      ],
+      "bbox_px": [
+        438,
+        45,
+        222,
+        18
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 222,
+      "confidence": 0.946,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_002",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          68,
+          46
+        ],
+        [
+          410,
+          46
+        ],
+        [
+          410,
+          63
+        ],
+        [
+          68,
+          63
+        ]
+      ],
+      "bbox_px": [
+        68,
+        46,
+        342,
+        17
+      ],
+      "observed_thickness_px": 17,
+      "length_px": 342,
+      "confidence": 0.954,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_003",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          52,
+          62
+        ],
+        [
+          68,
+          62
+        ],
+        [
+          68,
+          681
+        ],
+        [
+          52,
+          681
+        ]
+      ],
+      "bbox_px": [
+        52,
+        62,
+        16,
+        619
+      ],
+      "observed_thickness_px": 16,
+      "length_px": 619,
+      "confidence": 0.965,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_004",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          660,
+          62
+        ],
+        [
+          678,
+          62
+        ],
+        [
+          678,
+          608
+        ],
+        [
+          660,
+          608
+        ]
+      ],
+      "bbox_px": [
+        660,
+        62,
+        18,
+        546
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 546,
+      "confidence": 0.963,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_005",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          284,
+          65
+        ],
+        [
+          290,
+          65
+        ],
+        [
+          290,
+          250
+        ],
+        [
+          284,
+          250
+        ]
+      ],
+      "bbox_px": [
+        284,
+        65,
+        6,
+        185
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 185,
+      "confidence": 0.962,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_006",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          406,
+          65
+        ],
+        [
+          414,
+          65
+        ],
+        [
+          414,
+          250
+        ],
+        [
+          406,
+          250
+        ]
+      ],
+      "bbox_px": [
+        406,
+        65,
+        8,
+        185
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 185,
+      "confidence": 0.963,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_007",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          357,
+          228
+        ],
+        [
+          404,
+          228
+        ],
+        [
+          404,
+          234
+        ],
+        [
+          357,
+          234
+        ]
+      ],
+      "bbox_px": [
+        357,
+        228,
+        47,
+        6
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 47,
+      "confidence": 0.838,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_008",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          68,
+          302
+        ],
+        [
+          134,
+          302
+        ],
+        [
+          134,
+          308
+        ],
+        [
+          68,
+          308
+        ]
+      ],
+      "bbox_px": [
+        68,
+        302,
+        66,
+        6
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 66,
+      "confidence": 0.858,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_009",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          198,
+          302
+        ],
+        [
+          291,
+          302
+        ],
+        [
+          291,
+          322
+        ],
+        [
+          198,
+          322
+        ]
+      ],
+      "bbox_px": [
+        198,
+        302,
+        93,
+        20
+      ],
+      "observed_thickness_px": 20,
+      "length_px": 93,
+      "confidence": 0.892,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_010",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          488,
+          302
+        ],
+        [
+          534,
+          302
+        ],
+        [
+          534,
+          308
+        ],
+        [
+          488,
+          308
+        ]
+      ],
+      "bbox_px": [
+        488,
+        302,
+        46,
+        6
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 46,
+      "confidence": 0.828,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_011",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          568,
+          302
+        ],
+        [
+          651,
+          302
+        ],
+        [
+          651,
+          320
+        ],
+        [
+          568,
+          320
+        ]
+      ],
+      "bbox_px": [
+        568,
+        302,
+        83,
+        18
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 83,
+      "confidence": 0.884,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_012",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          568,
+          320
+        ],
+        [
+          651,
+          320
+        ],
+        [
+          651,
+          336
+        ],
+        [
+          568,
+          336
+        ]
+      ],
+      "bbox_px": [
+        568,
+        320,
+        83,
+        16
+      ],
+      "observed_thickness_px": 16,
+      "length_px": 83,
+      "confidence": 0.884,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_013",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          198,
+          322
+        ],
+        [
+          291,
+          322
+        ],
+        [
+          291,
+          333
+        ],
+        [
+          198,
+          333
+        ]
+      ],
+      "bbox_px": [
+        198,
+        322,
+        93,
+        11
+      ],
+      "observed_thickness_px": 11,
+      "length_px": 93,
+      "confidence": 0.892,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_014",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          68,
+          333
+        ],
+        [
+          258,
+          333
+        ],
+        [
+          258,
+          344
+        ],
+        [
+          68,
+          344
+        ]
+      ],
+      "bbox_px": [
+        68,
+        333,
+        190,
+        11
+      ],
+      "observed_thickness_px": 11,
+      "length_px": 190,
+      "confidence": 0.96,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_015",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          357,
+          336
+        ],
+        [
+          452,
+          336
+        ],
+        [
+          452,
+          344
+        ],
+        [
+          357,
+          344
+        ]
+      ],
+      "bbox_px": [
+        357,
+        336,
+        95,
+        8
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 95,
+      "confidence": 0.907,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_016",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          468,
+          336
+        ],
+        [
+          658,
+          336
+        ],
+        [
+          658,
+          344
+        ],
+        [
+          468,
+          344
+        ]
+      ],
+      "bbox_px": [
+        468,
+        336,
+        190,
+        8
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 190,
+      "confidence": 0.962,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_017",
+      "component_id": "component_002",
+      "tier": "secondary",
+      "polygon_px": [
+        [
+          199,
+          422
+        ],
+        [
+          251,
+          422
+        ],
+        [
+          251,
+          430
+        ],
+        [
+          199,
+          430
+        ]
+      ],
+      "bbox_px": [
+        199,
+        422,
+        52,
+        8
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 52,
+      "confidence": 0.844,
+      "reasons": [
+        "connected component contains 1 band(s)",
+        "total observed band length=52.0px",
+        "spatial span ratios x=0.071, y=0.011",
+        "classification uses geometry only; semantic role not inferred",
+        "insufficient connected extent for primary tier"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_018",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          67,
+          426
+        ],
+        [
+          124,
+          426
+        ],
+        [
+          124,
+          444
+        ],
+        [
+          67,
+          444
+        ]
+      ],
+      "bbox_px": [
+        67,
+        426,
+        57,
+        18
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 57,
+      "confidence": 0.85,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_019",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          67,
+          444
+        ],
+        [
+          124,
+          444
+        ],
+        [
+          124,
+          460
+        ],
+        [
+          67,
+          460
+        ]
+      ],
+      "bbox_px": [
+        67,
+        444,
+        57,
+        16
+      ],
+      "observed_thickness_px": 16,
+      "length_px": 57,
+      "confidence": 0.853,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_020",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          67,
+          460
+        ],
+        [
+          125,
+          460
+        ],
+        [
+          125,
+          478
+        ],
+        [
+          67,
+          478
+        ]
+      ],
+      "bbox_px": [
+        67,
+        460,
+        58,
+        18
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 58,
+      "confidence": 0.854,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_021",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          67,
+          478
+        ],
+        [
+          125,
+          478
+        ],
+        [
+          125,
+          496
+        ],
+        [
+          67,
+          496
+        ]
+      ],
+      "bbox_px": [
+        67,
+        478,
+        58,
+        18
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 58,
+      "confidence": 0.854,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_022",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          139,
+          478
+        ],
+        [
+          190,
+          478
+        ],
+        [
+          190,
+          494
+        ],
+        [
+          139,
+          494
+        ]
+      ],
+      "bbox_px": [
+        139,
+        478,
+        51,
+        16
+      ],
+      "observed_thickness_px": 16,
+      "length_px": 51,
+      "confidence": 0.824,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_023",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          126,
+          483
+        ],
+        [
+          132,
+          483
+        ],
+        [
+          132,
+          533
+        ],
+        [
+          126,
+          533
+        ]
+      ],
+      "bbox_px": [
+        126,
+        483,
+        6,
+        50
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 50,
+      "confidence": 0.839,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_024",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          133,
+          494
+        ],
+        [
+          190,
+          494
+        ],
+        [
+          190,
+          514
+        ],
+        [
+          133,
+          514
+        ]
+      ],
+      "bbox_px": [
+        133,
+        494,
+        57,
+        20
+      ],
+      "observed_thickness_px": 20,
+      "length_px": 57,
+      "confidence": 0.85,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_025",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          67,
+          496
+        ],
+        [
+          125,
+          496
+        ],
+        [
+          125,
+          514
+        ],
+        [
+          67,
+          514
+        ]
+      ],
+      "bbox_px": [
+        67,
+        496,
+        58,
+        18
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 58,
+      "confidence": 0.854,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_026",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          67,
+          514
+        ],
+        [
+          190,
+          514
+        ],
+        [
+          190,
+          530
+        ],
+        [
+          67,
+          530
+        ]
+      ],
+      "bbox_px": [
+        67,
+        514,
+        123,
+        16
+      ],
+      "observed_thickness_px": 16,
+      "length_px": 123,
+      "confidence": 0.943,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_027",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          67,
+          589
+        ],
+        [
+          184,
+          589
+        ],
+        [
+          184,
+          595
+        ],
+        [
+          67,
+          595
+        ]
+      ],
+      "bbox_px": [
+        67,
+        589,
+        117,
+        6
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 117,
+      "confidence": 0.935,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_028",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          273,
+          607
+        ],
+        [
+          660,
+          607
+        ],
+        [
+          660,
+          621
+        ],
+        [
+          273,
+          621
+        ]
+      ],
+      "bbox_px": [
+        273,
+        607,
+        387,
+        14
+      ],
+      "observed_thickness_px": 14,
+      "length_px": 387,
+      "confidence": 0.955,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_029",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          256,
+          624
+        ],
+        [
+          276,
+          624
+        ],
+        [
+          276,
+          679
+        ],
+        [
+          256,
+          679
+        ]
+      ],
+      "bbox_px": [
+        256,
+        624,
+        20,
+        55
+      ],
+      "observed_thickness_px": 20,
+      "length_px": 55,
+      "confidence": 0.807,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_030",
+      "component_id": "component_001",
+      "tier": "primary",
+      "polygon_px": [
+        [
+          67,
+          680
+        ],
+        [
+          257,
+          680
+        ],
+        [
+          257,
+          698
+        ],
+        [
+          67,
+          698
+        ]
+      ],
+      "bbox_px": [
+        67,
+        680,
+        190,
+        18
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 190,
+      "confidence": 0.963,
+      "reasons": [
+        "connected component contains 35 band(s)",
+        "total observed band length=4819.0px",
+        "spatial span ratios x=0.856, y=0.878",
+        "classification uses geometry only; semantic role not inferred",
+        "member retained in a spatially connected primary component"
+      ],
+      "abstained": false
+    },
+    {
+      "source_band_id": "band_031",
+      "component_id": "component_003",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          494,
+          176
+        ],
+        [
+          568,
+          176
+        ],
+        [
+          568,
+          183
+        ],
+        [
+          494,
+          183
+        ]
+      ],
+      "bbox_px": [
+        494,
+        176,
+        74,
+        7
+      ],
+      "observed_thickness_px": 7,
+      "length_px": 74,
+      "confidence": 0.862,
+      "reasons": [
+        "two parallel source edges overlap by 74px",
+        "overlap ratio=1.000",
+        "observed separation=7px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_032",
+      "component_id": "component_004",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          143,
+          177
+        ],
+        [
+          198,
+          177
+        ],
+        [
+          198,
+          185
+        ],
+        [
+          143,
+          185
+        ]
+      ],
+      "bbox_px": [
+        143,
+        177,
+        55,
+        8
+      ],
+      "observed_thickness_px": 8,
+      "length_px": 55,
+      "confidence": 0.828,
+      "reasons": [
+        "two parallel source edges overlap by 55px",
+        "overlap ratio=1.000",
+        "observed separation=8px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_033",
+      "component_id": "component_001",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          144,
+          302
+        ],
+        [
+          231,
+          302
+        ],
+        [
+          231,
+          316
+        ],
+        [
+          144,
+          316
+        ]
+      ],
+      "bbox_px": [
+        144,
+        302,
+        87,
+        14
+      ],
+      "observed_thickness_px": 14,
+      "length_px": 87,
+      "confidence": 0.881,
+      "reasons": [
+        "two parallel source edges overlap by 87px",
+        "overlap ratio=1.000",
+        "observed separation=14px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_034",
+      "component_id": "component_001",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          431,
+          302
+        ],
+        [
+          480,
+          302
+        ],
+        [
+          480,
+          318
+        ],
+        [
+          431,
+          318
+        ]
+      ],
+      "bbox_px": [
+        431,
+        302,
+        49,
+        16
+      ],
+      "observed_thickness_px": 16,
+      "length_px": 49,
+      "confidence": 0.765,
+      "reasons": [
+        "two parallel source edges overlap by 49px",
+        "overlap ratio=0.731",
+        "observed separation=16px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_035",
+      "component_id": "component_001",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          413,
+          312
+        ],
+        [
+          458,
+          312
+        ],
+        [
+          458,
+          318
+        ],
+        [
+          413,
+          318
+        ]
+      ],
+      "bbox_px": [
+        413,
+        312,
+        45,
+        6
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 45,
+      "confidence": 0.819,
+      "reasons": [
+        "two parallel source edges overlap by 45px",
+        "overlap ratio=1.000",
+        "observed separation=6px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_036",
+      "component_id": "component_001",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          144,
+          316
+        ],
+        [
+          231,
+          316
+        ],
+        [
+          231,
+          333
+        ],
+        [
+          144,
+          333
+        ]
+      ],
+      "bbox_px": [
+        144,
+        316,
+        87,
+        17
+      ],
+      "observed_thickness_px": 17,
+      "length_px": 87,
+      "confidence": 0.881,
+      "reasons": [
+        "two parallel source edges overlap by 87px",
+        "overlap ratio=1.000",
+        "observed separation=17px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_037",
+      "component_id": "component_001",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          413,
+          318
+        ],
+        [
+          480,
+          318
+        ],
+        [
+          480,
+          336
+        ],
+        [
+          413,
+          336
+        ]
+      ],
+      "bbox_px": [
+        413,
+        318,
+        67,
+        18
+      ],
+      "observed_thickness_px": 18,
+      "length_px": 67,
+      "confidence": 0.852,
+      "reasons": [
+        "two parallel source edges overlap by 67px",
+        "overlap ratio=1.000",
+        "observed separation=18px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_038",
+      "component_id": "component_001",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          568,
+          328
+        ],
+        [
+          649,
+          328
+        ],
+        [
+          649,
+          344
+        ],
+        [
+          568,
+          344
+        ]
+      ],
+      "bbox_px": [
+        568,
+        328,
+        81,
+        16
+      ],
+      "observed_thickness_px": 16,
+      "length_px": 81,
+      "confidence": 0.87,
+      "reasons": [
+        "two parallel source edges overlap by 81px",
+        "overlap ratio=1.000",
+        "observed separation=16px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_039",
+      "component_id": "component_005",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          476,
+          467
+        ],
+        [
+          540,
+          467
+        ],
+        [
+          540,
+          474
+        ],
+        [
+          476,
+          474
+        ]
+      ],
+      "bbox_px": [
+        476,
+        467,
+        64,
+        7
+      ],
+      "observed_thickness_px": 7,
+      "length_px": 64,
+      "confidence": 0.85,
+      "reasons": [
+        "two parallel source edges overlap by 64px",
+        "overlap ratio=1.000",
+        "observed separation=7px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    },
+    {
+      "source_band_id": "band_040",
+      "component_id": "component_006",
+      "tier": "abstention",
+      "polygon_px": [
+        [
+          460,
+          648
+        ],
+        [
+          515,
+          648
+        ],
+        [
+          515,
+          654
+        ],
+        [
+          460,
+          654
+        ]
+      ],
+      "bbox_px": [
+        460,
+        648,
+        55,
+        6
+      ],
+      "observed_thickness_px": 6,
+      "length_px": 55,
+      "confidence": 0.832,
+      "reasons": [
+        "two parallel source edges overlap by 55px",
+        "overlap ratio=1.000",
+        "observed separation=6px",
+        "source wall-band proposal was abstained"
+      ],
+      "abstained": true
+    }
+  ],
+  "excluded_inferences": [
+    "walls",
+    "rooms",
+    "openings",
+    "adjacency",
+    "scale",
+    "internal_or_external"
+  ]
+}

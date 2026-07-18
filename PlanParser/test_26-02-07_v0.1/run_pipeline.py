@@ -143,6 +143,8 @@ def run_pipeline(
 
         floors_data.append({
             "label": floor_img.label,
+            "confidence": floor_img.confidence,
+            "source_rect": floor_img.source_rect,
             "rooms": rooms,
             "dcel": dcel,
         })
@@ -156,6 +158,7 @@ def run_pipeline(
         floors_data=floors_data,
         scale=effective_scale,
         orientation=detected_orientation,
+        render_dpi=dpi,
         logger=logger,
     )
     export_json(model, output_dir / "knowledge_model.json", logger=logger)

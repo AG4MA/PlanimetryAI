@@ -1,0 +1,80 @@
+{
+  "inventory": {
+    "intersecting_native_text_spans": 0,
+    "page_blocks": 1,
+    "page_lines": 0,
+    "page_native_text_spans": 0,
+    "page_text_blocks": 0
+  },
+  "mapping": {
+    "formula": "page_png_x=pdf_x*scale_x; page_png_y=pdf_y*scale_y; local=page_png-region_origin",
+    "page_dimensions_pdf_points": [
+      595.320007,
+      841.920044
+    ],
+    "page_dimensions_png_px": [
+      2481,
+      3508
+    ],
+    "page_rotation_degrees_clockwise": 0,
+    "scale_x_px_per_point": 4.167506,
+    "scale_y_px_per_point": 4.166666
+  },
+  "objects": [],
+  "output": {
+    "overlay_file": "pdf_text_overlay.png",
+    "overlay_sha256": "d3c0b989e334f9888c28a7d81f0752130416283dea265b37317ace890234c782"
+  },
+  "provenance": {
+    "crop": {
+      "path": "PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+      "sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a"
+    },
+    "engine": "PyMuPDF.native_pdf_text",
+    "engine_version": "1.28.0",
+    "ingest_manifest": {
+      "path": "PlanParser/atomic_v2/ingest/artifacts/scheda_catastale/manifest.json",
+      "sha256": "ab1811079964f46b4115c0ab50413db2a4e4df7641d99a384c77592b5658b089"
+    },
+    "regions_manifest": {
+      "path": "PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/regions.json",
+      "sha256": "8fcc8444da5a384451e6639a9db30a55c36d1e9ff8a57cd414907ece5acf1d89"
+    },
+    "semantic_assignment": false,
+    "span_merging": false,
+    "text_correction": false
+  },
+  "region": {
+    "abstained": true,
+    "bbox_page_png_px_xywh": [
+      801,
+      684,
+      731,
+      744
+    ],
+    "bbox_region_local_px_xywh": [
+      0,
+      0,
+      731,
+      744
+    ],
+    "confidence": null,
+    "id": "region_001",
+    "reasons": [
+      "no_native_pdf_text_objects_intersect_region"
+    ],
+    "transcription_raw": null,
+    "transcription_status": "unavailable"
+  },
+  "schema": "planparser.atomic_v2.native_pdf_text",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 36428,
+    "page_index": 0,
+    "page_number": 1,
+    "path": "PlanParser/data/scheda_catastale.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "7483495c3288534be42cde291b9423e088805d4895c63bbd369e25359f9ad3fd"
+  },
+  "status": "abstained"
+}

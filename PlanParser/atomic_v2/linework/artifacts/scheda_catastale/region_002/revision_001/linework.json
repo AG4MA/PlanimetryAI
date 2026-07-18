@@ -1,0 +1,2068 @@
+{
+  "schema_version": "1.0.0",
+  "image": {
+    "width_px": 674,
+    "height_px": 729
+  },
+  "provenance": {
+    "source_path": "C:/projects/PlanimetryAI/PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_002.png",
+    "source_sha256": "612b583a2f244de46f1469b3acd35e8bde2de0e693f369f52a1c70fc82ebd82b",
+    "detector": "axis-aligned-hough-linework",
+    "detector_version": "1.0.0",
+    "semantic_inference": false
+  },
+  "summary": {
+    "candidate_count": 85,
+    "solid_count": 51,
+    "uncertain_count": 34
+  },
+  "candidates": [
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          410,
+          58
+        ],
+        [
+          557,
+          58
+        ]
+      ],
+      "length_px": 147.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_001"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          539,
+          58
+        ],
+        [
+          651,
+          58
+        ]
+      ],
+      "length_px": 112.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_002"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          21,
+          60
+        ],
+        [
+          382,
+          60
+        ]
+      ],
+      "length_px": 361.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 5 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_003"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          45,
+          86
+        ],
+        [
+          439,
+          86
+        ]
+      ],
+      "length_px": 394.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.937,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.975",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_004"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          199,
+          114
+        ],
+        [
+          257,
+          114
+        ]
+      ],
+      "length_px": 58.0,
+      "observed_thickness_px": 2.5,
+      "confidence": 0.886,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_005"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          272,
+          114
+        ],
+        [
+          332,
+          114
+        ]
+      ],
+      "length_px": 60.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.89,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_006"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          238,
+          185
+        ],
+        [
+          438,
+          185
+        ]
+      ],
+      "length_px": 200.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.96,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 7 detection(s)",
+        "observed line occupancy=0.975",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_007"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          227,
+          194
+        ],
+        [
+          425,
+          194
+        ]
+      ],
+      "length_px": 198.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.937,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.975",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_008"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          199,
+          228
+        ],
+        [
+          266,
+          228
+        ]
+      ],
+      "length_px": 67.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.904,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_009"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          47,
+          296
+        ],
+        [
+          229,
+          296
+        ]
+      ],
+      "length_px": 182.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_010"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          45,
+          302
+        ],
+        [
+          219,
+          302
+        ]
+      ],
+      "length_px": 174.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 4 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_011"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          230,
+          351
+        ],
+        [
+          425,
+          351
+        ]
+      ],
+      "length_px": 195.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.882,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 4 detection(s)",
+        "observed line occupancy=0.781",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_012"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          41,
+          440
+        ],
+        [
+          97,
+          440
+        ]
+      ],
+      "length_px": 56.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.835,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_013"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          353,
+          454
+        ],
+        [
+          426,
+          454
+        ]
+      ],
+      "length_px": 73.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.893,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_014"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          41,
+          458
+        ],
+        [
+          96,
+          458
+        ]
+      ],
+      "length_px": 55.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.857,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_015"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          235,
+          474
+        ],
+        [
+          355,
+          474
+        ]
+      ],
+      "length_px": 120.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_016"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          41,
+          476
+        ],
+        [
+          98,
+          476
+        ]
+      ],
+      "length_px": 57.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.837,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_017"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          248,
+          486
+        ],
+        [
+          651,
+          486
+        ]
+      ],
+      "length_px": 403.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 4 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_018"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          41,
+          492
+        ],
+        [
+          98,
+          492
+        ]
+      ],
+      "length_px": 57.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.884,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_019"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          41,
+          510
+        ],
+        [
+          163,
+          510
+        ]
+      ],
+      "length_px": 122.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.957,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=0.967",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_020"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          41,
+          527
+        ],
+        [
+          162,
+          527
+        ]
+      ],
+      "length_px": 121.0,
+      "observed_thickness_px": 2.5,
+      "confidence": 0.934,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.967",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_021"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          41,
+          546
+        ],
+        [
+          162,
+          546
+        ]
+      ],
+      "length_px": 121.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 4 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_022"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          69,
+          576
+        ],
+        [
+          133,
+          576
+        ]
+      ],
+      "length_px": 64.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.898,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_023"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          41,
+          606
+        ],
+        [
+          162,
+          606
+        ]
+      ],
+      "length_px": 121.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_024"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          165,
+          615
+        ],
+        [
+          226,
+          615
+        ]
+      ],
+      "length_px": 61.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.892,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_025"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          23,
+          626
+        ],
+        [
+          163,
+          626
+        ]
+      ],
+      "length_px": 140.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_026"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          21,
+          712
+        ],
+        [
+          651,
+          712
+        ]
+      ],
+      "length_px": 630.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_027"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          186,
+          15
+        ],
+        [
+          186,
+          101
+        ]
+      ],
+      "length_px": 86.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.942,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_028"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          334,
+          15
+        ],
+        [
+          334,
+          101
+        ]
+      ],
+      "length_px": 86.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.919,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_029"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          22,
+          58
+        ],
+        [
+          22,
+          713
+        ]
+      ],
+      "length_px": 655.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_030"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          436,
+          58
+        ],
+        [
+          436,
+          488
+        ]
+      ],
+      "length_px": 430.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 6 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_031"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          652,
+          58
+        ],
+        [
+          652,
+          713
+        ]
+      ],
+      "length_px": 655.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_032"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          46,
+          85
+        ],
+        [
+          46,
+          440
+        ]
+      ],
+      "length_px": 355.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.942,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.989",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_033"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          294,
+          134
+        ],
+        [
+          294,
+          188
+        ]
+      ],
+      "length_px": 54.0,
+      "observed_thickness_px": 6.5,
+      "confidence": 0.855,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_034"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          302,
+          134
+        ],
+        [
+          302,
+          181
+        ]
+      ],
+      "length_px": 47.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.841,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_035"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          228,
+          135
+        ],
+        [
+          228,
+          205
+        ]
+      ],
+      "length_px": 70.0,
+      "observed_thickness_px": 5.0,
+      "confidence": 0.91,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_036"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          236,
+          135
+        ],
+        [
+          236,
+          205
+        ]
+      ],
+      "length_px": 70.0,
+      "observed_thickness_px": 9.0,
+      "confidence": 0.864,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.944",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_037"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          426,
+          193
+        ],
+        [
+          426,
+          352
+        ]
+      ],
+      "length_px": 159.0,
+      "observed_thickness_px": 5.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_038"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          228,
+          254
+        ],
+        [
+          228,
+          302
+        ]
+      ],
+      "length_px": 48.0,
+      "observed_thickness_px": 7.0,
+      "confidence": 0.826,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.959",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_039"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          236,
+          254
+        ],
+        [
+          236,
+          301
+        ]
+      ],
+      "length_px": 47.0,
+      "observed_thickness_px": 6.5,
+      "confidence": 0.841,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_040"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          228,
+          352
+        ],
+        [
+          228,
+          626
+        ]
+      ],
+      "length_px": 274.0,
+      "observed_thickness_px": 5.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_041"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          236,
+          368
+        ],
+        [
+          236,
+          472
+        ]
+      ],
+      "length_px": 104.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_042"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          426,
+          368
+        ],
+        [
+          426,
+          455
+        ]
+      ],
+      "length_px": 87.0,
+      "observed_thickness_px": 5.0,
+      "confidence": 0.944,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_043"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          40,
+          437
+        ],
+        [
+          40,
+          607
+        ]
+      ],
+      "length_px": 170.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_044"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          70,
+          439
+        ],
+        [
+          70,
+          574
+        ]
+      ],
+      "length_px": 135.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_045"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          98,
+          439
+        ],
+        [
+          98,
+          548
+        ]
+      ],
+      "length_px": 109.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_046"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          314,
+          443
+        ],
+        [
+          314,
+          518
+        ]
+      ],
+      "length_px": 75.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.92,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_047"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          164,
+          463
+        ],
+        [
+          164,
+          626
+        ]
+      ],
+      "length_px": 163.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_048"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          134,
+          475
+        ],
+        [
+          134,
+          577
+        ]
+      ],
+      "length_px": 102.0,
+      "observed_thickness_px": 9.0,
+      "confidence": 0.947,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_049"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          249,
+          489
+        ],
+        [
+          249,
+          626
+        ]
+      ],
+      "length_px": 137.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.97,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_050"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          195,
+          584
+        ],
+        [
+          195,
+          655
+        ]
+      ],
+      "length_px": 71.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.889,
+      "status": "solid",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": false,
+      "id": "line_051"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          381,
+          40
+        ],
+        [
+          412,
+          40
+        ]
+      ],
+      "length_px": 31.0,
+      "observed_thickness_px": 8.0,
+      "confidence": 0.809,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_052"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          461,
+          58
+        ],
+        [
+          489,
+          58
+        ]
+      ],
+      "length_px": 28.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.779,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_053"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          250,
+          133
+        ],
+        [
+          277,
+          133
+        ]
+      ],
+      "length_px": 27.0,
+      "observed_thickness_px": 7.0,
+      "confidence": 0.715,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.786",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_054"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          326,
+          137
+        ],
+        [
+          388,
+          137
+        ]
+      ],
+      "length_px": 62.0,
+      "observed_thickness_px": 8.0,
+      "confidence": 0.691,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 6 detection(s)",
+        "observed line occupancy=0.492",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_055"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          249,
+          142
+        ],
+        [
+          283,
+          142
+        ]
+      ],
+      "length_px": 34.0,
+      "observed_thickness_px": 5.0,
+      "confidence": 0.735,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 4 detection(s)",
+        "observed line occupancy=0.743",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_056"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          349,
+          142
+        ],
+        [
+          388,
+          142
+        ]
+      ],
+      "length_px": 39.0,
+      "observed_thickness_px": 12.0,
+      "confidence": 0.691,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.725",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_057"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          106,
+          184
+        ],
+        [
+          167,
+          184
+        ]
+      ],
+      "length_px": 61.0,
+      "observed_thickness_px": 5.0,
+      "confidence": 0.759,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.726",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_058"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          227,
+          187
+        ],
+        [
+          256,
+          187
+        ]
+      ],
+      "length_px": 29.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.715,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.833",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_059"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          103,
+          192
+        ],
+        [
+          146,
+          192
+        ]
+      ],
+      "length_px": 43.0,
+      "observed_thickness_px": 11.0,
+      "confidence": 0.742,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.773",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_060"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          562,
+          293
+        ],
+        [
+          587,
+          293
+        ]
+      ],
+      "length_px": 25.0,
+      "observed_thickness_px": 11.0,
+      "confidence": 0.72,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=0.808",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_061"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          202,
+          301
+        ],
+        [
+          236,
+          301
+        ]
+      ],
+      "length_px": 34.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.791,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_062"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          309,
+          310
+        ],
+        [
+          329,
+          310
+        ]
+      ],
+      "length_px": 20.0,
+      "observed_thickness_px": 8.0,
+      "confidence": 0.725,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.905",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_063"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          311,
+          319
+        ],
+        [
+          349,
+          319
+        ]
+      ],
+      "length_px": 38.0,
+      "observed_thickness_px": 11.0,
+      "confidence": 0.784,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=0.846",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_064"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          199,
+          326
+        ],
+        [
+          241,
+          326
+        ]
+      ],
+      "length_px": 42.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.807,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_065"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          320,
+          350
+        ],
+        [
+          347,
+          350
+        ]
+      ],
+      "length_px": 27.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.734,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.893",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_066"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          116,
+          368
+        ],
+        [
+          152,
+          368
+        ]
+      ],
+      "length_px": 36.0,
+      "observed_thickness_px": 9.0,
+      "confidence": 0.723,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 4 detection(s)",
+        "observed line occupancy=0.703",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_067"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          127,
+          374
+        ],
+        [
+          161,
+          374
+        ]
+      ],
+      "length_px": 34.0,
+      "observed_thickness_px": 9.0,
+      "confidence": 0.688,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.743",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_068"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          129,
+          394
+        ],
+        [
+          166,
+          394
+        ]
+      ],
+      "length_px": 37.0,
+      "observed_thickness_px": 10.0,
+      "confidence": 0.734,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.842",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_069"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          115,
+          492
+        ],
+        [
+          145,
+          492
+        ]
+      ],
+      "length_px": 30.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.783,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_070"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          430,
+          577
+        ],
+        [
+          462,
+          577
+        ]
+      ],
+      "length_px": 32.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.702,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.788",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_071"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          430,
+          588
+        ],
+        [
+          464,
+          588
+        ]
+      ],
+      "length_px": 34.0,
+      "observed_thickness_px": 3.5,
+      "confidence": 0.654,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.657",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_072"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          23,
+          689
+        ],
+        [
+          44,
+          689
+        ]
+      ],
+      "length_px": 21.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.765,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_073"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          226,
+          690
+        ],
+        [
+          250,
+          690
+        ]
+      ],
+      "length_px": 24.0,
+      "observed_thickness_px": 9.0,
+      "confidence": 0.818,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_074"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          425,
+          690
+        ],
+        [
+          449,
+          690
+        ]
+      ],
+      "length_px": 24.0,
+      "observed_thickness_px": 9.0,
+      "confidence": 0.771,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_075"
+    },
+    {
+      "orientation": "horizontal",
+      "points_px": [
+        [
+          629,
+          690
+        ],
+        [
+          651,
+          690
+        ]
+      ],
+      "length_px": 22.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.791,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_076"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          152,
+          60
+        ],
+        [
+          152,
+          84
+        ]
+      ],
+      "length_px": 24.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.795,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 2 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_077"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          222,
+          60
+        ],
+        [
+          222,
+          84
+        ]
+      ],
+      "length_px": 24.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.771,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_078"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          362,
+          60
+        ],
+        [
+          362,
+          84
+        ]
+      ],
+      "length_px": 24.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.771,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_079"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          151,
+          366
+        ],
+        [
+          151,
+          395
+        ]
+      ],
+      "length_px": 29.0,
+      "observed_thickness_px": 5.0,
+      "confidence": 0.755,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=0.933",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_080"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          528,
+          469
+        ],
+        [
+          528,
+          508
+        ]
+      ],
+      "length_px": 39.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.848,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 3 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_081"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          104,
+          518
+        ],
+        [
+          104,
+          543
+        ]
+      ],
+      "length_px": 25.0,
+      "observed_thickness_px": 4.0,
+      "confidence": 0.773,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_082"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          249,
+          689
+        ],
+        [
+          249,
+          711
+        ]
+      ],
+      "length_px": 22.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.767,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_083"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          448,
+          689
+        ],
+        [
+          448,
+          711
+        ]
+      ],
+      "length_px": 22.0,
+      "observed_thickness_px": 2.0,
+      "confidence": 0.767,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_084"
+    },
+    {
+      "orientation": "vertical",
+      "points_px": [
+        [
+          426,
+          691
+        ],
+        [
+          426,
+          711
+        ]
+      ],
+      "length_px": 20.0,
+      "observed_thickness_px": 3.0,
+      "confidence": 0.763,
+      "status": "uncertain",
+      "reasons": [
+        "axis-aligned Hough support merged from 1 detection(s)",
+        "observed line occupancy=1.000",
+        "semantic type intentionally not inferred"
+      ],
+      "abstained": true,
+      "id": "line_085"
+    }
+  ],
+  "excluded_inferences": [
+    "walls",
+    "rooms",
+    "openings",
+    "adjacency",
+    "scale"
+  ]
+}

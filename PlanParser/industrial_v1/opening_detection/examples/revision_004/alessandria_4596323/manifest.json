@@ -1,0 +1,71 @@
+{
+  "document": {
+    "page_count": 1,
+    "pages": [
+      {
+        "page_index": 0,
+        "page_number": 1,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 788471,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 4676,
+            "unit": "pixels",
+            "width": 3307
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 400,
+            "y": 400
+          },
+          "file": "pages/page_0001.png",
+          "mime_type": "image/png",
+          "sha256": "2d5d8902989d2a30d4ed69210cf3323edfabe1a9f423978fc518645d867cedc5"
+        },
+        "source": {
+          "crop_box": {
+            "height": 841.679993,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "display_dimensions": {
+            "height": 841.679993,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 841.679993,
+            "unit": "points",
+            "width": 595.200012
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      }
+    ]
+  },
+  "ingestion": {
+    "engine": {
+      "annotations_rendered": true,
+      "library": "PyMuPDF",
+      "library_version": "1.28.0",
+      "pdf_render_dpi": 400
+    },
+    "operation": "source_to_canonical_png_pages",
+    "python_version": "3.13.14"
+  },
+  "schema": "planparser.atomic_v2.ingest_manifest",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 73825,
+    "detected_format": "pdf",
+    "extension": ".pdf",
+    "filename": "asteannunci__Alessandria-AL__4596323__1b81140f.pdf",
+    "mime_type": "application/pdf",
+    "reference": "PlanParser/planimetrie-scouting/harvest_output/PLANIMETRIE_PDF/asteannunci__Alessandria-AL__4596323__1b81140f.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "1b81140fbc5ab4aa0ce423341842c2fb2ecf6816cfbc1f449d7751f2938a54fa"
+  }
+}

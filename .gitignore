@@ -69,10 +69,14 @@ tesseract/
 # Output / Debug
 # =========================
 **/output/
+!Plan2HVAC/output/
+Plan2HVAC/output/*
+!Plan2HVAC/output/*.py
 **/debug_image/
 **/planimetry_output/
 **/filters_test/
 *.log
+.verification/
 
 # =========================
 # Images (generated)
@@ -96,6 +100,14 @@ tesseract/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# =========================
+# Runtime degli esperimenti OCR: modelli scaricabili, cache pip, staging
+# (file da 80-120 MB che non appartengono al versionamento)
+# =========================
+PlanParser/**/runtime/
+**/pip_cache/
+**/.staging/
 
 # =========================
 # Misc

@@ -1,0 +1,17 @@
+{
+  "gate": "GATE_1",
+  "_comment": "Gate-1 threshold config for the P1 benchmark. Thresholds left null are DA CONCORDARE in docs/ACCEPTANCE_CRITERIA.md and MUST be resolved by the product owner + reviewers before a GO is possible. The evaluator is fail-closed: any null threshold keeps the gate at HOLD.",
+  "criteria": [
+    {"id": "P1-05-room-detection-f1", "metric": "detection.per_class.room_region.f1", "op": ">=", "threshold": null, "note": "DA CONCORDARE — F1 detection ambienti"},
+    {"id": "P1-05-room-iou", "metric": "geometry.room_region.iou", "op": ">=", "threshold": null, "note": "DA CONCORDARE — IoU medio poligoni-ambiente"},
+    {"id": "P1-05-room-area-err", "metric": "geometry.room_region.area_error_ratio", "op": "<=", "threshold": null, "note": "DA CONCORDARE — errore relativo area ambienti"},
+    {"id": "P1-04-wall-axis-f1", "metric": "detection.per_class.wall_axis.f1", "op": ">=", "threshold": null, "note": "DA CONCORDARE — F1 assi murari"},
+    {"id": "P1-06-door-f1", "metric": "detection.per_class.door.f1", "op": ">=", "threshold": null, "note": "DA CONCORDARE — F1 porte"},
+    {"id": "P1-06-window-f1", "metric": "detection.per_class.window.f1", "op": ">=", "threshold": null, "note": "DA CONCORDARE — F1 finestre"},
+    {"id": "P1-07-ocr-cer", "metric": "ocr.cer", "op": "<=", "threshold": null, "note": "DA CONCORDARE — CER OCR"},
+    {"id": "P1-08-measure-error", "metric": "measurements.mean_value_error_ratio", "op": "<=", "threshold": null, "note": "DA CONCORDARE — errore misure/scala"},
+    {"id": "P1-09-relationship-f1", "metric": "relationships.f1", "op": ">=", "threshold": null, "note": "DA CONCORDARE — F1 relazioni"},
+    {"id": "P1-09-zero-orphans", "metric": "relationships.orphan_refs_pred.__len__", "op": "==", "threshold": 0, "note": "P1-09 fisso: zero riferimenti orfani nell'output P1"},
+    {"id": "P1-10-ece", "metric": "calibration.ece", "op": "<=", "threshold": null, "note": "DA CONCORDARE — Expected Calibration Error"}
+  ]
+}

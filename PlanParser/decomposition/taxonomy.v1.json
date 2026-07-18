@@ -1,0 +1,98 @@
+{
+  "name": "planimetry-atomic-taxonomy",
+  "version": "1.0.0",
+  "description": "Observed and candidate elements for Point 1 decomposition.",
+  "layers": {
+    "source_region": [
+      "drawing_area",
+      "drawing_frame",
+      "title_block",
+      "legend",
+      "schedule_table",
+      "general_notes",
+      "revision_block",
+      "image_region",
+      "unknown_region"
+    ],
+    "geometry": [
+      "line_segment",
+      "polyline",
+      "arc",
+      "circle",
+      "ellipse",
+      "polygon_contour",
+      "hatch_region",
+      "filled_region",
+      "point_marker",
+      "unknown_geometry"
+    ],
+    "text": [
+      "room_label",
+      "dimension_text",
+      "scale_text",
+      "level_text",
+      "elevation_text",
+      "sheet_title",
+      "material_note",
+      "general_note",
+      "identifier_text",
+      "unknown_text"
+    ],
+    "symbol": [
+      "north_arrow",
+      "section_marker",
+      "elevation_marker",
+      "level_marker",
+      "door_swing",
+      "window_marker",
+      "stair_direction",
+      "sanitary_fixture",
+      "electrical_symbol",
+      "plumbing_symbol",
+      "hvac_symbol",
+      "structural_symbol",
+      "unknown_symbol"
+    ],
+    "architectural_candidate": [
+      "floor_plan",
+      "room_region",
+      "wall_axis",
+      "wall_face",
+      "wall_region",
+      "door",
+      "window",
+      "passage",
+      "stair",
+      "column",
+      "beam",
+      "balcony",
+      "shaft",
+      "fixture",
+      "unknown_architectural"
+    ],
+    "measurement": [
+      "linear_dimension",
+      "angular_dimension",
+      "drawing_scale",
+      "elevation_level",
+      "slope",
+      "area_value",
+      "unknown_measurement"
+    ]
+  },
+  "relationship_types": [
+    "contains",
+    "candidate_part_of",
+    "touches",
+    "intersects",
+    "overlaps",
+    "parallel_to",
+    "perpendicular_to",
+    "collinear_with",
+    "labels",
+    "dimensions",
+    "bounds",
+    "references",
+    "adjacent_candidate"
+  ]
+}

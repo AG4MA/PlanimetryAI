@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://planimetry.ai/schemas/decomposition/1.0.0",
+  "title": "PlanimetryAI Atomic Decomposition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "document_id", "source", "taxonomy", "run", "dataset_status", "pages"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "document_id": {"type": "string", "minLength": 1},
+    "source": {"$ref": "#/$defs/source"},
+    "taxonomy": {"$ref": "#/$defs/taxonomyRef"},
+    "run": {"$ref": "#/$defs/run"},
+    "dataset_status": {"enum": ["draft", "reviewed", "frozen_ground_truth"]},
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/page"}
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "prefixItems": [{"type": "number"}, {"type": "number"}],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "bbox": {
+      "type": "array",
+      "prefixItems": [
+        {"type": "number", "minimum": 0},
+        {"type": "number", "minimum": 0},
+        {"type": "number", "exclusiveMinimum": 0},
+        {"type": "number", "exclusiveMinimum": 0}
+      ],
+      "items": false,
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["filename", "media_type", "sha256", "page_count"],
+      "properties": {
+        "filename": {"type": "string", "minLength": 1},
+        "media_type": {"enum": ["application/pdf", "image/png", "image/jpeg", "image/tiff", "image/webp"]},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "page_count": {"type": "integer", "minimum": 1},
+        "license_id": {"type": ["string", "null"]},
+        "provenance_id": {"type": ["string", "null"]}
+      }
+    },
+    "taxonomyRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "sha256"],
+      "properties": {
+        "name": {"const": "planimetry-atomic-taxonomy"},
+        "version": {"const": "1.0.0"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["producer", "producer_version", "created_at", "config_sha256", "model_versions"],
+      "properties": {
+        "producer": {"type": "string", "minLength": 1},
+        "producer_version": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string", "format": "date-time"},
+        "config_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "model_versions": {
+          "type": "object",
+          "additionalProperties": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "page_index", "width_px", "height_px", "render_dpi", "rotation_deg", "observations", "relationships"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "page_index": {"type": "integer", "minimum": 0},
+        "width_px": {"type": "integer", "minimum": 1},
+        "height_px": {"type": "integer", "minimum": 1},
+        "render_dpi": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "rotation_deg": {"type": "number", "minimum": 0, "exclusiveMaximum": 360},
+        "observations": {"type": "array", "items": {"$ref": "#/$defs/observation"}},
+        "relationships": {"type": "array", "items": {"$ref": "#/$defs/relationship"}}
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "layer", "class_id", "geometry", "evidence", "confidence", "provenance", "reviews", "attributes"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "layer": {"enum": ["source_region", "geometry", "text", "symbol", "architectural_candidate", "measurement"]},
+        "class_id": {"type": "string", "minLength": 1},
+        "geometry": {"$ref": "#/$defs/geometry"},
+        "evidence": {"$ref": "#/$defs/evidence"},
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "reviews": {"type": "array", "items": {"$ref": "#/$defs/review"}},
+        "attributes": {"type": "object"}
+      }
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": {"enum": ["point", "bbox", "polyline", "polygon", "mask"]},
+        "points": {"type": "array", "items": {"$ref": "#/$defs/point"}},
+        "bbox": {"$ref": "#/$defs/bbox"},
+        "mask_ref": {"type": "string", "minLength": 1},
+        "mask_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "allOf": [
+        {"if": {"properties": {"type": {"const": "point"}}}, "then": {"required": ["points"], "properties": {"points": {"minItems": 1, "maxItems": 1}}}},
+        {"if": {"properties": {"type": {"const": "bbox"}}}, "then": {"required": ["bbox"]}},
+        {"if": {"properties": {"type": {"const": "polyline"}}}, "then": {"required": ["points"], "properties": {"points": {"minItems": 2}}}},
+        {"if": {"properties": {"type": {"const": "polygon"}}}, "then": {"required": ["points"], "properties": {"points": {"minItems": 3}}}},
+        {"if": {"properties": {"type": {"const": "mask"}}}, "then": {"required": ["mask_ref", "mask_sha256"]}}
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["page_id", "crop_bbox_px"],
+      "properties": {
+        "page_id": {"type": "string", "minLength": 1},
+        "crop_bbox_px": {"$ref": "#/$defs/bbox"},
+        "source_object_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["score", "abstained", "reasons"],
+      "properties": {
+        "score": {"type": "number", "minimum": 0, "maximum": 1},
+        "calibration_version": {"type": ["string", "null"]},
+        "abstained": {"type": "boolean"},
+        "reasons": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "producer", "producer_version", "created_at", "derived_from"],
+      "properties": {
+        "method": {"enum": ["model", "human", "imported", "derived"]},
+        "producer": {"type": "string", "minLength": 1},
+        "producer_version": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string", "format": "date-time"},
+        "derived_from": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reviewer_id", "reviewer_role", "decision", "created_at", "guideline_version"],
+      "properties": {
+        "reviewer_id": {"type": "string", "minLength": 1},
+        "reviewer_role": {"enum": ["annotator", "senior_reviewer", "domain_professional"]},
+        "decision": {"enum": ["accepted", "rejected", "modified"]},
+        "created_at": {"type": "string", "format": "date-time"},
+        "guideline_version": {"type": "string", "minLength": 1},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "from_id", "to_id", "confidence", "provenance", "reviews"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1},
+        "from_id": {"type": "string", "minLength": 1},
+        "to_id": {"type": "string", "minLength": 1},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "reviews": {"type": "array", "items": {"$ref": "#/$defs/review"}}
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "status": "all_failed",
+  "input": "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\region_split\\artifacts\\scheda_catastale\\page_0001\\revision_002\\region_001.png",
+  "enable_mkldnn": false,
+  "attempts": [
+    {
+      "attempt": 1,
+      "engine": "paddle",
+      "status": "error",
+      "error_type": "PermissionError",
+      "error": "[Errno 13] Permission denied: 'C:\\\\projects\\\\PlanimetryAI\\\\PlanParser\\\\atomic_v2\\\\ocr_heavy\\\\runtime\\\\models\\\\official_models\\\\latin_PP-OCRv5_mobile_rec\\\\inference.yml'",
+      "evidence": "attempt_001_paddle.json"
+    },
+    {
+      "attempt": 2,
+      "engine": "paddle_static",
+      "status": "error",
+      "error_type": "PermissionError",
+      "error": "[Errno 13] Permission denied: 'C:\\\\projects\\\\PlanimetryAI\\\\PlanParser\\\\atomic_v2\\\\ocr_heavy\\\\runtime\\\\models\\\\official_models\\\\latin_PP-OCRv5_mobile_rec\\\\inference.yml'",
+      "evidence": "attempt_002_paddle_static.json"
+    },
+    {
+      "attempt": 3,
+      "engine": "paddle_dynamic",
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "No valid model files were found for engine 'paddle_dynamic'.",
+      "evidence": "attempt_003_paddle_dynamic.json"
+    }
+  ],
+  "common_blocker": "The recognition model directory is not readable by the current process. The paddle and paddle_static engines cannot open inference.yml. The supplied inference models do not contain the training files required by paddle_dynamic.",
+  "raw_json_produced": false,
+  "overlay_png_produced": false
+}

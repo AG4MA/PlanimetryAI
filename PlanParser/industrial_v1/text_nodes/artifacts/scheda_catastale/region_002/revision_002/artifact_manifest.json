@@ -1,0 +1,32 @@
+{
+  "schema_version": "planparser.industrial_v1.text_nodes.artifact_manifest.v1",
+  "revision": "revision_002",
+  "created_at_utc": "2026-07-17T15:48:46.432406Z",
+  "generator": {
+    "path": "C:/projects/PlanimetryAI/PlanParser/industrial_v1/text_nodes/src/build_region_002_revision_002.py",
+    "sha256": "951d7afd0504c30cc156d577b7a1ba1d31f6e046e4c1ea11429847a284ca9df9"
+  },
+  "source_raw_artifacts_reused_without_modification": true,
+  "outputs": {
+    "text_nodes.json": {
+      "bytes": 19765,
+      "sha256": "2af0578a55de5df173b6973ea892f42a33f12efdca28c88713db5de314b79586"
+    },
+    "text_nodes_overlay.png": {
+      "bytes": 77700,
+      "sha256": "5253a50665887621ef055794b645d614d6fa9ce865f4a4f108dd8988a36751a9"
+    }
+  },
+  "counts": {
+    "total": 9,
+    "consensus": 7,
+    "conflict_or_ambiguous": 1,
+    "single_engine": 1,
+    "role_candidates": 5,
+    "role_abstained": 4
+  },
+  "write_policy": {
+    "exclusive_create": true,
+    "existing_artifacts_modified": false
+  }
+}

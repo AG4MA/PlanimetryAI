@@ -1,0 +1,4 @@
+__pycache__/
+output/
+harvest_output/
+*.pyc

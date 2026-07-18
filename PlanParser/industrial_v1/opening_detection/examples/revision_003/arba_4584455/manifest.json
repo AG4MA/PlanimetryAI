@@ -1,0 +1,71 @@
+{
+  "document": {
+    "page_count": 1,
+    "pages": [
+      {
+        "page_index": 0,
+        "page_number": 1,
+        "rendered": {
+          "alpha": false,
+          "byte_size": 269244,
+          "color_space": "RGB",
+          "dimensions": {
+            "height": 4682,
+            "unit": "pixels",
+            "width": 3311
+          },
+          "dpi": {
+            "basis": "configured_pdf_render",
+            "x": 400,
+            "y": 400
+          },
+          "file": "pages/page_0001.png",
+          "mime_type": "image/png",
+          "sha256": "9004319b4f883103cc878374701958ba09b025fb84719bd221ef1dc0affe6fb3"
+        },
+        "source": {
+          "crop_box": {
+            "height": 842.744995,
+            "unit": "points",
+            "width": 595.911011
+          },
+          "display_dimensions": {
+            "height": 842.744995,
+            "unit": "points",
+            "width": 595.911011
+          },
+          "dpi": null,
+          "dpi_status": "not_applicable_to_vector_page",
+          "media_box": {
+            "height": 842.744995,
+            "unit": "points",
+            "width": 595.911011
+          },
+          "rotation_degrees_clockwise": 0
+        }
+      }
+    ]
+  },
+  "ingestion": {
+    "engine": {
+      "annotations_rendered": true,
+      "library": "PyMuPDF",
+      "library_version": "1.28.0",
+      "pdf_render_dpi": 400
+    },
+    "operation": "source_to_canonical_png_pages",
+    "python_version": "3.13.14"
+  },
+  "schema": "planparser.atomic_v2.ingest_manifest",
+  "schema_version": "1.0.0",
+  "source": {
+    "byte_size": 14827,
+    "detected_format": "pdf",
+    "extension": ".pdf",
+    "filename": "asteannunci__Arba-PN__4584455__10b57991.pdf",
+    "mime_type": "application/pdf",
+    "reference": "PlanParser/planimetrie-scouting/harvest_output/PLANIMETRIE_PDF/asteannunci__Arba-PN__4584455__10b57991.pdf",
+    "reference_kind": "project_relative",
+    "sha256": "10b5799141f8606e6b5f19fddef6ca3f49d0402f088ff25b887df89f7d65ab12"
+  }
+}

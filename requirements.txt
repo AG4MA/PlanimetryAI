@@ -14,3 +14,6 @@ Pillow>=10.0.0
 
 # Utilities
 scipy>=1.11.0
+
+# Contract validation
+jsonschema>=4.22.0

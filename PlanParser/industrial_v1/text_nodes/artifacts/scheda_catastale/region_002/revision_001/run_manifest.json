@@ -1,0 +1,79 @@
+{
+  "schema_version": "planparser.industrial_v1.text_nodes.run.v1",
+  "status": "completed",
+  "created_at_utc": "2026-07-17T15:46:38.413953Z",
+  "attempts": [
+    {
+      "engine": "paddle",
+      "command": [
+        "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Scripts\\python.exe",
+        "C:\\projects\\PlanimetryAI\\PlanParser\\industrial_v1\\text_nodes\\src\\build_region_002_revision_001.py",
+        "--worker",
+        "paddle"
+      ],
+      "return_code": 0,
+      "elapsed_seconds": 15.930733,
+      "stdout_tail": "",
+      "stderr_tail": "Creating model: ('PP-OCRv5_server_det', 'C:\\\\projects\\\\PlanimetryAI\\\\PlanParser\\\\atomic_v2\\\\ocr_heavy\\\\runtime\\\\revision_004\\\\attempt_001_model_bundle\\\\PP-OCRv5_server_det', 'paddle')\nINFO: Could not find files for the given pattern(s).\nC:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_heavy\\runtime\\venv\\Lib\\site-packages\\paddle\\utils\\cpp_extension\\extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md\n  warnings.warn(warning_message)\nWARNING: OMP_NUM_THREADS set to 2, not 1. The computation speed will not be optimized if you use data parallel. It will fail if this PaddlePaddle binary is compiled with OpenBlas since OpenBlas does not support multi-threads.\nPLEASE USE OMP_NUM_THREADS WISELY.\nCreating model: ('latin_PP-OCRv5_mobile_rec', 'C:\\\\projects\\\\PlanimetryAI\\\\PlanParser\\\\atomic_v2\\\\ocr_heavy\\\\runtime\\\\revision_004\\\\attempt_001_model_bundle\\\\latin_PP-OCRv5_mobile_rec', 'paddle')\n"
+    },
+    {
+      "engine": "doctr",
+      "command": [
+        "C:\\projects\\PlanimetryAI\\PlanParser\\atomic_v2\\ocr_doctr\\runtime\\.venv\\Scripts\\python.exe",
+        "C:\\projects\\PlanimetryAI\\PlanParser\\industrial_v1\\text_nodes\\src\\build_region_002_revision_001.py",
+        "--worker",
+        "doctr"
+      ],
+      "return_code": 0,
+      "elapsed_seconds": 7.39327,
+      "stdout_tail": "",
+      "stderr_tail": ""
+    }
+  ],
+  "counts": {
+    "total": 9,
+    "consensus": 6,
+    "conflict_or_ambiguous": 1,
+    "single_engine": 2,
+    "role_candidates": 5,
+    "role_abstained": 4
+  },
+  "outputs": {
+    "preflight_manifest.json": {
+      "bytes": 1409,
+      "sha256": "6c5fc87ce7a83f983038080bd6629c61442c7b424a526b128ea2341f22450b74"
+    },
+    "paddle_raw.json": {
+      "bytes": 13411,
+      "sha256": "cd305f72efadd01abf062a5d4341ed6d6bbe90a33f9e211a0ef416f010c9eed1"
+    },
+    "paddle_overlay.png": {
+      "bytes": 41146,
+      "sha256": "4414745725d65e001a89845c95564068adf017dea2e0c52aef7e0b70dc61c4c6"
+    },
+    "doctr_raw.json": {
+      "bytes": 22582,
+      "sha256": "27ccafc457dce76ff9b1be08627887a7d292026d746cf1c8f2cf479bb5eeb341"
+    },
+    "doctr_overlay.png": {
+      "bytes": 38089,
+      "sha256": "ea8a52d73f3f0700f4ad6857858da72d28319bec9f6e1471bd039d03aadd7782"
+    },
+    "text_nodes.json": {
+      "bytes": 18681,
+      "sha256": "5cbca1ddfd9578024838150afec04bb415d047362fa27733e579a817a2b7d384"
+    },
+    "text_nodes_overlay.png": {
+      "bytes": 77981,
+      "sha256": "5d4f4d27fe8d3b51f59e733a35a8189cd362aa25edc7b230f4b5b96dca9047af"
+    }
+  },
+  "generator": {
+    "path": "C:/projects/PlanimetryAI/PlanParser/industrial_v1/text_nodes/src/build_region_002_revision_001.py",
+    "sha256": "db9e6ecff8a2f4769dd4dd4f42cb44ef6a524b13ed58c79703c78a2ddbdf75c7"
+  },
+  "write_policy": {
+    "exclusive_create": true,
+    "existing_artifacts_modified": false
+  }
+}

@@ -21,6 +21,7 @@ def build_knowledge_model(
     scale: Optional[str] = None,
     scale_factor: Optional[float] = None,
     orientation: Optional[float] = None,
+    render_dpi: int = 300,
     logger: Optional[logging.Logger] = None,
 ) -> KnowledgeModel:
     """
@@ -40,7 +41,7 @@ def build_knowledge_model(
     """
     # Parse scale
     if scale and scale_factor is None:
-        scale_factor = _parse_scale(scale)
+        scale_factor = _parse_scale(scale, dpi=render_dpi)
 
     model = KnowledgeModel(
         source_file=source_file,
@@ -57,17 +58,21 @@ def build_knowledge_model(
         floor = Floor(
             id=f"floor_{i}",
             label=label,
+            confidence=float(floor_data.get("confidence", 0.0)),
+            source_rect=floor_data.get("source_rect"),
         )
 
         for ar in analyzed_rooms:
             # Build walls
             walls = []
-            for w in ar.walls:
+            for wall_index, w in enumerate(ar.walls):
                 wall = Wall(
+                    id=f"wall_{ar.face_id}_{wall_index}",
                     wall_type=w.get("wall_type", "unknown"),
                     start_point=tuple(w.get("start_point", (0, 0))),
                     end_point=tuple(w.get("end_point", (0, 0))),
                     length_px=w.get("length_px", 0.0),
+                    confidence=float(w.get("confidence", 0.5)),
                 )
                 if scale_factor is not None and wall.length_px > 0:
                     wall.length_m = wall.length_px * scale_factor
@@ -79,6 +84,7 @@ def build_knowledge_model(
                 conn = Connection(
                     to_room_id=str(c.get("to_room_id", "")),
                     connection_type=c.get("connection_type", "passage"),
+                    confidence=float(c.get("confidence", 0.5)),
                 )
                 if c.get("position"):
                     conn.position = tuple(c["position"])
@@ -92,6 +98,7 @@ def build_knowledge_model(
             room = Room(
                 id=str(ar.face_id),
                 label=ar.label,
+                confidence=float(ar.label_confidence),
                 polygon=ar.polygon,
                 area_px=ar.area_px,
                 area_m2=area_m2,
@@ -121,12 +128,12 @@ def build_knowledge_model(
     return model
 
 
-def _parse_scale(scale: str) -> Optional[float]:
+def _parse_scale(scale: str, dpi: int = 300) -> Optional[float]:
     """
     Parse a scale string like "1:100" into a conversion factor.
 
     Returns pixels-to-meters factor: 1 pixel = factor meters.
-    Assumes rendering at 300 DPI and standard paper.
+    Uses the actual rendering DPI supplied by the pipeline.
     """
     try:
         parts = scale.split(":")
@@ -139,7 +146,9 @@ def _parse_scale(scale: str) -> Optional[float]:
                 # 1 inch = 0.0254 m
                 # So 1 pixel = 0.0254/300 m on paper
                 # In reality: 1 pixel = (0.0254/300) * (denominator/numerator) m
-                meters_per_pixel = (0.0254 / 300.0) * (denominator / numerator)
+                if dpi <= 0:
+                    return None
+                meters_per_pixel = (0.0254 / float(dpi)) * (denominator / numerator)
                 return meters_per_pixel
     except (ValueError, ZeroDivisionError):
         pass

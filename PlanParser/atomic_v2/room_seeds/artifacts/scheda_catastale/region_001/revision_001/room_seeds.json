@@ -1,0 +1,1607 @@
+{
+  "schema_version": "1.0.0",
+  "provenance": {
+    "source_crop": "PlanParser/atomic_v2/region_split/artifacts/scheda_catastale/page_0001/revision_002/region_001.png",
+    "source_crop_sha256": "50c8caa164db3162894718052aaa9c031c6bb73ab64c6f16a61d3d8ac1965f5a",
+    "detector": "morphological-white-space-flood-fill",
+    "detector_version": "1.0.0"
+  },
+  "parameters": {
+    "ink_threshold": 205,
+    "horizontal_close_px": 25,
+    "vertical_close_px": 25,
+    "barrier_dilation_px": 3,
+    "minimum_candidate_area_px2": 1800,
+    "minimum_reported_area_px2": 12,
+    "polygon_epsilon_ratio": 0.006
+  },
+  "summary": {
+    "reported_component_count": 33,
+    "candidate": 7,
+    "small_excluded": 23,
+    "external_background": 3
+  },
+  "seeds": [
+    {
+      "id": "seed_001",
+      "status": "candidate",
+      "bbox_px": [
+        70,
+        66,
+        264,
+        268
+      ],
+      "polygon_px": [
+        [
+          70,
+          66
+        ],
+        [
+          70,
+          299
+        ],
+        [
+          292,
+          299
+        ],
+        [
+          293,
+          333
+        ],
+        [
+          333,
+          333
+        ],
+        [
+          333,
+          237
+        ],
+        [
+          293,
+          237
+        ],
+        [
+          293,
+          272
+        ],
+        [
+          322,
+          277
+        ],
+        [
+          252,
+          276
+        ],
+        [
+          282,
+          272
+        ],
+        [
+          282,
+          66
+        ],
+        [
+          217,
+          66
+        ],
+        [
+          215,
+          78
+        ],
+        [
+          211,
+          66
+        ]
+      ],
+      "area_px2": 52425,
+      "confidence": 0.95,
+      "reasons": [
+        "enclosed white-space component does not touch crop boundary",
+        "area=52425px2 exceeds explicit minimum",
+        "component fill ratio=0.741",
+        "no semantic room interpretation assigned"
+      ],
+      "abstained": false
+    },
+    {
+      "id": "seed_002",
+      "status": "candidate",
+      "bbox_px": [
+        293,
+        66,
+        111,
+        160
+      ],
+      "polygon_px": [
+        [
+          293,
+          66
+        ],
+        [
+          293,
+          131
+        ],
+        [
+          379,
+          140
+        ],
+        [
+          374,
+          153
+        ],
+        [
+          349,
+          157
+        ],
+        [
+          293,
+          152
+        ],
+        [
+          293,
+          225
+        ],
+        [
+          333,
+          225
+        ],
+        [
+          334,
+          198
+        ],
+        [
+          338,
+          225
+        ],
+        [
+          403,
+          225
+        ],
+        [
+          403,
+          66
+        ],
+        [
+          365,
+          66
+        ],
+        [
+          364,
+          77
+        ],
+        [
+          360,
+          66
+        ]
+      ],
+      "area_px2": 16051,
+      "confidence": 0.95,
+      "reasons": [
+        "enclosed white-space component does not touch crop boundary",
+        "area=16051px2 exceeds explicit minimum",
+        "component fill ratio=0.904",
+        "no semantic room interpretation assigned"
+      ],
+      "abstained": false
+    },
+    {
+      "id": "seed_003",
+      "status": "candidate",
+      "bbox_px": [
+        338,
+        66,
+        320,
+        268
+      ],
+      "polygon_px": [
+        [
+          416,
+          66
+        ],
+        [
+          416,
+          272
+        ],
+        [
+          445,
+          275
+        ],
+        [
+          375,
+          277
+        ],
+        [
+          403,
+          272
+        ],
+        [
+          403,
+          237
+        ],
+        [
+          338,
+          237
+        ],
+        [
+          338,
+          285
+        ],
+        [
+          368,
+          298
+        ],
+        [
+          338,
+          302
+        ],
+        [
+          338,
+          333
+        ],
+        [
+          403,
+          333
+        ],
+        [
+          404,
+          299
+        ],
+        [
+          657,
+          298
+        ],
+        [
+          657,
+          253
+        ],
+        [
+          645,
+          252
+        ],
+        [
+          657,
+          247
+        ],
+        [
+          657,
+          66
+        ]
+      ],
+      "area_px2": 61322,
+      "confidence": 0.95,
+      "reasons": [
+        "enclosed white-space component does not touch crop boundary",
+        "area=61322px2 exceeds explicit minimum",
+        "component fill ratio=0.715",
+        "no semantic room interpretation assigned"
+      ],
+      "abstained": false
+    },
+    {
+      "id": "seed_004",
+      "status": "candidate",
+      "bbox_px": [
+        70,
+        346,
+        588,
+        259
+      ],
+      "polygon_px": [
+        [
+          70,
+          394
+        ],
+        [
+          70,
+          423
+        ],
+        [
+          128,
+          424
+        ],
+        [
+          128,
+          471
+        ],
+        [
+          184,
+          450
+        ],
+        [
+          186,
+          408
+        ],
+        [
+          253,
+          421
+        ],
+        [
+          196,
+          433
+        ],
+        [
+          196,
+          575
+        ],
+        [
+          251,
+          586
+        ],
+        [
+          253,
+          604
+        ],
+        [
+          657,
+          604
+        ],
+        [
+          657,
+          346
+        ],
+        [
+          338,
+          346
+        ],
+        [
+          337,
+          374
+        ],
+        [
+          333,
+          346
+        ],
+        [
+          139,
+          346
+        ],
+        [
+          143,
+          380
+        ],
+        [
+          226,
+          384
+        ]
+      ],
+      "area_px2": 121993,
+      "confidence": 0.95,
+      "reasons": [
+        "enclosed white-space component does not touch crop boundary",
+        "area=121993px2 exceeds explicit minimum",
+        "component fill ratio=0.801",
+        "no semantic room interpretation assigned"
+      ],
+      "abstained": false
+    },
+    {
+      "id": "seed_005",
+      "status": "candidate",
+      "bbox_px": [
+        70,
+        598,
+        184,
+        81
+      ],
+      "polygon_px": [
+        [
+          70,
+          598
+        ],
+        [
+          70,
+          678
+        ],
+        [
+          159,
+          678
+        ],
+        [
+          160,
+          666
+        ],
+        [
+          164,
+          667
+        ],
+        [
+          164,
+          678
+        ],
+        [
+          253,
+          678
+        ],
+        [
+          253,
+          616
+        ],
+        [
+          240,
+          616
+        ],
+        [
+          238,
+          610
+        ],
+        [
+          217,
+          610
+        ],
+        [
+          216,
+          598
+        ]
+      ],
+      "area_px2": 13812,
+      "confidence": 0.93,
+      "reasons": [
+        "enclosed white-space component does not touch crop boundary",
+        "area=13812px2 exceeds explicit minimum",
+        "component fill ratio=0.927",
+        "no semantic room interpretation assigned"
+      ],
+      "abstained": false
+    },
+    {
+      "id": "seed_006",
+      "status": "candidate",
+      "bbox_px": [
+        277,
+        625,
+        175,
+        97
+      ],
+      "polygon_px": [
+        [
+          277,
+          625
+        ],
+        [
+          280,
+          721
+        ],
+        [
+          448,
+          721
+        ],
+        [
+          451,
+          659
+        ],
+        [
+          435,
+          658
+        ],
+        [
+          435,
+          625
+        ],
+        [
+          338,
+          625
+        ],
+        [
+          337,
+          653
+        ],
+        [
+          333,
+          652
+        ],
+        [
+          333,
+          625
+        ]
+      ],
+      "area_px2": 16151,
+      "confidence": 0.95,
+      "reasons": [
+        "enclosed white-space component does not touch crop boundary",
+        "area=16151px2 exceeds explicit minimum",
+        "component fill ratio=0.951",
+        "no semantic room interpretation assigned"
+      ],
+      "abstained": false
+    },
+    {
+      "id": "seed_007",
+      "status": "candidate",
+      "bbox_px": [
+        479,
+        625,
+        194,
+        67
+      ],
+      "polygon_px": [
+        [
+          479,
+          691
+        ],
+        [
+          655,
+          691
+        ],
+        [
+          655,
+          675
+        ],
+        [
+          672,
+          673
+        ],
+        [
+          672,
+          625
+        ],
+        [
+          572,
+          625
+        ],
+        [
+          571,
+          653
+        ],
+        [
+          567,
+          652
+        ],
+        [
+          567,
+          625
+        ],
+        [
+          518,
+          625
+        ],
+        [
+          518,
+          655
+        ],
+        [
+          514,
+          659
+        ],
+        [
+          479,
+          659
+        ]
+      ],
+      "area_px2": 11261,
+      "confidence": 0.888,
+      "reasons": [
+        "enclosed white-space component does not touch crop boundary",
+        "area=11261px2 exceeds explicit minimum",
+        "component fill ratio=0.866",
+        "no semantic room interpretation assigned"
+      ],
+      "abstained": false
+    },
+    {
+      "id": "seed_008",
+      "status": "small_excluded",
+      "bbox_px": [
+        365,
+        6,
+        42,
+        37
+      ],
+      "polygon_px": [
+        [
+          365,
+          6
+        ],
+        [
+          365,
+          42
+        ],
+        [
+          406,
+          42
+        ],
+        [
+          406,
+          6
+        ]
+      ],
+      "area_px2": 1554,
+      "confidence": 0.423,
+      "reasons": [
+        "area 1554px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_009",
+      "status": "small_excluded",
+      "bbox_px": [
+        410,
+        6,
+        2,
+        19
+      ],
+      "polygon_px": [
+        [
+          410,
+          6
+        ],
+        [
+          410,
+          24
+        ],
+        [
+          411,
+          24
+        ],
+        [
+          411,
+          6
+        ]
+      ],
+      "area_px2": 38,
+      "confidence": 0.01,
+      "reasons": [
+        "area 38px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_010",
+      "status": "small_excluded",
+      "bbox_px": [
+        409,
+        30,
+        28,
+        31
+      ],
+      "polygon_px": [
+        [
+          412,
+          30
+        ],
+        [
+          412,
+          46
+        ],
+        [
+          409,
+          48
+        ],
+        [
+          409,
+          60
+        ],
+        [
+          436,
+          60
+        ],
+        [
+          436,
+          30
+        ]
+      ],
+      "area_px2": 815,
+      "confidence": 0.222,
+      "reasons": [
+        "area 815px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_011",
+      "status": "small_excluded",
+      "bbox_px": [
+        52,
+        48,
+        14,
+        13
+      ],
+      "polygon_px": [
+        [
+          52,
+          48
+        ],
+        [
+          52,
+          60
+        ],
+        [
+          65,
+          60
+        ],
+        [
+          65,
+          48
+        ]
+      ],
+      "area_px2": 182,
+      "confidence": 0.05,
+      "reasons": [
+        "area 182px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_012",
+      "status": "small_excluded",
+      "bbox_px": [
+        287,
+        48,
+        2,
+        13
+      ],
+      "polygon_px": [
+        [
+          287,
+          48
+        ],
+        [
+          287,
+          60
+        ],
+        [
+          288,
+          60
+        ],
+        [
+          288,
+          48
+        ]
+      ],
+      "area_px2": 26,
+      "confidence": 0.007,
+      "reasons": [
+        "area 26px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_013",
+      "status": "small_excluded",
+      "bbox_px": [
+        662,
+        48,
+        17,
+        13
+      ],
+      "polygon_px": [
+        [
+          662,
+          48
+        ],
+        [
+          662,
+          60
+        ],
+        [
+          678,
+          60
+        ],
+        [
+          678,
+          48
+        ]
+      ],
+      "area_px2": 221,
+      "confidence": 0.06,
+      "reasons": [
+        "area 221px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_014",
+      "status": "small_excluded",
+      "bbox_px": [
+        653,
+        307,
+        5,
+        5
+      ],
+      "polygon_px": [
+        [
+          653,
+          307
+        ],
+        [
+          653,
+          311
+        ],
+        [
+          657,
+          311
+        ],
+        [
+          657,
+          307
+        ]
+      ],
+      "area_px2": 25,
+      "confidence": 0.007,
+      "reasons": [
+        "area 25px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_015",
+      "status": "small_excluded",
+      "bbox_px": [
+        266,
+        308,
+        2,
+        7
+      ],
+      "polygon_px": [
+        [
+          266,
+          308
+        ],
+        [
+          266,
+          314
+        ],
+        [
+          267,
+          314
+        ],
+        [
+          267,
+          308
+        ]
+      ],
+      "area_px2": 14,
+      "confidence": 0.004,
+      "reasons": [
+        "area 14px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_016",
+      "status": "small_excluded",
+      "bbox_px": [
+        281,
+        308,
+        2,
+        7
+      ],
+      "polygon_px": [
+        [
+          281,
+          308
+        ],
+        [
+          281,
+          314
+        ],
+        [
+          282,
+          314
+        ],
+        [
+          282,
+          308
+        ]
+      ],
+      "area_px2": 14,
+      "confidence": 0.004,
+      "reasons": [
+        "area 14px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_017",
+      "status": "small_excluded",
+      "bbox_px": [
+        52,
+        338,
+        14,
+        4
+      ],
+      "polygon_px": [
+        [
+          52,
+          338
+        ],
+        [
+          52,
+          341
+        ],
+        [
+          65,
+          341
+        ],
+        [
+          65,
+          338
+        ]
+      ],
+      "area_px2": 56,
+      "confidence": 0.015,
+      "reasons": [
+        "area 56px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_018",
+      "status": "small_excluded",
+      "bbox_px": [
+        409,
+        338,
+        3,
+        4
+      ],
+      "polygon_px": [
+        [
+          409,
+          338
+        ],
+        [
+          409,
+          341
+        ],
+        [
+          411,
+          341
+        ],
+        [
+          411,
+          338
+        ]
+      ],
+      "area_px2": 12,
+      "confidence": 0.003,
+      "reasons": [
+        "area 12px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_019",
+      "status": "small_excluded",
+      "bbox_px": [
+        70,
+        346,
+        18,
+        14
+      ],
+      "polygon_px": [
+        [
+          70,
+          346
+        ],
+        [
+          70,
+          359
+        ],
+        [
+          87,
+          359
+        ],
+        [
+          87,
+          346
+        ]
+      ],
+      "area_px2": 252,
+      "confidence": 0.069,
+      "reasons": [
+        "area 252px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_020",
+      "status": "small_excluded",
+      "bbox_px": [
+        113,
+        346,
+        1,
+        14
+      ],
+      "polygon_px": [
+        [
+          113,
+          346
+        ],
+        [
+          113,
+          359
+        ]
+      ],
+      "area_px2": 14,
+      "confidence": 0.004,
+      "reasons": [
+        "area 14px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_021",
+      "status": "small_excluded",
+      "bbox_px": [
+        125,
+        346,
+        1,
+        14
+      ],
+      "polygon_px": [
+        [
+          125,
+          346
+        ],
+        [
+          125,
+          359
+        ]
+      ],
+      "area_px2": 14,
+      "confidence": 0.004,
+      "reasons": [
+        "area 14px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_022",
+      "status": "small_excluded",
+      "bbox_px": [
+        70,
+        373,
+        18,
+        5
+      ],
+      "polygon_px": [
+        [
+          70,
+          373
+        ],
+        [
+          70,
+          377
+        ],
+        [
+          87,
+          377
+        ],
+        [
+          87,
+          373
+        ]
+      ],
+      "area_px2": 90,
+      "confidence": 0.025,
+      "reasons": [
+        "area 90px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_023",
+      "status": "small_excluded",
+      "bbox_px": [
+        70,
+        533,
+        26,
+        54
+      ],
+      "polygon_px": [
+        [
+          70,
+          533
+        ],
+        [
+          70,
+          586
+        ],
+        [
+          95,
+          586
+        ],
+        [
+          95,
+          534
+        ],
+        [
+          94,
+          533
+        ]
+      ],
+      "area_px2": 1403,
+      "confidence": 0.382,
+      "reasons": [
+        "area 1403px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_024",
+      "status": "small_excluded",
+      "bbox_px": [
+        100,
+        533,
+        60,
+        27
+      ],
+      "polygon_px": [
+        [
+          100,
+          533
+        ],
+        [
+          100,
+          559
+        ],
+        [
+          159,
+          559
+        ],
+        [
+          159,
+          535
+        ],
+        [
+          124,
+          535
+        ],
+        [
+          123,
+          533
+        ]
+      ],
+      "area_px2": 1548,
+      "confidence": 0.421,
+      "reasons": [
+        "area 1548px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_025",
+      "status": "small_excluded",
+      "bbox_px": [
+        164,
+        565,
+        21,
+        22
+      ],
+      "polygon_px": [
+        [
+          164,
+          565
+        ],
+        [
+          164,
+          586
+        ],
+        [
+          184,
+          586
+        ],
+        [
+          184,
+          565
+        ]
+      ],
+      "area_px2": 462,
+      "confidence": 0.126,
+      "reasons": [
+        "area 462px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_026",
+      "status": "small_excluded",
+      "bbox_px": [
+        52,
+        592,
+        14,
+        1
+      ],
+      "polygon_px": [
+        [
+          52,
+          592
+        ],
+        [
+          65,
+          592
+        ]
+      ],
+      "area_px2": 14,
+      "confidence": 0.004,
+      "reasons": [
+        "area 14px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_027",
+      "status": "small_excluded",
+      "bbox_px": [
+        259,
+        610,
+        13,
+        10
+      ],
+      "polygon_px": [
+        [
+          259,
+          610
+        ],
+        [
+          259,
+          619
+        ],
+        [
+          271,
+          619
+        ],
+        [
+          271,
+          610
+        ]
+      ],
+      "area_px2": 130,
+      "confidence": 0.035,
+      "reasons": [
+        "area 130px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_028",
+      "status": "small_excluded",
+      "bbox_px": [
+        662,
+        610,
+        17,
+        10
+      ],
+      "polygon_px": [
+        [
+          662,
+          610
+        ],
+        [
+          662,
+          619
+        ],
+        [
+          672,
+          619
+        ],
+        [
+          672,
+          618
+        ],
+        [
+          674,
+          616
+        ],
+        [
+          678,
+          616
+        ],
+        [
+          678,
+          610
+        ]
+      ],
+      "area_px2": 153,
+      "confidence": 0.042,
+      "reasons": [
+        "area 153px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_029",
+      "status": "small_excluded",
+      "bbox_px": [
+        52,
+        683,
+        14,
+        14
+      ],
+      "polygon_px": [
+        [
+          52,
+          683
+        ],
+        [
+          52,
+          696
+        ],
+        [
+          65,
+          696
+        ],
+        [
+          65,
+          683
+        ]
+      ],
+      "area_px2": 196,
+      "confidence": 0.053,
+      "reasons": [
+        "area 196px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_030",
+      "status": "small_excluded",
+      "bbox_px": [
+        259,
+        683,
+        13,
+        14
+      ],
+      "polygon_px": [
+        [
+          259,
+          683
+        ],
+        [
+          259,
+          696
+        ],
+        [
+          271,
+          696
+        ],
+        [
+          271,
+          683
+        ]
+      ],
+      "area_px2": 182,
+      "confidence": 0.05,
+      "reasons": [
+        "area 182px2 is below explicit candidate minimum 1800px2",
+        "retained as excluded/abstained component"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_031",
+      "status": "external_background",
+      "bbox_px": [
+        0,
+        0,
+        378,
+        744
+      ],
+      "polygon_px": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          743
+        ],
+        [
+          377,
+          743
+        ],
+        [
+          273,
+          730
+        ],
+        [
+          271,
+          701
+        ],
+        [
+          164,
+          701
+        ],
+        [
+          160,
+          730
+        ],
+        [
+          159,
+          701
+        ],
+        [
+          47,
+          700
+        ],
+        [
+          47,
+          384
+        ],
+        [
+          18,
+          382
+        ],
+        [
+          47,
+          378
+        ],
+        [
+          47,
+          43
+        ],
+        [
+          211,
+          42
+        ],
+        [
+          213,
+          12
+        ],
+        [
+          217,
+          42
+        ],
+        [
+          360,
+          42
+        ],
+        [
+          361,
+          6
+        ]
+      ],
+      "area_px2": 59665,
+      "confidence": 0.0,
+      "reasons": [
+        "white-space component touches crop boundary",
+        "retained as excluded external background"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_032",
+      "status": "external_background",
+      "bbox_px": [
+        424,
+        0,
+        307,
+        358
+      ],
+      "polygon_px": [
+        [
+          424,
+          0
+        ],
+        [
+          424,
+          24
+        ],
+        [
+          440,
+          24
+        ],
+        [
+          442,
+          42
+        ],
+        [
+          683,
+          43
+        ],
+        [
+          683,
+          248
+        ],
+        [
+          712,
+          249
+        ],
+        [
+          683,
+          253
+        ],
+        [
+          683,
+          357
+        ],
+        [
+          730,
+          357
+        ],
+        [
+          730,
+          0
+        ]
+      ],
+      "area_px2": 27869,
+      "confidence": 0.0,
+      "reasons": [
+        "white-space component touches crop boundary",
+        "retained as excluded external background"
+      ],
+      "abstained": true
+    },
+    {
+      "id": "seed_033",
+      "status": "external_background",
+      "bbox_px": [
+        382,
+        374,
+        349,
+        370
+      ],
+      "polygon_px": [
+        [
+          730,
+          374
+        ],
+        [
+          683,
+          374
+        ],
+        [
+          683,
+          700
+        ],
+        [
+          457,
+          701
+        ],
+        [
+          455,
+          730
+        ],
+        [
+          382,
+          730
+        ],
+        [
+          382,
+          743
+        ],
+        [
+          730,
+          743
+        ]
+      ],
+      "area_px2": 28529,
+      "confidence": 0.0,
+      "reasons": [
+        "white-space component touches crop boundary",
+        "retained as excluded external background"
+      ],
+      "abstained": true
+    }
+  ],
+  "excluded_inferences": [
+    "rooms",
+    "room_names",
+    "walls",
+    "openings",
+    "adjacency",
+    "scale"
+  ]
+}
